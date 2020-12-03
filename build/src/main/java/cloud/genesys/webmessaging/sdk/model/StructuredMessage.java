@@ -1,0 +1,182 @@
+package cloud.genesys.webmessaging.sdk.model;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import java.util.Objects;
+import cloud.genesys.webmessaging.sdk.model.BaseMessagingChannel;
+import cloud.genesys.webmessaging.sdk.model.BaseMessagingContent;
+import cloud.genesys.webmessaging.sdk.model.Direction;
+import cloud.genesys.webmessaging.sdk.model.NormalizedType;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
+
+import java.io.Serializable;
+/**
+ * StructuredMessage
+ */
+
+public class StructuredMessage  implements Serializable {
+  
+  private String text = null;
+  private NormalizedType type = null;
+  private Direction direction = null;
+  private String id = null;
+  private BaseMessagingChannel channel = null;
+  private List<BaseMessagingContent> content = new ArrayList<BaseMessagingContent>();
+
+  
+  /**
+   **/
+  public StructuredMessage text(String text) {
+    this.text = text;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("text")
+  public String getText() {
+    return text;
+  }
+  public void setText(String text) {
+    this.text = text;
+  }
+
+  
+  /**
+   **/
+  public StructuredMessage type(NormalizedType type) {
+    this.type = type;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("type")
+  public NormalizedType getType() {
+    return type;
+  }
+  public void setType(NormalizedType type) {
+    this.type = type;
+  }
+
+  
+  /**
+   **/
+  public StructuredMessage direction(Direction direction) {
+    this.direction = direction;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("direction")
+  public Direction getDirection() {
+    return direction;
+  }
+  public void setDirection(Direction direction) {
+    this.direction = direction;
+  }
+
+  
+  /**
+   **/
+  public StructuredMessage id(String id) {
+    this.id = id;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("id")
+  public String getId() {
+    return id;
+  }
+  public void setId(String id) {
+    this.id = id;
+  }
+
+  
+  /**
+   **/
+  public StructuredMessage channel(BaseMessagingChannel channel) {
+    this.channel = channel;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("channel")
+  public BaseMessagingChannel getChannel() {
+    return channel;
+  }
+  public void setChannel(BaseMessagingChannel channel) {
+    this.channel = channel;
+  }
+
+  
+  /**
+   **/
+  public StructuredMessage content(List<BaseMessagingContent> content) {
+    this.content = content;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("content")
+  public List<BaseMessagingContent> getContent() {
+    return content;
+  }
+  public void setContent(List<BaseMessagingContent> content) {
+    this.content = content;
+  }
+
+  
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    StructuredMessage structuredMessage = (StructuredMessage) o;
+    return Objects.equals(this.text, structuredMessage.text) &&
+        Objects.equals(this.type, structuredMessage.type) &&
+        Objects.equals(this.direction, structuredMessage.direction) &&
+        Objects.equals(this.id, structuredMessage.id) &&
+        Objects.equals(this.channel, structuredMessage.channel) &&
+        Objects.equals(this.content, structuredMessage.content);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(text, type, direction, id, channel, content);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class StructuredMessage {\n");
+    
+    sb.append("    text: ").append(toIndentedString(text)).append("\n");
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    direction: ").append(toIndentedString(direction)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    channel: ").append(toIndentedString(channel)).append("\n");
+    sb.append("    content: ").append(toIndentedString(content)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
+

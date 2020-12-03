@@ -1,0 +1,10 @@
+cloud.genesys.webmessaging.sdk
+cloud.genesys.webmessaging.sdk.api
+cloud.genesys.webmessaging.sdk.api.request
+cloud.genesys.webmessaging.sdk.auth
+cloud.genesys.webmessaging.sdk.connector
+cloud.genesys.webmessaging.sdk.connector.apache
+cloud.genesys.webmessaging.sdk.connector.ning
+cloud.genesys.webmessaging.sdk.connector.okhttp
+cloud.genesys.webmessaging.sdk.extensions
+cloud.genesys.webmessaging.sdk.model

@@ -17,6 +17,10 @@ title: MessageDataType
 
 * `PRESIGNEDURLRESPONSE` (value: `"PresignedUrlResponse"`)
 
+* `ATTACHMENTDELETEDRESPONSE` (value: `"AttachmentDeletedResponse"`)
+
+* `UPLOADFAILUREEVENT` (value: `"UploadFailureEvent"`)
+
 * `UPLOADSUCCESSEVENT` (value: `"UploadSuccessEvent"`)
 
 

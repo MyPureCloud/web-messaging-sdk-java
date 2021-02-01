@@ -10,6 +10,7 @@ title: SessionResponse
 | ------------ | ------------- | ------------- | ------------- |
 | **sessionId** | <!----><!---->**String**<!----> |  |  [optional] |
 | **connected** | <!----><!---->**Boolean**<!----> |  |  |
+| **newSession** | <!----><!---->**Boolean**<!----> |  |  [optional] |
 {: class="table table-striped"}
 
 

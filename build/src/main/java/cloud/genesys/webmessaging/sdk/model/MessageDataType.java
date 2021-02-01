@@ -14,6 +14,8 @@ public enum MessageDataType {
   SESSIONRESPONSE("SessionResponse"),
   STRUCTUREDMESSAGE("StructuredMessage"),
   PRESIGNEDURLRESPONSE("PresignedUrlResponse"),
+  ATTACHMENTDELETEDRESPONSE("AttachmentDeletedResponse"),
+  UPLOADFAILUREEVENT("UploadFailureEvent"),
   UPLOADSUCCESSEVENT("UploadSuccessEvent");
 
   private String value;

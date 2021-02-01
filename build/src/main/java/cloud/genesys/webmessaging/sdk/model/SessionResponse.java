@@ -16,6 +16,7 @@ public class SessionResponse  implements Serializable {
   
   private String sessionId = null;
   private Boolean connected = null;
+  private Boolean newSession = null;
 
   
   /**
@@ -52,6 +53,23 @@ public class SessionResponse  implements Serializable {
   }
 
   
+  /**
+   **/
+  public SessionResponse newSession(Boolean newSession) {
+    this.newSession = newSession;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("newSession")
+  public Boolean getNewSession() {
+    return newSession;
+  }
+  public void setNewSession(Boolean newSession) {
+    this.newSession = newSession;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -63,12 +81,13 @@ public class SessionResponse  implements Serializable {
     }
     SessionResponse sessionResponse = (SessionResponse) o;
     return Objects.equals(this.sessionId, sessionResponse.sessionId) &&
-        Objects.equals(this.connected, sessionResponse.connected);
+        Objects.equals(this.connected, sessionResponse.connected) &&
+        Objects.equals(this.newSession, sessionResponse.newSession);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sessionId, connected);
+    return Objects.hash(sessionId, connected, newSession);
   }
 
   @Override
@@ -78,6 +97,7 @@ public class SessionResponse  implements Serializable {
     
     sb.append("    sessionId: ").append(toIndentedString(sessionId)).append("\n");
     sb.append("    connected: ").append(toIndentedString(connected)).append("\n");
+    sb.append("    newSession: ").append(toIndentedString(newSession)).append("\n");
     sb.append("}");
     return sb.toString();
   }

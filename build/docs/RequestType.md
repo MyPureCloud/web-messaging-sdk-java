@@ -15,6 +15,10 @@ title: RequestType
 
 * `ONGENERATEUPLOADURL` (value: `"onGenerateUploadUrl"`)
 
+* `ONGENERATEDOWNLOADURL` (value: `"onGenerateDownloadUrl"`)
+
+* `DELETEATTACHMENT` (value: `"deleteAttachment"`)
+
 * `ONMESSAGE` (value: `"onMessage"`)
 
 * `CLOSESESSION` (value: `"closeSession"`)

@@ -15,6 +15,7 @@ import java.io.Serializable;
 
 public class BaseContentAttachment  implements Serializable {
   
+  private String id = null;
   private String filename = null;
   private Double fileSize = null;
   private MediaType mediaType = null;
@@ -22,6 +23,23 @@ public class BaseContentAttachment  implements Serializable {
   private String sha256 = null;
   private String text = null;
   private String url = null;
+
+  
+  /**
+   **/
+  public BaseContentAttachment id(String id) {
+    this.id = id;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("id")
+  public String getId() {
+    return id;
+  }
+  public void setId(String id) {
+    this.id = id;
+  }
 
   
   /**
@@ -153,7 +171,8 @@ public class BaseContentAttachment  implements Serializable {
       return false;
     }
     BaseContentAttachment baseContentAttachment = (BaseContentAttachment) o;
-    return Objects.equals(this.filename, baseContentAttachment.filename) &&
+    return Objects.equals(this.id, baseContentAttachment.id) &&
+        Objects.equals(this.filename, baseContentAttachment.filename) &&
         Objects.equals(this.fileSize, baseContentAttachment.fileSize) &&
         Objects.equals(this.mediaType, baseContentAttachment.mediaType) &&
         Objects.equals(this.mime, baseContentAttachment.mime) &&
@@ -164,7 +183,7 @@ public class BaseContentAttachment  implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(filename, fileSize, mediaType, mime, sha256, text, url);
+    return Objects.hash(id, filename, fileSize, mediaType, mime, sha256, text, url);
   }
 
   @Override
@@ -172,6 +191,7 @@ public class BaseContentAttachment  implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class BaseContentAttachment {\n");
     
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    filename: ").append(toIndentedString(filename)).append("\n");
     sb.append("    fileSize: ").append(toIndentedString(fileSize)).append("\n");
     sb.append("    mediaType: ").append(toIndentedString(mediaType)).append("\n");

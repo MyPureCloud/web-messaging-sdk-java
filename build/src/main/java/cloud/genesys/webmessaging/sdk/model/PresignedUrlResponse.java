@@ -20,6 +20,9 @@ public class PresignedUrlResponse  implements Serializable {
   private String attachmentId = null;
   private Map<String, String> headers = null;
   private String url = null;
+  private String fileName = null;
+  private Double fileSize = null;
+  private String fileType = null;
 
   
   /**
@@ -73,6 +76,57 @@ public class PresignedUrlResponse  implements Serializable {
   }
 
   
+  /**
+   **/
+  public PresignedUrlResponse fileName(String fileName) {
+    this.fileName = fileName;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("fileName")
+  public String getFileName() {
+    return fileName;
+  }
+  public void setFileName(String fileName) {
+    this.fileName = fileName;
+  }
+
+  
+  /**
+   **/
+  public PresignedUrlResponse fileSize(Double fileSize) {
+    this.fileSize = fileSize;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("fileSize")
+  public Double getFileSize() {
+    return fileSize;
+  }
+  public void setFileSize(Double fileSize) {
+    this.fileSize = fileSize;
+  }
+
+  
+  /**
+   **/
+  public PresignedUrlResponse fileType(String fileType) {
+    this.fileType = fileType;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("fileType")
+  public String getFileType() {
+    return fileType;
+  }
+  public void setFileType(String fileType) {
+    this.fileType = fileType;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -85,12 +139,15 @@ public class PresignedUrlResponse  implements Serializable {
     PresignedUrlResponse presignedUrlResponse = (PresignedUrlResponse) o;
     return Objects.equals(this.attachmentId, presignedUrlResponse.attachmentId) &&
         Objects.equals(this.headers, presignedUrlResponse.headers) &&
-        Objects.equals(this.url, presignedUrlResponse.url);
+        Objects.equals(this.url, presignedUrlResponse.url) &&
+        Objects.equals(this.fileName, presignedUrlResponse.fileName) &&
+        Objects.equals(this.fileSize, presignedUrlResponse.fileSize) &&
+        Objects.equals(this.fileType, presignedUrlResponse.fileType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(attachmentId, headers, url);
+    return Objects.hash(attachmentId, headers, url, fileName, fileSize, fileType);
   }
 
   @Override
@@ -101,6 +158,9 @@ public class PresignedUrlResponse  implements Serializable {
     sb.append("    attachmentId: ").append(toIndentedString(attachmentId)).append("\n");
     sb.append("    headers: ").append(toIndentedString(headers)).append("\n");
     sb.append("    url: ").append(toIndentedString(url)).append("\n");
+    sb.append("    fileName: ").append(toIndentedString(fileName)).append("\n");
+    sb.append("    fileSize: ").append(toIndentedString(fileSize)).append("\n");
+    sb.append("    fileType: ").append(toIndentedString(fileType)).append("\n");
     sb.append("}");
     return sb.toString();
   }

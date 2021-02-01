@@ -11,11 +11,8 @@
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/WebMessagingMessage.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/ApiDateFormat.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/ConfigureSessionRequest.java
-/var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/auth/ApiKeyAuth.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/IncomingNormalizedMessage.java
-/var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/ConsoleColors.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/connector/okhttp/OkHttpClientConnector.java
-/var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/auth/OAuthFlow.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/connector/okhttp/OkHttpClientConnectorProvider.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/extensions/LocalDateSerializer.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/connector/ApiClientConnectorLoader.java
@@ -27,7 +24,6 @@
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/JourneyCustomer.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/ApiRequestBuilder.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/connector/apache/ApacheHttpClientConnectorProvider.java
-/var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/extensions/AuthResponse.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/CleanMessage.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/api/WebMessagingApi.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/connector/apache/ApacheHttpClientConnector.java
@@ -37,7 +33,6 @@
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/Configuration.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/Pair.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/WebMessagingRecipient.java
-/var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/api/WebMessagingApiAsync.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/CleanMessagingChannel.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/WebMessagingClient.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/auth/OAuth.java
@@ -45,7 +40,6 @@
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/JourneyContext.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/BaseMessage.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/CleanMessagingRecipient.java
-/var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/auth/HttpBasicAuth.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/StructuredMessage.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/ChannelType.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/PresignedUrlResponse.java
@@ -57,16 +51,17 @@
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/BaseMessagingChannel.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/ApiResponse.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/BaseMessageType.java
-/var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/GenesysCloudRegionHosts.java
-/var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/connector/ning/AsyncHttpResponse.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/connector/ApiClientConnectorProperty.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/WebMessagingAttachment.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/ApiRequest.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/WebMessagingMessageEntityList.java
+/var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/AttachmentDeletedResponse.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/GuestInformation.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/EchoNotification.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/RequestTypeEchoMessage.java
+/var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/GenesysCloudRegionWebSocketHosts.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/StringUtil.java
+/var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/UploadFailureEvent.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/connector/ApiClientConnectorProvider.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/connector/apache/ApacheHttpResponse.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/JourneyAction.java
@@ -74,10 +69,7 @@
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/RequestTypeConfigureSession.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/ResponseMessage.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/LocalDateDeserializer.java
-/var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/connector/ning/AsyncHttpClientConnector.java
-/var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/connector/ning/AsyncHttpClientConnectorProvider.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/connector/apache/SLF4JInterceptor.java
-/var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/AsyncApiCallback.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/BaseContentAttachment.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/SessionResponse.java
 /var/build/workspace/build-platform-sdks/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/connector/ApiClientConnectorProperties.java

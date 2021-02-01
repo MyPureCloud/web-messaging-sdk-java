@@ -10,6 +10,7 @@ title: UploadSuccessEvent
 | ------------ | ------------- | ------------- | ------------- |
 | **attachmentId** | <!----><!---->**String**<!----> |  |  |
 | **downloadUrl** | <!----><!---->**String**<!----> |  |  |
+| **timestamp** | <!----><!---->**String**<!----> |  |  |
 {: class="table table-striped"}
 
 

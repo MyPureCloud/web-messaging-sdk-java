@@ -16,6 +16,7 @@ public class UploadSuccessEvent  implements Serializable {
   
   private String attachmentId = null;
   private String downloadUrl = null;
+  private String timestamp = null;
 
   
   /**
@@ -52,6 +53,23 @@ public class UploadSuccessEvent  implements Serializable {
   }
 
   
+  /**
+   **/
+  public UploadSuccessEvent timestamp(String timestamp) {
+    this.timestamp = timestamp;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("timestamp")
+  public String getTimestamp() {
+    return timestamp;
+  }
+  public void setTimestamp(String timestamp) {
+    this.timestamp = timestamp;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -63,12 +81,13 @@ public class UploadSuccessEvent  implements Serializable {
     }
     UploadSuccessEvent uploadSuccessEvent = (UploadSuccessEvent) o;
     return Objects.equals(this.attachmentId, uploadSuccessEvent.attachmentId) &&
-        Objects.equals(this.downloadUrl, uploadSuccessEvent.downloadUrl);
+        Objects.equals(this.downloadUrl, uploadSuccessEvent.downloadUrl) &&
+        Objects.equals(this.timestamp, uploadSuccessEvent.timestamp);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(attachmentId, downloadUrl);
+    return Objects.hash(attachmentId, downloadUrl, timestamp);
   }
 
   @Override
@@ -78,6 +97,7 @@ public class UploadSuccessEvent  implements Serializable {
     
     sb.append("    attachmentId: ").append(toIndentedString(attachmentId)).append("\n");
     sb.append("    downloadUrl: ").append(toIndentedString(downloadUrl)).append("\n");
+    sb.append("    timestamp: ").append(toIndentedString(timestamp)).append("\n");
     sb.append("}");
     return sb.toString();
   }

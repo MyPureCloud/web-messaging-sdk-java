@@ -8,6 +8,7 @@ title: BaseContentAttachment
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
+| **id** | <!----><!---->**String**<!----> |  |  [optional] |
 | **filename** | <!----><!---->**String**<!----> |  |  [optional] |
 | **fileSize** | <!----><!---->**Double**<!----> |  |  [optional] |
 | **mediaType** | <!----><!---->[**MediaType**](MediaType.html)<!----> |  |  |

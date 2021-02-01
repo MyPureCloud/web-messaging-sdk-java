@@ -1,18 +1,22 @@
 package cloud.genesys.webmessaging.sdk;
 
 import cloud.genesys.webmessaging.sdk.model.*;
+import cloud.genesys.webmessaging.sdk.api.WebMessagingApi;
+import cloud.genesys.webmessaging.sdk.api.request.GetWebmessagingDeploymentSessionMessagesRequest;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
+import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.WebSocket;
 import java.net.http.WebSocket.Listener;
 import java.util.ArrayList;
 import java.util.EventListener;
+import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
@@ -21,11 +25,14 @@ import java.util.concurrent.CompletionStage;
  * A client used to connect to a Web Messaging session
  */
 public class WebMessagingClient {
-    private final String address;
+    private final String webSocketAddress;
     private WebSocket webSocket;
     private String token;
+    private String deploymentId;
+    private String sessionId;
     private final ObjectMapper objectMapper = new ObjectMapper();
     private final ArrayList<SessionListener> sessionListeners = new ArrayList<>();
+    private ApiClient apiClient;
 
     /**
      * Creates a new Web Messaging client
@@ -33,13 +40,22 @@ public class WebMessagingClient {
      * @param address The WebSocket server's address, including the wss:// protocol
      */
     public WebMessagingClient(String address) {
-        this.address = address;
+        this.webSocketAddress = address;
 
         objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
         objectMapper.enable(SerializationFeature.WRITE_ENUMS_USING_TO_STRING);
         objectMapper.enable(DeserializationFeature.READ_ENUMS_USING_TO_STRING);
         objectMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
         objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
+    }
+
+    /**
+     * Creates a new Web Messaging client
+     *
+     * @param region The WebSocket server's Genesys Cloud region
+     */
+    public WebMessagingClient(GenesysCloudRegionWebSocketHosts region) {
+        this(region.getWebSocketHost());
     }
 
     /**
@@ -102,13 +118,13 @@ public class WebMessagingClient {
             }
         };
         addSessionListener(listener);
-        connect();
+        connect(deploymentId);
     }
 
     /**
      * Establishes a connection to Genesys Cloud via a WebSocket
      */
-    public void connect() {
+    public void connect(String deploymentId) {
         // Create listener
         Listener listener = new Listener() {
             @Override
@@ -144,7 +160,7 @@ public class WebMessagingClient {
                 .newWebSocketBuilder()
                 .header("Origin", "https://asldfkjasldfijkalsdkfj.ru")
                 .header("deploymentId", "1234")
-                .buildAsync(URI.create(address), listener);
+                .buildAsync(URI.create(webSocketAddress + "?deploymentId=" + deploymentId), listener);
 
         // Connect to WebSocket server
         completableFuture.join();
@@ -170,6 +186,10 @@ public class WebMessagingClient {
     public void configureSession(String deploymentId, GuestInformation guestInformation, String token) {
         try {
             this.token = token;
+            this.deploymentId = deploymentId;
+            if (apiClient == null) {
+                initializeApiClient();
+            }
 
             // Create configuration request
             ConfigureSessionRequest configureSessionRequest = new ConfigureSessionRequest();
@@ -254,7 +274,7 @@ public class WebMessagingClient {
     }
 
     /**
-     * Invokes registered listeners for incoming WebSocket messages
+     * Invokes appropriate handler for incoming WebSocket messages
      *
      * @param rawResponse The raw message payload JSON as a string
      * @param event       The deserialized event object
@@ -277,7 +297,13 @@ public class WebMessagingClient {
         }
     }
 
-    void handleMessageReceived(String rawResponse, BaseMessage event) {
+    /**
+     * Invokes registered listeners for incoming WebSocket messages
+     *
+     * @param rawResponse The raw message payload JSON as a string
+     * @param event       The deserialized event object
+     */
+    private void handleMessageReceived(String rawResponse, BaseMessage event) {
         Class<?> messageClass;
         try {
             messageClass = Class.forName(getClass().getPackageName() + ".model." + event.getClassProperty().toString());
@@ -296,7 +322,13 @@ public class WebMessagingClient {
         }
     }
 
-    void handleResponseReceived(String rawResponse, BaseMessage event) {
+    /**
+     * Invokes registered listeners for incoming WebSocket responses
+     *
+     * @param rawResponse The raw message payload JSON as a string
+     * @param event       The deserialized event object
+     */
+    private void handleResponseReceived(String rawResponse, BaseMessage event) {
         Class<?> messageClass;
         try {
             messageClass = Class.forName(getClass().getPackageName() + ".model." + event.getClassProperty().toString());
@@ -305,6 +337,7 @@ public class WebMessagingClient {
             return;
         }
         SessionResponse sessionResponse = (SessionResponse) objectMapper.convertValue(event.getBody(), messageClass);
+        sessionId = sessionResponse.getSessionId();
 
         // Invoke each listener
         for (SessionListener sessionListener : sessionListeners) {
@@ -315,7 +348,13 @@ public class WebMessagingClient {
         }
     }
 
-    void handleUnknownMessageReceived(String rawResponse, BaseMessage event) {
+    /**
+     * Invokes registered listeners for incoming WebSocket messages of unknown type
+     *
+     * @param rawResponse The raw message payload JSON as a string
+     * @param event       The deserialized event object
+     */
+    private void handleUnknownMessageReceived(String rawResponse, BaseMessage event) {
         // Invoke each listener
         for (SessionListener sessionListener : sessionListeners) {
             // Send raw message text
@@ -325,7 +364,13 @@ public class WebMessagingClient {
         }
     }
 
-    void handleSessionConfigureRequest(String rawResponse, ConfigureSessionRequest request) {
+    /**
+     * Invokes registered listeners for incoming WebSocket configuration requests
+     *
+     * @param rawResponse The raw message payload JSON as a string
+     * @param request       The deserialized request object
+     */
+    private void handleSessionConfigureRequest(String rawResponse, ConfigureSessionRequest request) {
         // Invoke each listener
         for (SessionListener sessionListener : sessionListeners) {
             // Send raw message text
@@ -335,7 +380,13 @@ public class WebMessagingClient {
         }
     }
 
-    void handleEchoNotification(String rawResponse, EchoNotification notification) {
+    /**
+     * Invokes registered listeners for incoming WebSocket ping messages
+     *
+     * @param rawResponse The raw message payload JSON as a string
+     * @param notification       The deserialized notification object
+     */
+    private void handleEchoNotification(String rawResponse, EchoNotification notification) {
         // Invoke each listener
         for (SessionListener sessionListener : sessionListeners) {
             // Send raw message text
@@ -391,6 +442,63 @@ public class WebMessagingClient {
      */
     public void removeSessionListener(SessionListener sessionListener) {
         sessionListeners.removeIf(l -> l.equals(sessionListener));
+    }
+
+    /**
+     * Retrieves the the messages for a web messaging session.
+     *
+     * @return WebMessagingMessageEntityList
+     * @throws WebMessagingException if the request fails on the server
+     * @throws IOException if the request fails to be processed
+     */
+    public WebMessagingMessageEntityList getHistory() throws IOException, WebMessagingException {
+        if (apiClient == null) {
+            throw new WebMessagingException(new Exception("A conversation must be joined before the history can be retrieved"));
+        }
+        GetWebmessagingDeploymentSessionMessagesRequest request = GetWebmessagingDeploymentSessionMessagesRequest.builder()
+                .withDeploymentId(deploymentId)
+                .withSessionId(sessionId)
+                .withPageSize(100)
+                .build();
+
+        WebMessagingApi webMessagingApi = new WebMessagingApi();
+
+        WebMessagingMessageEntityList messageEntityList = webMessagingApi.getWebmessagingDeploymentSessionMessages(request);
+        List<WebMessagingMessage> list = messageEntityList.getEntities();
+
+        int pageNumber = 2;
+        do {
+            request.setPageNumber(pageNumber++);
+            messageEntityList = webMessagingApi.getWebmessagingDeploymentSessionMessages(request);
+            list.addAll(messageEntityList.getEntities());
+        } while (messageEntityList.getEntities().size() > 0);
+
+        return messageEntityList.entities(list);
+    }
+
+    /**
+     * Initializes the ApiClient used to make requests to the webmessaging API endpoint
+     */
+    private void initializeApiClient() {
+        String basePath = GenesysCloudRegionWebSocketHosts.asApiHost(webSocketAddress);
+
+        apiClient = ApiClient.Builder.standard()
+                .withBasePath(basePath)
+                .withAccessToken(token)
+                .build();
+
+        // Use the ApiClient instance
+        Configuration.setDefaultApiClient(apiClient);
+    }
+
+    /**
+     * Adds a custom ApiClient used for API requests
+     *
+     * @param apiClient An instance of <code>ApiClient</code>
+     */
+    public void setApiClient(ApiClient apiClient) {
+        this.apiClient = apiClient;
+        Configuration.setDefaultApiClient(this.apiClient);
     }
 
     /**

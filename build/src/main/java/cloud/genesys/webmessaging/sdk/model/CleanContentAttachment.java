@@ -15,6 +15,7 @@ import java.io.Serializable;
 
 public class CleanContentAttachment  implements Serializable {
   
+  private String id = null;
   private String filename = null;
   private Double fileSize = null;
   private MediaType mediaType = null;
@@ -22,8 +23,23 @@ public class CleanContentAttachment  implements Serializable {
   private String sha256 = null;
   private String text = null;
   private String url = null;
-  private String id = null;
-  private String fileName = null;
+
+  
+  /**
+   **/
+  public CleanContentAttachment id(String id) {
+    this.id = id;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("id")
+  public String getId() {
+    return id;
+  }
+  public void setId(String id) {
+    this.id = id;
+  }
 
   
   /**
@@ -145,40 +161,6 @@ public class CleanContentAttachment  implements Serializable {
   }
 
   
-  /**
-   **/
-  public CleanContentAttachment id(String id) {
-    this.id = id;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("id")
-  public String getId() {
-    return id;
-  }
-  public void setId(String id) {
-    this.id = id;
-  }
-
-  
-  /**
-   **/
-  public CleanContentAttachment fileName(String fileName) {
-    this.fileName = fileName;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("fileName")
-  public String getFileName() {
-    return fileName;
-  }
-  public void setFileName(String fileName) {
-    this.fileName = fileName;
-  }
-
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -189,20 +171,19 @@ public class CleanContentAttachment  implements Serializable {
       return false;
     }
     CleanContentAttachment cleanContentAttachment = (CleanContentAttachment) o;
-    return Objects.equals(this.filename, cleanContentAttachment.filename) &&
+    return Objects.equals(this.id, cleanContentAttachment.id) &&
+        Objects.equals(this.filename, cleanContentAttachment.filename) &&
         Objects.equals(this.fileSize, cleanContentAttachment.fileSize) &&
         Objects.equals(this.mediaType, cleanContentAttachment.mediaType) &&
         Objects.equals(this.mime, cleanContentAttachment.mime) &&
         Objects.equals(this.sha256, cleanContentAttachment.sha256) &&
         Objects.equals(this.text, cleanContentAttachment.text) &&
-        Objects.equals(this.url, cleanContentAttachment.url) &&
-        Objects.equals(this.id, cleanContentAttachment.id) &&
-        Objects.equals(this.fileName, cleanContentAttachment.fileName);
+        Objects.equals(this.url, cleanContentAttachment.url);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(filename, fileSize, mediaType, mime, sha256, text, url, id, fileName);
+    return Objects.hash(id, filename, fileSize, mediaType, mime, sha256, text, url);
   }
 
   @Override
@@ -210,6 +191,7 @@ public class CleanContentAttachment  implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class CleanContentAttachment {\n");
     
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    filename: ").append(toIndentedString(filename)).append("\n");
     sb.append("    fileSize: ").append(toIndentedString(fileSize)).append("\n");
     sb.append("    mediaType: ").append(toIndentedString(mediaType)).append("\n");
@@ -217,8 +199,6 @@ public class CleanContentAttachment  implements Serializable {
     sb.append("    sha256: ").append(toIndentedString(sha256)).append("\n");
     sb.append("    text: ").append(toIndentedString(text)).append("\n");
     sb.append("    url: ").append(toIndentedString(url)).append("\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    fileName: ").append(toIndentedString(fileName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

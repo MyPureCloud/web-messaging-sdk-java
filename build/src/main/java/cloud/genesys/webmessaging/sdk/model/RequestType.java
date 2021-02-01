@@ -13,6 +13,8 @@ public enum RequestType {
   CONFIGURESESSION("configureSession"),
   CONFIGURESESSIONAUTHENTICATED("configureSessionAuthenticated"),
   ONGENERATEUPLOADURL("onGenerateUploadUrl"),
+  ONGENERATEDOWNLOADURL("onGenerateDownloadUrl"),
+  DELETEATTACHMENT("deleteAttachment"),
   ONMESSAGE("onMessage"),
   CLOSESESSION("closeSession"),
   ECHO("echo");

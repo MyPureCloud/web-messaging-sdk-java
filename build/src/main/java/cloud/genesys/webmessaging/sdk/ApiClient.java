@@ -19,7 +19,6 @@ import java.time.LocalDate;
 import java.util.*;
 import java.util.Map.Entry;
 import java.util.concurrent.Future;
-import cloud.genesys.webmessaging.sdk.extensions.AuthResponse;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.httpclient.UsernamePasswordCredentials;
 import org.apache.commons.httpclient.auth.BasicScheme;
@@ -53,12 +52,9 @@ import javax.xml.bind.DatatypeConverter;
 
 import com.google.common.util.concurrent.SettableFuture;
 
-import cloud.genesys.webmessaging.sdk.auth.ApiKeyAuth;
 import cloud.genesys.webmessaging.sdk.auth.Authentication;
 import cloud.genesys.webmessaging.sdk.auth.OAuth;
 import cloud.genesys.webmessaging.sdk.connector.*;
-import cloud.genesys.webmessaging.sdk.extensions.AuthResponse;
-
 
 
 public class ApiClient implements AutoCloseable {
@@ -68,8 +64,6 @@ public class ApiClient implements AutoCloseable {
 
     private static Map<String, Authentication> buildAuthentications() {
         Map<String, Authentication> authentications = new HashMap<>();
-        authentications.put("PureCloud OAuth", new OAuth());
-        authentications.put("Guest Chat JWT", new ApiKeyAuth("header", "Authorization"));
 
         return Collections.unmodifiableMap(authentications);
     }
@@ -554,91 +548,8 @@ public class ApiClient implements AutoCloseable {
         }
     }
 
-    private <T> Future<ApiResponse<T>> getAPIResponseAsync(ApiRequest<?> request, final TypeReference<T> returnType, final AsyncApiCallback<ApiResponse<T>> callback) {
-        final SettableFuture<ApiResponse<T>> future = SettableFuture.create();
-        try {
-            ApiClientConnectorRequest connectorRequest = prepareConnectorRequest(request, false);
-            Retry retry = new Retry(retryConfiguration);
-            getAPIResponseAsyncWithRetry(connectorRequest, returnType, callback, retry, future);
-        } catch (Throwable exception) {
-            notifyFailure(future, callback, exception);
-        }
-        return future;
-    }
-
-    private <T> void getAPIResponseAsyncWithRetry(final ApiClientConnectorRequest connectorRequest,
-                                                  final TypeReference<T> returnType,
-                                                  final AsyncApiCallback<ApiResponse<T>> callback,
-                                                  final Retry retry,
-                                                  final SettableFuture<ApiResponse<T>> future) {
-        try {
-            connector.invokeAsync(connectorRequest, new AsyncApiCallback<ApiClientConnectorResponse>() {
-                @Override
-                public void onCompleted(ApiClientConnectorResponse connectorResponse) {
-                    try {
-                        ApiResponse<T> response;
-                        if (!retry.shouldRetry(connectorResponse)) {
-                            try {
-                                response = interpretConnectorResponse(connectorResponse, returnType);
-                            } finally {
-                                connectorResponse.close();
-                            }
-                            notifySuccess(future, callback, response);
-                            return;
-                        }
-                        getAPIResponseAsyncWithRetry(connectorRequest, returnType, callback, retry, future);
-
-                    } catch (Throwable exception) {
-                        notifyFailure(future, callback, exception);
-                    }
-                }
-
-                @Override
-                public void onFailed(Throwable exception) {
-                    notifyFailure(future, callback, exception);
-                }
-            });
-        } catch (Throwable exception) {
-            notifyFailure(future, callback, exception);
-        }
-    }
-
-    private <T> void notifySuccess(SettableFuture<T> future, AsyncApiCallback<T> callback, T result) {
-        if (callback != null) {
-            try {
-                callback.onCompleted(result);
-                future.set(result);
-            }
-            catch (Throwable exception) {
-                future.setException(exception);
-            }
-        }
-        else {
-            future.set(result);
-        }
-    }
-
-    private <T> void notifyFailure(SettableFuture<T> future, AsyncApiCallback<T> callback, Throwable exception) {
-        if (callback != null) {
-            try {
-                callback.onFailed(exception);
-                future.setException(exception);
-            }
-            catch (Throwable callbackException) {
-                future.setException(callbackException);
-            }
-        }
-        else {
-            future.setException(exception);
-        }
-    }
-
     public <T> ApiResponse<T> invoke(ApiRequest<?> request, TypeReference<T> returnType) throws WebMessagingException, IOException {
         return getAPIResponse(request, returnType, false);
-    }
-
-    public <T> Future<ApiResponse<T>> invokeAsync(ApiRequest<?> request, TypeReference<T> returnType, AsyncApiCallback<ApiResponse<T>> callback) {
-        return getAPIResponseAsync(request, returnType, callback);
     }
 
     /**
@@ -751,8 +662,8 @@ public class ApiClient implements AutoCloseable {
             this.basePath = basePath;
             return this;
         }
-         public Builder withBasePath(GenesysCloudRegionHosts region){
-            this.basePath = region.getApiHost();
+         public Builder withBasePath(GenesysCloudRegionWebSocketHosts region){
+            this.basePath = region.asApiHost();
             return this;
         }
 

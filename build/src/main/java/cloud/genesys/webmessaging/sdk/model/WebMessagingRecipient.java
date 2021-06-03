@@ -2,16 +2,22 @@ package cloud.genesys.webmessaging.sdk.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.DeserializationContext;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
+import java.io.IOException;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.io.Serializable;
 /**
- * Information about the sender or receiver of a message
+ * Information about the recipient the message is sent to or received from.
  */
-@ApiModel(description = "Information about the sender or receiver of a message")
+@ApiModel(description = "Information about the recipient the message is sent to or received from.")
 
 public class WebMessagingRecipient  implements Serializable {
   
@@ -20,21 +26,21 @@ public class WebMessagingRecipient  implements Serializable {
   private String nickname = null;
 
   
-  @ApiModelProperty(example = "null", value = "The first name of the sender/receiver")
+  @ApiModelProperty(example = "null", value = "First name of the recipient.")
   @JsonProperty("firstName")
   public String getFirstName() {
     return firstName;
   }
 
   
-  @ApiModelProperty(example = "null", value = "The last name of the sender/receiver")
+  @ApiModelProperty(example = "null", value = "Last name of the recipient.")
   @JsonProperty("lastName")
   public String getLastName() {
     return lastName;
   }
 
   
-  @ApiModelProperty(example = "null", value = "The nickname of the sender/receiver")
+  @ApiModelProperty(example = "null", value = "Nickname or display name of the recipient.")
   @JsonProperty("nickname")
   public String getNickname() {
     return nickname;

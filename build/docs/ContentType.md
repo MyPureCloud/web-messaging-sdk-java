@@ -11,6 +11,8 @@ title: ContentType
 
 * `ATTACHMENT` (value: `"Attachment"`)
 
+* `BUTTONRESPONSE` (value: `"ButtonResponse"`)
+
 * `GENERICTEMPLATE` (value: `"GenericTemplate"`)
 
 * `LISTTEMPLATE` (value: `"ListTemplate"`)
@@ -20,6 +22,8 @@ title: ContentType
 * `MENTION` (value: `"Mention"`)
 
 * `NOTIFICATION` (value: `"Notification"`)
+
+* `POSTBACK` (value: `"Postback"`)
 
 * `QUICKREPLY` (value: `"QuickReply"`)
 

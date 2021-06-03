@@ -2,7 +2,13 @@ package cloud.genesys.webmessaging.sdk.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.DeserializationContext;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
+import java.io.IOException;
 import cloud.genesys.webmessaging.sdk.model.WebMessagingRecipient;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
@@ -11,9 +17,9 @@ import java.util.Date;
 
 import java.io.Serializable;
 /**
- * Additional information about a web messaging message and its delivery
+ * Channel-specific information that describes the message and the message channel/provider.
  */
-@ApiModel(description = "Additional information about a web messaging message and its delivery")
+@ApiModel(description = "Channel-specific information that describes the message and the message channel/provider.")
 
 public class WebMessagingChannel  implements Serializable {
   
@@ -23,14 +29,14 @@ public class WebMessagingChannel  implements Serializable {
 
   
   /**
-   * Who sent the message
+   * Information about the recipient the message is received from.
    **/
   public WebMessagingChannel from(WebMessagingRecipient from) {
     this.from = from;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Who sent the message")
+  @ApiModelProperty(example = "null", value = "Information about the recipient the message is received from.")
   @JsonProperty("from")
   public WebMessagingRecipient getFrom() {
     return from;
@@ -41,14 +47,14 @@ public class WebMessagingChannel  implements Serializable {
 
   
   /**
-   * Who the message was sent to
+   * Information about the recipient the message is sent to.
    **/
   public WebMessagingChannel to(WebMessagingRecipient to) {
     this.to = to;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Who the message was sent to")
+  @ApiModelProperty(example = "null", value = "Information about the recipient the message is sent to.")
   @JsonProperty("to")
   public WebMessagingRecipient getTo() {
     return to;

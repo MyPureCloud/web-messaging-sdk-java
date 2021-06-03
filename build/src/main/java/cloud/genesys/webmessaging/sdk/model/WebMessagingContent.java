@@ -2,8 +2,16 @@ package cloud.genesys.webmessaging.sdk.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.DeserializationContext;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
+import java.io.IOException;
 import cloud.genesys.webmessaging.sdk.model.WebMessagingAttachment;
+import cloud.genesys.webmessaging.sdk.model.WebMessagingButtonResponse;
+import cloud.genesys.webmessaging.sdk.model.WebMessagingQuickReply;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
@@ -11,19 +19,34 @@ import io.swagger.annotations.ApiModelProperty;
 
 import java.io.Serializable;
 /**
- * Optional, additional message content
+ * Message content element.
  */
-@ApiModel(description = "Optional, additional message content")
+@ApiModel(description = "Message content element.")
 
 public class WebMessagingContent  implements Serializable {
   
 
+  private static class ContentTypeEnumDeserializer extends StdDeserializer<ContentTypeEnum> {
+    public ContentTypeEnumDeserializer() {
+      super(ContentTypeEnumDeserializer.class);
+    }
+
+    @Override
+    public ContentTypeEnum deserialize(JsonParser jsonParser, DeserializationContext ctxt)
+            throws IOException {
+      JsonNode node = jsonParser.getCodec().readTree(jsonParser);
+      return ContentTypeEnum.fromString(node.toString().replace("\"", ""));
+    }
+  }
   /**
-   * The type of content
+   * Type of this content element. If contentType = \"Attachment\" only one item is allowed.
    */
+ @JsonDeserialize(using = ContentTypeEnumDeserializer.class)
   public enum ContentTypeEnum {
     OUTDATEDSDKVERSION("OutdatedSdkVersion"),
-    ATTACHMENT("Attachment");
+    ATTACHMENT("Attachment"),
+    QUICKREPLY("QuickReply"),
+    BUTTONRESPONSE("ButtonResponse");
 
     private String value;
 
@@ -52,9 +75,11 @@ public class WebMessagingContent  implements Serializable {
   }
   private ContentTypeEnum contentType = null;
   private WebMessagingAttachment attachment = null;
+  private WebMessagingQuickReply quickReply = null;
+  private WebMessagingButtonResponse buttonResponse = null;
 
   
-  @ApiModelProperty(example = "null", value = "The type of content")
+  @ApiModelProperty(example = "null", value = "Type of this content element. If contentType = \"Attachment\" only one item is allowed.")
   @JsonProperty("contentType")
   public ContentTypeEnum getContentType() {
     return contentType;
@@ -62,20 +87,56 @@ public class WebMessagingContent  implements Serializable {
 
   
   /**
-   * Details of the content when it an Attachment
+   * Attachment content.
    **/
   public WebMessagingContent attachment(WebMessagingAttachment attachment) {
     this.attachment = attachment;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Details of the content when it an Attachment")
+  @ApiModelProperty(example = "null", value = "Attachment content.")
   @JsonProperty("attachment")
   public WebMessagingAttachment getAttachment() {
     return attachment;
   }
   public void setAttachment(WebMessagingAttachment attachment) {
     this.attachment = attachment;
+  }
+
+  
+  /**
+   * Quick reply content.
+   **/
+  public WebMessagingContent quickReply(WebMessagingQuickReply quickReply) {
+    this.quickReply = quickReply;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Quick reply content.")
+  @JsonProperty("quickReply")
+  public WebMessagingQuickReply getQuickReply() {
+    return quickReply;
+  }
+  public void setQuickReply(WebMessagingQuickReply quickReply) {
+    this.quickReply = quickReply;
+  }
+
+  
+  /**
+   * Button response content.
+   **/
+  public WebMessagingContent buttonResponse(WebMessagingButtonResponse buttonResponse) {
+    this.buttonResponse = buttonResponse;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Button response content.")
+  @JsonProperty("buttonResponse")
+  public WebMessagingButtonResponse getButtonResponse() {
+    return buttonResponse;
+  }
+  public void setButtonResponse(WebMessagingButtonResponse buttonResponse) {
+    this.buttonResponse = buttonResponse;
   }
 
   
@@ -90,12 +151,14 @@ public class WebMessagingContent  implements Serializable {
     }
     WebMessagingContent webMessagingContent = (WebMessagingContent) o;
     return Objects.equals(this.contentType, webMessagingContent.contentType) &&
-        Objects.equals(this.attachment, webMessagingContent.attachment);
+        Objects.equals(this.attachment, webMessagingContent.attachment) &&
+        Objects.equals(this.quickReply, webMessagingContent.quickReply) &&
+        Objects.equals(this.buttonResponse, webMessagingContent.buttonResponse);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(contentType, attachment);
+    return Objects.hash(contentType, attachment, quickReply, buttonResponse);
   }
 
   @Override
@@ -105,6 +168,8 @@ public class WebMessagingContent  implements Serializable {
     
     sb.append("    contentType: ").append(toIndentedString(contentType)).append("\n");
     sb.append("    attachment: ").append(toIndentedString(attachment)).append("\n");
+    sb.append("    quickReply: ").append(toIndentedString(quickReply)).append("\n");
+    sb.append("    buttonResponse: ").append(toIndentedString(buttonResponse)).append("\n");
     sb.append("}");
     return sb.toString();
   }

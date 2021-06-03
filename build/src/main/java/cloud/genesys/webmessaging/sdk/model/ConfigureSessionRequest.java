@@ -2,8 +2,13 @@ package cloud.genesys.webmessaging.sdk.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.DeserializationContext;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
-import cloud.genesys.webmessaging.sdk.model.GuestInformation;
+import java.io.IOException;
 import cloud.genesys.webmessaging.sdk.model.JourneyContext;
 import cloud.genesys.webmessaging.sdk.model.RequestTypeConfigureSession;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -20,7 +25,6 @@ public class ConfigureSessionRequest  implements Serializable {
   private RequestTypeConfigureSession action = null;
   private String deploymentId = null;
   private String token = null;
-  private GuestInformation guestInformation = null;
   private JourneyContext journeyContext = null;
 
   
@@ -77,23 +81,6 @@ public class ConfigureSessionRequest  implements Serializable {
   
   /**
    **/
-  public ConfigureSessionRequest guestInformation(GuestInformation guestInformation) {
-    this.guestInformation = guestInformation;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("guestInformation")
-  public GuestInformation getGuestInformation() {
-    return guestInformation;
-  }
-  public void setGuestInformation(GuestInformation guestInformation) {
-    this.guestInformation = guestInformation;
-  }
-
-  
-  /**
-   **/
   public ConfigureSessionRequest journeyContext(JourneyContext journeyContext) {
     this.journeyContext = journeyContext;
     return this;
@@ -122,13 +109,12 @@ public class ConfigureSessionRequest  implements Serializable {
     return Objects.equals(this.action, configureSessionRequest.action) &&
         Objects.equals(this.deploymentId, configureSessionRequest.deploymentId) &&
         Objects.equals(this.token, configureSessionRequest.token) &&
-        Objects.equals(this.guestInformation, configureSessionRequest.guestInformation) &&
         Objects.equals(this.journeyContext, configureSessionRequest.journeyContext);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(action, deploymentId, token, guestInformation, journeyContext);
+    return Objects.hash(action, deploymentId, token, journeyContext);
   }
 
   @Override
@@ -139,7 +125,6 @@ public class ConfigureSessionRequest  implements Serializable {
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
     sb.append("    deploymentId: ").append(toIndentedString(deploymentId)).append("\n");
     sb.append("    token: ").append(toIndentedString(token)).append("\n");
-    sb.append("    guestInformation: ").append(toIndentedString(guestInformation)).append("\n");
     sb.append("    journeyContext: ").append(toIndentedString(journeyContext)).append("\n");
     sb.append("}");
     return sb.toString();

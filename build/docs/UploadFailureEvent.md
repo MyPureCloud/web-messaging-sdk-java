@@ -9,7 +9,7 @@ title: UploadFailureEvent
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
 | **attachmentId** | <!----><!---->**String**<!----> |  |  |
-| **errorCode** | <!----><!---->**Double**<!----> |  |  |
+| **errorCode** | <!----><!---->**Integer**<!----> |  |  |
 | **errorMessage** | <!----><!---->**String**<!----> |  |  |
 | **timestamp** | <!----><!---->**String**<!----> |  |  |
 {: class="table table-striped"}

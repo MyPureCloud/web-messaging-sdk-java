@@ -12,7 +12,7 @@ title: PresignedUrlResponse
 | **headers** | <!----><!---->**Map&lt;String, String&gt;**<!----> |  |  |
 | **url** | <!----><!---->**String**<!----> |  |  |
 | **fileName** | <!----><!---->**String**<!----> |  |  [optional] |
-| **fileSize** | <!----><!---->**Double**<!----> |  |  [optional] |
+| **fileSize** | <!----><!---->**Integer**<!----> |  |  [optional] |
 | **fileType** | <!----><!---->**String**<!----> |  |  [optional] |
 {: class="table table-striped"}
 

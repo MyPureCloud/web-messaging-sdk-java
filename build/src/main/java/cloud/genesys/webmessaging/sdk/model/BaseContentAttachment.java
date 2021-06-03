@@ -2,7 +2,13 @@ package cloud.genesys.webmessaging.sdk.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.DeserializationContext;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
+import java.io.IOException;
 import cloud.genesys.webmessaging.sdk.model.MediaType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
@@ -17,7 +23,7 @@ public class BaseContentAttachment  implements Serializable {
   
   private String id = null;
   private String filename = null;
-  private Double fileSize = null;
+  private Integer fileSize = null;
   private MediaType mediaType = null;
   private String mime = null;
   private String sha256 = null;
@@ -61,17 +67,17 @@ public class BaseContentAttachment  implements Serializable {
   
   /**
    **/
-  public BaseContentAttachment fileSize(Double fileSize) {
+  public BaseContentAttachment fileSize(Integer fileSize) {
     this.fileSize = fileSize;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("fileSize")
-  public Double getFileSize() {
+  public Integer getFileSize() {
     return fileSize;
   }
-  public void setFileSize(Double fileSize) {
+  public void setFileSize(Integer fileSize) {
     this.fileSize = fileSize;
   }
 

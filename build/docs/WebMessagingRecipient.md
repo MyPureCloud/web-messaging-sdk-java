@@ -8,9 +8,9 @@ title: WebMessagingRecipient
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **firstName** | <!----><!---->**String**<!----> | The first name of the sender/receiver |  [optional] |
-| **lastName** | <!----><!---->**String**<!----> | The last name of the sender/receiver |  [optional] |
-| **nickname** | <!----><!---->**String**<!----> | The nickname of the sender/receiver |  [optional] |
+| **firstName** | <!----><!---->**String**<!----> | First name of the recipient. |  [optional] |
+| **lastName** | <!----><!---->**String**<!----> | Last name of the recipient. |  [optional] |
+| **nickname** | <!----><!---->**String**<!----> | Nickname or display name of the recipient. |  [optional] |
 {: class="table table-striped"}
 
 

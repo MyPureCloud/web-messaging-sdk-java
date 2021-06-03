@@ -2,18 +2,37 @@ package cloud.genesys.webmessaging.sdk.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.DeserializationContext;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
+import java.io.IOException;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 import java.io.Serializable;
+class RequestTypeDeserializer extends StdDeserializer<RequestType> {
+  public RequestTypeDeserializer() {
+    super(RequestTypeDeserializer.class);
+  }
+
+  @Override
+  public RequestType deserialize(JsonParser jsonParser, DeserializationContext ctxt)
+          throws IOException {
+    JsonNode node = jsonParser.getCodec().readTree(jsonParser);
+    return RequestType.fromString(node.toString().replace("\"", ""));
+  }
+}
 /**
  * Gets or Sets RequestType
  */
+ @JsonDeserialize(using = RequestTypeDeserializer.class)
 public enum RequestType {
   CONFIGURESESSION("configureSession"),
   CONFIGURESESSIONAUTHENTICATED("configureSessionAuthenticated"),
-  ONGENERATEUPLOADURL("onGenerateUploadUrl"),
-  ONGENERATEDOWNLOADURL("onGenerateDownloadUrl"),
+  ONATTACHMENT("onAttachment"),
+  GETATTACHMENT("getAttachment"),
   DELETEATTACHMENT("deleteAttachment"),
   ONMESSAGE("onMessage"),
   CLOSESESSION("closeSession"),

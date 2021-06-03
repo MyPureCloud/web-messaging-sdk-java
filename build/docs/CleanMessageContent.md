@@ -10,6 +10,8 @@ title: CleanMessageContent
 | ------------ | ------------- | ------------- | ------------- |
 | **attachment** | <!----><!---->[**CleanContentAttachment**](CleanContentAttachment.html)<!----> |  |  [optional] |
 | **contentType** | <!----><!---->[**ContentType**](ContentType.html)<!----> |  |  |
+| **buttonResponse** | <!----><!---->[**ContentButtonResponse**](ContentButtonResponse.html)<!----> |  |  [optional] |
+| **quickReply** | <!----><!---->[**ContentQuickReply**](ContentQuickReply.html)<!----> |  |  [optional] |
 {: class="table table-striped"}
 
 

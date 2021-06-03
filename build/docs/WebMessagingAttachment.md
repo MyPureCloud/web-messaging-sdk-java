@@ -8,12 +8,13 @@ title: WebMessagingAttachment
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **mediaType** | [**MediaTypeEnum**](#MediaTypeEnum)<!----> | The type of media represented by the file |  [optional] |
-| **url** | <!----><!---->**String**<!----> | The url of the file |  [optional] |
-| **mime** | <!----><!---->**String**<!----> | The mime type, also known as the IANA media type, of the file.  E.g. image/jpeg.  See https://www.iana.org/assignments/media-types/media-types.xhtml |  [optional] |
-| **text** | <!----><!---->**String**<!----> | Optional text about the file |  [optional] |
-| **sha256** | <!----><!---->**String**<!----> | A 256 bit secure hash of the file |  [optional] |
-| **filename** | <!----><!---->**String**<!----> | The file name associated with the file |  [optional] |
+| **id** | <!----><!---->**String**<!----> | The globally unique identifier for the object. |  [optional] |
+| **mediaType** | [**MediaTypeEnum**](#MediaTypeEnum)<!----> | The type of attachment this instance represents. |  [optional] |
+| **url** | <!----><!---->**String**<!----> | URL of the attachment. |  [optional] |
+| **mime** | <!----><!---->**String**<!----> | Attachment mime type (https://www.iana.org/assignments/media-types/media-types.xhtml). |  [optional] |
+| **text** | <!----><!---->**String**<!----> | Text associated with attachment such as an image caption. |  [optional] |
+| **sha256** | <!----><!---->**String**<!----> | Secure hash of the attachment content. |  [optional] |
+| **filename** | <!----><!---->**String**<!----> | Suggested file name for attachment. |  [optional] |
 | **fileSize** | <!----><!---->**Integer**<!----> | The file size associated with the file |  [optional] |
 {: class="table table-striped"}
 

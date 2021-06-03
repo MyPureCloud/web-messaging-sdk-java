@@ -8,8 +8,10 @@ title: WebMessagingContent
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **contentType** | [**ContentTypeEnum**](#ContentTypeEnum)<!----> | The type of content |  [optional] |
-| **attachment** | <!----><!---->[**WebMessagingAttachment**](WebMessagingAttachment.html)<!----> | Details of the content when it an Attachment |  [optional] |
+| **contentType** | [**ContentTypeEnum**](#ContentTypeEnum)<!----> | Type of this content element. If contentType = \&quot;Attachment\&quot; only one item is allowed. |  [optional] |
+| **attachment** | <!----><!---->[**WebMessagingAttachment**](WebMessagingAttachment.html)<!----> | Attachment content. |  [optional] |
+| **quickReply** | <!----><!---->[**WebMessagingQuickReply**](WebMessagingQuickReply.html)<!----> | Quick reply content. |  [optional] |
+| **buttonResponse** | <!----><!---->[**WebMessagingButtonResponse**](WebMessagingButtonResponse.html)<!----> | Button response content. |  [optional] |
 {: class="table table-striped"}
 
 
@@ -21,6 +23,8 @@ title: WebMessagingContent
 | ---- | ----- |
 | OUTDATEDSDKVERSION | &quot;OutdatedSdkVersion&quot; |
 | ATTACHMENT | &quot;Attachment&quot; |
+| QUICKREPLY | &quot;QuickReply&quot; |
+| BUTTONRESPONSE | &quot;ButtonResponse&quot; |
 {: class="table table-striped"}
 
 

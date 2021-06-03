@@ -1,40 +1,104 @@
-Platform API version: 4430
+Platform API version: 4742
 
 
-# Major Changes (2 changes)
+# Major Changes (9 changes)
 
-**UploadSuccessEvent** (1 change)
+**GuestInformation** (1 change)
 
-* Required property timestamp was added
+* Model GuestInformation was removed
 
-**CleanContentAttachment** (1 change)
+**IncomingMessageNotification** (1 change)
 
-* Property fileName was removed
+* Model IncomingMessageNotification was removed
 
+**EchoNotification** (1 change)
 
-# Minor Changes (7 changes)
+* Model EchoNotification was removed
 
-**SessionResponse** (1 change)
+**ConfigureSessionRequest** (1 change)
 
-* Optional property newSession was added
+* Property guestInformation was removed
 
-**PresignedUrlResponse** (3 changes)
+**IncomingNormalizedMessage** (2 changes)
 
-* Optional property fileName was added
-* Optional property fileSize was added
-* Optional property fileType was added
+* Required property quickReplyId was added
+* Required property quickReplyPayload was added
 
-**AttachmentDeletedResponse** (1 change)
+**PresignedUrlResponse** (1 change)
 
-* Model was added
+* Property fileSize was changed from number to integer
 
 **BaseContentAttachment** (1 change)
 
-* Optional property id was added
+* Property fileSize was changed from number to integer
 
 **UploadFailureEvent** (1 change)
 
+* Property errorCode was changed from number to integer
+
+
+# Minor Changes (16 changes)
+
+**RequestType.CloseSession** (1 change)
+
 * Model was added
+
+**CloseSessionRequest** (1 change)
+
+* Model was added
+
+**RequestType.DeleteAttachment** (1 change)
+
+* Model was added
+
+**DeleteAttachmentRequest** (1 change)
+
+* Model was added
+
+**RequestType.GenerateDownloadUrl** (1 change)
+
+* Model was added
+
+**GenerateDownloadUrlRequest** (1 change)
+
+* Model was added
+
+**RequestType.GenerateUploadUrl** (1 change)
+
+* Model was added
+
+**GenerateUploadUrlRequest** (1 change)
+
+* Model was added
+
+**SendMessageRequest** (1 change)
+
+* Model was added
+
+**SendEchoRequest** (1 change)
+
+* Model was added
+
+**ButtonResponseType** (1 change)
+
+* Model was added
+
+**ContentButtonResponse** (1 change)
+
+* Model was added
+
+**Action** (1 change)
+
+* Model was added
+
+**ContentQuickReply** (1 change)
+
+* Model was added
+
+**CleanMessageContent** (2 changes)
+
+* Optional property buttonResponse was added
+* Optional property quickReply was added
 
 
 # Point Changes (0 changes)

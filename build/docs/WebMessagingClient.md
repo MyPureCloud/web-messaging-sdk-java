@@ -17,28 +17,21 @@ title: WebMessagingClient
 | [**sendMessage**](WebMessagingClient.html#sendMessage1) | Sends a message to the conversation |
 | [**deserialize**](WebMessagingClient.html#deserialize1) | Deserializes a message payload |
 | [**onSessionEvent**](WebMessagingClient.html#onSessionEvent1) | Invokes appropriate handler for incoming WebSocket messages |
-| [**handleMessageReceived**](WebMessagingClient.html#handleMessageReceived1) | Invokes registered listeners for incoming WebSocket messages |
-| [**handleResponseReceived**](WebMessagingClient.html#handleResponseReceived1) | Invokes registered listeners for incoming WebSocket responses |
-| [**handleUnknownMessageReceived**](WebMessagingClient.html#handleUnknownMessageReceived1) | Invokes registered listeners for incoming WebSocket messages of unknown type |
-| [**handleSessionConfigureRequest**](WebMessagingClient.html#handleSessionConfigureRequest1) | Invokes registered listeners for incoming WebSocket configuration requests |
-| [**handleEchoNotification**](WebMessagingClient.html#handleEchoNotification1) | Invokes registered listeners for incoming WebSocket ping messages |
 | [**onWebSocketConnected**](WebMessagingClient.html#onWebSocketConnected1) | Invokes registered listeners when the connection to the remote server has been established |
 | [**onWebSocketDisconnected**](WebMessagingClient.html#onWebSocketDisconnected1) | Invokes registered listeners when the connection to the remote server has been closed |
-| [**onSessionReady**](WebMessagingClient.html#onSessionReady1) | Invokes registered listeners when the session is ready to begin sending and receiving messages |
 | [**addSessionListener**](WebMessagingClient.html#addSessionListener1) | Registers a <code>SessionListener</code> to receive events |
 | [**removeSessionListener**](WebMessagingClient.html#removeSessionListener1) | Unregisters a <code>SessionListener</code> object |
 | [**getHistory**](WebMessagingClient.html#getHistory1) | Retrieves the the messages for a web messaging session. |
 | [**initializeApiClient**](WebMessagingClient.html#initializeApiClient1) | Initializes the ApiClient used to make requests to the webmessaging API endpoint |
 | [**setApiClient**](WebMessagingClient.html#setApiClient1) | Adds a custom ApiClient used for API requests |
-| [**responseReceived**](WebMessagingClient.html#responseReceived1) | Raised for responses to sent messages (type == BaseResponseType.RESPONSE) |
-| [**messageReceived**](WebMessagingClient.html#messageReceived1) | Raised for incoming messages (type == BaseResponseType.MESSAGE) |
-| [**unknownMessageReceived**](WebMessagingClient.html#unknownMessageReceived1) | Raised for unmatched BaseResponseType |
-| [**rawMessageReceived**](WebMessagingClient.html#rawMessageReceived1) | Raised for all messages. Use this instead of the other methods when implementing fully custom payload deserialization. |
-| [**sessionConfigured**](WebMessagingClient.html#sessionConfigured1) | Raised when the session has been configured |
-| [**echoNotification**](WebMessagingClient.html#echoNotification1) | Raised for responses to echo messages |
+| [**sessionResponse**](WebMessagingClient.html#sessionResponse1) | Raised for responses to session requests (type == BaseResponseType.RESPONSE, class = SessionResponse) |
+| [**structuredMessage**](WebMessagingClient.html#structuredMessage1) | Raised for incoming messages (type == RESPONSE OR MESSAGE), class = StructuredMessage` |
+| [**presignedUrlResponse**](WebMessagingClient.html#presignedUrlResponse1) | Raised for responses to url requests (type == BaseResponseType.RESPONSE, class = PresignedUrlResponse) |
+| [**uploadSuccessEvent**](WebMessagingClient.html#uploadSuccessEvent1) | Raised for responses to url requests (type == BaseResponseType.RESPONSE, class = PresignedUrlResponse) |
+| [**uploadFailureEvent**](WebMessagingClient.html#uploadFailureEvent1) | Raised for responses to url requests (type == BaseResponseType.RESPONSE, class = PresignedUrlResponse) |
+| [**unexpectedMessage**](WebMessagingClient.html#unexpectedMessage1) | Raised for unmatched BaseResponseType |
 | [**webSocketConnected**](WebMessagingClient.html#webSocketConnected1) | Raised when the connection to the remote server has been established |
 | [**webSocketDisconnected**](WebMessagingClient.html#webSocketDisconnected1) | Raised when the connection to the remote server has been closed |
-| [**sessionReady**](WebMessagingClient.html#sessionReady1) | Raised when the session is ready to begin sending and receiving messages |
 {: class="table-striped"}
 
 <h1>Constructors</h1>
@@ -89,7 +82,7 @@ Creates a new Web Messaging client
 
 
 
-> void joinConversation(deploymentId, guestInformation, initialMessage)
+> void joinConversation(deploymentId, initialMessage)
 
 Full service operation to connect the WebSocket and configure the session
 
@@ -99,8 +92,7 @@ Full service operation to connect the WebSocket and configure the session
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **deploymentId** | **String**| The ID of the Web Messaging deployment |
-| **guestInformation** | **GuestInformation**| The guest's information |
-| **initialMessage** | **String**| The initial message to send once the session is ready   |
+| **initialMessage** | **String**| The initial message to send once the session is ready  |
 {: class="table-striped"}
 
 
@@ -114,7 +106,7 @@ Full service operation to connect the WebSocket and configure the session
 
 
 
-> void joinConversation(deploymentId, guestInformation, token, initialMessage)
+> void joinConversation(deploymentId, token, initialMessage)
 
 Full service operation to connect the WebSocket and configure the session
 
@@ -124,8 +116,7 @@ Full service operation to connect the WebSocket and configure the session
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **deploymentId** | **String**| The ID of the Web Messaging deployment |
-| **guestInformation** | **String**| The guest's information |
-| **token** | **GuestInformation**| The session token |
+| **token** | **String**| The session token |
 | **initialMessage** | **String**| The initial message to send once the session is ready   |
 {: class="table-striped"}
 
@@ -153,7 +144,7 @@ Establishes a connection to Genesys Cloud via a WebSocket
 
 
 
-> void configureSession(deploymentId, guestInformation)
+> void configureSession(deploymentId)
 
 Configures a new session with a randomly generated session token
 
@@ -162,8 +153,7 @@ Configures a new session with a randomly generated session token
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **deploymentId** | **GuestInformation**| The ID of the Web Messaging deployment |
-| **guestInformation** | **String**| The guest's information   |
+| **deploymentId** | **String**| The ID of the Web Messaging deployment   |
 {: class="table-striped"}
 
 
@@ -177,7 +167,7 @@ Configures a new session with a randomly generated session token
 
 
 
-> void configureSession(deploymentId, guestInformation, token)
+> void configureSession(deploymentId, token)
 
 Configures a session using the provided session token. This can be used to reconnect to active sessions.
 
@@ -187,7 +177,6 @@ Configures a session using the provided session token. This can be used to recon
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **deploymentId** | **String**| The ID of the Web Messaging deployment |
-| **guestInformation** | **GuestInformation**| The guest's information |
 | **token** | **String**| The session token   |
 {: class="table-striped"}
 
@@ -237,7 +226,7 @@ Sends a message to the conversation
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **message** | **String**| The text to send   |
+| **message** | **String...**| The text to send   |
 {: class="table-striped"}
 
 
@@ -293,126 +282,6 @@ Invokes appropriate handler for incoming WebSocket messages
 
 **void**
 
-<a name="handleMessageReceived1"></a>
-
-# **handleMessageReceived**
-
-
-
-> void handleMessageReceived(rawResponse, event)
-
-Invokes registered listeners for incoming WebSocket messages
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **rawResponse** | **BaseMessage**| The raw message payload JSON as a string |
-| **event** | **String**| The deserialized event object   |
-{: class="table-striped"}
-
-
-### Return type
-
-**void**
-
-<a name="handleResponseReceived1"></a>
-
-# **handleResponseReceived**
-
-
-
-> void handleResponseReceived(rawResponse, event)
-
-Invokes registered listeners for incoming WebSocket responses
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **rawResponse** | **BaseMessage**| The raw message payload JSON as a string |
-| **event** | **String**| The deserialized event object   |
-{: class="table-striped"}
-
-
-### Return type
-
-**void**
-
-<a name="handleUnknownMessageReceived1"></a>
-
-# **handleUnknownMessageReceived**
-
-
-
-> void handleUnknownMessageReceived(rawResponse, event)
-
-Invokes registered listeners for incoming WebSocket messages of unknown type
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **rawResponse** | **BaseMessage**| The raw message payload JSON as a string |
-| **event** | **String**| The deserialized event object   |
-{: class="table-striped"}
-
-
-### Return type
-
-**void**
-
-<a name="handleSessionConfigureRequest1"></a>
-
-# **handleSessionConfigureRequest**
-
-
-
-> void handleSessionConfigureRequest(rawResponse, request)
-
-Invokes registered listeners for incoming WebSocket configuration requests
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **rawResponse** | **ConfigureSessionRequest**| The raw message payload JSON as a string |
-| **request** | **String**| The deserialized request object   |
-{: class="table-striped"}
-
-
-### Return type
-
-**void**
-
-<a name="handleEchoNotification1"></a>
-
-# **handleEchoNotification**
-
-
-
-> void handleEchoNotification(rawResponse, notification)
-
-Invokes registered listeners for incoming WebSocket ping messages
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **rawResponse** | **EchoNotification**| The raw message payload JSON as a string |
-| **notification** | **String**| The deserialized notification object   |
-{: class="table-striped"}
-
-
-### Return type
-
-**void**
-
 <a name="onWebSocketConnected1"></a>
 
 # **onWebSocketConnected**
@@ -435,19 +304,6 @@ Invokes registered listeners when the connection to the remote server has been e
 > void onWebSocketDisconnected()
 
 Invokes registered listeners when the connection to the remote server has been closed
-### Return type
-
-**void**
-
-<a name="onSessionReady1"></a>
-
-# **onSessionReady**
-
-
-
-> void onSessionReady()
-
-Invokes registered listeners when the session is ready to begin sending and receiving messages
 ### Return type
 
 **void**
@@ -547,15 +403,15 @@ Adds a custom ApiClient used for API requests
 
 **void**
 
-<a name="responseReceived1"></a>
+<a name="sessionResponse1"></a>
 
-# **responseReceived**
+# **sessionResponse**
 
 
 
-> void responseReceived(response, rawResponse)
+> void sessionResponse(response, rawMessage)
 
-Raised for responses to sent messages (type == BaseResponseType.RESPONSE)
+Raised for responses to session requests (type == BaseResponseType.RESPONSE, class = SessionResponse)
 
 ### Parameters
 
@@ -563,7 +419,7 @@ Raised for responses to sent messages (type == BaseResponseType.RESPONSE)
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **response** | **String**| The deserialized event object |
-| **rawResponse** | **SessionResponse**| The raw message payload JSON as a string   |
+| **rawMessage** | **SessionResponse**| The raw message payload JSON as a string   |
 {: class="table-striped"}
 
 
@@ -571,15 +427,15 @@ Raised for responses to sent messages (type == BaseResponseType.RESPONSE)
 
 **void**
 
-<a name="messageReceived1"></a>
+<a name="structuredMessage1"></a>
 
-# **messageReceived**
+# **structuredMessage**
 
 
 
-> void messageReceived(message, rawResponse)
+> void structuredMessage(message, rawMessage)
 
-Raised for incoming messages (type == BaseResponseType.MESSAGE)
+Raised for incoming messages (type == RESPONSE OR MESSAGE), class = StructuredMessage`
 
 ### Parameters
 
@@ -587,7 +443,7 @@ Raised for incoming messages (type == BaseResponseType.MESSAGE)
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **message** | **String**| The deserialized event object |
-| **rawResponse** | **StructuredMessage**| The raw message payload JSON as a string   |
+| **rawMessage** | **StructuredMessage**| The raw message payload JSON as a string   |
 {: class="table-striped"}
 
 
@@ -595,13 +451,85 @@ Raised for incoming messages (type == BaseResponseType.MESSAGE)
 
 **void**
 
-<a name="unknownMessageReceived1"></a>
+<a name="presignedUrlResponse1"></a>
 
-# **unknownMessageReceived**
+# **presignedUrlResponse**
 
 
 
-> void unknownMessageReceived(message, rawResponse)
+> void presignedUrlResponse(response, rawMessage)
+
+Raised for responses to url requests (type == BaseResponseType.RESPONSE, class = PresignedUrlResponse)
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **response** | **String**| The deserialized event object |
+| **rawMessage** | **PresignedUrlResponse**| The raw message payload JSON as a string   |
+{: class="table-striped"}
+
+
+### Return type
+
+**void**
+
+<a name="uploadSuccessEvent1"></a>
+
+# **uploadSuccessEvent**
+
+
+
+> void uploadSuccessEvent(uploadSuccessEvent, rawMessage)
+
+Raised for responses to url requests (type == BaseResponseType.RESPONSE, class = PresignedUrlResponse)
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **uploadSuccessEvent** | **String**| The deserialized event |
+| **rawMessage** | **UploadSuccessEvent**| The raw message payload JSON as a string   |
+{: class="table-striped"}
+
+
+### Return type
+
+**void**
+
+<a name="uploadFailureEvent1"></a>
+
+# **uploadFailureEvent**
+
+
+
+> void uploadFailureEvent(uploadFailureEvent, rawMessage)
+
+Raised for responses to url requests (type == BaseResponseType.RESPONSE, class = PresignedUrlResponse)
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **uploadFailureEvent** | **String**| The deserialized event |
+| **rawMessage** | **UploadFailureEvent**| The raw message payload JSON as a string   |
+{: class="table-striped"}
+
+
+### Return type
+
+**void**
+
+<a name="unexpectedMessage1"></a>
+
+# **unexpectedMessage**
+
+
+
+> void unexpectedMessage(baseMessage, rawMessage)
 
 Raised for unmatched BaseResponseType
 
@@ -610,79 +538,8 @@ Raised for unmatched BaseResponseType
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **message** | **String**| The deserialized event object |
-| **rawResponse** | **BaseMessage**| The raw message payload JSON as a string   |
-{: class="table-striped"}
-
-
-### Return type
-
-**void**
-
-<a name="rawMessageReceived1"></a>
-
-# **rawMessageReceived**
-
-
-
-> void rawMessageReceived(rawResponse)
-
-Raised for all messages. Use this instead of the other methods when implementing fully custom payload deserialization.
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **rawResponse** | **String**| The raw message payload JSON as a string   |
-{: class="table-striped"}
-
-
-### Return type
-
-**void**
-
-<a name="sessionConfigured1"></a>
-
-# **sessionConfigured**
-
-
-
-> void sessionConfigured(request, rawResponse)
-
-Raised when the session has been configured
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **request** | **String**| The configuration request object |
-| **rawResponse** | **ConfigureSessionRequest**| The raw message payload JSON as a string   |
-{: class="table-striped"}
-
-
-### Return type
-
-**void**
-
-<a name="echoNotification1"></a>
-
-# **echoNotification**
-
-
-
-> void echoNotification(notification, rawResponse)
-
-Raised for responses to echo messages
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **notification** | **String**| The echo notification object |
-| **rawResponse** | **EchoNotification**| The raw message payload JSON as a string   |
+| **baseMessage** | **String**| The deserialized event |
+| **rawMessage** | **BaseMessage**| The raw message payload JSON as a string   |
 {: class="table-striped"}
 
 
@@ -723,19 +580,6 @@ Raised when the connection to the remote server has been closed
 {: class="table-striped"}
 
 
-### Return type
-
-**void**
-
-<a name="sessionReady1"></a>
-
-# **sessionReady**
-
-
-
-> void sessionReady()
-
-Raised when the session is ready to begin sending and receiving messages
 ### Return type
 
 **void**

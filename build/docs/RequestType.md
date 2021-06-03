@@ -13,9 +13,9 @@ title: RequestType
 
 * `CONFIGURESESSIONAUTHENTICATED` (value: `"configureSessionAuthenticated"`)
 
-* `ONGENERATEUPLOADURL` (value: `"onGenerateUploadUrl"`)
+* `ONATTACHMENT` (value: `"onAttachment"`)
 
-* `ONGENERATEDOWNLOADURL` (value: `"onGenerateDownloadUrl"`)
+* `GETATTACHMENT` (value: `"getAttachment"`)
 
 * `DELETEATTACHMENT` (value: `"deleteAttachment"`)
 

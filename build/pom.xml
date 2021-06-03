@@ -5,7 +5,7 @@
 
   <groupId>cloud.genesys</groupId>
   <artifactId>web-messaging-sdk</artifactId>
-  <version>0.0.0</version>
+  <version>2.0.0-UNKNOWN</version>
   <name>web-messaging-sdk</name>
   <description>A customer-side development kit for creating custom Genesys Cloud Web Messaging experiences</description>
   <url>https://developer.mypurecloud.com/api/rest/client-libraries/webmessaging-java/</url>
@@ -72,7 +72,7 @@
     <dependency>
       <groupId>com.fasterxml.jackson.datatype</groupId>
       <artifactId>jackson-datatype-joda</artifactId>
-      <version>2.1.5</version>
+      <version>${jackson-version}</version>
     </dependency>
     <dependency>
       <groupId>joda-time</groupId>
@@ -90,7 +90,7 @@
     <dependency>
       <groupId>org.opensaml</groupId>
       <artifactId>opensaml</artifactId>
-      <version>2.5.3</version>
+      <version>2.6.4</version>
     </dependency>
 
     <!-- for asynchronous helper classes -->
@@ -241,8 +241,8 @@
     <swagger-annotations-version>1.5.8</swagger-annotations-version>
     <slf4j-version>1.7.21</slf4j-version>
     <jersey-version>1.19.1</jersey-version>
-    <jackson-version>2.10.3</jackson-version>
-    <jodatime-version>2.9.3</jodatime-version>
+    <jackson-version>2.12.1</jackson-version>
+    <jodatime-version>2.10.10</jodatime-version>
     <maven-plugin-version>1.0.0</maven-plugin-version>
     <apache-httpclient-version>4.5.2</apache-httpclient-version>
     <okhttpclient-version>2.7.0</okhttpclient-version>

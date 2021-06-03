@@ -2,14 +2,33 @@ package cloud.genesys.webmessaging.sdk.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.DeserializationContext;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
+import java.io.IOException;
 import io.swagger.annotations.ApiModel;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 import java.io.Serializable;
+class DirectionDeserializer extends StdDeserializer<Direction> {
+  public DirectionDeserializer() {
+    super(DirectionDeserializer.class);
+  }
+
+  @Override
+  public Direction deserialize(JsonParser jsonParser, DeserializationContext ctxt)
+          throws IOException {
+    JsonNode node = jsonParser.getCodec().readTree(jsonParser);
+    return Direction.fromString(node.toString().replace("\"", ""));
+  }
+}
 /**
  * The direction of messaging
  */
+ @JsonDeserialize(using = DirectionDeserializer.class)
 public enum Direction {
   INBOUND("Inbound"),
   OUTBOUND("Outbound");

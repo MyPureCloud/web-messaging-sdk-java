@@ -10,7 +10,7 @@ title: BaseContentAttachment
 | ------------ | ------------- | ------------- | ------------- |
 | **id** | <!----><!---->**String**<!----> |  |  [optional] |
 | **filename** | <!----><!---->**String**<!----> |  |  [optional] |
-| **fileSize** | <!----><!---->**Double**<!----> |  |  [optional] |
+| **fileSize** | <!----><!---->**Integer**<!----> |  |  [optional] |
 | **mediaType** | <!----><!---->[**MediaType**](MediaType.html)<!----> |  |  |
 | **mime** | <!----><!---->**String**<!----> |  |  [optional] |
 | **sha256** | <!----><!---->**String**<!----> |  |  [optional] |

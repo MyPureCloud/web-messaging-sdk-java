@@ -16,9 +16,9 @@ import io.swagger.annotations.ApiModelProperty;
 
 import java.io.Serializable;
 /**
- * Button response content  Button response object
+ * Button response content.  Button response object representing the click of a structured message button, such as a quick reply.
  */
-@ApiModel(description = "Button response content  Button response object")
+@ApiModel(description = "Button response content.  Button response object representing the click of a structured message button, such as a quick reply.")
 
 public class ContentButtonResponse  implements Serializable {
   
@@ -29,14 +29,14 @@ public class ContentButtonResponse  implements Serializable {
 
   
   /**
-   * An ID assigned to the button response. Each object inside the content array has a unique ID.
+   * An ID assigned to the button response (Deprecated).
    **/
   public ContentButtonResponse id(String id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "An ID assigned to the button response. Each object inside the content array has a unique ID.")
+  @ApiModelProperty(example = "null", value = "An ID assigned to the button response (Deprecated).")
   @JsonProperty("id")
   public String getId() {
     return id;
@@ -47,14 +47,14 @@ public class ContentButtonResponse  implements Serializable {
 
   
   /**
-   * Content of the textback payload after clicking a button
+   * The response payload associated with the clicked button.
    **/
   public ContentButtonResponse payload(String payload) {
     this.payload = payload;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Content of the textback payload after clicking a button")
+  @ApiModelProperty(example = "null", required = true, value = "The response payload associated with the clicked button.")
   @JsonProperty("payload")
   public String getPayload() {
     return payload;
@@ -65,14 +65,14 @@ public class ContentButtonResponse  implements Serializable {
 
   
   /**
-   * Text to show inside the Button reply. This is also used as the response text after clicking on the Button.
+   * The response text from the button click.
    **/
   public ContentButtonResponse text(String text) {
     this.text = text;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Text to show inside the Button reply. This is also used as the response text after clicking on the Button.")
+  @ApiModelProperty(example = "null", required = true, value = "The response text from the button click.")
   @JsonProperty("text")
   public String getText() {
     return text;
@@ -83,14 +83,14 @@ public class ContentButtonResponse  implements Serializable {
 
   
   /**
-   * Button response type that captures Button and QuickReply type responses
+   * Describes the button that resulted in the Button Response.
    **/
   public ContentButtonResponse type(ButtonResponseType type) {
     this.type = type;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Button response type that captures Button and QuickReply type responses")
+  @ApiModelProperty(example = "null", value = "Describes the button that resulted in the Button Response.")
   @JsonProperty("type")
   public ButtonResponseType getType() {
     return type;

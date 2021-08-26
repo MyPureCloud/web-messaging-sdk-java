@@ -22,7 +22,6 @@ import java.io.Serializable;
 
 public class WebMessagingQuickReply  implements Serializable {
   
-  private String id = null;
   private String text = null;
   private String payload = null;
   private String image = null;
@@ -76,24 +75,6 @@ public class WebMessagingQuickReply  implements Serializable {
 
   
   /**
-   * A unique ID assigned to the quick reply (Deprecated).
-   **/
-  public WebMessagingQuickReply id(String id) {
-    this.id = id;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "A unique ID assigned to the quick reply (Deprecated).")
-  @JsonProperty("id")
-  public String getId() {
-    return id;
-  }
-  public void setId(String id) {
-    this.id = id;
-  }
-
-  
-  /**
    * Text to show inside the quick reply. This is also used as the response text after clicking on the quick reply.
    **/
   public WebMessagingQuickReply text(String text) {
@@ -119,7 +100,7 @@ public class WebMessagingQuickReply  implements Serializable {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Content of the payload included in the quick reply response. Could be an ID identifying the quick reply response.")
+  @ApiModelProperty(example = "null", required = true, value = "Content of the payload included in the quick reply response. Could be an ID identifying the quick reply response.")
   @JsonProperty("payload")
   public String getPayload() {
     return payload;
@@ -175,8 +156,7 @@ public class WebMessagingQuickReply  implements Serializable {
       return false;
     }
     WebMessagingQuickReply webMessagingQuickReply = (WebMessagingQuickReply) o;
-    return Objects.equals(this.id, webMessagingQuickReply.id) &&
-        Objects.equals(this.text, webMessagingQuickReply.text) &&
+    return Objects.equals(this.text, webMessagingQuickReply.text) &&
         Objects.equals(this.payload, webMessagingQuickReply.payload) &&
         Objects.equals(this.image, webMessagingQuickReply.image) &&
         Objects.equals(this.action, webMessagingQuickReply.action);
@@ -184,7 +164,7 @@ public class WebMessagingQuickReply  implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, text, payload, image, action);
+    return Objects.hash(text, payload, image, action);
   }
 
   @Override
@@ -192,7 +172,6 @@ public class WebMessagingQuickReply  implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class WebMessagingQuickReply {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    text: ").append(toIndentedString(text)).append("\n");
     sb.append("    payload: ").append(toIndentedString(payload)).append("\n");
     sb.append("    image: ").append(toIndentedString(image)).append("\n");

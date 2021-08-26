@@ -26,7 +26,7 @@ class ActionDeserializer extends StdDeserializer<Action> {
   }
 }
 /**
- * Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \"Message\" which sends a message using the quick reply text.
+ * Specifies the type of action that is triggered upon clicking the quick reply.
  */
  @JsonDeserialize(using = ActionDeserializer.class)
 public enum Action {

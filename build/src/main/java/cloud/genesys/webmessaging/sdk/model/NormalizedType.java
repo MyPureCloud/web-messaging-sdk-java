@@ -26,7 +26,7 @@ class NormalizedTypeDeserializer extends StdDeserializer<NormalizedType> {
   }
 }
 /**
- * Message type
+ * Message type.
  */
  @JsonDeserialize(using = NormalizedTypeDeserializer.class)
 public enum NormalizedType {

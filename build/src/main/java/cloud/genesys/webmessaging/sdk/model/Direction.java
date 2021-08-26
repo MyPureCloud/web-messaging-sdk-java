@@ -26,7 +26,7 @@ class DirectionDeserializer extends StdDeserializer<Direction> {
   }
 }
 /**
- * The direction of messaging
+ * The direction of the message.
  */
  @JsonDeserialize(using = DirectionDeserializer.class)
 public enum Direction {

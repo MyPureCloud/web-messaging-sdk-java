@@ -29,6 +29,9 @@ title: WebMessagingClient
 | [**presignedUrlResponse**](WebMessagingClient.html#presignedUrlResponse1) | Raised for responses to url requests (type == BaseResponseType.RESPONSE, class = PresignedUrlResponse) |
 | [**uploadSuccessEvent**](WebMessagingClient.html#uploadSuccessEvent1) | Raised for responses to url requests (type == BaseResponseType.RESPONSE, class = PresignedUrlResponse) |
 | [**uploadFailureEvent**](WebMessagingClient.html#uploadFailureEvent1) | Raised for responses to url requests (type == BaseResponseType.RESPONSE, class = PresignedUrlResponse) |
+| [**connectionClosedEvent**](WebMessagingClient.html#connectionClosedEvent1) | Raised for responses to url requests (type == BaseResponseType.RESPONSE, class = SessionResponse) |
+| [**sessionExpiredEvent**](WebMessagingClient.html#sessionExpiredEvent1) | Raised for responses to url requests (type == BaseResponseType.RESPONSE, class = SessionResponse) |
+| [**jwtResponse**](WebMessagingClient.html#jwtResponse1) | Raised for responses to url requests (type == BaseResponseType.RESPONSE, class = SessionResponse) |
 | [**unexpectedMessage**](WebMessagingClient.html#unexpectedMessage1) | Raised for unmatched BaseResponseType |
 | [**webSocketConnected**](WebMessagingClient.html#webSocketConnected1) | Raised when the connection to the remote server has been established |
 | [**webSocketDisconnected**](WebMessagingClient.html#webSocketDisconnected1) | Raised when the connection to the remote server has been closed |
@@ -516,6 +519,78 @@ Raised for responses to url requests (type == BaseResponseType.RESPONSE, class =
 | ------------- | ------------- | ------------- | ------------- |
 | **uploadFailureEvent** | **String**| The deserialized event |
 | **rawMessage** | **UploadFailureEvent**| The raw message payload JSON as a string   |
+{: class="table-striped"}
+
+
+### Return type
+
+**void**
+
+<a name="connectionClosedEvent1"></a>
+
+# **connectionClosedEvent**
+
+
+
+> void connectionClosedEvent(connectionClosedEvent, rawMessage)
+
+Raised for responses to url requests (type == BaseResponseType.RESPONSE, class = SessionResponse)
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **connectionClosedEvent** | **String**| The deserialized event |
+| **rawMessage** | **ConnectionClosedEvent**| The raw message payload JSON as a string   |
+{: class="table-striped"}
+
+
+### Return type
+
+**void**
+
+<a name="sessionExpiredEvent1"></a>
+
+# **sessionExpiredEvent**
+
+
+
+> void sessionExpiredEvent(sessionExpiredEvent, rawMessage)
+
+Raised for responses to url requests (type == BaseResponseType.RESPONSE, class = SessionResponse)
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sessionExpiredEvent** | **String**| The deserialized event |
+| **rawMessage** | **SessionExpiredEvent**| The raw message payload JSON as a string   |
+{: class="table-striped"}
+
+
+### Return type
+
+**void**
+
+<a name="jwtResponse1"></a>
+
+# **jwtResponse**
+
+
+
+> void jwtResponse(jwtResponse, rawMessage)
+
+Raised for responses to url requests (type == BaseResponseType.RESPONSE, class = SessionResponse)
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jwtResponse** | **String**| The deserialized event |
+| **rawMessage** | **JwtResponse**| The raw message payload JSON as a string   |
 {: class="table-striped"}
 
 

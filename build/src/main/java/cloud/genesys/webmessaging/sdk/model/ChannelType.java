@@ -26,7 +26,7 @@ class ChannelTypeDeserializer extends StdDeserializer<ChannelType> {
   }
 }
 /**
- * Specifies if this message was sent to / from a private or a public forum
+ * Specifies if this message is part of a private or public conversation.
  */
  @JsonDeserialize(using = ChannelTypeDeserializer.class)
 public enum ChannelType {

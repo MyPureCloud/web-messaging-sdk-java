@@ -26,13 +26,14 @@ class MediaTypeDeserializer extends StdDeserializer<MediaType> {
   }
 }
 /**
- * The type of media this instance represents
+ * The type of attachment this instance represents.
  */
  @JsonDeserialize(using = MediaTypeDeserializer.class)
 public enum MediaType {
   AUDIO("Audio"),
   FILE("File"),
   IMAGE("Image"),
+  LINK("Link"),
   VIDEO("Video");
 
   private String value;

@@ -23,5 +23,11 @@ title: MessageDataType
 
 * `UPLOADSUCCESSEVENT` (value: `"UploadSuccessEvent"`)
 
+* `CONNECTIONCLOSEDEVENT` (value: `"ConnectionClosedEvent"`)
+
+* `SESSIONEXPIREDEVENT` (value: `"SessionExpiredEvent"`)
+
+* `JWTRESPONSE` (value: `"JwtResponse"`)
+
 
 

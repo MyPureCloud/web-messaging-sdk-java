@@ -26,6 +26,7 @@ public class WebMessagingChannel  implements Serializable {
   private WebMessagingRecipient from = null;
   private WebMessagingRecipient to = null;
   private Date time = null;
+  private String messageId = null;
 
   
   /**
@@ -71,6 +72,13 @@ public class WebMessagingChannel  implements Serializable {
   }
 
   
+  @ApiModelProperty(example = "null", value = "Unique provider ID of the message.")
+  @JsonProperty("messageId")
+  public String getMessageId() {
+    return messageId;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -83,12 +91,13 @@ public class WebMessagingChannel  implements Serializable {
     WebMessagingChannel webMessagingChannel = (WebMessagingChannel) o;
     return Objects.equals(this.from, webMessagingChannel.from) &&
         Objects.equals(this.to, webMessagingChannel.to) &&
-        Objects.equals(this.time, webMessagingChannel.time);
+        Objects.equals(this.time, webMessagingChannel.time) &&
+        Objects.equals(this.messageId, webMessagingChannel.messageId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(from, to, time);
+    return Objects.hash(from, to, time, messageId);
   }
 
   @Override
@@ -99,6 +108,7 @@ public class WebMessagingChannel  implements Serializable {
     sb.append("    from: ").append(toIndentedString(from)).append("\n");
     sb.append("    to: ").append(toIndentedString(to)).append("\n");
     sb.append("    time: ").append(toIndentedString(time)).append("\n");
+    sb.append("    messageId: ").append(toIndentedString(messageId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

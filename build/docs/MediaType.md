@@ -15,6 +15,8 @@ title: MediaType
 
 * `IMAGE` (value: `"Image"`)
 
+* `LINK` (value: `"Link"`)
+
 * `VIDEO` (value: `"Video"`)
 
 

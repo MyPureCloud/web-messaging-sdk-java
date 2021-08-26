@@ -36,7 +36,9 @@ public enum RequestType {
   DELETEATTACHMENT("deleteAttachment"),
   ONMESSAGE("onMessage"),
   CLOSESESSION("closeSession"),
-  ECHO("echo");
+  ECHO("echo"),
+  GETJWT("getJwt"),
+  DISCONNECTCUSTOMER("disconnectCustomer");
 
   private String value;
 

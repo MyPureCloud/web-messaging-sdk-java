@@ -25,5 +25,9 @@ title: RequestType
 
 * `ECHO` (value: `"echo"`)
 
+* `GETJWT` (value: `"getJwt"`)
+
+* `DISCONNECTCUSTOMER` (value: `"disconnectCustomer"`)
+
 
 

@@ -35,7 +35,10 @@ public enum MessageDataType {
   PRESIGNEDURLRESPONSE("PresignedUrlResponse"),
   ATTACHMENTDELETEDRESPONSE("AttachmentDeletedResponse"),
   UPLOADFAILUREEVENT("UploadFailureEvent"),
-  UPLOADSUCCESSEVENT("UploadSuccessEvent");
+  UPLOADSUCCESSEVENT("UploadSuccessEvent"),
+  CONNECTIONCLOSEDEVENT("ConnectionClosedEvent"),
+  SESSIONEXPIREDEVENT("SessionExpiredEvent"),
+  JWTRESPONSE("JwtResponse");
 
   private String value;
 

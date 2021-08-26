@@ -26,7 +26,7 @@ class ButtonResponseTypeDeserializer extends StdDeserializer<ButtonResponseType>
   }
 }
 /**
- * Button response type that captures Button and QuickReply type responses
+ * Describes the button that resulted in the Button Response.
  */
  @JsonDeserialize(using = ButtonResponseTypeDeserializer.class)
 public enum ButtonResponseType {

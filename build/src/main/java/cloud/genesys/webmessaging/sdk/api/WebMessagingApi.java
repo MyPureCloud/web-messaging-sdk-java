@@ -14,7 +14,7 @@ import cloud.genesys.webmessaging.sdk.model.ErrorBody;
 import cloud.genesys.webmessaging.sdk.model.WebMessagingMessageEntityList;
 
 
-import cloud.genesys.webmessaging.sdk.api.request.GetWebmessagingDeploymentSessionMessagesRequest;
+import cloud.genesys.webmessaging.sdk.api.request.GetWebmessagingMessagesRequest;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -38,38 +38,30 @@ public class WebMessagingApi {
   /**
    * Get the messages for a web messaging session.
    * 
-   * @param deploymentId deploymentId (required)
-   * @param sessionId sessionId (required)
    * @param pageSize Page size (optional, default to 25)
    * @param pageNumber Page number (optional, default to 1)
    * @return WebMessagingMessageEntityList
    * @throws WebMessagingException if the request fails on the server
    * @throws IOException if the request fails to be processed
    */
-  public WebMessagingMessageEntityList getWebmessagingDeploymentSessionMessages(String deploymentId, String sessionId, Integer pageSize, Integer pageNumber) throws IOException, WebMessagingException {
-    return  getWebmessagingDeploymentSessionMessages(createGetWebmessagingDeploymentSessionMessagesRequest(deploymentId, sessionId, pageSize, pageNumber));
+  public WebMessagingMessageEntityList getWebmessagingMessages(Integer pageSize, Integer pageNumber) throws IOException, WebMessagingException {
+    return  getWebmessagingMessages(createGetWebmessagingMessagesRequest(pageSize, pageNumber));
   }
 
   /**
    * Get the messages for a web messaging session.
    * 
-   * @param deploymentId deploymentId (required)
-   * @param sessionId sessionId (required)
    * @param pageSize Page size (optional, default to 25)
    * @param pageNumber Page number (optional, default to 1)
    * @return WebMessagingMessageEntityList
    * @throws IOException if the request fails to be processed
    */
-  public ApiResponse<WebMessagingMessageEntityList> getWebmessagingDeploymentSessionMessagesWithHttpInfo(String deploymentId, String sessionId, Integer pageSize, Integer pageNumber) throws IOException {
-    return getWebmessagingDeploymentSessionMessages(createGetWebmessagingDeploymentSessionMessagesRequest(deploymentId, sessionId, pageSize, pageNumber).withHttpInfo());
+  public ApiResponse<WebMessagingMessageEntityList> getWebmessagingMessagesWithHttpInfo(Integer pageSize, Integer pageNumber) throws IOException {
+    return getWebmessagingMessages(createGetWebmessagingMessagesRequest(pageSize, pageNumber).withHttpInfo());
   }
 
-  private GetWebmessagingDeploymentSessionMessagesRequest createGetWebmessagingDeploymentSessionMessagesRequest(String deploymentId, String sessionId, Integer pageSize, Integer pageNumber) {
-    return GetWebmessagingDeploymentSessionMessagesRequest.builder()
-            .withDeploymentId(deploymentId)
-    
-            .withSessionId(sessionId)
-    
+  private GetWebmessagingMessagesRequest createGetWebmessagingMessagesRequest(Integer pageSize, Integer pageNumber) {
+    return GetWebmessagingMessagesRequest.builder()
             .withPageSize(pageSize)
     
             .withPageNumber(pageNumber)
@@ -85,7 +77,7 @@ public class WebMessagingApi {
    * @throws WebMessagingException if the request fails on the server
    * @throws IOException if the request fails to be processed
    */
-  public WebMessagingMessageEntityList getWebmessagingDeploymentSessionMessages(GetWebmessagingDeploymentSessionMessagesRequest request) throws IOException, WebMessagingException {
+  public WebMessagingMessageEntityList getWebmessagingMessages(GetWebmessagingMessagesRequest request) throws IOException, WebMessagingException {
     try {
       ApiResponse<WebMessagingMessageEntityList> response = gcapiClient.invoke(request.withHttpInfo(), new TypeReference<WebMessagingMessageEntityList>() {});
       return response.getBody();
@@ -103,7 +95,7 @@ public class WebMessagingApi {
    * @return the response
    * @throws IOException if the request fails to be processed
    */
-  public ApiResponse<WebMessagingMessageEntityList> getWebmessagingDeploymentSessionMessages(ApiRequest<Void> request) throws IOException {
+  public ApiResponse<WebMessagingMessageEntityList> getWebmessagingMessages(ApiRequest<Void> request) throws IOException {
     try {
       return gcapiClient.invoke(request, new TypeReference<WebMessagingMessageEntityList>() {});
     }

@@ -1,119 +1,68 @@
-Platform API version: 4914
+Platform API version: 5152
 
 
-# Major Changes (2 changes)
+# Major Changes (3 changes)
+
+**GenerateUploadUrlRequest** (1 change)
+
+* Required property errorsAsJson was added
 
 **IncomingNormalizedMessage** (2 changes)
 
-* Property quickReplyId was removed
-* Required property content was added
+* Property quickReplyPayload was removed
+* Required property events was added
 
 
-# Minor Changes (26 changes)
+# Minor Changes (13 changes)
 
-**ContentAttachment** (1 change)
-
-* Model was added
-
-**ContentActions** (1 change)
+**StoryType** (1 change)
 
 * Model was added
 
-**ButtonComponent** (1 change)
-
-* Model was added
-
-**ContentGeneric** (1 change)
-
-* Model was added
-
-**ListItemType** (1 change)
-
-* Model was added
-
-**ListItemComponent** (1 change)
-
-* Model was added
-
-**ListType** (1 change)
-
-* Model was added
-
-**ContentList** (1 change)
-
-* Model was added
-
-**ContentLocation** (1 change)
-
-* Model was added
-
-**IDType** (1 change)
-
-* Model was added
-
-**MessagingRecipient** (1 change)
-
-* Model was added
-
-**ContentPostback** (1 change)
-
-* Model was added
-
-**ReactionType** (1 change)
-
-* Model was added
-
-**ContentReaction** (1 change)
-
-* Model was added
-
-**NotificationTemplateParameter** (1 change)
-
-* Model was added
-
-**NotificationTemplateBody** (1 change)
-
-* Model was added
-
-**NotificationTemplateFooter** (1 change)
-
-* Model was added
-
-**HeaderType** (1 change)
-
-* Model was added
-
-**NotificationTemplateHeader** (1 change)
-
-* Model was added
-
-**ContentNotificationTemplate** (1 change)
+**ContentStory** (1 change)
 
 * Model was added
 
 **MessageContent** (1 change)
 
-* Model was added
+* Optional property story was added
 
-**RequestType.GetJwt** (1 change)
-
-* Model was added
-
-**GetJwtRequest** (1 change)
+**EventCoBrowseType** (1 change)
 
 * Model was added
 
-**JwtResponse** (1 change)
+**EventCoBrowse** (1 change)
 
 * Model was added
 
-**ConnectionClosedEvent** (1 change)
+**EventType** (1 change)
 
 * Model was added
 
-**SessionExpiredEvent** (1 change)
+**MessageEvent** (1 change)
 
 * Model was added
+
+**GenerateUrlError** (1 change)
+
+* Model was added
+
+**CleanMessageContent** (1 change)
+
+* Optional property generic was added
+
+**CleanMessageEvent** (1 change)
+
+* Model was added
+
+**OriginatingEntity** (1 change)
+
+* Model was added
+
+**CleanMessage** (2 changes)
+
+* Optional property events was added
+* Optional property originatingEntity was added
 
 
 # Point Changes (0 changes)

@@ -9,6 +9,8 @@ title: NormalizedType
 ## Enum
 
 
+* `EVENT` (value: `"Event"`)
+
 * `RECEIPT` (value: `"Receipt"`)
 
 * `STRUCTURED` (value: `"Structured"`)

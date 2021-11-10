@@ -29,5 +29,7 @@ title: ContentType
 
 * `REACTIONS` (value: `"Reactions"`)
 
+* `STORY` (value: `"Story"`)
+
 
 

@@ -18,6 +18,7 @@ title: MessageContent
 | **postback** | <!----><!---->[**ContentPostback**](ContentPostback.html)<!----> | Structured message postback (Deprecated). |  [optional] |
 | **quickReply** | <!----><!---->[**ContentQuickReply**](ContentQuickReply.html)<!----> | Quick reply content. |  [optional] |
 | **reactions** | <!----><!---->[**List&lt;ContentReaction&gt;**](ContentReaction.html)<!----> | A set of reactions to a message. |  [optional] |
+| **story** | <!----><!---->[**ContentStory**](ContentStory.html)<!----> | Ephemeral story content. |  [optional] |
 | **template** | <!----><!---->[**ContentNotificationTemplate**](ContentNotificationTemplate.html)<!----> | Template notification content. |  [optional] |
 {: class="table table-striped"}
 

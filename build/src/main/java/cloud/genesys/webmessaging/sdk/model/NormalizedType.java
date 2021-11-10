@@ -30,6 +30,7 @@ class NormalizedTypeDeserializer extends StdDeserializer<NormalizedType> {
  */
  @JsonDeserialize(using = NormalizedTypeDeserializer.class)
 public enum NormalizedType {
+  EVENT("Event"),
   RECEIPT("Receipt"),
   STRUCTURED("Structured"),
   TEXT("Text");

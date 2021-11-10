@@ -29,39 +29,17 @@ public class WebMessagingChannel  implements Serializable {
   private String messageId = null;
 
   
-  /**
-   * Information about the recipient the message is received from.
-   **/
-  public WebMessagingChannel from(WebMessagingRecipient from) {
-    this.from = from;
-    return this;
-  }
-  
   @ApiModelProperty(example = "null", value = "Information about the recipient the message is received from.")
   @JsonProperty("from")
   public WebMessagingRecipient getFrom() {
     return from;
   }
-  public void setFrom(WebMessagingRecipient from) {
-    this.from = from;
-  }
 
-  
-  /**
-   * Information about the recipient the message is sent to.
-   **/
-  public WebMessagingChannel to(WebMessagingRecipient to) {
-    this.to = to;
-    return this;
-  }
   
   @ApiModelProperty(example = "null", value = "Information about the recipient the message is sent to.")
   @JsonProperty("to")
   public WebMessagingRecipient getTo() {
     return to;
-  }
-  public void setTo(WebMessagingRecipient to) {
-    this.to = to;
   }
 
   

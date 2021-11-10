@@ -15,6 +15,7 @@ title: GenerateUploadUrlRequest
 | **fileType** | <!----><!---->**String**<!----> |  |  |
 | **fileSize** | <!----><!---->**Integer**<!----> |  |  |
 | **fileMd5** | <!----><!---->**String**<!----> |  |  |
+| **errorsAsJson** | <!----><!---->**Boolean**<!----> |  |  |
 {: class="table table-striped"}
 
 

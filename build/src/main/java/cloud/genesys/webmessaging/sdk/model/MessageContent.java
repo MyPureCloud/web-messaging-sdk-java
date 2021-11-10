@@ -18,6 +18,7 @@ import cloud.genesys.webmessaging.sdk.model.ContentNotificationTemplate;
 import cloud.genesys.webmessaging.sdk.model.ContentPostback;
 import cloud.genesys.webmessaging.sdk.model.ContentQuickReply;
 import cloud.genesys.webmessaging.sdk.model.ContentReaction;
+import cloud.genesys.webmessaging.sdk.model.ContentStory;
 import cloud.genesys.webmessaging.sdk.model.ContentType;
 import cloud.genesys.webmessaging.sdk.model.MessagingRecipient;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -44,6 +45,7 @@ public class MessageContent  implements Serializable {
   private ContentPostback postback = null;
   private ContentQuickReply quickReply = null;
   private List<ContentReaction> reactions = new ArrayList<ContentReaction>();
+  private ContentStory story = null;
   private ContentNotificationTemplate template = null;
 
   
@@ -228,6 +230,24 @@ public class MessageContent  implements Serializable {
 
   
   /**
+   * Ephemeral story content.
+   **/
+  public MessageContent story(ContentStory story) {
+    this.story = story;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Ephemeral story content.")
+  @JsonProperty("story")
+  public ContentStory getStory() {
+    return story;
+  }
+  public void setStory(ContentStory story) {
+    this.story = story;
+  }
+
+  
+  /**
    * Template notification content.
    **/
   public MessageContent template(ContentNotificationTemplate template) {
@@ -265,12 +285,13 @@ public class MessageContent  implements Serializable {
         Objects.equals(this.postback, messageContent.postback) &&
         Objects.equals(this.quickReply, messageContent.quickReply) &&
         Objects.equals(this.reactions, messageContent.reactions) &&
+        Objects.equals(this.story, messageContent.story) &&
         Objects.equals(this.template, messageContent.template);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(attachment, buttonResponse, contentType, generic, list, location, mention, postback, quickReply, reactions, template);
+    return Objects.hash(attachment, buttonResponse, contentType, generic, list, location, mention, postback, quickReply, reactions, story, template);
   }
 
   @Override
@@ -288,6 +309,7 @@ public class MessageContent  implements Serializable {
     sb.append("    postback: ").append(toIndentedString(postback)).append("\n");
     sb.append("    quickReply: ").append(toIndentedString(quickReply)).append("\n");
     sb.append("    reactions: ").append(toIndentedString(reactions)).append("\n");
+    sb.append("    story: ").append(toIndentedString(story)).append("\n");
     sb.append("    template: ").append(toIndentedString(template)).append("\n");
     sb.append("}");
     return sb.toString();

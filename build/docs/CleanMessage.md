@@ -14,7 +14,9 @@ title: CleanMessage
 | **id** | <!----><!---->**String**<!----> |  |  [optional] |
 | **channel** | <!----><!---->[**CleanMessagingChannel**](CleanMessagingChannel.html)<!----> |  |  [optional] |
 | **content** | <!----><!---->[**List&lt;CleanMessageContent&gt;**](CleanMessageContent.html)<!----> |  |  [optional] |
+| **events** | <!----><!---->[**List&lt;CleanMessageEvent&gt;**](CleanMessageEvent.html)<!----> |  |  [optional] |
 | **metadata** | <!----><!---->**Map&lt;String, String&gt;**<!----> |  |  [optional] |
+| **originatingEntity** | <!----><!---->[**OriginatingEntity**](OriginatingEntity.html)<!----> |  |  [optional] |
 {: class="table table-striped"}
 
 

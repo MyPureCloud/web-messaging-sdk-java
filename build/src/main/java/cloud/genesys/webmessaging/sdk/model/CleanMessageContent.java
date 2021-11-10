@@ -11,6 +11,7 @@ import java.util.Objects;
 import java.io.IOException;
 import cloud.genesys.webmessaging.sdk.model.CleanContentAttachment;
 import cloud.genesys.webmessaging.sdk.model.ContentButtonResponse;
+import cloud.genesys.webmessaging.sdk.model.ContentGeneric;
 import cloud.genesys.webmessaging.sdk.model.ContentQuickReply;
 import cloud.genesys.webmessaging.sdk.model.ContentType;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -27,6 +28,7 @@ public class CleanMessageContent  implements Serializable {
   private CleanContentAttachment attachment = null;
   private ContentType contentType = null;
   private ContentButtonResponse buttonResponse = null;
+  private ContentGeneric generic = null;
   private ContentQuickReply quickReply = null;
 
   
@@ -83,6 +85,23 @@ public class CleanMessageContent  implements Serializable {
   
   /**
    **/
+  public CleanMessageContent generic(ContentGeneric generic) {
+    this.generic = generic;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("generic")
+  public ContentGeneric getGeneric() {
+    return generic;
+  }
+  public void setGeneric(ContentGeneric generic) {
+    this.generic = generic;
+  }
+
+  
+  /**
+   **/
   public CleanMessageContent quickReply(ContentQuickReply quickReply) {
     this.quickReply = quickReply;
     return this;
@@ -111,12 +130,13 @@ public class CleanMessageContent  implements Serializable {
     return Objects.equals(this.attachment, cleanMessageContent.attachment) &&
         Objects.equals(this.contentType, cleanMessageContent.contentType) &&
         Objects.equals(this.buttonResponse, cleanMessageContent.buttonResponse) &&
+        Objects.equals(this.generic, cleanMessageContent.generic) &&
         Objects.equals(this.quickReply, cleanMessageContent.quickReply);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(attachment, contentType, buttonResponse, quickReply);
+    return Objects.hash(attachment, contentType, buttonResponse, generic, quickReply);
   }
 
   @Override
@@ -127,6 +147,7 @@ public class CleanMessageContent  implements Serializable {
     sb.append("    attachment: ").append(toIndentedString(attachment)).append("\n");
     sb.append("    contentType: ").append(toIndentedString(contentType)).append("\n");
     sb.append("    buttonResponse: ").append(toIndentedString(buttonResponse)).append("\n");
+    sb.append("    generic: ").append(toIndentedString(generic)).append("\n");
     sb.append("    quickReply: ").append(toIndentedString(quickReply)).append("\n");
     sb.append("}");
     return sb.toString();

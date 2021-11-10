@@ -28,6 +28,7 @@ public class GenerateUploadUrlRequest  implements Serializable {
   private String fileType = null;
   private Integer fileSize = null;
   private String fileMd5 = null;
+  private Boolean errorsAsJson = null;
 
   
   /**
@@ -149,6 +150,23 @@ public class GenerateUploadUrlRequest  implements Serializable {
   }
 
   
+  /**
+   **/
+  public GenerateUploadUrlRequest errorsAsJson(Boolean errorsAsJson) {
+    this.errorsAsJson = errorsAsJson;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("errorsAsJson")
+  public Boolean getErrorsAsJson() {
+    return errorsAsJson;
+  }
+  public void setErrorsAsJson(Boolean errorsAsJson) {
+    this.errorsAsJson = errorsAsJson;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -165,12 +183,13 @@ public class GenerateUploadUrlRequest  implements Serializable {
         Objects.equals(this.fileName, generateUploadUrlRequest.fileName) &&
         Objects.equals(this.fileType, generateUploadUrlRequest.fileType) &&
         Objects.equals(this.fileSize, generateUploadUrlRequest.fileSize) &&
-        Objects.equals(this.fileMd5, generateUploadUrlRequest.fileMd5);
+        Objects.equals(this.fileMd5, generateUploadUrlRequest.fileMd5) &&
+        Objects.equals(this.errorsAsJson, generateUploadUrlRequest.errorsAsJson);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(action, token, attachmentId, fileName, fileType, fileSize, fileMd5);
+    return Objects.hash(action, token, attachmentId, fileName, fileType, fileSize, fileMd5, errorsAsJson);
   }
 
   @Override
@@ -185,6 +204,7 @@ public class GenerateUploadUrlRequest  implements Serializable {
     sb.append("    fileType: ").append(toIndentedString(fileType)).append("\n");
     sb.append("    fileSize: ").append(toIndentedString(fileSize)).append("\n");
     sb.append("    fileMd5: ").append(toIndentedString(fileMd5)).append("\n");
+    sb.append("    errorsAsJson: ").append(toIndentedString(errorsAsJson)).append("\n");
     sb.append("}");
     return sb.toString();
   }

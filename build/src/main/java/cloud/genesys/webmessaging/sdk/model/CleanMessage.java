@@ -10,9 +10,11 @@ import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
 import cloud.genesys.webmessaging.sdk.model.CleanMessageContent;
+import cloud.genesys.webmessaging.sdk.model.CleanMessageEvent;
 import cloud.genesys.webmessaging.sdk.model.CleanMessagingChannel;
 import cloud.genesys.webmessaging.sdk.model.Direction;
 import cloud.genesys.webmessaging.sdk.model.NormalizedType;
+import cloud.genesys.webmessaging.sdk.model.OriginatingEntity;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -34,7 +36,9 @@ public class CleanMessage  implements Serializable {
   private String id = null;
   private CleanMessagingChannel channel = null;
   private List<CleanMessageContent> content = new ArrayList<CleanMessageContent>();
+  private List<CleanMessageEvent> events = new ArrayList<CleanMessageEvent>();
   private Map<String, String> metadata = null;
+  private OriginatingEntity originatingEntity = null;
 
   
   /**
@@ -141,6 +145,23 @@ public class CleanMessage  implements Serializable {
   
   /**
    **/
+  public CleanMessage events(List<CleanMessageEvent> events) {
+    this.events = events;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("events")
+  public List<CleanMessageEvent> getEvents() {
+    return events;
+  }
+  public void setEvents(List<CleanMessageEvent> events) {
+    this.events = events;
+  }
+
+  
+  /**
+   **/
   public CleanMessage metadata(Map<String, String> metadata) {
     this.metadata = metadata;
     return this;
@@ -153,6 +174,23 @@ public class CleanMessage  implements Serializable {
   }
   public void setMetadata(Map<String, String> metadata) {
     this.metadata = metadata;
+  }
+
+  
+  /**
+   **/
+  public CleanMessage originatingEntity(OriginatingEntity originatingEntity) {
+    this.originatingEntity = originatingEntity;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("originatingEntity")
+  public OriginatingEntity getOriginatingEntity() {
+    return originatingEntity;
+  }
+  public void setOriginatingEntity(OriginatingEntity originatingEntity) {
+    this.originatingEntity = originatingEntity;
   }
 
   
@@ -172,12 +210,14 @@ public class CleanMessage  implements Serializable {
         Objects.equals(this.id, cleanMessage.id) &&
         Objects.equals(this.channel, cleanMessage.channel) &&
         Objects.equals(this.content, cleanMessage.content) &&
-        Objects.equals(this.metadata, cleanMessage.metadata);
+        Objects.equals(this.events, cleanMessage.events) &&
+        Objects.equals(this.metadata, cleanMessage.metadata) &&
+        Objects.equals(this.originatingEntity, cleanMessage.originatingEntity);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(text, type, direction, id, channel, content, metadata);
+    return Objects.hash(text, type, direction, id, channel, content, events, metadata, originatingEntity);
   }
 
   @Override
@@ -191,7 +231,9 @@ public class CleanMessage  implements Serializable {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    channel: ").append(toIndentedString(channel)).append("\n");
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
+    sb.append("    events: ").append(toIndentedString(events)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
+    sb.append("    originatingEntity: ").append(toIndentedString(originatingEntity)).append("\n");
     sb.append("}");
     return sb.toString();
   }

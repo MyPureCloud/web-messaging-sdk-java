@@ -39,7 +39,8 @@ public enum ContentType {
   NOTIFICATION("Notification"),
   POSTBACK("Postback"),
   QUICKREPLY("QuickReply"),
-  REACTIONS("Reactions");
+  REACTIONS("Reactions"),
+  STORY("Story");
 
   private String value;
 

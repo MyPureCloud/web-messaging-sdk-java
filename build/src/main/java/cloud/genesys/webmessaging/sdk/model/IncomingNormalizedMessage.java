@@ -10,6 +10,7 @@ import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
 import cloud.genesys.webmessaging.sdk.model.MessageContent;
+import cloud.genesys.webmessaging.sdk.model.MessageEvent;
 import cloud.genesys.webmessaging.sdk.model.NormalizedType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
@@ -28,8 +29,8 @@ public class IncomingNormalizedMessage  implements Serializable {
   
   private NormalizedType type = null;
   private String text = null;
-  private String quickReplyPayload = null;
   private List<MessageContent> content = new ArrayList<MessageContent>();
+  private List<MessageEvent> events = new ArrayList<MessageEvent>();
   private Map<String, String> metadata = null;
 
   
@@ -69,23 +70,6 @@ public class IncomingNormalizedMessage  implements Serializable {
   
   /**
    **/
-  public IncomingNormalizedMessage quickReplyPayload(String quickReplyPayload) {
-    this.quickReplyPayload = quickReplyPayload;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", required = true, value = "")
-  @JsonProperty("quickReplyPayload")
-  public String getQuickReplyPayload() {
-    return quickReplyPayload;
-  }
-  public void setQuickReplyPayload(String quickReplyPayload) {
-    this.quickReplyPayload = quickReplyPayload;
-  }
-
-  
-  /**
-   **/
   public IncomingNormalizedMessage content(List<MessageContent> content) {
     this.content = content;
     return this;
@@ -98,6 +82,23 @@ public class IncomingNormalizedMessage  implements Serializable {
   }
   public void setContent(List<MessageContent> content) {
     this.content = content;
+  }
+
+  
+  /**
+   **/
+  public IncomingNormalizedMessage events(List<MessageEvent> events) {
+    this.events = events;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("events")
+  public List<MessageEvent> getEvents() {
+    return events;
+  }
+  public void setEvents(List<MessageEvent> events) {
+    this.events = events;
   }
 
   
@@ -130,14 +131,14 @@ public class IncomingNormalizedMessage  implements Serializable {
     IncomingNormalizedMessage incomingNormalizedMessage = (IncomingNormalizedMessage) o;
     return Objects.equals(this.type, incomingNormalizedMessage.type) &&
         Objects.equals(this.text, incomingNormalizedMessage.text) &&
-        Objects.equals(this.quickReplyPayload, incomingNormalizedMessage.quickReplyPayload) &&
         Objects.equals(this.content, incomingNormalizedMessage.content) &&
+        Objects.equals(this.events, incomingNormalizedMessage.events) &&
         Objects.equals(this.metadata, incomingNormalizedMessage.metadata);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(type, text, quickReplyPayload, content, metadata);
+    return Objects.hash(type, text, content, events, metadata);
   }
 
   @Override
@@ -147,8 +148,8 @@ public class IncomingNormalizedMessage  implements Serializable {
     
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    text: ").append(toIndentedString(text)).append("\n");
-    sb.append("    quickReplyPayload: ").append(toIndentedString(quickReplyPayload)).append("\n");
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
+    sb.append("    events: ").append(toIndentedString(events)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
     sb.append("}");
     return sb.toString();

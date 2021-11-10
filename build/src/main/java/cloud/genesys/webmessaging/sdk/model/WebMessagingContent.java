@@ -89,21 +89,10 @@ public class WebMessagingContent  implements Serializable {
   }
 
   
-  /**
-   * Attachment content.
-   **/
-  public WebMessagingContent attachment(WebMessagingAttachment attachment) {
-    this.attachment = attachment;
-    return this;
-  }
-  
   @ApiModelProperty(example = "null", value = "Attachment content.")
   @JsonProperty("attachment")
   public WebMessagingAttachment getAttachment() {
     return attachment;
-  }
-  public void setAttachment(WebMessagingAttachment attachment) {
-    this.attachment = attachment;
   }
 
   

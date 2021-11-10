@@ -11,7 +11,7 @@ title: ContentButtonResponse
 | **id** | <!----><!---->**String**<!----> | An ID assigned to the button response (Deprecated). |  [optional] |
 | **payload** | <!----><!---->**String**<!----> | The response payload associated with the clicked button. |  |
 | **text** | <!----><!---->**String**<!----> | The response text from the button click. |  |
-| **type** | <!----><!---->[**ButtonResponseType**](ButtonResponseType.html)<!----> | Describes the button that resulted in the Button Response. |  [optional] |
+| **type** | <!----><!---->[**ButtonResponseType**](ButtonResponseType.html)<!----> | Describes the button that resulted in the Button Response. |  |
 {: class="table table-striped"}
 
 

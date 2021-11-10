@@ -29,5 +29,9 @@ title: MessageDataType
 
 * `JWTRESPONSE` (value: `"JwtResponse"`)
 
+* `GENERATEURLERROR` (value: `"GenerateUrlError"`)
+
+* `UNKNOWN` (value: `"Unknown"`)
+
 
 

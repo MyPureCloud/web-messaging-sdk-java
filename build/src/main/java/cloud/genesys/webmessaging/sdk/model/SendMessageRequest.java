@@ -9,6 +9,7 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
+import cloud.genesys.webmessaging.sdk.model.BaseMessagingChannel;
 import cloud.genesys.webmessaging.sdk.model.IncomingNormalizedMessage;
 import cloud.genesys.webmessaging.sdk.model.RequestTypeIncomingMessage;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -29,6 +30,7 @@ public class SendMessageRequest  implements Serializable {
   private String time = null;
   private IncomingNormalizedMessage message = null;
   private List<String> attachmentIds = new ArrayList<String>();
+  private BaseMessagingChannel channel = null;
 
   
   /**
@@ -116,6 +118,23 @@ public class SendMessageRequest  implements Serializable {
   }
 
   
+  /**
+   **/
+  public SendMessageRequest channel(BaseMessagingChannel channel) {
+    this.channel = channel;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("channel")
+  public BaseMessagingChannel getChannel() {
+    return channel;
+  }
+  public void setChannel(BaseMessagingChannel channel) {
+    this.channel = channel;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -130,12 +149,13 @@ public class SendMessageRequest  implements Serializable {
         Objects.equals(this.token, sendMessageRequest.token) &&
         Objects.equals(this.time, sendMessageRequest.time) &&
         Objects.equals(this.message, sendMessageRequest.message) &&
-        Objects.equals(this.attachmentIds, sendMessageRequest.attachmentIds);
+        Objects.equals(this.attachmentIds, sendMessageRequest.attachmentIds) &&
+        Objects.equals(this.channel, sendMessageRequest.channel);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(action, token, time, message, attachmentIds);
+    return Objects.hash(action, token, time, message, attachmentIds, channel);
   }
 
   @Override
@@ -148,6 +168,7 @@ public class SendMessageRequest  implements Serializable {
     sb.append("    time: ").append(toIndentedString(time)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
     sb.append("    attachmentIds: ").append(toIndentedString(attachmentIds)).append("\n");
+    sb.append("    channel: ").append(toIndentedString(channel)).append("\n");
     sb.append("}");
     return sb.toString();
   }

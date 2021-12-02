@@ -19,13 +19,19 @@
 'UTF-8'
 -Xdoclint:none
 -doctitle
-'web-messaging-sdk 4.0.0 API'
+'web-messaging-sdk 5.0.0 API'
 -linkoffline
 'https://docs.oracle.com/en/java/javase/11/docs/api' '/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/javadoc-bundle-options'
 -use
 -version
 -windowtitle
-'web-messaging-sdk 4.0.0 API'
+'web-messaging-sdk 5.0.0 API'
+cloud.genesys.webmessaging.sdk.model
+cloud.genesys.webmessaging.sdk.model
+cloud.genesys.webmessaging.sdk.model
+cloud.genesys.webmessaging.sdk.model
+cloud.genesys.webmessaging.sdk.model
+cloud.genesys.webmessaging.sdk.model
 cloud.genesys.webmessaging.sdk.model
 cloud.genesys.webmessaging.sdk.model
 cloud.genesys.webmessaging.sdk.model
@@ -157,63 +163,63 @@ cloud.genesys.webmessaging.sdk.connector.okhttp
 cloud.genesys.webmessaging.sdk.connector.okhttp
 cloud.genesys.webmessaging.sdk.connector.okhttp
 cloud.genesys.webmessaging.sdk.extensions
-/home/jenkins/.m2/repository/io/swagger/swagger-annotations/1.6.2/swagger-annotations-1.6.2.jar = 1636535240120
-/home/jenkins/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar = 1636506102342
-/home/jenkins/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar = 1636506102282
-/home/jenkins/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar = 1636535240200
-/home/jenkins/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar = 1636506123761
-/home/jenkins/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar = 1636506103438
-/home/jenkins/.m2/repository/com/squareup/okhttp/okhttp/2.7.4/okhttp-2.7.4.jar = 1636535240164
-/home/jenkins/.m2/repository/com/squareup/okio/okio/1.6.0/okio-1.6.0.jar = 1636535240132
-/home/jenkins/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.3/jackson-core-2.10.3.jar = 1636535240200
-/home/jenkins/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.3/jackson-annotations-2.10.3.jar = 1636535240136
-/home/jenkins/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.5.1/jackson-databind-2.10.5.1.jar = 1636535240352
-/home/jenkins/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.10.3/jackson-jaxrs-json-provider-2.10.3.jar = 1636535240156
-/home/jenkins/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-base/2.10.3/jackson-jaxrs-base-2.10.3.jar = 1636535240180
-/home/jenkins/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.10.3/jackson-module-jaxb-annotations-2.10.3.jar = 1636535240196
-/home/jenkins/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.2/jakarta.xml.bind-api-2.3.2.jar = 1636506103106
-/home/jenkins/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.1/jakarta.activation-api-1.2.1.jar = 1636506103122
-/home/jenkins/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-joda/2.10.3/jackson-datatype-joda-2.10.3.jar = 1636535240208
-/home/jenkins/.m2/repository/joda-time/joda-time/2.9.3/joda-time-2.9.3.jar = 1636535240312
-/home/jenkins/.m2/repository/com/brsanthu/migbase64/2.2/migbase64-2.2.jar = 1636506102162
-/home/jenkins/.m2/repository/org/opensaml/opensaml/2.6.4/opensaml-2.6.4.jar = 1636506102114
-/home/jenkins/.m2/repository/org/opensaml/openws/1.5.4/openws-1.5.4.jar = 1636506102086
-/home/jenkins/.m2/repository/org/opensaml/xmltooling/1.4.4/xmltooling-1.4.4.jar = 1636506102102
-/home/jenkins/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.51/bcprov-jdk15on-1.51.jar = 1636507941734
-/home/jenkins/.m2/repository/ca/juliusdavies/not-yet-commons-ssl/0.3.9/not-yet-commons-ssl-0.3.9.jar = 1636506102126
-/home/jenkins/.m2/repository/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar = 1636506102142
-/home/jenkins/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar = 1636535240336
-/home/jenkins/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar = 1636506123853
-/home/jenkins/.m2/repository/org/apache/velocity/velocity/1.7/velocity-1.7.jar = 1636506102562
-/home/jenkins/.m2/repository/org/owasp/esapi/esapi/2.0.1/esapi-2.0.1.jar = 1636506102182
-/home/jenkins/.m2/repository/org/apache/santuario/xmlsec/1.5.7/xmlsec-1.5.7.jar = 1636507941606
-/home/jenkins/.m2/repository/com/google/guava/guava/30.0-jre/guava-30.0-jre.jar = 1636535240396
-/home/jenkins/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar = 1636506102306
-/home/jenkins/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar = 1636506102306
-/home/jenkins/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar = 1636506102994
-/home/jenkins/.m2/repository/org/checkerframework/checker-qual/3.5.0/checker-qual-3.5.0.jar = 1636535240276
-/home/jenkins/.m2/repository/com/google/errorprone/error_prone_annotations/2.3.4/error_prone_annotations-2.3.4.jar = 1636535240288
-/home/jenkins/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar = 1636506102318
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java = 1636535233920
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/generated-sources/annotations = 1636535241984
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/element-list = 1636535252544
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/constant-values.html = 1636535252592
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/serialized-form.html = 1636535252632
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/overview-tree.html = 1636535252972
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/package-search-index.js = 1636535253084
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/package-search-index.zip = 1636535253088
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/type-search-index.js = 1636535253088
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/type-search-index.zip = 1636535253088
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/member-search-index.js = 1636535253088
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/member-search-index.zip = 1636535253092
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/index-all.html = 1636535253100
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/allclasses-index.html = 1636535253112
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/allpackages-index.html = 1636535253112
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/deprecated-list.html = 1636535253124
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/allclasses.html = 1636535253128
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/index.html = 1636535253132
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/overview-summary.html = 1636535253132
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/help-doc.html = 1636535253136
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/stylesheet.css = 1636535253136
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/script.js = 1636535253136
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/search.js = 1636535253136
+/home/jenkins/.m2/repository/io/swagger/swagger-annotations/1.6.2/swagger-annotations-1.6.2.jar = 1638440594552
+/home/jenkins/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar = 1638410454736
+/home/jenkins/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar = 1638410454704
+/home/jenkins/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar = 1638440594620
+/home/jenkins/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar = 1638410472212
+/home/jenkins/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar = 1638410453720
+/home/jenkins/.m2/repository/com/squareup/okhttp/okhttp/2.7.4/okhttp-2.7.4.jar = 1638440594624
+/home/jenkins/.m2/repository/com/squareup/okio/okio/1.6.0/okio-1.6.0.jar = 1638412388153
+/home/jenkins/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.3/jackson-core-2.10.3.jar = 1638440594628
+/home/jenkins/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.3/jackson-annotations-2.10.3.jar = 1638440594592
+/home/jenkins/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.5.1/jackson-databind-2.10.5.1.jar = 1638440594732
+/home/jenkins/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.10.3/jackson-jaxrs-json-provider-2.10.3.jar = 1638440594608
+/home/jenkins/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-base/2.10.3/jackson-jaxrs-base-2.10.3.jar = 1638440594624
+/home/jenkins/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.10.3/jackson-module-jaxb-annotations-2.10.3.jar = 1638440594644
+/home/jenkins/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.2/jakarta.xml.bind-api-2.3.2.jar = 1638410453584
+/home/jenkins/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.1/jakarta.activation-api-1.2.1.jar = 1638410453592
+/home/jenkins/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-joda/2.10.3/jackson-datatype-joda-2.10.3.jar = 1638440594660
+/home/jenkins/.m2/repository/joda-time/joda-time/2.9.3/joda-time-2.9.3.jar = 1638412388797
+/home/jenkins/.m2/repository/com/brsanthu/migbase64/2.2/migbase64-2.2.jar = 1638410453984
+/home/jenkins/.m2/repository/org/opensaml/opensaml/2.6.4/opensaml-2.6.4.jar = 1638411197736
+/home/jenkins/.m2/repository/org/opensaml/openws/1.5.4/openws-1.5.4.jar = 1638411197684
+/home/jenkins/.m2/repository/org/opensaml/xmltooling/1.4.4/xmltooling-1.4.4.jar = 1638411197644
+/home/jenkins/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.51/bcprov-jdk15on-1.51.jar = 1638411197876
+/home/jenkins/.m2/repository/ca/juliusdavies/not-yet-commons-ssl/0.3.9/not-yet-commons-ssl-0.3.9.jar = 1638411197736
+/home/jenkins/.m2/repository/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar = 1638410454592
+/home/jenkins/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar = 1638412388705
+/home/jenkins/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar = 1638410472424
+/home/jenkins/.m2/repository/org/apache/velocity/velocity/1.7/velocity-1.7.jar = 1638410472240
+/home/jenkins/.m2/repository/org/owasp/esapi/esapi/2.0.1/esapi-2.0.1.jar = 1638411197804
+/home/jenkins/.m2/repository/org/apache/santuario/xmlsec/1.5.7/xmlsec-1.5.7.jar = 1638411197804
+/home/jenkins/.m2/repository/com/google/guava/guava/30.0-jre/guava-30.0-jre.jar = 1638440594824
+/home/jenkins/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar = 1638410454500
+/home/jenkins/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar = 1638410454508
+/home/jenkins/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar = 1638410454480
+/home/jenkins/.m2/repository/org/checkerframework/checker-qual/3.5.0/checker-qual-3.5.0.jar = 1638440594684
+/home/jenkins/.m2/repository/com/google/errorprone/error_prone_annotations/2.3.4/error_prone_annotations-2.3.4.jar = 1638440594672
+/home/jenkins/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar = 1638410454520
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java = 1638440586328
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/generated-sources/annotations = 1638440596668
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/element-list = 1638440611749
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/constant-values.html = 1638440611837
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/serialized-form.html = 1638440611913
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/overview-tree.html = 1638440612433
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/package-search-index.js = 1638440612693
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/package-search-index.zip = 1638440612709
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/type-search-index.js = 1638440612709
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/type-search-index.zip = 1638440612709
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/member-search-index.js = 1638440612713
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/member-search-index.zip = 1638440612717
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/index-all.html = 1638440612737
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/allclasses-index.html = 1638440612753
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/allpackages-index.html = 1638440612757
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/deprecated-list.html = 1638440612765
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/allclasses.html = 1638440612769
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/index.html = 1638440612773
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/overview-summary.html = 1638440612773
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/help-doc.html = 1638440612777
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/stylesheet.css = 1638440612797
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/script.js = 1638440612797
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/search.js = 1638440612797

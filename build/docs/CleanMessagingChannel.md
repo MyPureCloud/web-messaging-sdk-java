@@ -13,6 +13,7 @@ title: CleanMessagingChannel
 | **messageId** | <!----><!---->**String**<!----> |  |  [optional] |
 | **from** | <!----><!---->[**CleanMessagingRecipient**](CleanMessagingRecipient.html)<!----> |  |  [optional] |
 | **to** | <!----><!---->[**CleanMessagingRecipient**](CleanMessagingRecipient.html)<!----> |  |  [optional] |
+| **metadata** | <!----><!---->[**CleanChannelMetadata**](CleanChannelMetadata.html)<!----> |  |  [optional] |
 {: class="table table-striped"}
 
 

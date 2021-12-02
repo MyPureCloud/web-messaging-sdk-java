@@ -12,6 +12,8 @@ title: WebMessagingClient
 | [**connect**](WebMessagingClient.html#connect1) | Establishes a connection to Genesys Cloud via a WebSocket |
 | [**configureSession**](WebMessagingClient.html#configureSession1) | Configures a new session with a randomly generated session token |
 | [**configureSession**](WebMessagingClient.html#configureSession2) | Configures a session using the provided session token. This can be used to reconnect to active sessions. |
+| [**configureAuthenticatedSession**](WebMessagingClient.html#configureAuthenticatedSession1) | Configures a new authenticated session with a randomly generated session token |
+| [**configureAuthenticatedSession**](WebMessagingClient.html#configureAuthenticatedSession2) | Configures an authenticated session using the provided session token. This can be used to reconnect to active sessions. |
 | [**disconnect**](WebMessagingClient.html#disconnect1) | Closes the WebSocket connection |
 | [**ping**](WebMessagingClient.html#ping1) | Sends a message that will cause a response to ensure the connection is active |
 | [**sendMessage**](WebMessagingClient.html#sendMessage1) | Sends a message to the conversation |
@@ -147,7 +149,7 @@ Establishes a connection to Genesys Cloud via a WebSocket
 
 
 
-> void configureSession(deploymentId)
+> void configureSession(deploymentId, origin)
 
 Configures a new session with a randomly generated session token
 
@@ -156,7 +158,8 @@ Configures a new session with a randomly generated session token
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **deploymentId** | **String**| The ID of the Web Messaging deployment   |
+| **deploymentId** | **String**| The ID of the Web Messaging deployment |
+| **origin** | **String**| Represents the origin of the request. You can restrict access in Messenger Deployments   |
 {: class="table-striped"}
 
 
@@ -170,7 +173,7 @@ Configures a new session with a randomly generated session token
 
 
 
-> void configureSession(deploymentId, token)
+> void configureSession(deploymentId, token, origin)
 
 Configures a session using the provided session token. This can be used to reconnect to active sessions.
 
@@ -180,7 +183,59 @@ Configures a session using the provided session token. This can be used to recon
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **deploymentId** | **String**| The ID of the Web Messaging deployment |
-| **token** | **String**| The session token   |
+| **token** | **String**| The session token |
+| **origin** | **String**| Represents the origin of the request. You can restrict access in Messenger Deployments   |
+{: class="table-striped"}
+
+
+### Return type
+
+**void**
+
+<a name="configureAuthenticatedSession1"></a>
+
+# **configureAuthenticatedSession**
+
+
+
+> void configureAuthenticatedSession(deploymentId, origin, data)
+
+Configures a new authenticated session with a randomly generated session token
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **deploymentId** | **OAuthParams**| The ID of the Web Messaging deployment |
+| **origin** | **String**| Represents the origin of the request. You can restrict access in Messenger Deployments |
+| **data** | **String**| The session OAuthParams for configuring Authenticated Session   |
+{: class="table-striped"}
+
+
+### Return type
+
+**void**
+
+<a name="configureAuthenticatedSession2"></a>
+
+# **configureAuthenticatedSession**
+
+
+
+> void configureAuthenticatedSession(deploymentId, token, origin, data)
+
+Configures an authenticated session using the provided session token. This can be used to reconnect to active sessions.
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **deploymentId** | **OAuthParams**| The ID of the Web Messaging deployment |
+| **token** | **String**| The session token |
+| **origin** | **String**| Represents the origin of the request. You can restrict access in Messenger Deployments |
+| **data** | **String**| The session OAuthParams for configuring Authenticated Session   |
 {: class="table-striped"}
 
 

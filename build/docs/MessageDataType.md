@@ -25,6 +25,8 @@ title: MessageDataType
 
 * `CONNECTIONCLOSEDEVENT` (value: `"ConnectionClosedEvent"`)
 
+* `LOGOUTEVENT` (value: `"LogoutEvent"`)
+
 * `SESSIONEXPIREDEVENT` (value: `"SessionExpiredEvent"`)
 
 * `JWTRESPONSE` (value: `"JwtResponse"`)

@@ -10,6 +10,7 @@ import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
 import cloud.genesys.webmessaging.sdk.model.ChannelType;
+import cloud.genesys.webmessaging.sdk.model.CleanChannelMetadata;
 import cloud.genesys.webmessaging.sdk.model.CleanMessagingRecipient;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
@@ -27,6 +28,7 @@ public class CleanMessagingChannel  implements Serializable {
   private String messageId = null;
   private CleanMessagingRecipient from = null;
   private CleanMessagingRecipient to = null;
+  private CleanChannelMetadata metadata = null;
 
   
   /**
@@ -114,6 +116,23 @@ public class CleanMessagingChannel  implements Serializable {
   }
 
   
+  /**
+   **/
+  public CleanMessagingChannel metadata(CleanChannelMetadata metadata) {
+    this.metadata = metadata;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("metadata")
+  public CleanChannelMetadata getMetadata() {
+    return metadata;
+  }
+  public void setMetadata(CleanChannelMetadata metadata) {
+    this.metadata = metadata;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -128,12 +147,13 @@ public class CleanMessagingChannel  implements Serializable {
         Objects.equals(this.type, cleanMessagingChannel.type) &&
         Objects.equals(this.messageId, cleanMessagingChannel.messageId) &&
         Objects.equals(this.from, cleanMessagingChannel.from) &&
-        Objects.equals(this.to, cleanMessagingChannel.to);
+        Objects.equals(this.to, cleanMessagingChannel.to) &&
+        Objects.equals(this.metadata, cleanMessagingChannel.metadata);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(time, type, messageId, from, to);
+    return Objects.hash(time, type, messageId, from, to, metadata);
   }
 
   @Override
@@ -146,6 +166,7 @@ public class CleanMessagingChannel  implements Serializable {
     sb.append("    messageId: ").append(toIndentedString(messageId)).append("\n");
     sb.append("    from: ").append(toIndentedString(from)).append("\n");
     sb.append("    to: ").append(toIndentedString(to)).append("\n");
+    sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
     sb.append("}");
     return sb.toString();
   }

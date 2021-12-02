@@ -75,7 +75,7 @@ public class IncomingNormalizedMessage  implements Serializable {
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("content")
   public List<MessageContent> getContent() {
     return content;
@@ -92,7 +92,7 @@ public class IncomingNormalizedMessage  implements Serializable {
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("events")
   public List<MessageEvent> getEvents() {
     return events;

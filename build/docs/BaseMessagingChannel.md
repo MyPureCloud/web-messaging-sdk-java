@@ -13,6 +13,7 @@ title: BaseMessagingChannel
 | **messageId** | <!----><!---->**String**<!----> |  |  [optional] |
 | **from** | <!----><!---->[**BaseMessagingRecipient**](BaseMessagingRecipient.html)<!----> |  |  [optional] |
 | **to** | <!----><!---->[**BaseMessagingRecipient**](BaseMessagingRecipient.html)<!----> |  |  [optional] |
+| **metadata** | <!----><!---->[**BaseChannelMetadata**](BaseChannelMetadata.html)<!----> |  |  [optional] |
 {: class="table table-striped"}
 
 

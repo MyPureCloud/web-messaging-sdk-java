@@ -37,6 +37,7 @@ public enum MessageDataType {
   UPLOADFAILUREEVENT("UploadFailureEvent"),
   UPLOADSUCCESSEVENT("UploadSuccessEvent"),
   CONNECTIONCLOSEDEVENT("ConnectionClosedEvent"),
+  LOGOUTEVENT("LogoutEvent"),
   SESSIONEXPIREDEVENT("SessionExpiredEvent"),
   JWTRESPONSE("JwtResponse"),
   GENERATEURLERROR("GenerateUrlError"),

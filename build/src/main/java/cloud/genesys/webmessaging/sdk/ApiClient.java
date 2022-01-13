@@ -18,39 +18,12 @@ import java.text.DateFormat;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.Map.Entry;
-import java.util.concurrent.Future;
-import org.apache.commons.codec.binary.Base64;
-import org.apache.commons.httpclient.UsernamePasswordCredentials;
-import org.apache.commons.httpclient.auth.BasicScheme;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.ResponseHandler;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.util.EntityUtils;
+
 import com.google.common.base.Stopwatch;
 import java.util.concurrent.TimeUnit;
-import org.joda.time.DateTime;
-import org.opensaml.saml2.core.Response;
-import org.opensaml.saml2.core.impl.ResponseMarshaller;
-import org.opensaml.xml.io.MarshallingException;
-import org.opensaml.xml.util.XMLHelper;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
 import java.io.IOException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import javax.xml.bind.DatatypeConverter;
-
-import com.google.common.util.concurrent.SettableFuture;
 
 import cloud.genesys.webmessaging.sdk.auth.Authentication;
 import cloud.genesys.webmessaging.sdk.auth.OAuth;
@@ -631,7 +604,7 @@ public class ApiClient implements AutoCloseable {
         private Builder(ConnectorProperties properties) {
             this.properties = (properties != null) ? properties.copy() : new ConnectorProperties();
             withUserAgent(DEFAULT_USER_AGENT);
-            withDefaultHeader("purecloud-sdk", "5.0.0");
+            withDefaultHeader("purecloud-sdk", "6.0.0");
         }
 
         public Builder withDefaultHeader(String header, String value) {

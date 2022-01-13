@@ -22,7 +22,6 @@ import java.io.Serializable;
 public class CloseSessionRequest  implements Serializable {
   
   private RequestTypeCloseSession action = null;
-  private String sessionId = null;
   private String token = null;
 
   
@@ -40,23 +39,6 @@ public class CloseSessionRequest  implements Serializable {
   }
   public void setAction(RequestTypeCloseSession action) {
     this.action = action;
-  }
-
-  
-  /**
-   **/
-  public CloseSessionRequest sessionId(String sessionId) {
-    this.sessionId = sessionId;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", required = true, value = "")
-  @JsonProperty("sessionId")
-  public String getSessionId() {
-    return sessionId;
-  }
-  public void setSessionId(String sessionId) {
-    this.sessionId = sessionId;
   }
 
   
@@ -88,13 +70,12 @@ public class CloseSessionRequest  implements Serializable {
     }
     CloseSessionRequest closeSessionRequest = (CloseSessionRequest) o;
     return Objects.equals(this.action, closeSessionRequest.action) &&
-        Objects.equals(this.sessionId, closeSessionRequest.sessionId) &&
         Objects.equals(this.token, closeSessionRequest.token);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(action, sessionId, token);
+    return Objects.hash(action, token);
   }
 
   @Override
@@ -103,7 +84,6 @@ public class CloseSessionRequest  implements Serializable {
     sb.append("class CloseSessionRequest {\n");
     
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
-    sb.append("    sessionId: ").append(toIndentedString(sessionId)).append("\n");
     sb.append("    token: ").append(toIndentedString(token)).append("\n");
     sb.append("}");
     return sb.toString();

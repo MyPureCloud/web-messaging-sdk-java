@@ -33,6 +33,8 @@ title: MessageDataType
 
 * `GENERATEURLERROR` (value: `"GenerateUrlError"`)
 
+* `TOOMANYREQUESTSERRORMESSAGE` (value: `"TooManyRequestsErrorMessage"`)
+
 * `UNKNOWN` (value: `"Unknown"`)
 
 

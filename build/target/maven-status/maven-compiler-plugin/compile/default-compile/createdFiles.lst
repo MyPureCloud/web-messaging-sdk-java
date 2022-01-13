@@ -4,7 +4,6 @@ cloud/genesys/webmessaging/sdk/model/ResponseMessage.class
 cloud/genesys/webmessaging/sdk/model/PresignedUrlResponse.class
 cloud/genesys/webmessaging/sdk/connector/apache/ApacheHttpCredentialsProvider$CredentialsWrapper.class
 cloud/genesys/webmessaging/sdk/model/ButtonResponseType.class
-cloud/genesys/webmessaging/sdk/model/RequestTypeConfigureSessionAuthenticated.class
 cloud/genesys/webmessaging/sdk/ApiDateFormat.class
 cloud/genesys/webmessaging/sdk/model/MessageDataType.class
 cloud/genesys/webmessaging/sdk/model/MessageDataTypeDeserializer.class
@@ -12,6 +11,7 @@ cloud/genesys/webmessaging/sdk/model/ActionDeserializer.class
 cloud/genesys/webmessaging/sdk/ApiRequestBuilder$2.class
 cloud/genesys/webmessaging/sdk/model/JwtResponse.class
 cloud/genesys/webmessaging/sdk/model/BaseMessagingContent.class
+cloud/genesys/webmessaging/sdk/model/RequestTypeConfigureAuthenticatedSessionDeserializer.class
 cloud/genesys/webmessaging/sdk/model/EventMessage.class
 cloud/genesys/webmessaging/sdk/model/ContentAttachment.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingMessage$DirectionEnumDeserializer.class
@@ -41,7 +41,9 @@ cloud/genesys/webmessaging/sdk/model/WebMessagingMessage$OriginatingEntityEnumDe
 cloud/genesys/webmessaging/sdk/model/GenerateUrlError.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingAttachment$MediaTypeEnum.class
 cloud/genesys/webmessaging/sdk/connector/ApiClientConnectorProperties.class
+cloud/genesys/webmessaging/sdk/model/WebMessagingEvent$EventTypeEnum.class
 cloud/genesys/webmessaging/sdk/LocalDateDeserializer.class
+cloud/genesys/webmessaging/sdk/model/RequestTypeConfigureAuthenticatedSession.class
 cloud/genesys/webmessaging/sdk/WebMessagingClient$1.class
 cloud/genesys/webmessaging/sdk/model/SendMessageRequest.class
 cloud/genesys/webmessaging/sdk/model/BaseMessagingChannel.class
@@ -49,7 +51,6 @@ cloud/genesys/webmessaging/sdk/model/RequestType.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingAttachment.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingQuickReply$ActionEnumDeserializer.class
 cloud/genesys/webmessaging/sdk/model/RequestTypeGenerateDownloadUrl.class
-cloud/genesys/webmessaging/sdk/model/ConfigureSessionAuthenticatedRequest.class
 cloud/genesys/webmessaging/sdk/model/RequestTypeIncomingMessage.class
 cloud/genesys/webmessaging/sdk/model/UploadFailureEvent.class
 cloud/genesys/webmessaging/sdk/model/RequestTypeGenerateDownloadUrlDeserializer.class
@@ -68,8 +69,10 @@ cloud/genesys/webmessaging/sdk/model/CleanMessagingChannel.class
 cloud/genesys/webmessaging/sdk/model/ErrorBody.class
 cloud/genesys/webmessaging/sdk/connector/apache/ApacheHttpClientConnectorProvider.class
 cloud/genesys/webmessaging/sdk/model/BaseMessageTypeDeserializer.class
+cloud/genesys/webmessaging/sdk/model/WebMessagingEvent.class
 cloud/genesys/webmessaging/sdk/model/ContentButtonResponse.class
 cloud/genesys/webmessaging/sdk/model/JourneyAction.class
+cloud/genesys/webmessaging/sdk/model/TooManyRequestsErrorMessage.class
 cloud/genesys/webmessaging/sdk/model/SessionResponse.class
 cloud/genesys/webmessaging/sdk/model/StoryType.class
 cloud/genesys/webmessaging/sdk/model/ButtonResponseTypeDeserializer.class
@@ -77,7 +80,6 @@ cloud/genesys/webmessaging/sdk/PagedResource.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingQuickReply$ActionEnum.class
 cloud/genesys/webmessaging/sdk/StringUtil.class
 cloud/genesys/webmessaging/sdk/model/BaseMessageType.class
-cloud/genesys/webmessaging/sdk/model/RequestTypeConfigureSessionAuthenticatedDeserializer.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingButtonResponse.class
 cloud/genesys/webmessaging/sdk/model/ContentList.class
 cloud/genesys/webmessaging/sdk/WebMessagingClient$SessionListener.class
@@ -110,6 +112,7 @@ cloud/genesys/webmessaging/sdk/model/JourneyCustomer.class
 cloud/genesys/webmessaging/sdk/model/CleanMessageContent.class
 cloud/genesys/webmessaging/sdk/model/ContentTypeDeserializer.class
 cloud/genesys/webmessaging/sdk/connector/ApiClientConnectorRequest.class
+cloud/genesys/webmessaging/sdk/model/WebMessagingEventCoBrowse$TypeEnum.class
 cloud/genesys/webmessaging/sdk/model/RequestTypeIncomingMessageDeserializer.class
 cloud/genesys/webmessaging/sdk/model/GetJwtRequest.class
 cloud/genesys/webmessaging/sdk/model/NotificationTemplateFooter.class
@@ -144,6 +147,7 @@ cloud/genesys/webmessaging/sdk/model/SendEchoRequest.class
 cloud/genesys/webmessaging/sdk/connector/ApiClientConnectorProvider.class
 cloud/genesys/webmessaging/sdk/model/RequestTypeDeserializer.class
 cloud/genesys/webmessaging/sdk/GenesysCloudRegionWebSocketHosts.class
+cloud/genesys/webmessaging/sdk/model/WebMessagingEventCoBrowse.class
 cloud/genesys/webmessaging/sdk/connector/okhttp/OkHttpClientConnectorProvider.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingMessage$TypeEnumDeserializer.class
 cloud/genesys/webmessaging/sdk/model/RequestTypeGenerateUploadUrlDeserializer.class
@@ -151,9 +155,11 @@ cloud/genesys/webmessaging/sdk/model/ContentGeneric.class
 cloud/genesys/webmessaging/sdk/api/WebMessagingApi.class
 cloud/genesys/webmessaging/sdk/model/DeleteAttachmentRequest.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingContent$ContentTypeEnumDeserializer.class
+cloud/genesys/webmessaging/sdk/model/WebMessagingEvent$EventTypeEnumDeserializer.class
 cloud/genesys/webmessaging/sdk/auth/Authentication.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingGeneric.class
 cloud/genesys/webmessaging/sdk/WebMessagingClient$2.class
+cloud/genesys/webmessaging/sdk/model/ConfigureAuthenticatedSessionRequest.class
 cloud/genesys/webmessaging/sdk/model/ContentReaction.class
 cloud/genesys/webmessaging/sdk/ApiRequestBuilder.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingMessageEntityList.class
@@ -189,6 +195,7 @@ cloud/genesys/webmessaging/sdk/ApiClient$ApiResponseWrapper.class
 cloud/genesys/webmessaging/sdk/model/ContentType.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingChannel.class
 cloud/genesys/webmessaging/sdk/model/UploadSuccessEvent.class
+cloud/genesys/webmessaging/sdk/model/WebMessagingEventCoBrowse$TypeEnumDeserializer.class
 cloud/genesys/webmessaging/sdk/model/ListItemTypeDeserializer.class
 cloud/genesys/webmessaging/sdk/ApiClient.class
 cloud/genesys/webmessaging/sdk/WebMessagingClient.class

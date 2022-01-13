@@ -11,6 +11,7 @@ import java.util.Objects;
 import java.io.IOException;
 import cloud.genesys.webmessaging.sdk.model.WebMessagingChannel;
 import cloud.genesys.webmessaging.sdk.model.WebMessagingContent;
+import cloud.genesys.webmessaging.sdk.model.WebMessagingEvent;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
@@ -49,7 +50,8 @@ public class WebMessagingMessage  implements Serializable {
     OUTDATEDSDKVERSION("OutdatedSdkVersion"),
     TEXT("Text"),
     STRUCTURED("Structured"),
-    RECEIPT("Receipt");
+    RECEIPT("Receipt"),
+    EVENT("Event");
 
     private String value;
 
@@ -79,6 +81,7 @@ public class WebMessagingMessage  implements Serializable {
   private TypeEnum type = null;
   private String text = null;
   private List<WebMessagingContent> content = new ArrayList<WebMessagingContent>();
+  private List<WebMessagingEvent> events = new ArrayList<WebMessagingEvent>();
 
   private static class DirectionEnumDeserializer extends StdDeserializer<DirectionEnum> {
     public DirectionEnumDeserializer() {
@@ -268,6 +271,24 @@ public class WebMessagingMessage  implements Serializable {
 
   
   /**
+   * List of event elements.
+   **/
+  public WebMessagingMessage events(List<WebMessagingEvent> events) {
+    this.events = events;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "List of event elements.")
+  @JsonProperty("events")
+  public List<WebMessagingEvent> getEvents() {
+    return events;
+  }
+  public void setEvents(List<WebMessagingEvent> events) {
+    this.events = events;
+  }
+
+  
+  /**
    * The direction of the message.  Direction is always from the perspective of the Genesys Cloud platform.  An Inbound message is one sent from a guest to the Genesys Cloud Platform.  An Outbound message is one sent from the Genesys Cloud Platform to a guest.
    **/
   public WebMessagingMessage direction(DirectionEnum direction) {
@@ -318,13 +339,14 @@ public class WebMessagingMessage  implements Serializable {
         Objects.equals(this.type, webMessagingMessage.type) &&
         Objects.equals(this.text, webMessagingMessage.text) &&
         Objects.equals(this.content, webMessagingMessage.content) &&
+        Objects.equals(this.events, webMessagingMessage.events) &&
         Objects.equals(this.direction, webMessagingMessage.direction) &&
         Objects.equals(this.originatingEntity, webMessagingMessage.originatingEntity);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, channel, type, text, content, direction, originatingEntity);
+    return Objects.hash(id, channel, type, text, content, events, direction, originatingEntity);
   }
 
   @Override
@@ -337,6 +359,7 @@ public class WebMessagingMessage  implements Serializable {
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    text: ").append(toIndentedString(text)).append("\n");
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
+    sb.append("    events: ").append(toIndentedString(events)).append("\n");
     sb.append("    direction: ").append(toIndentedString(direction)).append("\n");
     sb.append("    originatingEntity: ").append(toIndentedString(originatingEntity)).append("\n");
     sb.append("}");

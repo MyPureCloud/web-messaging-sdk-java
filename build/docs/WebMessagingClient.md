@@ -17,6 +17,7 @@ title: WebMessagingClient
 | [**disconnect**](WebMessagingClient.html#disconnect1) | Closes the WebSocket connection |
 | [**ping**](WebMessagingClient.html#ping1) | Sends a message that will cause a response to ensure the connection is active |
 | [**sendMessage**](WebMessagingClient.html#sendMessage1) | Sends a message to the conversation |
+| [**sendMessage**](WebMessagingClient.html#sendMessage2) | Sends a message to the conversation with customAttributes |
 | [**deserialize**](WebMessagingClient.html#deserialize1) | Deserializes a message payload |
 | [**onSessionEvent**](WebMessagingClient.html#onSessionEvent1) | Invokes appropriate handler for incoming WebSocket messages |
 | [**onWebSocketConnected**](WebMessagingClient.html#onWebSocketConnected1) | Invokes registered listeners when the connection to the remote server has been established |
@@ -275,7 +276,7 @@ Sends a message that will cause a response to ensure the connection is active
 
 
 
-> void sendMessage(message)
+> void sendMessage(message, attachmentIds)
 
 Sends a message to the conversation
 
@@ -284,7 +285,33 @@ Sends a message to the conversation
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **message** | **String...**| The text to send   |
+| **message** | **String...**| The text to send |
+| **attachmentIds** | **String**| The Id of the attachments being sent with the message   |
+{: class="table-striped"}
+
+
+### Return type
+
+**void**
+
+<a name="sendMessage2"></a>
+
+# **sendMessage**
+
+
+
+> void sendMessage(message, customAttributes, attachmentIds)
+
+Sends a message to the conversation with customAttributes
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **message** | **String...**| The text to send |
+| **customAttributes** | **String>**| Key Value Pair that allows custom data to be sent with a message |
+| **attachmentIds** | **Map<String**| The Id of the attachments being sent with the message   |
 {: class="table-striped"}
 
 

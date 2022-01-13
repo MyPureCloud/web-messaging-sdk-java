@@ -41,6 +41,7 @@ public enum MessageDataType {
   SESSIONEXPIREDEVENT("SessionExpiredEvent"),
   JWTRESPONSE("JwtResponse"),
   GENERATEURLERROR("GenerateUrlError"),
+  TOOMANYREQUESTSERRORMESSAGE("TooManyRequestsErrorMessage"),
   UNKNOWN("Unknown");
 
   private String value;

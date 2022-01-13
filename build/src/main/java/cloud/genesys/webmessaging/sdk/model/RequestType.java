@@ -30,7 +30,7 @@ class RequestTypeDeserializer extends StdDeserializer<RequestType> {
  @JsonDeserialize(using = RequestTypeDeserializer.class)
 public enum RequestType {
   CONFIGURESESSION("configureSession"),
-  CONFIGURESESSIONAUTHENTICATED("configureSessionAuthenticated"),
+  CONFIGUREAUTHENTICATEDSESSION("configureAuthenticatedSession"),
   ONATTACHMENT("onAttachment"),
   GETATTACHMENT("getAttachment"),
   DELETEATTACHMENT("deleteAttachment"),

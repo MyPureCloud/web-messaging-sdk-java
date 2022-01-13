@@ -11,7 +11,7 @@ title: RequestType
 
 * `CONFIGURESESSION` (value: `"configureSession"`)
 
-* `CONFIGURESESSIONAUTHENTICATED` (value: `"configureSessionAuthenticated"`)
+* `CONFIGUREAUTHENTICATEDSESSION` (value: `"configureAuthenticatedSession"`)
 
 * `ONATTACHMENT` (value: `"onAttachment"`)
 

@@ -22,6 +22,7 @@ import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
+import java.util.Map;
 
 /**
  * A client used to connect to a Web Messaging session
@@ -247,12 +248,12 @@ public class WebMessagingClient {
       }
 
       // Create configuration request
-      ConfigureSessionAuthenticatedRequest configureSessionAuthenticatedRequest = new ConfigureSessionAuthenticatedRequest();
-      configureSessionAuthenticatedRequest.setAction(RequestTypeConfigureSessionAuthenticated.CONFIGURESESSIONAUTHENTICATED);
-      configureSessionAuthenticatedRequest.setDeploymentId(deploymentId);
-      configureSessionAuthenticatedRequest.setToken(token);
-      configureSessionAuthenticatedRequest.setData(data);
-      String payload = objectMapper.writeValueAsString(configureSessionAuthenticatedRequest);
+      ConfigureAuthenticatedSessionRequest configureAuthenticatedSessionRequest = new ConfigureAuthenticatedSessionRequest();
+      configureAuthenticatedSessionRequest.setAction(RequestTypeConfigureAuthenticatedSession.CONFIGUREAUTHENTICATEDSESSION);
+      configureAuthenticatedSessionRequest.setDeploymentId(deploymentId);
+      configureAuthenticatedSessionRequest.setToken(token);
+      configureAuthenticatedSessionRequest.setData(data);
+      String payload = objectMapper.writeValueAsString(configureAuthenticatedSessionRequest);
 
       webSocket.sendText(payload, true);
     } catch (JsonProcessingException e) {
@@ -292,8 +293,20 @@ public class WebMessagingClient {
      * Sends a message to the conversation
      *
      * @param message The text to send
+     * @param attachmentIds The Id of the attachments being sent with the message
      */
     public void sendMessage(String message, String... attachmentIds) {
+        sendMessage(message, null, attachmentIds);
+    }
+
+    /**
+     * Sends a message to the conversation with customAttributes
+     *
+     * @param message The text to send
+     * @param customAttributes Key Value Pair that allows custom data to be sent with a message
+     * @param attachmentIds The Id of the attachments being sent with the message
+     */
+    public void sendMessage(String message, Map<String, String> customAttributes, String... attachmentIds) {
         try {
             SendMessageRequest sendMessageRequest = new SendMessageRequest();
             sendMessageRequest.token(this.token);
@@ -301,6 +314,13 @@ public class WebMessagingClient {
             sendMessageRequest.message(new IncomingNormalizedMessage()
                .type(NormalizedType.TEXT)
                .text(message));
+            if (customAttributes != null) {
+                BaseMessagingChannel baseMessagingChannel = new BaseMessagingChannel();
+                BaseChannelMetadata baseChannelMetadata = new BaseChannelMetadata();
+                baseChannelMetadata.customAttributes(customAttributes);
+                baseMessagingChannel.metadata(baseChannelMetadata);
+                sendMessageRequest.channel(baseMessagingChannel);
+            }
             sendMessageRequest.attachmentIds(Arrays.asList(attachmentIds));
             String payload = objectMapper.writeValueAsString(sendMessageRequest);
 

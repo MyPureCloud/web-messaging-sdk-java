@@ -23,8 +23,8 @@ import java.io.Serializable;
 public class ConfigureSessionRequest  implements Serializable {
   
   private RequestTypeConfigureSession action = null;
-  private String deploymentId = null;
   private String token = null;
+  private String deploymentId = null;
   private JourneyContext journeyContext = null;
 
   
@@ -47,23 +47,6 @@ public class ConfigureSessionRequest  implements Serializable {
   
   /**
    **/
-  public ConfigureSessionRequest deploymentId(String deploymentId) {
-    this.deploymentId = deploymentId;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", required = true, value = "")
-  @JsonProperty("deploymentId")
-  public String getDeploymentId() {
-    return deploymentId;
-  }
-  public void setDeploymentId(String deploymentId) {
-    this.deploymentId = deploymentId;
-  }
-
-  
-  /**
-   **/
   public ConfigureSessionRequest token(String token) {
     this.token = token;
     return this;
@@ -76,6 +59,23 @@ public class ConfigureSessionRequest  implements Serializable {
   }
   public void setToken(String token) {
     this.token = token;
+  }
+
+  
+  /**
+   **/
+  public ConfigureSessionRequest deploymentId(String deploymentId) {
+    this.deploymentId = deploymentId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("deploymentId")
+  public String getDeploymentId() {
+    return deploymentId;
+  }
+  public void setDeploymentId(String deploymentId) {
+    this.deploymentId = deploymentId;
   }
 
   
@@ -107,14 +107,14 @@ public class ConfigureSessionRequest  implements Serializable {
     }
     ConfigureSessionRequest configureSessionRequest = (ConfigureSessionRequest) o;
     return Objects.equals(this.action, configureSessionRequest.action) &&
-        Objects.equals(this.deploymentId, configureSessionRequest.deploymentId) &&
         Objects.equals(this.token, configureSessionRequest.token) &&
+        Objects.equals(this.deploymentId, configureSessionRequest.deploymentId) &&
         Objects.equals(this.journeyContext, configureSessionRequest.journeyContext);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(action, deploymentId, token, journeyContext);
+    return Objects.hash(action, token, deploymentId, journeyContext);
   }
 
   @Override
@@ -123,8 +123,8 @@ public class ConfigureSessionRequest  implements Serializable {
     sb.append("class ConfigureSessionRequest {\n");
     
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
-    sb.append("    deploymentId: ").append(toIndentedString(deploymentId)).append("\n");
     sb.append("    token: ").append(toIndentedString(token)).append("\n");
+    sb.append("    deploymentId: ").append(toIndentedString(deploymentId)).append("\n");
     sb.append("    journeyContext: ").append(toIndentedString(journeyContext)).append("\n");
     sb.append("}");
     return sb.toString();

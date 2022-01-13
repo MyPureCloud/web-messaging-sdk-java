@@ -1,44 +1,32 @@
-Platform API version: 5216
+Platform API version: 5276
 
 
-# Major Changes (0 changes)
-
-
-# Minor Changes (9 changes)
-
-**BaseChannelMetadata** (1 change)
-
-* Model was added
-
-**BaseMessagingChannel** (1 change)
-
-* Optional property metadata was added
-
-**SendMessageRequest** (1 change)
-
-* Optional property channel was added
+# Major Changes (3 changes)
 
 **RequestType.ConfigureSessionAuthenticated** (1 change)
 
-* Model was added
-
-**oAuthParams** (1 change)
-
-* Model was added
+* Model RequestType.ConfigureSessionAuthenticated was removed
 
 **ConfigureSessionAuthenticatedRequest** (1 change)
 
+* Model ConfigureSessionAuthenticatedRequest was removed
+
+**CloseSessionRequest** (1 change)
+
+* Property sessionId was removed
+
+
+# Minor Changes (3 changes)
+
+**RequestType.ConfigureAuthenticatedSession** (1 change)
+
 * Model was added
 
-**CleanChannelMetadata** (1 change)
+**ConfigureAuthenticatedSessionRequest** (1 change)
 
 * Model was added
 
-**CleanMessagingChannel** (1 change)
-
-* Optional property metadata was added
-
-**LogoutEvent** (1 change)
+**TooManyRequestsErrorMessage** (1 change)
 
 * Model was added
 

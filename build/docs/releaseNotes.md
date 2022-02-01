@@ -1,34 +1,12 @@
-Platform API version: 5276
+Platform API version: 5336
 
 
-# Major Changes (3 changes)
+Upgrading OKHttp from 2.7.4 to 4.9.3 in an attempt to remove a security flaw
 
-**RequestType.ConfigureSessionAuthenticated** (1 change)
-
-* Model RequestType.ConfigureSessionAuthenticated was removed
-
-**ConfigureSessionAuthenticatedRequest** (1 change)
-
-* Model ConfigureSessionAuthenticatedRequest was removed
-
-**CloseSessionRequest** (1 change)
-
-* Property sessionId was removed
+# Major Changes (0 changes)
 
 
-# Minor Changes (3 changes)
-
-**RequestType.ConfigureAuthenticatedSession** (1 change)
-
-* Model was added
-
-**ConfigureAuthenticatedSessionRequest** (1 change)
-
-* Model was added
-
-**TooManyRequestsErrorMessage** (1 change)
-
-* Model was added
+# Minor Changes (0 changes)
 
 
 # Point Changes (0 changes)

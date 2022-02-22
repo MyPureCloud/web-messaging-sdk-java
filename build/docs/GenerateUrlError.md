@@ -8,9 +8,9 @@ title: GenerateUrlError
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **attachmentId** | <!----><!---->**String**<!----> |  |  [optional] |
 | **errorCode** | <!----><!---->**Integer**<!----> |  |  |
 | **errorMessage** | <!----><!---->**String**<!----> |  |  |
+| **attachmentId** | <!----><!---->**String**<!----> |  |  [optional] |
 | **timestamp** | <!----><!---->**String**<!----> |  |  [optional] |
 {: class="table table-striped"}
 

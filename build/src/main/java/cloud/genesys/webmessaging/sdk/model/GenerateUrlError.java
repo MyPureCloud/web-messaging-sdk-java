@@ -20,27 +20,10 @@ import java.io.Serializable;
 
 public class GenerateUrlError  implements Serializable {
   
-  private String attachmentId = null;
   private Integer errorCode = null;
   private String errorMessage = null;
+  private String attachmentId = null;
   private String timestamp = null;
-
-  
-  /**
-   **/
-  public GenerateUrlError attachmentId(String attachmentId) {
-    this.attachmentId = attachmentId;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("attachmentId")
-  public String getAttachmentId() {
-    return attachmentId;
-  }
-  public void setAttachmentId(String attachmentId) {
-    this.attachmentId = attachmentId;
-  }
 
   
   /**
@@ -79,6 +62,23 @@ public class GenerateUrlError  implements Serializable {
   
   /**
    **/
+  public GenerateUrlError attachmentId(String attachmentId) {
+    this.attachmentId = attachmentId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("attachmentId")
+  public String getAttachmentId() {
+    return attachmentId;
+  }
+  public void setAttachmentId(String attachmentId) {
+    this.attachmentId = attachmentId;
+  }
+
+  
+  /**
+   **/
   public GenerateUrlError timestamp(String timestamp) {
     this.timestamp = timestamp;
     return this;
@@ -104,15 +104,15 @@ public class GenerateUrlError  implements Serializable {
       return false;
     }
     GenerateUrlError generateUrlError = (GenerateUrlError) o;
-    return Objects.equals(this.attachmentId, generateUrlError.attachmentId) &&
-        Objects.equals(this.errorCode, generateUrlError.errorCode) &&
+    return Objects.equals(this.errorCode, generateUrlError.errorCode) &&
         Objects.equals(this.errorMessage, generateUrlError.errorMessage) &&
+        Objects.equals(this.attachmentId, generateUrlError.attachmentId) &&
         Objects.equals(this.timestamp, generateUrlError.timestamp);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(attachmentId, errorCode, errorMessage, timestamp);
+    return Objects.hash(errorCode, errorMessage, attachmentId, timestamp);
   }
 
   @Override
@@ -120,9 +120,9 @@ public class GenerateUrlError  implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class GenerateUrlError {\n");
     
-    sb.append("    attachmentId: ").append(toIndentedString(attachmentId)).append("\n");
     sb.append("    errorCode: ").append(toIndentedString(errorCode)).append("\n");
     sb.append("    errorMessage: ").append(toIndentedString(errorMessage)).append("\n");
+    sb.append("    attachmentId: ").append(toIndentedString(attachmentId)).append("\n");
     sb.append("    timestamp: ").append(toIndentedString(timestamp)).append("\n");
     sb.append("}");
     return sb.toString();

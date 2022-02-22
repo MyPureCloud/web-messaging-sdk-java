@@ -1,12 +1,40 @@
-Platform API version: 5336
+Platform API version: 5413
 
 
-Upgrading OKHttp from 2.7.4 to 4.9.3 in an attempt to remove a security flaw
+# Major Changes (1 change)
 
-# Major Changes (0 changes)
+**GenerateUploadUrlRequest** (1 change)
+
+* Property errorsAsJson was removed
 
 
-# Minor Changes (0 changes)
+# Minor Changes (8 changes)
+
+**EventPresenceType** (1 change)
+
+* Model was added
+
+**EventPresence** (1 change)
+
+* Model was added
+
+**EventTypingType** (1 change)
+
+* Model was added
+
+**EventTyping** (1 change)
+
+* Model was added
+
+**MessageEvent** (2 changes)
+
+* Optional property presence was added
+* Optional property typing was added
+
+**CleanMessageEvent** (2 changes)
+
+* Optional property presence was added
+* Optional property typing was added
 
 
 # Point Changes (0 changes)

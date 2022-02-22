@@ -11,5 +11,9 @@ title: EventType
 
 * `COBROWSE` (value: `"CoBrowse"`)
 
+* `PRESENCE` (value: `"Presence"`)
+
+* `TYPING` (value: `"Typing"`)
+
 
 

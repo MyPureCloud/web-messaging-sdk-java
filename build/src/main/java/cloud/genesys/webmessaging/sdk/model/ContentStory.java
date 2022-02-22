@@ -64,14 +64,14 @@ public class ContentStory  implements Serializable {
 
   
   /**
-   * URL to the ephemeran story.
+   * URL to the ephemeral story.
    **/
   public ContentStory url(String url) {
     this.url = url;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "URL to the ephemeran story.")
+  @ApiModelProperty(example = "null", required = true, value = "URL to the ephemeral story.")
   @JsonProperty("url")
   public String getUrl() {
     return url;

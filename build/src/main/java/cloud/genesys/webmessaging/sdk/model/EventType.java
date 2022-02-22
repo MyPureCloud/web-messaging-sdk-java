@@ -30,7 +30,9 @@ class EventTypeDeserializer extends StdDeserializer<EventType> {
  */
  @JsonDeserialize(using = EventTypeDeserializer.class)
 public enum EventType {
-  COBROWSE("CoBrowse");
+  COBROWSE("CoBrowse"),
+  PRESENCE("Presence"),
+  TYPING("Typing");
 
   private String value;
 

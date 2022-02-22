@@ -10,7 +10,9 @@ import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
 import cloud.genesys.webmessaging.sdk.model.EventCoBrowse;
+import cloud.genesys.webmessaging.sdk.model.EventPresence;
 import cloud.genesys.webmessaging.sdk.model.EventType;
+import cloud.genesys.webmessaging.sdk.model.EventTyping;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -24,6 +26,8 @@ public class CleanMessageEvent  implements Serializable {
   
   private EventCoBrowse coBrowse = null;
   private EventType eventType = null;
+  private EventPresence presence = null;
+  private EventTyping typing = null;
 
   
   /**
@@ -62,6 +66,42 @@ public class CleanMessageEvent  implements Serializable {
   }
 
   
+  /**
+   * Presence event.
+   **/
+  public CleanMessageEvent presence(EventPresence presence) {
+    this.presence = presence;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Presence event.")
+  @JsonProperty("presence")
+  public EventPresence getPresence() {
+    return presence;
+  }
+  public void setPresence(EventPresence presence) {
+    this.presence = presence;
+  }
+
+  
+  /**
+   * Typing event.
+   **/
+  public CleanMessageEvent typing(EventTyping typing) {
+    this.typing = typing;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Typing event.")
+  @JsonProperty("typing")
+  public EventTyping getTyping() {
+    return typing;
+  }
+  public void setTyping(EventTyping typing) {
+    this.typing = typing;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -73,12 +113,14 @@ public class CleanMessageEvent  implements Serializable {
     }
     CleanMessageEvent cleanMessageEvent = (CleanMessageEvent) o;
     return Objects.equals(this.coBrowse, cleanMessageEvent.coBrowse) &&
-        Objects.equals(this.eventType, cleanMessageEvent.eventType);
+        Objects.equals(this.eventType, cleanMessageEvent.eventType) &&
+        Objects.equals(this.presence, cleanMessageEvent.presence) &&
+        Objects.equals(this.typing, cleanMessageEvent.typing);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(coBrowse, eventType);
+    return Objects.hash(coBrowse, eventType, presence, typing);
   }
 
   @Override
@@ -88,6 +130,8 @@ public class CleanMessageEvent  implements Serializable {
     
     sb.append("    coBrowse: ").append(toIndentedString(coBrowse)).append("\n");
     sb.append("    eventType: ").append(toIndentedString(eventType)).append("\n");
+    sb.append("    presence: ").append(toIndentedString(presence)).append("\n");
+    sb.append("    typing: ").append(toIndentedString(typing)).append("\n");
     sb.append("}");
     return sb.toString();
   }

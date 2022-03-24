@@ -3,10 +3,10 @@
   <groupId>cloud.genesys</groupId>
   <artifactId>web-messaging-sdk</artifactId>
   <versioning>
-    <release>${props.version}</release>
+    <release>7.1.0</release>
     <versions>
-      <version>${props.version}</version>
+      <version>7.1.0</version>
     </versions>
-    <lastUpdated>20220222102736</lastUpdated>
+    <lastUpdated>20220324152016</lastUpdated>
   </versioning>
 </metadata>

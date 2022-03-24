@@ -1,40 +1,56 @@
-Platform API version: 5413
+Platform API version: 5516
 
 
-# Major Changes (1 change)
-
-**GenerateUploadUrlRequest** (1 change)
-
-* Property errorsAsJson was removed
+# Major Changes (0 changes)
 
 
-# Minor Changes (8 changes)
+# Minor Changes (13 changes)
 
-**EventPresenceType** (1 change)
+**Status** (1 change)
 
 * Model was added
 
-**EventPresence** (1 change)
+**CardActionType** (1 change)
 
 * Model was added
 
-**EventTypingType** (1 change)
+**CardAction** (1 change)
 
 * Model was added
 
-**EventTyping** (1 change)
+**ContentCard** (1 change)
 
 * Model was added
 
-**MessageEvent** (2 changes)
+**ContentCarousel** (1 change)
 
-* Optional property presence was added
-* Optional property typing was added
+* Model was added
 
-**CleanMessageEvent** (2 changes)
+**AdditionalIDType** (1 change)
 
-* Optional property presence was added
-* Optional property typing was added
+* Model was added
+
+**RecipientAdditionalIdentifier** (1 change)
+
+* Model was added
+
+**MessagingRecipient** (1 change)
+
+* Optional property additionalIds was added
+
+**MessageContent** (2 changes)
+
+* Optional property card was added
+* Optional property carousel was added
+
+**IncomingNormalizedMessage** (2 changes)
+
+* Optional property id was added
+* Optional property status was added
+
+**CleanMessageContent** (1 change)
+
+* Optional property card was added
 
 
 # Point Changes (0 changes)

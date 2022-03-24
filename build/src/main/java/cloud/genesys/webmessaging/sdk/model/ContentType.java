@@ -32,6 +32,8 @@ class ContentTypeDeserializer extends StdDeserializer<ContentType> {
 public enum ContentType {
   ATTACHMENT("Attachment"),
   BUTTONRESPONSE("ButtonResponse"),
+  CARD("Card"),
+  CAROUSEL("Carousel"),
   GENERICTEMPLATE("GenericTemplate"),
   LISTTEMPLATE("ListTemplate"),
   LOCATION("Location"),

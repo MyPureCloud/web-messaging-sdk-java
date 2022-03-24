@@ -12,6 +12,7 @@ import java.io.IOException;
 import cloud.genesys.webmessaging.sdk.model.MessageContent;
 import cloud.genesys.webmessaging.sdk.model.MessageEvent;
 import cloud.genesys.webmessaging.sdk.model.NormalizedType;
+import cloud.genesys.webmessaging.sdk.model.Status;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -27,11 +28,30 @@ import java.io.Serializable;
 
 public class IncomingNormalizedMessage  implements Serializable {
   
+  private String id = null;
   private NormalizedType type = null;
   private String text = null;
+  private Status status = null;
   private List<MessageContent> content = new ArrayList<MessageContent>();
   private List<MessageEvent> events = new ArrayList<MessageEvent>();
   private Map<String, String> metadata = null;
+
+  
+  /**
+   **/
+  public IncomingNormalizedMessage id(String id) {
+    this.id = id;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("id")
+  public String getId() {
+    return id;
+  }
+  public void setId(String id) {
+    this.id = id;
+  }
 
   
   /**
@@ -65,6 +85,23 @@ public class IncomingNormalizedMessage  implements Serializable {
   }
   public void setText(String text) {
     this.text = text;
+  }
+
+  
+  /**
+   **/
+  public IncomingNormalizedMessage status(Status status) {
+    this.status = status;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("status")
+  public Status getStatus() {
+    return status;
+  }
+  public void setStatus(Status status) {
+    this.status = status;
   }
 
   
@@ -129,8 +166,10 @@ public class IncomingNormalizedMessage  implements Serializable {
       return false;
     }
     IncomingNormalizedMessage incomingNormalizedMessage = (IncomingNormalizedMessage) o;
-    return Objects.equals(this.type, incomingNormalizedMessage.type) &&
+    return Objects.equals(this.id, incomingNormalizedMessage.id) &&
+        Objects.equals(this.type, incomingNormalizedMessage.type) &&
         Objects.equals(this.text, incomingNormalizedMessage.text) &&
+        Objects.equals(this.status, incomingNormalizedMessage.status) &&
         Objects.equals(this.content, incomingNormalizedMessage.content) &&
         Objects.equals(this.events, incomingNormalizedMessage.events) &&
         Objects.equals(this.metadata, incomingNormalizedMessage.metadata);
@@ -138,7 +177,7 @@ public class IncomingNormalizedMessage  implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(type, text, content, events, metadata);
+    return Objects.hash(id, type, text, status, content, events, metadata);
   }
 
   @Override
@@ -146,8 +185,10 @@ public class IncomingNormalizedMessage  implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class IncomingNormalizedMessage {\n");
     
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    text: ").append(toIndentedString(text)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    events: ").append(toIndentedString(events)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");

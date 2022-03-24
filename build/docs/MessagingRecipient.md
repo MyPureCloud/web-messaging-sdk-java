@@ -8,6 +8,7 @@ title: MessagingRecipient
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
+| **additionalIds** | <!----><!---->[**List&lt;RecipientAdditionalIdentifier&gt;**](RecipientAdditionalIdentifier.html)<!----> | List of recipient additional identifiers |  [optional] |
 | **email** | <!----><!---->**String**<!----> | E-mail address of the recipient. |  [optional] |
 | **firstName** | <!----><!---->**String**<!----> | First name of the recipient. |  [optional] |
 | **id** | <!----><!---->**String**<!----> | The recipient ID specific to the provider. |  |

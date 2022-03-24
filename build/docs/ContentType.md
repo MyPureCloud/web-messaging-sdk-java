@@ -13,6 +13,10 @@ title: ContentType
 
 * `BUTTONRESPONSE` (value: `"ButtonResponse"`)
 
+* `CARD` (value: `"Card"`)
+
+* `CAROUSEL` (value: `"Carousel"`)
+
 * `GENERICTEMPLATE` (value: `"GenericTemplate"`)
 
 * `LISTTEMPLATE` (value: `"ListTemplate"`)

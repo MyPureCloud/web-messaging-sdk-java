@@ -10,6 +10,8 @@ title: WebMessagingClient
 | [**joinConversation**](WebMessagingClient.html#joinConversation1) | Full service operation to connect the WebSocket and configure the session |
 | [**joinConversation**](WebMessagingClient.html#joinConversation2) | Full service operation to connect the WebSocket and configure the session |
 | [**connect**](WebMessagingClient.html#connect1) | Establishes a connection to Genesys Cloud via a WebSocket |
+| [**isInputClosed**](WebMessagingClient.html#isInputClosed1) | Check whether the underlying websocket's input is closed |
+| [**isOutputClosed**](WebMessagingClient.html#isOutputClosed1) | Check whether the underlying websocket's output is closed |
 | [**configureSession**](WebMessagingClient.html#configureSession1) | Configures a new session with a randomly generated session token |
 | [**configureSession**](WebMessagingClient.html#configureSession2) | Configures a session using the provided session token. This can be used to reconnect to active sessions. |
 | [**configureAuthenticatedSession**](WebMessagingClient.html#configureAuthenticatedSession1) | Configures a new authenticated session with a randomly generated session token |
@@ -18,10 +20,16 @@ title: WebMessagingClient
 | [**ping**](WebMessagingClient.html#ping1) | Sends a message that will cause a response to ensure the connection is active |
 | [**sendMessage**](WebMessagingClient.html#sendMessage1) | Sends a message to the conversation |
 | [**sendMessage**](WebMessagingClient.html#sendMessage2) | Sends a message to the conversation with customAttributes |
+| [**sendPresenceEvent**](WebMessagingClient.html#sendPresenceEvent1) | send an event of type Presence join |
+| [**sendTypingEvent**](WebMessagingClient.html#sendTypingEvent1) | send an event of type Typing on |
+| [**attachment**](WebMessagingClient.html#attachment1) | send a request to generate an upload url for an attachment |
+| [**getAttachment**](WebMessagingClient.html#getAttachment1) | send a request to generate a download url for an attachment |
+| [**deleteAttachment**](WebMessagingClient.html#deleteAttachment1) | delete an attachment. Must not have been sent |
 | [**deserialize**](WebMessagingClient.html#deserialize1) | Deserializes a message payload |
 | [**onSessionEvent**](WebMessagingClient.html#onSessionEvent1) | Invokes appropriate handler for incoming WebSocket messages |
 | [**onWebSocketConnected**](WebMessagingClient.html#onWebSocketConnected1) | Invokes registered listeners when the connection to the remote server has been established |
 | [**onWebSocketDisconnected**](WebMessagingClient.html#onWebSocketDisconnected1) | Invokes registered listeners when the connection to the remote server has been closed |
+| [**onWebSocketError**](WebMessagingClient.html#onWebSocketError1) | Invokes registered listeners when an error occurs on the connection to the remote server |
 | [**addSessionListener**](WebMessagingClient.html#addSessionListener1) | Registers a <code>SessionListener</code> to receive events |
 | [**removeSessionListener**](WebMessagingClient.html#removeSessionListener1) | Unregisters a <code>SessionListener</code> object |
 | [**getHistory**](WebMessagingClient.html#getHistory1) | Retrieves the the messages for a web messaging session. |
@@ -38,6 +46,7 @@ title: WebMessagingClient
 | [**unexpectedMessage**](WebMessagingClient.html#unexpectedMessage1) | Raised for unmatched BaseResponseType |
 | [**webSocketConnected**](WebMessagingClient.html#webSocketConnected1) | Raised when the connection to the remote server has been established |
 | [**webSocketDisconnected**](WebMessagingClient.html#webSocketDisconnected1) | Raised when the connection to the remote server has been closed |
+| [**webSocketError**](WebMessagingClient.html#webSocketError1) | Raised when error occurs on the remote connection |
 {: class="table-striped"}
 
 <h1>Constructors</h1>
@@ -98,7 +107,7 @@ Full service operation to connect the WebSocket and configure the session
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **deploymentId** | **String**| The ID of the Web Messaging deployment |
-| **initialMessage** | **String**| The initial message to send once the session is ready  |
+| **initialMessage** | **String**| The initial message to send once the session is ready   |
 {: class="table-striped"}
 
 
@@ -137,12 +146,50 @@ Full service operation to connect the WebSocket and configure the session
 
 
 
-> void connect()
+> void connect(deploymentId, origin, connectionTimeout)
 
 Establishes a connection to Genesys Cloud via a WebSocket
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **deploymentId** | **Optional<Integer>**| deploymentId to connect to |
+| **origin** | **String**| origin header to add |
+| **connectionTimeout** | **String**| connection timeout, in second, to use   |
+{: class="table-striped"}
+
+
 ### Return type
 
 **void**
+
+<a name="isInputClosed1"></a>
+
+# **isInputClosed**
+
+
+
+> boolean isInputClosed()
+
+Check whether the underlying websocket's input is closed
+### Return type
+
+**boolean**
+
+<a name="isOutputClosed1"></a>
+
+# **isOutputClosed**
+
+
+
+> boolean isOutputClosed()
+
+Check whether the underlying websocket's output is closed
+### Return type
+
+**boolean**
 
 <a name="configureSession1"></a>
 
@@ -319,6 +366,71 @@ Sends a message to the conversation with customAttributes
 
 **void**
 
+<a name="sendPresenceEvent1"></a>
+
+# **sendPresenceEvent**
+
+
+
+> void sendPresenceEvent()
+
+send an event of type Presence join
+### Return type
+
+**void**
+
+<a name="sendTypingEvent1"></a>
+
+# **sendTypingEvent**
+
+
+
+> void sendTypingEvent()
+
+send an event of type Typing on
+### Return type
+
+**void**
+
+<a name="attachment1"></a>
+
+# **attachment**
+
+
+
+> void attachment()
+
+send a request to generate an upload url for an attachment
+### Return type
+
+**void**
+
+<a name="getAttachment1"></a>
+
+# **getAttachment**
+
+
+
+> void getAttachment()
+
+send a request to generate a download url for an attachment
+### Return type
+
+**void**
+
+<a name="deleteAttachment1"></a>
+
+# **deleteAttachment**
+
+
+
+> void deleteAttachment()
+
+delete an attachment. Must not have been sent
+### Return type
+
+**void**
+
 <a name="deserialize1"></a>
 
 # **deserialize**
@@ -349,7 +461,7 @@ Deserializes a message payload
 
 
 
-> void onSessionEvent(rawResponse, event)
+> void onSessionEvent(rawMessage, baseMessage)
 
 Invokes appropriate handler for incoming WebSocket messages
 
@@ -358,8 +470,8 @@ Invokes appropriate handler for incoming WebSocket messages
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **rawResponse** | **BaseMessage**| The raw message payload JSON as a string |
-| **event** | **String**| The deserialized event object   |
+| **rawMessage** | **BaseMessage**| The raw message payload JSON as a string |
+| **baseMessage** | **String**| The deserialized event object   |
 {: class="table-striped"}
 
 
@@ -389,6 +501,19 @@ Invokes registered listeners when the connection to the remote server has been e
 > void onWebSocketDisconnected()
 
 Invokes registered listeners when the connection to the remote server has been closed
+### Return type
+
+**void**
+
+<a name="onWebSocketError1"></a>
+
+# **onWebSocketError**
+
+
+
+> void onWebSocketError()
+
+Invokes registered listeners when an error occurs on the connection to the remote server
 ### Return type
 
 **void**
@@ -734,6 +859,29 @@ Raised when the connection to the remote server has been closed
 | ------------- | ------------- | ------------- | ------------- |
 | **statusCode** | **String**| undefined |
 | **reason** | **int**|   |
+{: class="table-striped"}
+
+
+### Return type
+
+**void**
+
+<a name="webSocketError1"></a>
+
+# **webSocketError**
+
+
+
+> void webSocketError(reason)
+
+Raised when error occurs on the remote connection
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **reason** | **String**|   |
 {: class="table-striped"}
 
 

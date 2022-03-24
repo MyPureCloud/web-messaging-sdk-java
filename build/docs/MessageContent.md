@@ -10,6 +10,8 @@ title: MessageContent
 | ------------ | ------------- | ------------- | ------------- |
 | **attachment** | <!----><!---->[**ContentAttachment**](ContentAttachment.html)<!----> | Attachment content. |  [optional] |
 | **buttonResponse** | <!----><!---->[**ContentButtonResponse**](ContentButtonResponse.html)<!----> | Button response content. |  [optional] |
+| **card** | <!----><!---->[**ContentCard**](ContentCard.html)<!----> | Card content |  [optional] |
+| **carousel** | <!----><!---->[**ContentCarousel**](ContentCarousel.html)<!----> | Carousel content |  [optional] |
 | **contentType** | <!----><!---->[**ContentType**](ContentType.html)<!----> | Type of this content element. If contentType = \&quot;Attachment\&quot; only one item is allowed. |  |
 | **generic** | <!----><!---->[**ContentGeneric**](ContentGeneric.html)<!----> | Generic content. |  [optional] |
 | **list** | <!----><!---->[**ContentList**](ContentList.html)<!----> | List content. |  [optional] |

@@ -12,6 +12,7 @@ title: CleanMessageContent
 | **contentType** | <!----><!---->[**ContentType**](ContentType.html)<!----> |  |  |
 | **buttonResponse** | <!----><!---->[**ContentButtonResponse**](ContentButtonResponse.html)<!----> |  |  [optional] |
 | **generic** | <!----><!---->[**ContentGeneric**](ContentGeneric.html)<!----> |  |  [optional] |
+| **card** | <!----><!---->[**ContentCard**](ContentCard.html)<!----> |  |  [optional] |
 | **quickReply** | <!----><!---->[**ContentQuickReply**](ContentQuickReply.html)<!----> |  |  [optional] |
 {: class="table table-striped"}
 

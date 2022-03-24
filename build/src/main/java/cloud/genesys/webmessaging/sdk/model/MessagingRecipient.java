@@ -10,9 +10,12 @@ import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
 import cloud.genesys.webmessaging.sdk.model.IDType;
+import cloud.genesys.webmessaging.sdk.model.RecipientAdditionalIdentifier;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 
 import java.io.Serializable;
 /**
@@ -22,6 +25,7 @@ import java.io.Serializable;
 
 public class MessagingRecipient  implements Serializable {
   
+  private List<RecipientAdditionalIdentifier> additionalIds = new ArrayList<RecipientAdditionalIdentifier>();
   private String email = null;
   private String firstName = null;
   private String id = null;
@@ -29,6 +33,24 @@ public class MessagingRecipient  implements Serializable {
   private String image = null;
   private String lastName = null;
   private String nickname = null;
+
+  
+  /**
+   * List of recipient additional identifiers
+   **/
+  public MessagingRecipient additionalIds(List<RecipientAdditionalIdentifier> additionalIds) {
+    this.additionalIds = additionalIds;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "List of recipient additional identifiers")
+  @JsonProperty("additionalIds")
+  public List<RecipientAdditionalIdentifier> getAdditionalIds() {
+    return additionalIds;
+  }
+  public void setAdditionalIds(List<RecipientAdditionalIdentifier> additionalIds) {
+    this.additionalIds = additionalIds;
+  }
 
   
   /**
@@ -167,7 +189,8 @@ public class MessagingRecipient  implements Serializable {
       return false;
     }
     MessagingRecipient messagingRecipient = (MessagingRecipient) o;
-    return Objects.equals(this.email, messagingRecipient.email) &&
+    return Objects.equals(this.additionalIds, messagingRecipient.additionalIds) &&
+        Objects.equals(this.email, messagingRecipient.email) &&
         Objects.equals(this.firstName, messagingRecipient.firstName) &&
         Objects.equals(this.id, messagingRecipient.id) &&
         Objects.equals(this.idType, messagingRecipient.idType) &&
@@ -178,7 +201,7 @@ public class MessagingRecipient  implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(email, firstName, id, idType, image, lastName, nickname);
+    return Objects.hash(additionalIds, email, firstName, id, idType, image, lastName, nickname);
   }
 
   @Override
@@ -186,6 +209,7 @@ public class MessagingRecipient  implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class MessagingRecipient {\n");
     
+    sb.append("    additionalIds: ").append(toIndentedString(additionalIds)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");

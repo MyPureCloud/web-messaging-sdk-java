@@ -11,6 +11,8 @@ import java.util.Objects;
 import java.io.IOException;
 import cloud.genesys.webmessaging.sdk.model.ContentAttachment;
 import cloud.genesys.webmessaging.sdk.model.ContentButtonResponse;
+import cloud.genesys.webmessaging.sdk.model.ContentCard;
+import cloud.genesys.webmessaging.sdk.model.ContentCarousel;
 import cloud.genesys.webmessaging.sdk.model.ContentGeneric;
 import cloud.genesys.webmessaging.sdk.model.ContentList;
 import cloud.genesys.webmessaging.sdk.model.ContentLocation;
@@ -37,6 +39,8 @@ public class MessageContent  implements Serializable {
   
   private ContentAttachment attachment = null;
   private ContentButtonResponse buttonResponse = null;
+  private ContentCard card = null;
+  private ContentCarousel carousel = null;
   private ContentType contentType = null;
   private ContentGeneric generic = null;
   private ContentList list = null;
@@ -82,6 +86,42 @@ public class MessageContent  implements Serializable {
   }
   public void setButtonResponse(ContentButtonResponse buttonResponse) {
     this.buttonResponse = buttonResponse;
+  }
+
+  
+  /**
+   * Card content
+   **/
+  public MessageContent card(ContentCard card) {
+    this.card = card;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Card content")
+  @JsonProperty("card")
+  public ContentCard getCard() {
+    return card;
+  }
+  public void setCard(ContentCard card) {
+    this.card = card;
+  }
+
+  
+  /**
+   * Carousel content
+   **/
+  public MessageContent carousel(ContentCarousel carousel) {
+    this.carousel = carousel;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Carousel content")
+  @JsonProperty("carousel")
+  public ContentCarousel getCarousel() {
+    return carousel;
+  }
+  public void setCarousel(ContentCarousel carousel) {
+    this.carousel = carousel;
   }
 
   
@@ -277,6 +317,8 @@ public class MessageContent  implements Serializable {
     MessageContent messageContent = (MessageContent) o;
     return Objects.equals(this.attachment, messageContent.attachment) &&
         Objects.equals(this.buttonResponse, messageContent.buttonResponse) &&
+        Objects.equals(this.card, messageContent.card) &&
+        Objects.equals(this.carousel, messageContent.carousel) &&
         Objects.equals(this.contentType, messageContent.contentType) &&
         Objects.equals(this.generic, messageContent.generic) &&
         Objects.equals(this.list, messageContent.list) &&
@@ -291,7 +333,7 @@ public class MessageContent  implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(attachment, buttonResponse, contentType, generic, list, location, mention, postback, quickReply, reactions, story, template);
+    return Objects.hash(attachment, buttonResponse, card, carousel, contentType, generic, list, location, mention, postback, quickReply, reactions, story, template);
   }
 
   @Override
@@ -301,6 +343,8 @@ public class MessageContent  implements Serializable {
     
     sb.append("    attachment: ").append(toIndentedString(attachment)).append("\n");
     sb.append("    buttonResponse: ").append(toIndentedString(buttonResponse)).append("\n");
+    sb.append("    card: ").append(toIndentedString(card)).append("\n");
+    sb.append("    carousel: ").append(toIndentedString(carousel)).append("\n");
     sb.append("    contentType: ").append(toIndentedString(contentType)).append("\n");
     sb.append("    generic: ").append(toIndentedString(generic)).append("\n");
     sb.append("    list: ").append(toIndentedString(list)).append("\n");

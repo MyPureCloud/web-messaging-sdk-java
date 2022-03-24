@@ -30,7 +30,6 @@ class EventTypingTypeDeserializer extends StdDeserializer<EventTypingType> {
  */
  @JsonDeserialize(using = EventTypingTypeDeserializer.class)
 public enum EventTypingType {
-  OFF("Off"),
   ON("On");
 
   private String value;

@@ -9,8 +9,6 @@ title: EventTypingType
 ## Enum
 
 
-* `OFF` (value: `"Off"`)
-
 * `ON` (value: `"On"`)
 
 

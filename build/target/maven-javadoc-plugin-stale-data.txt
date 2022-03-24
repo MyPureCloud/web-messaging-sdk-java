@@ -18,12 +18,12 @@
 'UTF-8'
 -Xdoclint:none
 -doctitle
-'web-messaging-sdk 7.1.0 API'
+'web-messaging-sdk 7.2.0 API'
 -linkoffline
 'https://docs.oracle.com/en/java/javase/11/docs/api' '/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/javadoc-bundle-options'
 -use
 -windowtitle
-'web-messaging-sdk 7.1.0 API'
+'web-messaging-sdk 7.2.0 API'
 cloud.genesys.webmessaging.sdk.model
 cloud.genesys.webmessaging.sdk.api
 cloud.genesys.webmessaging.sdk.api.request
@@ -62,26 +62,26 @@ cloud.genesys.webmessaging.sdk.extensions
 /home/jenkins/.m2/repository/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar = 1648135193567
 /home/jenkins/.m2/repository/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.jar = 1648135193551
 /home/jenkins/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar = 1648103799126
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java = 1648135182779
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/generated-sources/annotations = 1648135196751
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/element-list = 1648135213659
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/constant-values.html = 1648135213791
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/serialized-form.html = 1648135213895
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/overview-tree.html = 1648135214495
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/package-search-index.js = 1648135214683
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/package-search-index.zip = 1648135214687
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/type-search-index.js = 1648135214687
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/type-search-index.zip = 1648135214687
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/member-search-index.js = 1648135214691
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/member-search-index.zip = 1648135214695
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/index-all.html = 1648135214707
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/allclasses-index.html = 1648135214723
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/allpackages-index.html = 1648135214727
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/deprecated-list.html = 1648135214735
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/allclasses.html = 1648135214739
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/index.html = 1648135214743
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/overview-summary.html = 1648135214747
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/help-doc.html = 1648135214755
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/stylesheet.css = 1648135214759
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/script.js = 1648135214759
-/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/search.js = 1648135214763
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java = 1648140210619
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/generated-sources/annotations = 1648140223731
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/element-list = 1648140251455
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/constant-values.html = 1648140251647
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/serialized-form.html = 1648140251783
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/overview-tree.html = 1648140252943
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/package-search-index.js = 1648140253323
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/package-search-index.zip = 1648140253327
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/type-search-index.js = 1648140253327
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/type-search-index.zip = 1648140253327
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/member-search-index.js = 1648140253331
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/member-search-index.zip = 1648140253351
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/index-all.html = 1648140253363
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/allclasses-index.html = 1648140253407
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/allpackages-index.html = 1648140253411
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/deprecated-list.html = 1648140253419
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/allclasses.html = 1648140253423
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/index.html = 1648140253427
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/overview-summary.html = 1648140253455
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/help-doc.html = 1648140253471
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/stylesheet.css = 1648140253475
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/script.js = 1648140253475
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/target/apidocs/search.js = 1648140253475

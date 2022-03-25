@@ -1,19 +1,20 @@
 {
-  "webmessaging": {
-    "GET /api/v2/webmessaging/messages": {
-      "functionName": "getWebmessagingMessages",
-      "signature": "getWebmessagingMessages(pageSize, pageNumber)",
-      "parameters": [
-        {
-          "name": "pageSize",
-          "type": "Integer"
-        },
-        {
-          "name": "pageNumber",
-          "type": "Integer"
-        }
-      ],
-      "return": "WebMessagingMessageEntityList"
-    }
+  "getwebmessagingmessages": {
+    "operationId": "getwebmessagingmessages",
+    "functionName": "getWebmessagingMessages",
+    "signature": "getWebmessagingMessages(pageSize, pageNumber)",
+    "parameters": [
+      {
+        "name": "pageSize",
+        "type": "Integer",
+        "required": "false"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Integer",
+        "required": "false"
+      }
+    ],
+    "return": "WebMessagingMessageEntityList"
   }
 }

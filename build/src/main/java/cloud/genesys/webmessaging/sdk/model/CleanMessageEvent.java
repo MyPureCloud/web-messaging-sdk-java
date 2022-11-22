@@ -47,16 +47,15 @@ public class CleanMessageEvent  implements Serializable {
     this.coBrowse = coBrowse;
   }
 
-  
+
   /**
-   * Type of this event element
    **/
   public CleanMessageEvent eventType(EventType eventType) {
     this.eventType = eventType;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Type of this event element")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("eventType")
   public EventType getEventType() {
     return eventType;
@@ -65,7 +64,7 @@ public class CleanMessageEvent  implements Serializable {
     this.eventType = eventType;
   }
 
-  
+
   /**
    * Presence event.
    **/
@@ -83,7 +82,7 @@ public class CleanMessageEvent  implements Serializable {
     this.presence = presence;
   }
 
-  
+
   /**
    * Typing event.
    **/
@@ -101,7 +100,6 @@ public class CleanMessageEvent  implements Serializable {
     this.typing = typing;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -113,9 +111,9 @@ public class CleanMessageEvent  implements Serializable {
     }
     CleanMessageEvent cleanMessageEvent = (CleanMessageEvent) o;
     return Objects.equals(this.coBrowse, cleanMessageEvent.coBrowse) &&
-        Objects.equals(this.eventType, cleanMessageEvent.eventType) &&
-        Objects.equals(this.presence, cleanMessageEvent.presence) &&
-        Objects.equals(this.typing, cleanMessageEvent.typing);
+          Objects.equals(this.eventType, cleanMessageEvent.eventType) &&
+          Objects.equals(this.presence, cleanMessageEvent.presence) &&
+          Objects.equals(this.typing, cleanMessageEvent.typing);
   }
 
   @Override

@@ -9,7 +9,6 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
-import cloud.genesys.webmessaging.sdk.model.RequestTypeGenerateUploadUrl;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -46,7 +45,7 @@ public class GenerateUploadUrlRequest  implements Serializable {
     this.action = action;
   }
 
-  
+
   /**
    **/
   public GenerateUploadUrlRequest token(String token) {
@@ -63,7 +62,7 @@ public class GenerateUploadUrlRequest  implements Serializable {
     this.token = token;
   }
 
-  
+
   /**
    **/
   public GenerateUploadUrlRequest attachmentId(String attachmentId) {
@@ -80,7 +79,7 @@ public class GenerateUploadUrlRequest  implements Serializable {
     this.attachmentId = attachmentId;
   }
 
-  
+
   /**
    **/
   public GenerateUploadUrlRequest fileName(String fileName) {
@@ -97,7 +96,7 @@ public class GenerateUploadUrlRequest  implements Serializable {
     this.fileName = fileName;
   }
 
-  
+
   /**
    **/
   public GenerateUploadUrlRequest fileType(String fileType) {
@@ -114,7 +113,7 @@ public class GenerateUploadUrlRequest  implements Serializable {
     this.fileType = fileType;
   }
 
-  
+
   /**
    **/
   public GenerateUploadUrlRequest fileSize(Integer fileSize) {
@@ -131,7 +130,7 @@ public class GenerateUploadUrlRequest  implements Serializable {
     this.fileSize = fileSize;
   }
 
-  
+
   /**
    **/
   public GenerateUploadUrlRequest fileMd5(String fileMd5) {
@@ -148,7 +147,6 @@ public class GenerateUploadUrlRequest  implements Serializable {
     this.fileMd5 = fileMd5;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -160,12 +158,12 @@ public class GenerateUploadUrlRequest  implements Serializable {
     }
     GenerateUploadUrlRequest generateUploadUrlRequest = (GenerateUploadUrlRequest) o;
     return Objects.equals(this.action, generateUploadUrlRequest.action) &&
-        Objects.equals(this.token, generateUploadUrlRequest.token) &&
-        Objects.equals(this.attachmentId, generateUploadUrlRequest.attachmentId) &&
-        Objects.equals(this.fileName, generateUploadUrlRequest.fileName) &&
-        Objects.equals(this.fileType, generateUploadUrlRequest.fileType) &&
-        Objects.equals(this.fileSize, generateUploadUrlRequest.fileSize) &&
-        Objects.equals(this.fileMd5, generateUploadUrlRequest.fileMd5);
+          Objects.equals(this.token, generateUploadUrlRequest.token) &&
+          Objects.equals(this.attachmentId, generateUploadUrlRequest.attachmentId) &&
+          Objects.equals(this.fileName, generateUploadUrlRequest.fileName) &&
+          Objects.equals(this.fileType, generateUploadUrlRequest.fileType) &&
+          Objects.equals(this.fileSize, generateUploadUrlRequest.fileSize) &&
+          Objects.equals(this.fileMd5, generateUploadUrlRequest.fileMd5);
   }
 
   @Override

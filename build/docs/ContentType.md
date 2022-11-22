@@ -31,9 +31,13 @@ title: ContentType
 
 * `QUICKREPLY` (value: `"QuickReply"`)
 
+* `QUICKREPLYV2` (value: `"QuickReplyV2"`)
+
 * `REACTIONS` (value: `"Reactions"`)
 
 * `STORY` (value: `"Story"`)
+
+* `TEXT` (value: `"Text"`)
 
 
 

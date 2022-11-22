@@ -41,7 +41,7 @@ public class UploadSuccessEvent  implements Serializable {
     this.attachmentId = attachmentId;
   }
 
-  
+
   /**
    **/
   public UploadSuccessEvent downloadUrl(String downloadUrl) {
@@ -58,7 +58,7 @@ public class UploadSuccessEvent  implements Serializable {
     this.downloadUrl = downloadUrl;
   }
 
-  
+
   /**
    **/
   public UploadSuccessEvent timestamp(String timestamp) {
@@ -75,7 +75,6 @@ public class UploadSuccessEvent  implements Serializable {
     this.timestamp = timestamp;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -87,8 +86,8 @@ public class UploadSuccessEvent  implements Serializable {
     }
     UploadSuccessEvent uploadSuccessEvent = (UploadSuccessEvent) o;
     return Objects.equals(this.attachmentId, uploadSuccessEvent.attachmentId) &&
-        Objects.equals(this.downloadUrl, uploadSuccessEvent.downloadUrl) &&
-        Objects.equals(this.timestamp, uploadSuccessEvent.timestamp);
+          Objects.equals(this.downloadUrl, uploadSuccessEvent.downloadUrl) &&
+          Objects.equals(this.timestamp, uploadSuccessEvent.timestamp);
   }
 
   @Override

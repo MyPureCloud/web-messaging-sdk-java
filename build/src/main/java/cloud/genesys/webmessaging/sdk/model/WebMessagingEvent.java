@@ -10,6 +10,7 @@ import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
 import cloud.genesys.webmessaging.sdk.model.WebMessagingEventCoBrowse;
+import cloud.genesys.webmessaging.sdk.model.WebMessagingEventPresence;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
@@ -42,7 +43,8 @@ public class WebMessagingEvent  implements Serializable {
  @JsonDeserialize(using = EventTypeEnumDeserializer.class)
   public enum EventTypeEnum {
     OUTDATEDSDKVERSION("OutdatedSdkVersion"),
-    COBROWSE("CoBrowse");
+    COBROWSE("CoBrowse"),
+    PRESENCE("Presence");
 
     private String value;
 
@@ -71,6 +73,7 @@ public class WebMessagingEvent  implements Serializable {
   }
   private EventTypeEnum eventType = null;
   private WebMessagingEventCoBrowse coBrowse = null;
+  private WebMessagingEventPresence presence = null;
 
   
   /**
@@ -90,7 +93,7 @@ public class WebMessagingEvent  implements Serializable {
     this.eventType = eventType;
   }
 
-  
+
   /**
    * Cobrowse event.
    **/
@@ -108,7 +111,24 @@ public class WebMessagingEvent  implements Serializable {
     this.coBrowse = coBrowse;
   }
 
+
+  /**
+   * Presence event.
+   **/
+  public WebMessagingEvent presence(WebMessagingEventPresence presence) {
+    this.presence = presence;
+    return this;
+  }
   
+  @ApiModelProperty(example = "null", value = "Presence event.")
+  @JsonProperty("presence")
+  public WebMessagingEventPresence getPresence() {
+    return presence;
+  }
+  public void setPresence(WebMessagingEventPresence presence) {
+    this.presence = presence;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -120,12 +140,13 @@ public class WebMessagingEvent  implements Serializable {
     }
     WebMessagingEvent webMessagingEvent = (WebMessagingEvent) o;
     return Objects.equals(this.eventType, webMessagingEvent.eventType) &&
-        Objects.equals(this.coBrowse, webMessagingEvent.coBrowse);
+          Objects.equals(this.coBrowse, webMessagingEvent.coBrowse) &&
+          Objects.equals(this.presence, webMessagingEvent.presence);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventType, coBrowse);
+    return Objects.hash(eventType, coBrowse, presence);
   }
 
   @Override
@@ -135,6 +156,7 @@ public class WebMessagingEvent  implements Serializable {
     
     sb.append("    eventType: ").append(toIndentedString(eventType)).append("\n");
     sb.append("    coBrowse: ").append(toIndentedString(coBrowse)).append("\n");
+    sb.append("    presence: ").append(toIndentedString(presence)).append("\n");
     sb.append("}");
     return sb.toString();
   }

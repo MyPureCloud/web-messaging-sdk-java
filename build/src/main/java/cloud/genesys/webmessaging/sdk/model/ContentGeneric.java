@@ -19,9 +19,9 @@ import java.util.List;
 
 import java.io.Serializable;
 /**
- * Generic content.  Generic content object.
+ * Generic content (Deprecated).  Deprecated, should use Card.
  */
-@ApiModel(description = "Generic content.  Generic content object.")
+@ApiModel(description = "Generic content (Deprecated).  Deprecated, should use Card.")
 
 public class ContentGeneric  implements Serializable {
   
@@ -35,14 +35,14 @@ public class ContentGeneric  implements Serializable {
 
   
   /**
-   * Actions to be taken.
+   * Actions to be taken (Deprecated).
    **/
   public ContentGeneric actions(ContentActions actions) {
     this.actions = actions;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Actions to be taken.")
+  @ApiModelProperty(example = "null", value = "Actions to be taken (Deprecated).")
   @JsonProperty("actions")
   public ContentActions getActions() {
     return actions;
@@ -51,7 +51,7 @@ public class ContentGeneric  implements Serializable {
     this.actions = actions;
   }
 
-  
+
   /**
    * An array of component objects.
    **/
@@ -69,7 +69,7 @@ public class ContentGeneric  implements Serializable {
     this.components = components;
   }
 
-  
+
   /**
    * Text to show in the description.
    **/
@@ -87,16 +87,16 @@ public class ContentGeneric  implements Serializable {
     this.description = description;
   }
 
-  
+
   /**
-   * A unique ID assigned to this rich message content.
+   * A unique ID assigned to this rich message content (Deprecated).
    **/
   public ContentGeneric id(String id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "A unique ID assigned to this rich message content.")
+  @ApiModelProperty(example = "null", value = "A unique ID assigned to this rich message content (Deprecated).")
   @JsonProperty("id")
   public String getId() {
     return id;
@@ -105,7 +105,7 @@ public class ContentGeneric  implements Serializable {
     this.id = id;
   }
 
-  
+
   /**
    * URL of an image.
    **/
@@ -123,7 +123,7 @@ public class ContentGeneric  implements Serializable {
     this.image = image;
   }
 
-  
+
   /**
    * Text to show in the title.
    **/
@@ -132,7 +132,7 @@ public class ContentGeneric  implements Serializable {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Text to show in the title.")
+  @ApiModelProperty(example = "null", required = true, value = "Text to show in the title.")
   @JsonProperty("title")
   public String getTitle() {
     return title;
@@ -141,7 +141,7 @@ public class ContentGeneric  implements Serializable {
     this.title = title;
   }
 
-  
+
   /**
    * URL of a video.
    **/
@@ -159,7 +159,6 @@ public class ContentGeneric  implements Serializable {
     this.video = video;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -171,12 +170,12 @@ public class ContentGeneric  implements Serializable {
     }
     ContentGeneric contentGeneric = (ContentGeneric) o;
     return Objects.equals(this.actions, contentGeneric.actions) &&
-        Objects.equals(this.components, contentGeneric.components) &&
-        Objects.equals(this.description, contentGeneric.description) &&
-        Objects.equals(this.id, contentGeneric.id) &&
-        Objects.equals(this.image, contentGeneric.image) &&
-        Objects.equals(this.title, contentGeneric.title) &&
-        Objects.equals(this.video, contentGeneric.video);
+          Objects.equals(this.components, contentGeneric.components) &&
+          Objects.equals(this.description, contentGeneric.description) &&
+          Objects.equals(this.id, contentGeneric.id) &&
+          Objects.equals(this.image, contentGeneric.image) &&
+          Objects.equals(this.title, contentGeneric.title) &&
+          Objects.equals(this.video, contentGeneric.video);
   }
 
   @Override

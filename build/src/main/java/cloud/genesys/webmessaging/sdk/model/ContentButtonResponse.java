@@ -45,7 +45,7 @@ public class ContentButtonResponse  implements Serializable {
     this.id = id;
   }
 
-  
+
   /**
    * The response payload associated with the clicked button.
    **/
@@ -63,7 +63,7 @@ public class ContentButtonResponse  implements Serializable {
     this.payload = payload;
   }
 
-  
+
   /**
    * The response text from the button click.
    **/
@@ -81,7 +81,7 @@ public class ContentButtonResponse  implements Serializable {
     this.text = text;
   }
 
-  
+
   /**
    * Describes the button that resulted in the Button Response.
    **/
@@ -99,7 +99,6 @@ public class ContentButtonResponse  implements Serializable {
     this.type = type;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -111,9 +110,9 @@ public class ContentButtonResponse  implements Serializable {
     }
     ContentButtonResponse contentButtonResponse = (ContentButtonResponse) o;
     return Objects.equals(this.id, contentButtonResponse.id) &&
-        Objects.equals(this.payload, contentButtonResponse.payload) &&
-        Objects.equals(this.text, contentButtonResponse.text) &&
-        Objects.equals(this.type, contentButtonResponse.type);
+          Objects.equals(this.payload, contentButtonResponse.payload) &&
+          Objects.equals(this.text, contentButtonResponse.text) &&
+          Objects.equals(this.type, contentButtonResponse.type);
   }
 
   @Override

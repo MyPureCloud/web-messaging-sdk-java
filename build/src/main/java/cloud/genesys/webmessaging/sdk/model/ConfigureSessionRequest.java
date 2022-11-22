@@ -10,7 +10,6 @@ import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
 import cloud.genesys.webmessaging.sdk.model.JourneyContext;
-import cloud.genesys.webmessaging.sdk.model.RequestTypeConfigureSession;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -26,6 +25,8 @@ public class ConfigureSessionRequest  implements Serializable {
   private String token = null;
   private String deploymentId = null;
   private JourneyContext journeyContext = null;
+  private String resumeToken = null;
+  private Boolean startNew = null;
 
   
   /**
@@ -44,7 +45,7 @@ public class ConfigureSessionRequest  implements Serializable {
     this.action = action;
   }
 
-  
+
   /**
    **/
   public ConfigureSessionRequest token(String token) {
@@ -61,7 +62,7 @@ public class ConfigureSessionRequest  implements Serializable {
     this.token = token;
   }
 
-  
+
   /**
    **/
   public ConfigureSessionRequest deploymentId(String deploymentId) {
@@ -78,7 +79,7 @@ public class ConfigureSessionRequest  implements Serializable {
     this.deploymentId = deploymentId;
   }
 
-  
+
   /**
    **/
   public ConfigureSessionRequest journeyContext(JourneyContext journeyContext) {
@@ -95,7 +96,40 @@ public class ConfigureSessionRequest  implements Serializable {
     this.journeyContext = journeyContext;
   }
 
+
+  /**
+   **/
+  public ConfigureSessionRequest resumeToken(String resumeToken) {
+    this.resumeToken = resumeToken;
+    return this;
+  }
   
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("resumeToken")
+  public String getResumeToken() {
+    return resumeToken;
+  }
+  public void setResumeToken(String resumeToken) {
+    this.resumeToken = resumeToken;
+  }
+
+
+  /**
+   **/
+  public ConfigureSessionRequest startNew(Boolean startNew) {
+    this.startNew = startNew;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("startNew")
+  public Boolean getStartNew() {
+    return startNew;
+  }
+  public void setStartNew(Boolean startNew) {
+    this.startNew = startNew;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -107,14 +141,16 @@ public class ConfigureSessionRequest  implements Serializable {
     }
     ConfigureSessionRequest configureSessionRequest = (ConfigureSessionRequest) o;
     return Objects.equals(this.action, configureSessionRequest.action) &&
-        Objects.equals(this.token, configureSessionRequest.token) &&
-        Objects.equals(this.deploymentId, configureSessionRequest.deploymentId) &&
-        Objects.equals(this.journeyContext, configureSessionRequest.journeyContext);
+          Objects.equals(this.token, configureSessionRequest.token) &&
+          Objects.equals(this.deploymentId, configureSessionRequest.deploymentId) &&
+          Objects.equals(this.journeyContext, configureSessionRequest.journeyContext) &&
+          Objects.equals(this.resumeToken, configureSessionRequest.resumeToken) &&
+          Objects.equals(this.startNew, configureSessionRequest.startNew);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(action, token, deploymentId, journeyContext);
+    return Objects.hash(action, token, deploymentId, journeyContext, resumeToken, startNew);
   }
 
   @Override
@@ -126,6 +162,8 @@ public class ConfigureSessionRequest  implements Serializable {
     sb.append("    token: ").append(toIndentedString(token)).append("\n");
     sb.append("    deploymentId: ").append(toIndentedString(deploymentId)).append("\n");
     sb.append("    journeyContext: ").append(toIndentedString(journeyContext)).append("\n");
+    sb.append("    resumeToken: ").append(toIndentedString(resumeToken)).append("\n");
+    sb.append("    startNew: ").append(toIndentedString(startNew)).append("\n");
     sb.append("}");
     return sb.toString();
   }

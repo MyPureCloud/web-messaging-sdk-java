@@ -35,6 +35,8 @@ title: MessageDataType
 
 * `TOOMANYREQUESTSERRORMESSAGE` (value: `"TooManyRequestsErrorMessage"`)
 
+* `RESUMETOKENRESPONSE` (value: `"ResumeTokenResponse"`)
+
 * `UNKNOWN` (value: `"Unknown"`)
 
 

@@ -49,7 +49,7 @@ public class NotificationTemplateHeader  implements Serializable {
     this.media = media;
   }
 
-  
+
   /**
    * Template parameters for placeholders in template.
    **/
@@ -67,7 +67,7 @@ public class NotificationTemplateHeader  implements Serializable {
     this.parameters = parameters;
   }
 
-  
+
   /**
    * Header text. For WhatsApp, ignored.
    **/
@@ -85,7 +85,7 @@ public class NotificationTemplateHeader  implements Serializable {
     this.text = text;
   }
 
-  
+
   /**
    * Template header type.
    **/
@@ -103,7 +103,6 @@ public class NotificationTemplateHeader  implements Serializable {
     this.type = type;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -115,9 +114,9 @@ public class NotificationTemplateHeader  implements Serializable {
     }
     NotificationTemplateHeader notificationTemplateHeader = (NotificationTemplateHeader) o;
     return Objects.equals(this.media, notificationTemplateHeader.media) &&
-        Objects.equals(this.parameters, notificationTemplateHeader.parameters) &&
-        Objects.equals(this.text, notificationTemplateHeader.text) &&
-        Objects.equals(this.type, notificationTemplateHeader.type);
+          Objects.equals(this.parameters, notificationTemplateHeader.parameters) &&
+          Objects.equals(this.text, notificationTemplateHeader.text) &&
+          Objects.equals(this.type, notificationTemplateHeader.type);
   }
 
   @Override

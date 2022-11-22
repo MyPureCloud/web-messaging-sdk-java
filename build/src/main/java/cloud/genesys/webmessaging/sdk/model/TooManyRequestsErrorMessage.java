@@ -41,7 +41,7 @@ public class TooManyRequestsErrorMessage  implements Serializable {
     this.errorCode = errorCode;
   }
 
-  
+
   /**
    **/
   public TooManyRequestsErrorMessage errorMessage(String errorMessage) {
@@ -58,7 +58,7 @@ public class TooManyRequestsErrorMessage  implements Serializable {
     this.errorMessage = errorMessage;
   }
 
-  
+
   /**
    **/
   public TooManyRequestsErrorMessage retryAfter(Integer retryAfter) {
@@ -75,7 +75,6 @@ public class TooManyRequestsErrorMessage  implements Serializable {
     this.retryAfter = retryAfter;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -87,8 +86,8 @@ public class TooManyRequestsErrorMessage  implements Serializable {
     }
     TooManyRequestsErrorMessage tooManyRequestsErrorMessage = (TooManyRequestsErrorMessage) o;
     return Objects.equals(this.errorCode, tooManyRequestsErrorMessage.errorCode) &&
-        Objects.equals(this.errorMessage, tooManyRequestsErrorMessage.errorMessage) &&
-        Objects.equals(this.retryAfter, tooManyRequestsErrorMessage.retryAfter);
+          Objects.equals(this.errorMessage, tooManyRequestsErrorMessage.errorMessage) &&
+          Objects.equals(this.retryAfter, tooManyRequestsErrorMessage.retryAfter);
   }
 
   @Override

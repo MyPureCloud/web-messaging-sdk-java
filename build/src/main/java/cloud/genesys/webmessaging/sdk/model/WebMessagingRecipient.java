@@ -27,6 +27,7 @@ public class WebMessagingRecipient  implements Serializable {
   private String firstName = null;
   private String lastName = null;
   private String nickname = null;
+  private String image = null;
   private List<RecipientAdditionalIdentifier> additionalIds = new ArrayList<RecipientAdditionalIdentifier>();
 
   
@@ -36,28 +37,34 @@ public class WebMessagingRecipient  implements Serializable {
     return firstName;
   }
 
-  
+
   @ApiModelProperty(example = "null", value = "Last name of the recipient.")
   @JsonProperty("lastName")
   public String getLastName() {
     return lastName;
   }
 
-  
+
   @ApiModelProperty(example = "null", value = "Nickname or display name of the recipient.")
   @JsonProperty("nickname")
   public String getNickname() {
     return nickname;
   }
 
-  
+
+  @ApiModelProperty(example = "null", value = "URL of an image that represents the recipient.")
+  @JsonProperty("image")
+  public String getImage() {
+    return image;
+  }
+
+
   @ApiModelProperty(example = "null", value = "List of recipient additional identifiers")
   @JsonProperty("additionalIds")
   public List<RecipientAdditionalIdentifier> getAdditionalIds() {
     return additionalIds;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -69,14 +76,15 @@ public class WebMessagingRecipient  implements Serializable {
     }
     WebMessagingRecipient webMessagingRecipient = (WebMessagingRecipient) o;
     return Objects.equals(this.firstName, webMessagingRecipient.firstName) &&
-        Objects.equals(this.lastName, webMessagingRecipient.lastName) &&
-        Objects.equals(this.nickname, webMessagingRecipient.nickname) &&
-        Objects.equals(this.additionalIds, webMessagingRecipient.additionalIds);
+          Objects.equals(this.lastName, webMessagingRecipient.lastName) &&
+          Objects.equals(this.nickname, webMessagingRecipient.nickname) &&
+          Objects.equals(this.image, webMessagingRecipient.image) &&
+          Objects.equals(this.additionalIds, webMessagingRecipient.additionalIds);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(firstName, lastName, nickname, additionalIds);
+    return Objects.hash(firstName, lastName, nickname, image, additionalIds);
   }
 
   @Override
@@ -87,6 +95,7 @@ public class WebMessagingRecipient  implements Serializable {
     sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
     sb.append("    nickname: ").append(toIndentedString(nickname)).append("\n");
+    sb.append("    image: ").append(toIndentedString(image)).append("\n");
     sb.append("    additionalIds: ").append(toIndentedString(additionalIds)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -47,7 +47,7 @@ public class BaseContentAttachment  implements Serializable {
     this.id = id;
   }
 
-  
+
   /**
    **/
   public BaseContentAttachment filename(String filename) {
@@ -64,7 +64,7 @@ public class BaseContentAttachment  implements Serializable {
     this.filename = filename;
   }
 
-  
+
   /**
    **/
   public BaseContentAttachment fileSize(Integer fileSize) {
@@ -81,7 +81,7 @@ public class BaseContentAttachment  implements Serializable {
     this.fileSize = fileSize;
   }
 
-  
+
   /**
    **/
   public BaseContentAttachment mediaType(MediaType mediaType) {
@@ -98,7 +98,7 @@ public class BaseContentAttachment  implements Serializable {
     this.mediaType = mediaType;
   }
 
-  
+
   /**
    **/
   public BaseContentAttachment mime(String mime) {
@@ -115,7 +115,7 @@ public class BaseContentAttachment  implements Serializable {
     this.mime = mime;
   }
 
-  
+
   /**
    **/
   public BaseContentAttachment sha256(String sha256) {
@@ -132,7 +132,7 @@ public class BaseContentAttachment  implements Serializable {
     this.sha256 = sha256;
   }
 
-  
+
   /**
    **/
   public BaseContentAttachment text(String text) {
@@ -149,7 +149,7 @@ public class BaseContentAttachment  implements Serializable {
     this.text = text;
   }
 
-  
+
   /**
    **/
   public BaseContentAttachment url(String url) {
@@ -166,7 +166,6 @@ public class BaseContentAttachment  implements Serializable {
     this.url = url;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -178,13 +177,13 @@ public class BaseContentAttachment  implements Serializable {
     }
     BaseContentAttachment baseContentAttachment = (BaseContentAttachment) o;
     return Objects.equals(this.id, baseContentAttachment.id) &&
-        Objects.equals(this.filename, baseContentAttachment.filename) &&
-        Objects.equals(this.fileSize, baseContentAttachment.fileSize) &&
-        Objects.equals(this.mediaType, baseContentAttachment.mediaType) &&
-        Objects.equals(this.mime, baseContentAttachment.mime) &&
-        Objects.equals(this.sha256, baseContentAttachment.sha256) &&
-        Objects.equals(this.text, baseContentAttachment.text) &&
-        Objects.equals(this.url, baseContentAttachment.url);
+          Objects.equals(this.filename, baseContentAttachment.filename) &&
+          Objects.equals(this.fileSize, baseContentAttachment.fileSize) &&
+          Objects.equals(this.mediaType, baseContentAttachment.mediaType) &&
+          Objects.equals(this.mime, baseContentAttachment.mime) &&
+          Objects.equals(this.sha256, baseContentAttachment.sha256) &&
+          Objects.equals(this.text, baseContentAttachment.text) &&
+          Objects.equals(this.url, baseContentAttachment.url);
   }
 
   @Override

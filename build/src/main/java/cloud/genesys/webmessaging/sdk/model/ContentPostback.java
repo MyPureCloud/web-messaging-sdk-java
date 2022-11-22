@@ -43,7 +43,7 @@ public class ContentPostback  implements Serializable {
     this.id = id;
   }
 
-  
+
   /**
    * The response payload associated with the clicked button.
    **/
@@ -61,7 +61,7 @@ public class ContentPostback  implements Serializable {
     this.payload = payload;
   }
 
-  
+
   /**
    * The response text from the button click.
    **/
@@ -79,7 +79,6 @@ public class ContentPostback  implements Serializable {
     this.text = text;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -91,8 +90,8 @@ public class ContentPostback  implements Serializable {
     }
     ContentPostback contentPostback = (ContentPostback) o;
     return Objects.equals(this.id, contentPostback.id) &&
-        Objects.equals(this.payload, contentPostback.payload) &&
-        Objects.equals(this.text, contentPostback.text);
+          Objects.equals(this.payload, contentPostback.payload) &&
+          Objects.equals(this.text, contentPostback.text);
   }
 
   @Override

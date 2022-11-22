@@ -20,26 +20,9 @@ import java.io.Serializable;
 
 public class SessionResponse  implements Serializable {
   
-  private String sessionId = null;
   private Boolean connected = null;
   private Boolean newSession = null;
-
-  
-  /**
-   **/
-  public SessionResponse sessionId(String sessionId) {
-    this.sessionId = sessionId;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("sessionId")
-  public String getSessionId() {
-    return sessionId;
-  }
-  public void setSessionId(String sessionId) {
-    this.sessionId = sessionId;
-  }
+  private Boolean readOnly = null;
 
   
   /**
@@ -58,7 +41,7 @@ public class SessionResponse  implements Serializable {
     this.connected = connected;
   }
 
-  
+
   /**
    **/
   public SessionResponse newSession(Boolean newSession) {
@@ -75,7 +58,23 @@ public class SessionResponse  implements Serializable {
     this.newSession = newSession;
   }
 
+
+  /**
+   **/
+  public SessionResponse readOnly(Boolean readOnly) {
+    this.readOnly = readOnly;
+    return this;
+  }
   
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("readOnly")
+  public Boolean getReadOnly() {
+    return readOnly;
+  }
+  public void setReadOnly(Boolean readOnly) {
+    this.readOnly = readOnly;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -86,14 +85,14 @@ public class SessionResponse  implements Serializable {
       return false;
     }
     SessionResponse sessionResponse = (SessionResponse) o;
-    return Objects.equals(this.sessionId, sessionResponse.sessionId) &&
-        Objects.equals(this.connected, sessionResponse.connected) &&
-        Objects.equals(this.newSession, sessionResponse.newSession);
+    return Objects.equals(this.connected, sessionResponse.connected) &&
+          Objects.equals(this.newSession, sessionResponse.newSession) &&
+          Objects.equals(this.readOnly, sessionResponse.readOnly);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sessionId, connected, newSession);
+    return Objects.hash(connected, newSession, readOnly);
   }
 
   @Override
@@ -101,9 +100,9 @@ public class SessionResponse  implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class SessionResponse {\n");
     
-    sb.append("    sessionId: ").append(toIndentedString(sessionId)).append("\n");
     sb.append("    connected: ").append(toIndentedString(connected)).append("\n");
     sb.append("    newSession: ").append(toIndentedString(newSession)).append("\n");
+    sb.append("    readOnly: ").append(toIndentedString(readOnly)).append("\n");
     sb.append("}");
     return sb.toString();
   }

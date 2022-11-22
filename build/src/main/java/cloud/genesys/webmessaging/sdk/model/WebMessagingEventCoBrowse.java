@@ -93,7 +93,7 @@ public class WebMessagingEventCoBrowse  implements Serializable {
     this.type = type;
   }
 
-  
+
   /**
    * The Cobrowse session ID.
    **/
@@ -111,7 +111,7 @@ public class WebMessagingEventCoBrowse  implements Serializable {
     this.sessionId = sessionId;
   }
 
-  
+
   /**
    * The Cobrowse session join token.
    **/
@@ -129,7 +129,6 @@ public class WebMessagingEventCoBrowse  implements Serializable {
     this.sessionJoinToken = sessionJoinToken;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -141,8 +140,8 @@ public class WebMessagingEventCoBrowse  implements Serializable {
     }
     WebMessagingEventCoBrowse webMessagingEventCoBrowse = (WebMessagingEventCoBrowse) o;
     return Objects.equals(this.type, webMessagingEventCoBrowse.type) &&
-        Objects.equals(this.sessionId, webMessagingEventCoBrowse.sessionId) &&
-        Objects.equals(this.sessionJoinToken, webMessagingEventCoBrowse.sessionJoinToken);
+          Objects.equals(this.sessionId, webMessagingEventCoBrowse.sessionId) &&
+          Objects.equals(this.sessionJoinToken, webMessagingEventCoBrowse.sessionJoinToken);
   }
 
   @Override

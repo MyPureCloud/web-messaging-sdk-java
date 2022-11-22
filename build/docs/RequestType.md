@@ -29,5 +29,9 @@ title: RequestType
 
 * `DISCONNECTCUSTOMER` (value: `"disconnectCustomer"`)
 
+* `RESUMETOKEN` (value: `"resumeToken"`)
+
+* `SUBSCRIBETOPUSH` (value: `"subscribeToPush"`)
+
 
 

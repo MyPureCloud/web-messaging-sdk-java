@@ -40,7 +40,7 @@ public class JourneyCustomerSession  implements Serializable {
     this.id = id;
   }
 
-  
+
   /**
    **/
   public JourneyCustomerSession type(String type) {
@@ -57,7 +57,6 @@ public class JourneyCustomerSession  implements Serializable {
     this.type = type;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -69,7 +68,7 @@ public class JourneyCustomerSession  implements Serializable {
     }
     JourneyCustomerSession journeyCustomerSession = (JourneyCustomerSession) o;
     return Objects.equals(this.id, journeyCustomerSession.id) &&
-        Objects.equals(this.type, journeyCustomerSession.type);
+          Objects.equals(this.type, journeyCustomerSession.type);
   }
 
   @Override

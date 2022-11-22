@@ -43,16 +43,16 @@ public class ButtonComponent  implements Serializable {
     this.title = title;
   }
 
-  
+
   /**
-   * The button actions.
+   * The button actions (Deprecated).
    **/
   public ButtonComponent actions(ContentActions actions) {
     this.actions = actions;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "The button actions.")
+  @ApiModelProperty(example = "null", value = "The button actions (Deprecated).")
   @JsonProperty("actions")
   public ContentActions getActions() {
     return actions;
@@ -61,7 +61,6 @@ public class ButtonComponent  implements Serializable {
     this.actions = actions;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -73,7 +72,7 @@ public class ButtonComponent  implements Serializable {
     }
     ButtonComponent buttonComponent = (ButtonComponent) o;
     return Objects.equals(this.title, buttonComponent.title) &&
-        Objects.equals(this.actions, buttonComponent.actions);
+          Objects.equals(this.actions, buttonComponent.actions);
   }
 
   @Override

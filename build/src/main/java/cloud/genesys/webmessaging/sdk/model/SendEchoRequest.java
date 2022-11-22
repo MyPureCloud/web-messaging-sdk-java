@@ -10,7 +10,6 @@ import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
 import cloud.genesys.webmessaging.sdk.model.IncomingNormalizedMessage;
-import cloud.genesys.webmessaging.sdk.model.RequestTypeEchoMessage;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -43,7 +42,7 @@ public class SendEchoRequest  implements Serializable {
     this.action = action;
   }
 
-  
+
   /**
    **/
   public SendEchoRequest token(String token) {
@@ -60,7 +59,7 @@ public class SendEchoRequest  implements Serializable {
     this.token = token;
   }
 
-  
+
   /**
    **/
   public SendEchoRequest message(IncomingNormalizedMessage message) {
@@ -77,7 +76,6 @@ public class SendEchoRequest  implements Serializable {
     this.message = message;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -89,8 +87,8 @@ public class SendEchoRequest  implements Serializable {
     }
     SendEchoRequest sendEchoRequest = (SendEchoRequest) o;
     return Objects.equals(this.action, sendEchoRequest.action) &&
-        Objects.equals(this.token, sendEchoRequest.token) &&
-        Objects.equals(this.message, sendEchoRequest.message);
+          Objects.equals(this.token, sendEchoRequest.token) &&
+          Objects.equals(this.message, sendEchoRequest.message);
   }
 
   @Override

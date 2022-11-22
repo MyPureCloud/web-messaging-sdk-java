@@ -33,14 +33,14 @@ public class ListItemComponent  implements Serializable {
 
   
   /**
-   * The list item actions.
+   * The list item actions (Deprecated).
    **/
   public ListItemComponent actions(ContentActions actions) {
     this.actions = actions;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "The list item actions.")
+  @ApiModelProperty(example = "null", value = "The list item actions (Deprecated).")
   @JsonProperty("actions")
   public ContentActions getActions() {
     return actions;
@@ -49,7 +49,7 @@ public class ListItemComponent  implements Serializable {
     this.actions = actions;
   }
 
-  
+
   /**
    * Text to show in the list item description.
    **/
@@ -67,7 +67,7 @@ public class ListItemComponent  implements Serializable {
     this.description = description;
   }
 
-  
+
   /**
    * An ID assigned to this list item.
    **/
@@ -85,7 +85,7 @@ public class ListItemComponent  implements Serializable {
     this.id = id;
   }
 
-  
+
   /**
    * URL of an image.
    **/
@@ -103,7 +103,7 @@ public class ListItemComponent  implements Serializable {
     this.image = image;
   }
 
-  
+
   /**
    * An ID of the rich message instance.
    **/
@@ -121,7 +121,7 @@ public class ListItemComponent  implements Serializable {
     this.rmid = rmid;
   }
 
-  
+
   /**
    * The main headline of the list item.
    **/
@@ -139,7 +139,7 @@ public class ListItemComponent  implements Serializable {
     this.title = title;
   }
 
-  
+
   /**
    * The type of list item to render.
    **/
@@ -157,7 +157,6 @@ public class ListItemComponent  implements Serializable {
     this.type = type;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -169,12 +168,12 @@ public class ListItemComponent  implements Serializable {
     }
     ListItemComponent listItemComponent = (ListItemComponent) o;
     return Objects.equals(this.actions, listItemComponent.actions) &&
-        Objects.equals(this.description, listItemComponent.description) &&
-        Objects.equals(this.id, listItemComponent.id) &&
-        Objects.equals(this.image, listItemComponent.image) &&
-        Objects.equals(this.rmid, listItemComponent.rmid) &&
-        Objects.equals(this.title, listItemComponent.title) &&
-        Objects.equals(this.type, listItemComponent.type);
+          Objects.equals(this.description, listItemComponent.description) &&
+          Objects.equals(this.id, listItemComponent.id) &&
+          Objects.equals(this.image, listItemComponent.image) &&
+          Objects.equals(this.rmid, listItemComponent.rmid) &&
+          Objects.equals(this.title, listItemComponent.title) &&
+          Objects.equals(this.type, listItemComponent.type);
   }
 
   @Override

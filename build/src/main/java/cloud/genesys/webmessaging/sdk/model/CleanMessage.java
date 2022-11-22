@@ -36,8 +36,8 @@ public class CleanMessage  implements Serializable {
   private String id = null;
   private CleanMessagingChannel channel = null;
   private List<CleanMessageContent> content = new ArrayList<CleanMessageContent>();
-  private List<CleanMessageEvent> events = new ArrayList<CleanMessageEvent>();
   private Map<String, String> metadata = null;
+  private List<CleanMessageEvent> events = new ArrayList<CleanMessageEvent>();
   private OriginatingEntity originatingEntity = null;
 
   
@@ -57,7 +57,7 @@ public class CleanMessage  implements Serializable {
     this.text = text;
   }
 
-  
+
   /**
    **/
   public CleanMessage type(NormalizedType type) {
@@ -74,7 +74,7 @@ public class CleanMessage  implements Serializable {
     this.type = type;
   }
 
-  
+
   /**
    **/
   public CleanMessage direction(Direction direction) {
@@ -91,7 +91,7 @@ public class CleanMessage  implements Serializable {
     this.direction = direction;
   }
 
-  
+
   /**
    **/
   public CleanMessage id(String id) {
@@ -108,7 +108,7 @@ public class CleanMessage  implements Serializable {
     this.id = id;
   }
 
-  
+
   /**
    **/
   public CleanMessage channel(CleanMessagingChannel channel) {
@@ -125,7 +125,7 @@ public class CleanMessage  implements Serializable {
     this.channel = channel;
   }
 
-  
+
   /**
    **/
   public CleanMessage content(List<CleanMessageContent> content) {
@@ -142,24 +142,7 @@ public class CleanMessage  implements Serializable {
     this.content = content;
   }
 
-  
-  /**
-   **/
-  public CleanMessage events(List<CleanMessageEvent> events) {
-    this.events = events;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("events")
-  public List<CleanMessageEvent> getEvents() {
-    return events;
-  }
-  public void setEvents(List<CleanMessageEvent> events) {
-    this.events = events;
-  }
 
-  
   /**
    **/
   public CleanMessage metadata(Map<String, String> metadata) {
@@ -176,7 +159,24 @@ public class CleanMessage  implements Serializable {
     this.metadata = metadata;
   }
 
+
+  /**
+   **/
+  public CleanMessage events(List<CleanMessageEvent> events) {
+    this.events = events;
+    return this;
+  }
   
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("events")
+  public List<CleanMessageEvent> getEvents() {
+    return events;
+  }
+  public void setEvents(List<CleanMessageEvent> events) {
+    this.events = events;
+  }
+
+
   /**
    **/
   public CleanMessage originatingEntity(OriginatingEntity originatingEntity) {
@@ -193,7 +193,6 @@ public class CleanMessage  implements Serializable {
     this.originatingEntity = originatingEntity;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -205,19 +204,19 @@ public class CleanMessage  implements Serializable {
     }
     CleanMessage cleanMessage = (CleanMessage) o;
     return Objects.equals(this.text, cleanMessage.text) &&
-        Objects.equals(this.type, cleanMessage.type) &&
-        Objects.equals(this.direction, cleanMessage.direction) &&
-        Objects.equals(this.id, cleanMessage.id) &&
-        Objects.equals(this.channel, cleanMessage.channel) &&
-        Objects.equals(this.content, cleanMessage.content) &&
-        Objects.equals(this.events, cleanMessage.events) &&
-        Objects.equals(this.metadata, cleanMessage.metadata) &&
-        Objects.equals(this.originatingEntity, cleanMessage.originatingEntity);
+          Objects.equals(this.type, cleanMessage.type) &&
+          Objects.equals(this.direction, cleanMessage.direction) &&
+          Objects.equals(this.id, cleanMessage.id) &&
+          Objects.equals(this.channel, cleanMessage.channel) &&
+          Objects.equals(this.content, cleanMessage.content) &&
+          Objects.equals(this.metadata, cleanMessage.metadata) &&
+          Objects.equals(this.events, cleanMessage.events) &&
+          Objects.equals(this.originatingEntity, cleanMessage.originatingEntity);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(text, type, direction, id, channel, content, events, metadata, originatingEntity);
+    return Objects.hash(text, type, direction, id, channel, content, metadata, events, originatingEntity);
   }
 
   @Override
@@ -231,8 +230,8 @@ public class CleanMessage  implements Serializable {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    channel: ").append(toIndentedString(channel)).append("\n");
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
-    sb.append("    events: ").append(toIndentedString(events)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
+    sb.append("    events: ").append(toIndentedString(events)).append("\n");
     sb.append("    originatingEntity: ").append(toIndentedString(originatingEntity)).append("\n");
     sb.append("}");
     return sb.toString();

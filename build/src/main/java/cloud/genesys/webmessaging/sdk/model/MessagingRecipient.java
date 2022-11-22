@@ -52,7 +52,7 @@ public class MessagingRecipient  implements Serializable {
     this.additionalIds = additionalIds;
   }
 
-  
+
   /**
    * E-mail address of the recipient.
    **/
@@ -70,7 +70,7 @@ public class MessagingRecipient  implements Serializable {
     this.email = email;
   }
 
-  
+
   /**
    * First name of the recipient.
    **/
@@ -88,7 +88,7 @@ public class MessagingRecipient  implements Serializable {
     this.firstName = firstName;
   }
 
-  
+
   /**
    * The recipient ID specific to the provider.
    **/
@@ -106,7 +106,7 @@ public class MessagingRecipient  implements Serializable {
     this.id = id;
   }
 
-  
+
   /**
    * The recipient ID type. This is used to indicate the format used for the ID.
    **/
@@ -124,7 +124,7 @@ public class MessagingRecipient  implements Serializable {
     this.idType = idType;
   }
 
-  
+
   /**
    * URL of an image that represents the recipient.
    **/
@@ -142,7 +142,7 @@ public class MessagingRecipient  implements Serializable {
     this.image = image;
   }
 
-  
+
   /**
    * Last name of the recipient.
    **/
@@ -160,7 +160,7 @@ public class MessagingRecipient  implements Serializable {
     this.lastName = lastName;
   }
 
-  
+
   /**
    * Nickname or display name of the recipient.
    **/
@@ -178,7 +178,6 @@ public class MessagingRecipient  implements Serializable {
     this.nickname = nickname;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -190,13 +189,13 @@ public class MessagingRecipient  implements Serializable {
     }
     MessagingRecipient messagingRecipient = (MessagingRecipient) o;
     return Objects.equals(this.additionalIds, messagingRecipient.additionalIds) &&
-        Objects.equals(this.email, messagingRecipient.email) &&
-        Objects.equals(this.firstName, messagingRecipient.firstName) &&
-        Objects.equals(this.id, messagingRecipient.id) &&
-        Objects.equals(this.idType, messagingRecipient.idType) &&
-        Objects.equals(this.image, messagingRecipient.image) &&
-        Objects.equals(this.lastName, messagingRecipient.lastName) &&
-        Objects.equals(this.nickname, messagingRecipient.nickname);
+          Objects.equals(this.email, messagingRecipient.email) &&
+          Objects.equals(this.firstName, messagingRecipient.firstName) &&
+          Objects.equals(this.id, messagingRecipient.id) &&
+          Objects.equals(this.idType, messagingRecipient.idType) &&
+          Objects.equals(this.image, messagingRecipient.image) &&
+          Objects.equals(this.lastName, messagingRecipient.lastName) &&
+          Objects.equals(this.nickname, messagingRecipient.nickname);
   }
 
   @Override

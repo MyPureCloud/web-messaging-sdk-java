@@ -20,9 +20,9 @@ import java.util.List;
 
 import java.io.Serializable;
 /**
- * List content.  List content object.
+ * List content (Deprecated).  List content object.
  */
-@ApiModel(description = "List content.  List content object.")
+@ApiModel(description = "List content (Deprecated).  List content object.")
 
 public class ContentList  implements Serializable {
   
@@ -36,14 +36,14 @@ public class ContentList  implements Serializable {
 
   
   /**
-   * The list actions.
+   * The list actions (Deprecated).
    **/
   public ContentList actions(ContentActions actions) {
     this.actions = actions;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "The list actions.")
+  @ApiModelProperty(example = "null", value = "The list actions (Deprecated).")
   @JsonProperty("actions")
   public ContentActions getActions() {
     return actions;
@@ -52,7 +52,7 @@ public class ContentList  implements Serializable {
     this.actions = actions;
   }
 
-  
+
   /**
    * An array of component objects.
    **/
@@ -70,7 +70,7 @@ public class ContentList  implements Serializable {
     this.components = components;
   }
 
-  
+
   /**
    * Text to show in the description.
    **/
@@ -88,7 +88,7 @@ public class ContentList  implements Serializable {
     this.description = description;
   }
 
-  
+
   /**
    * A unique ID assigned to this rich message content.
    **/
@@ -106,7 +106,7 @@ public class ContentList  implements Serializable {
     this.id = id;
   }
 
-  
+
   /**
    * The type of list this instance represents.
    **/
@@ -124,7 +124,7 @@ public class ContentList  implements Serializable {
     this.listType = listType;
   }
 
-  
+
   /**
    * Label for Submit button.
    **/
@@ -142,7 +142,7 @@ public class ContentList  implements Serializable {
     this.submitLabel = submitLabel;
   }
 
-  
+
   /**
    * Text to show in the title.
    **/
@@ -160,7 +160,6 @@ public class ContentList  implements Serializable {
     this.title = title;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -172,12 +171,12 @@ public class ContentList  implements Serializable {
     }
     ContentList contentList = (ContentList) o;
     return Objects.equals(this.actions, contentList.actions) &&
-        Objects.equals(this.components, contentList.components) &&
-        Objects.equals(this.description, contentList.description) &&
-        Objects.equals(this.id, contentList.id) &&
-        Objects.equals(this.listType, contentList.listType) &&
-        Objects.equals(this.submitLabel, contentList.submitLabel) &&
-        Objects.equals(this.title, contentList.title);
+          Objects.equals(this.components, contentList.components) &&
+          Objects.equals(this.description, contentList.description) &&
+          Objects.equals(this.id, contentList.id) &&
+          Objects.equals(this.listType, contentList.listType) &&
+          Objects.equals(this.submitLabel, contentList.submitLabel) &&
+          Objects.equals(this.title, contentList.title);
   }
 
   @Override

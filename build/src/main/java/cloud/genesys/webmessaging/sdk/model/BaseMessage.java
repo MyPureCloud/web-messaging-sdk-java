@@ -44,7 +44,7 @@ public class BaseMessage  implements Serializable {
     this.type = type;
   }
 
-  
+
   /**
    **/
   public BaseMessage _class(MessageDataType _class) {
@@ -61,7 +61,7 @@ public class BaseMessage  implements Serializable {
     this._class = _class;
   }
 
-  
+
   /**
    **/
   public BaseMessage code(Integer code) {
@@ -78,7 +78,7 @@ public class BaseMessage  implements Serializable {
     this.code = code;
   }
 
-  
+
   /**
    **/
   public BaseMessage body(Object body) {
@@ -95,7 +95,6 @@ public class BaseMessage  implements Serializable {
     this.body = body;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -107,9 +106,9 @@ public class BaseMessage  implements Serializable {
     }
     BaseMessage baseMessage = (BaseMessage) o;
     return Objects.equals(this.type, baseMessage.type) &&
-        Objects.equals(this._class, baseMessage._class) &&
-        Objects.equals(this.code, baseMessage.code) &&
-        Objects.equals(this.body, baseMessage.body);
+          Objects.equals(this._class, baseMessage._class) &&
+          Objects.equals(this.code, baseMessage.code) &&
+          Objects.equals(this.body, baseMessage.body);
   }
 
   @Override

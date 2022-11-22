@@ -42,7 +42,7 @@ public class GenerateUrlError  implements Serializable {
     this.errorCode = errorCode;
   }
 
-  
+
   /**
    **/
   public GenerateUrlError errorMessage(String errorMessage) {
@@ -59,7 +59,7 @@ public class GenerateUrlError  implements Serializable {
     this.errorMessage = errorMessage;
   }
 
-  
+
   /**
    **/
   public GenerateUrlError attachmentId(String attachmentId) {
@@ -76,7 +76,7 @@ public class GenerateUrlError  implements Serializable {
     this.attachmentId = attachmentId;
   }
 
-  
+
   /**
    **/
   public GenerateUrlError timestamp(String timestamp) {
@@ -93,7 +93,6 @@ public class GenerateUrlError  implements Serializable {
     this.timestamp = timestamp;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -105,9 +104,9 @@ public class GenerateUrlError  implements Serializable {
     }
     GenerateUrlError generateUrlError = (GenerateUrlError) o;
     return Objects.equals(this.errorCode, generateUrlError.errorCode) &&
-        Objects.equals(this.errorMessage, generateUrlError.errorMessage) &&
-        Objects.equals(this.attachmentId, generateUrlError.attachmentId) &&
-        Objects.equals(this.timestamp, generateUrlError.timestamp);
+          Objects.equals(this.errorMessage, generateUrlError.errorMessage) &&
+          Objects.equals(this.attachmentId, generateUrlError.attachmentId) &&
+          Objects.equals(this.timestamp, generateUrlError.timestamp);
   }
 
   @Override

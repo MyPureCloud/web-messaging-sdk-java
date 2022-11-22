@@ -40,7 +40,7 @@ public class JourneyActionMap  implements Serializable {
     this.id = id;
   }
 
-  
+
   /**
    **/
   public JourneyActionMap version(Integer version) {
@@ -57,7 +57,6 @@ public class JourneyActionMap  implements Serializable {
     this.version = version;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -69,7 +68,7 @@ public class JourneyActionMap  implements Serializable {
     }
     JourneyActionMap journeyActionMap = (JourneyActionMap) o;
     return Objects.equals(this.id, journeyActionMap.id) &&
-        Objects.equals(this.version, journeyActionMap.version);
+          Objects.equals(this.version, journeyActionMap.version);
   }
 
   @Override

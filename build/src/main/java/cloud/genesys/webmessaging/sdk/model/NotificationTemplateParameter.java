@@ -42,7 +42,7 @@ public class NotificationTemplateParameter  implements Serializable {
     this.name = name;
   }
 
-  
+
   /**
    * Parameter text value.
    **/
@@ -60,7 +60,6 @@ public class NotificationTemplateParameter  implements Serializable {
     this.text = text;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -72,7 +71,7 @@ public class NotificationTemplateParameter  implements Serializable {
     }
     NotificationTemplateParameter notificationTemplateParameter = (NotificationTemplateParameter) o;
     return Objects.equals(this.name, notificationTemplateParameter.name) &&
-        Objects.equals(this.text, notificationTemplateParameter.text);
+          Objects.equals(this.text, notificationTemplateParameter.text);
   }
 
   @Override

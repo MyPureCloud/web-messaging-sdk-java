@@ -44,7 +44,7 @@ public class EventCoBrowse  implements Serializable {
     this.sessionId = sessionId;
   }
 
-  
+
   /**
    * The CoBrowse session join token.
    **/
@@ -62,7 +62,7 @@ public class EventCoBrowse  implements Serializable {
     this.sessionJoinToken = sessionJoinToken;
   }
 
-  
+
   /**
    * Describes the type of CoBrowse event.
    **/
@@ -80,7 +80,6 @@ public class EventCoBrowse  implements Serializable {
     this.type = type;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -92,8 +91,8 @@ public class EventCoBrowse  implements Serializable {
     }
     EventCoBrowse eventCoBrowse = (EventCoBrowse) o;
     return Objects.equals(this.sessionId, eventCoBrowse.sessionId) &&
-        Objects.equals(this.sessionJoinToken, eventCoBrowse.sessionJoinToken) &&
-        Objects.equals(this.type, eventCoBrowse.type);
+          Objects.equals(this.sessionJoinToken, eventCoBrowse.sessionJoinToken) &&
+          Objects.equals(this.type, eventCoBrowse.type);
   }
 
   @Override

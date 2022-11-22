@@ -46,7 +46,7 @@ public class ContentQuickReply  implements Serializable {
     this.action = action;
   }
 
-  
+
   /**
    * A unique ID assigned to the quick reply (Deprecated).
    **/
@@ -64,7 +64,7 @@ public class ContentQuickReply  implements Serializable {
     this.id = id;
   }
 
-  
+
   /**
    * URL of an image associated with the quick reply.
    **/
@@ -82,7 +82,7 @@ public class ContentQuickReply  implements Serializable {
     this.image = image;
   }
 
-  
+
   /**
    * Content of the payload included in the quick reply response. Could be an ID identifying the quick reply response.
    **/
@@ -100,7 +100,7 @@ public class ContentQuickReply  implements Serializable {
     this.payload = payload;
   }
 
-  
+
   /**
    * Text to show inside the quick reply. This is also used as the response text after clicking on the quick reply.
    **/
@@ -118,7 +118,6 @@ public class ContentQuickReply  implements Serializable {
     this.text = text;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -130,10 +129,10 @@ public class ContentQuickReply  implements Serializable {
     }
     ContentQuickReply contentQuickReply = (ContentQuickReply) o;
     return Objects.equals(this.action, contentQuickReply.action) &&
-        Objects.equals(this.id, contentQuickReply.id) &&
-        Objects.equals(this.image, contentQuickReply.image) &&
-        Objects.equals(this.payload, contentQuickReply.payload) &&
-        Objects.equals(this.text, contentQuickReply.text);
+          Objects.equals(this.id, contentQuickReply.id) &&
+          Objects.equals(this.image, contentQuickReply.image) &&
+          Objects.equals(this.payload, contentQuickReply.payload) &&
+          Objects.equals(this.text, contentQuickReply.text);
   }
 
   @Override

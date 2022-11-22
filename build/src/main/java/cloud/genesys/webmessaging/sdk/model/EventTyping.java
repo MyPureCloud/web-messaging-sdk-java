@@ -43,7 +43,7 @@ public class EventTyping  implements Serializable {
     this.duration = duration;
   }
 
-  
+
   /**
    * Describes the type of Typing event.
    **/
@@ -61,7 +61,6 @@ public class EventTyping  implements Serializable {
     this.type = type;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -73,7 +72,7 @@ public class EventTyping  implements Serializable {
     }
     EventTyping eventTyping = (EventTyping) o;
     return Objects.equals(this.duration, eventTyping.duration) &&
-        Objects.equals(this.type, eventTyping.type);
+          Objects.equals(this.type, eventTyping.type);
   }
 
   @Override

@@ -43,7 +43,7 @@ public class ContentActions  implements Serializable {
     this.url = url;
   }
 
-  
+
   /**
    * The target window in which to open the URL. If empty will open a blank page or tab.
    **/
@@ -61,16 +61,16 @@ public class ContentActions  implements Serializable {
     this.urlTarget = urlTarget;
   }
 
-  
+
   /**
-   * Text to be sent back in reply when the item is selected.
+   * Text to be returned as the payload from a ButtonResponse when a button is clicked. The textback and title are a combination which will have to be unique across each card and carousel in order to determine which button was clicked in that card or carousel.
    **/
   public ContentActions textback(String textback) {
     this.textback = textback;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Text to be sent back in reply when the item is selected.")
+  @ApiModelProperty(example = "null", value = "Text to be returned as the payload from a ButtonResponse when a button is clicked. The textback and title are a combination which will have to be unique across each card and carousel in order to determine which button was clicked in that card or carousel.")
   @JsonProperty("textback")
   public String getTextback() {
     return textback;
@@ -79,7 +79,6 @@ public class ContentActions  implements Serializable {
     this.textback = textback;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -91,8 +90,8 @@ public class ContentActions  implements Serializable {
     }
     ContentActions contentActions = (ContentActions) o;
     return Objects.equals(this.url, contentActions.url) &&
-        Objects.equals(this.urlTarget, contentActions.urlTarget) &&
-        Objects.equals(this.textback, contentActions.textback);
+          Objects.equals(this.urlTarget, contentActions.urlTarget) &&
+          Objects.equals(this.textback, contentActions.textback);
   }
 
   @Override

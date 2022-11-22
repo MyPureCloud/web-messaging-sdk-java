@@ -39,7 +39,6 @@ public class AttachmentDeletedResponse  implements Serializable {
     this.attachmentId = attachmentId;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {

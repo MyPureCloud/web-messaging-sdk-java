@@ -42,7 +42,7 @@ public class BaseMessagingContent  implements Serializable {
     this.attachment = attachment;
   }
 
-  
+
   /**
    **/
   public BaseMessagingContent contentType(ContentType contentType) {
@@ -59,7 +59,6 @@ public class BaseMessagingContent  implements Serializable {
     this.contentType = contentType;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -71,7 +70,7 @@ public class BaseMessagingContent  implements Serializable {
     }
     BaseMessagingContent baseMessagingContent = (BaseMessagingContent) o;
     return Objects.equals(this.attachment, baseMessagingContent.attachment) &&
-        Objects.equals(this.contentType, baseMessagingContent.contentType);
+          Objects.equals(this.contentType, baseMessagingContent.contentType);
   }
 
   @Override

@@ -47,7 +47,7 @@ public class BaseMessagingChannel  implements Serializable {
     this.time = time;
   }
 
-  
+
   /**
    **/
   public BaseMessagingChannel type(ChannelType type) {
@@ -64,7 +64,7 @@ public class BaseMessagingChannel  implements Serializable {
     this.type = type;
   }
 
-  
+
   /**
    **/
   public BaseMessagingChannel messageId(String messageId) {
@@ -81,7 +81,7 @@ public class BaseMessagingChannel  implements Serializable {
     this.messageId = messageId;
   }
 
-  
+
   /**
    **/
   public BaseMessagingChannel from(BaseMessagingRecipient from) {
@@ -98,7 +98,7 @@ public class BaseMessagingChannel  implements Serializable {
     this.from = from;
   }
 
-  
+
   /**
    **/
   public BaseMessagingChannel to(BaseMessagingRecipient to) {
@@ -115,7 +115,7 @@ public class BaseMessagingChannel  implements Serializable {
     this.to = to;
   }
 
-  
+
   /**
    **/
   public BaseMessagingChannel metadata(BaseChannelMetadata metadata) {
@@ -132,7 +132,6 @@ public class BaseMessagingChannel  implements Serializable {
     this.metadata = metadata;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -144,11 +143,11 @@ public class BaseMessagingChannel  implements Serializable {
     }
     BaseMessagingChannel baseMessagingChannel = (BaseMessagingChannel) o;
     return Objects.equals(this.time, baseMessagingChannel.time) &&
-        Objects.equals(this.type, baseMessagingChannel.type) &&
-        Objects.equals(this.messageId, baseMessagingChannel.messageId) &&
-        Objects.equals(this.from, baseMessagingChannel.from) &&
-        Objects.equals(this.to, baseMessagingChannel.to) &&
-        Objects.equals(this.metadata, baseMessagingChannel.metadata);
+          Objects.equals(this.type, baseMessagingChannel.type) &&
+          Objects.equals(this.messageId, baseMessagingChannel.messageId) &&
+          Objects.equals(this.from, baseMessagingChannel.from) &&
+          Objects.equals(this.to, baseMessagingChannel.to) &&
+          Objects.equals(this.metadata, baseMessagingChannel.metadata);
   }
 
   @Override

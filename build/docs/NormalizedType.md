@@ -11,6 +11,8 @@ title: NormalizedType
 
 * `EVENT` (value: `"Event"`)
 
+* `MESSAGE` (value: `"Message"`)
+
 * `RECEIPT` (value: `"Receipt"`)
 
 * `STRUCTURED` (value: `"Structured"`)

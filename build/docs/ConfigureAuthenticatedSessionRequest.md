@@ -11,7 +11,9 @@ title: ConfigureAuthenticatedSessionRequest
 | **action** | <!----><!---->[**RequestTypeConfigureAuthenticatedSession**](RequestTypeConfigureAuthenticatedSession.html)<!----> |  |  |
 | **token** | <!----><!---->**String**<!----> |  |  |
 | **deploymentId** | <!----><!---->**String**<!----> |  |  |
-| **data** | <!----><!---->[**OAuthParams**](OAuthParams.html)<!----> |  |  |
+| **data** | <!----><!---->[**OAuthParams**](oAuthParams.html)<!----> |  |  |
+| **resumeToken** | <!----><!---->**String**<!----> |  |  [optional] |
+| **startNew** | <!----><!---->**Boolean**<!----> |  |  [optional] |
 {: class="table table-striped"}
 
 

@@ -48,7 +48,7 @@ public class ContentNotificationTemplate  implements Serializable {
     this.body = body;
   }
 
-  
+
   /**
    * The template footer.
    **/
@@ -66,7 +66,7 @@ public class ContentNotificationTemplate  implements Serializable {
     this.footer = footer;
   }
 
-  
+
   /**
    * The template header.
    **/
@@ -84,7 +84,7 @@ public class ContentNotificationTemplate  implements Serializable {
     this.header = header;
   }
 
-  
+
   /**
    * The messaging provider template ID. For WhatsApp, 'namespace@name'.
    **/
@@ -102,7 +102,7 @@ public class ContentNotificationTemplate  implements Serializable {
     this.id = id;
   }
 
-  
+
   /**
    * Template language.
    **/
@@ -120,7 +120,6 @@ public class ContentNotificationTemplate  implements Serializable {
     this.language = language;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -132,10 +131,10 @@ public class ContentNotificationTemplate  implements Serializable {
     }
     ContentNotificationTemplate contentNotificationTemplate = (ContentNotificationTemplate) o;
     return Objects.equals(this.body, contentNotificationTemplate.body) &&
-        Objects.equals(this.footer, contentNotificationTemplate.footer) &&
-        Objects.equals(this.header, contentNotificationTemplate.header) &&
-        Objects.equals(this.id, contentNotificationTemplate.id) &&
-        Objects.equals(this.language, contentNotificationTemplate.language);
+          Objects.equals(this.footer, contentNotificationTemplate.footer) &&
+          Objects.equals(this.header, contentNotificationTemplate.header) &&
+          Objects.equals(this.id, contentNotificationTemplate.id) &&
+          Objects.equals(this.language, contentNotificationTemplate.language);
   }
 
   @Override

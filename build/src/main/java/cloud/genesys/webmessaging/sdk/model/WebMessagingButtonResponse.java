@@ -92,7 +92,7 @@ public class WebMessagingButtonResponse  implements Serializable {
     this.id = id;
   }
 
-  
+
   /**
    * Describes the button that resulted in the Button Response.
    **/
@@ -110,7 +110,7 @@ public class WebMessagingButtonResponse  implements Serializable {
     this.type = type;
   }
 
-  
+
   /**
    * The response text from the button click.
    **/
@@ -128,7 +128,7 @@ public class WebMessagingButtonResponse  implements Serializable {
     this.text = text;
   }
 
-  
+
   /**
    * The response payload associated with the clicked button.
    **/
@@ -146,7 +146,6 @@ public class WebMessagingButtonResponse  implements Serializable {
     this.payload = payload;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -158,9 +157,9 @@ public class WebMessagingButtonResponse  implements Serializable {
     }
     WebMessagingButtonResponse webMessagingButtonResponse = (WebMessagingButtonResponse) o;
     return Objects.equals(this.id, webMessagingButtonResponse.id) &&
-        Objects.equals(this.type, webMessagingButtonResponse.type) &&
-        Objects.equals(this.text, webMessagingButtonResponse.text) &&
-        Objects.equals(this.payload, webMessagingButtonResponse.payload);
+          Objects.equals(this.type, webMessagingButtonResponse.type) &&
+          Objects.equals(this.text, webMessagingButtonResponse.text) &&
+          Objects.equals(this.payload, webMessagingButtonResponse.payload);
   }
 
   @Override

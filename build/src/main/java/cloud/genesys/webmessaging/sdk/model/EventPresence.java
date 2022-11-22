@@ -42,7 +42,6 @@ public class EventPresence  implements Serializable {
     this.type = type;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {

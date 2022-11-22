@@ -17,7 +17,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import java.io.Serializable;
 /**
@@ -32,6 +34,7 @@ public class StructuredMessage  implements Serializable {
   private String id = null;
   private BaseMessagingChannel channel = null;
   private List<BaseMessagingContent> content = new ArrayList<BaseMessagingContent>();
+  private Map<String, String> metadata = null;
 
   
   /**
@@ -50,7 +53,7 @@ public class StructuredMessage  implements Serializable {
     this.text = text;
   }
 
-  
+
   /**
    **/
   public StructuredMessage type(NormalizedType type) {
@@ -67,7 +70,7 @@ public class StructuredMessage  implements Serializable {
     this.type = type;
   }
 
-  
+
   /**
    **/
   public StructuredMessage direction(Direction direction) {
@@ -84,7 +87,7 @@ public class StructuredMessage  implements Serializable {
     this.direction = direction;
   }
 
-  
+
   /**
    **/
   public StructuredMessage id(String id) {
@@ -101,7 +104,7 @@ public class StructuredMessage  implements Serializable {
     this.id = id;
   }
 
-  
+
   /**
    **/
   public StructuredMessage channel(BaseMessagingChannel channel) {
@@ -118,7 +121,7 @@ public class StructuredMessage  implements Serializable {
     this.channel = channel;
   }
 
-  
+
   /**
    **/
   public StructuredMessage content(List<BaseMessagingContent> content) {
@@ -135,7 +138,23 @@ public class StructuredMessage  implements Serializable {
     this.content = content;
   }
 
+
+  /**
+   **/
+  public StructuredMessage metadata(Map<String, String> metadata) {
+    this.metadata = metadata;
+    return this;
+  }
   
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("metadata")
+  public Map<String, String> getMetadata() {
+    return metadata;
+  }
+  public void setMetadata(Map<String, String> metadata) {
+    this.metadata = metadata;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -147,16 +166,17 @@ public class StructuredMessage  implements Serializable {
     }
     StructuredMessage structuredMessage = (StructuredMessage) o;
     return Objects.equals(this.text, structuredMessage.text) &&
-        Objects.equals(this.type, structuredMessage.type) &&
-        Objects.equals(this.direction, structuredMessage.direction) &&
-        Objects.equals(this.id, structuredMessage.id) &&
-        Objects.equals(this.channel, structuredMessage.channel) &&
-        Objects.equals(this.content, structuredMessage.content);
+          Objects.equals(this.type, structuredMessage.type) &&
+          Objects.equals(this.direction, structuredMessage.direction) &&
+          Objects.equals(this.id, structuredMessage.id) &&
+          Objects.equals(this.channel, structuredMessage.channel) &&
+          Objects.equals(this.content, structuredMessage.content) &&
+          Objects.equals(this.metadata, structuredMessage.metadata);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(text, type, direction, id, channel, content);
+    return Objects.hash(text, type, direction, id, channel, content, metadata);
   }
 
   @Override
@@ -170,6 +190,7 @@ public class StructuredMessage  implements Serializable {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    channel: ").append(toIndentedString(channel)).append("\n");
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
+    sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
     sb.append("}");
     return sb.toString();
   }

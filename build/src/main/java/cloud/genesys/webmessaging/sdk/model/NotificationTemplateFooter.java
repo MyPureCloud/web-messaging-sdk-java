@@ -41,7 +41,6 @@ public class NotificationTemplateFooter  implements Serializable {
     this.text = text;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {

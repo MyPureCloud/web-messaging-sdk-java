@@ -34,7 +34,6 @@ public class WebMessagingApi {
     this.gcapiClient = apiClient;
   }
 
-  
   /**
    * Get the messages for a web messaging session.
    * 
@@ -63,9 +62,8 @@ public class WebMessagingApi {
   private GetWebmessagingMessagesRequest createGetWebmessagingMessagesRequest(Integer pageSize, Integer pageNumber) {
     return GetWebmessagingMessagesRequest.builder()
             .withPageSize(pageSize)
-    
+
             .withPageNumber(pageNumber)
-    
             .build();
   }
 
@@ -117,5 +115,4 @@ public class WebMessagingApi {
     }
   }
 
-  
 }

@@ -34,7 +34,7 @@ public class ContentReaction  implements Serializable {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Number of users that reacted this way to the message.")
+  @ApiModelProperty(example = "null", required = true, value = "Number of users that reacted this way to the message.")
   @JsonProperty("count")
   public Double getCount() {
     return count;
@@ -43,7 +43,7 @@ public class ContentReaction  implements Serializable {
     this.count = count;
   }
 
-  
+
   /**
    * Type of reaction.
    **/
@@ -52,7 +52,7 @@ public class ContentReaction  implements Serializable {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Type of reaction.")
+  @ApiModelProperty(example = "null", required = true, value = "Type of reaction.")
   @JsonProperty("reactionType")
   public ReactionType getReactionType() {
     return reactionType;
@@ -61,7 +61,6 @@ public class ContentReaction  implements Serializable {
     this.reactionType = reactionType;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -73,7 +72,7 @@ public class ContentReaction  implements Serializable {
     }
     ContentReaction contentReaction = (ContentReaction) o;
     return Objects.equals(this.count, contentReaction.count) &&
-        Objects.equals(this.reactionType, contentReaction.reactionType);
+          Objects.equals(this.reactionType, contentReaction.reactionType);
   }
 
   @Override

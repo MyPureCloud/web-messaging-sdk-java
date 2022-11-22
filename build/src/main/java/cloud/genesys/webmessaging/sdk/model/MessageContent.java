@@ -19,8 +19,10 @@ import cloud.genesys.webmessaging.sdk.model.ContentLocation;
 import cloud.genesys.webmessaging.sdk.model.ContentNotificationTemplate;
 import cloud.genesys.webmessaging.sdk.model.ContentPostback;
 import cloud.genesys.webmessaging.sdk.model.ContentQuickReply;
+import cloud.genesys.webmessaging.sdk.model.ContentQuickReplyV2;
 import cloud.genesys.webmessaging.sdk.model.ContentReaction;
 import cloud.genesys.webmessaging.sdk.model.ContentStory;
+import cloud.genesys.webmessaging.sdk.model.ContentText;
 import cloud.genesys.webmessaging.sdk.model.ContentType;
 import cloud.genesys.webmessaging.sdk.model.MessagingRecipient;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -31,9 +33,9 @@ import java.util.List;
 
 import java.io.Serializable;
 /**
- * Message content element.
+ * Message content element. If contentType &#x3D; \&quot;Attachment\&quot; only one item is allowed.
  */
-@ApiModel(description = "Message content element.")
+@ApiModel(description = "Message content element. If contentType = \"Attachment\" only one item is allowed.")
 
 public class MessageContent  implements Serializable {
   
@@ -48,9 +50,11 @@ public class MessageContent  implements Serializable {
   private MessagingRecipient mention = null;
   private ContentPostback postback = null;
   private ContentQuickReply quickReply = null;
+  private ContentQuickReplyV2 quickReplyV2 = null;
   private List<ContentReaction> reactions = new ArrayList<ContentReaction>();
   private ContentStory story = null;
   private ContentNotificationTemplate template = null;
+  private ContentText text = null;
 
   
   /**
@@ -70,7 +74,7 @@ public class MessageContent  implements Serializable {
     this.attachment = attachment;
   }
 
-  
+
   /**
    * Button response content.
    **/
@@ -88,7 +92,7 @@ public class MessageContent  implements Serializable {
     this.buttonResponse = buttonResponse;
   }
 
-  
+
   /**
    * Card content
    **/
@@ -106,7 +110,7 @@ public class MessageContent  implements Serializable {
     this.card = card;
   }
 
-  
+
   /**
    * Carousel content
    **/
@@ -124,16 +128,15 @@ public class MessageContent  implements Serializable {
     this.carousel = carousel;
   }
 
-  
+
   /**
-   * Type of this content element. If contentType = \"Attachment\" only one item is allowed.
    **/
   public MessageContent contentType(ContentType contentType) {
     this.contentType = contentType;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Type of this content element. If contentType = \"Attachment\" only one item is allowed.")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("contentType")
   public ContentType getContentType() {
     return contentType;
@@ -142,16 +145,16 @@ public class MessageContent  implements Serializable {
     this.contentType = contentType;
   }
 
-  
+
   /**
-   * Generic content.
+   * Generic content (Deprecated).
    **/
   public MessageContent generic(ContentGeneric generic) {
     this.generic = generic;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Generic content.")
+  @ApiModelProperty(example = "null", value = "Generic content (Deprecated).")
   @JsonProperty("generic")
   public ContentGeneric getGeneric() {
     return generic;
@@ -160,16 +163,16 @@ public class MessageContent  implements Serializable {
     this.generic = generic;
   }
 
-  
+
   /**
-   * List content.
+   * List content (Deprecated).
    **/
   public MessageContent list(ContentList list) {
     this.list = list;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "List content.")
+  @ApiModelProperty(example = "null", value = "List content (Deprecated).")
   @JsonProperty("list")
   public ContentList getList() {
     return list;
@@ -178,7 +181,7 @@ public class MessageContent  implements Serializable {
     this.list = list;
   }
 
-  
+
   /**
    * Location content.
    **/
@@ -196,7 +199,7 @@ public class MessageContent  implements Serializable {
     this.location = location;
   }
 
-  
+
   /**
    * Mention content.
    **/
@@ -214,7 +217,7 @@ public class MessageContent  implements Serializable {
     this.mention = mention;
   }
 
-  
+
   /**
    * Structured message postback (Deprecated).
    **/
@@ -232,7 +235,7 @@ public class MessageContent  implements Serializable {
     this.postback = postback;
   }
 
-  
+
   /**
    * Quick reply content.
    **/
@@ -250,7 +253,25 @@ public class MessageContent  implements Serializable {
     this.quickReply = quickReply;
   }
 
+
+  /**
+   * Quick reply V2 content.
+   **/
+  public MessageContent quickReplyV2(ContentQuickReplyV2 quickReplyV2) {
+    this.quickReplyV2 = quickReplyV2;
+    return this;
+  }
   
+  @ApiModelProperty(example = "null", value = "Quick reply V2 content.")
+  @JsonProperty("quickReplyV2")
+  public ContentQuickReplyV2 getQuickReplyV2() {
+    return quickReplyV2;
+  }
+  public void setQuickReplyV2(ContentQuickReplyV2 quickReplyV2) {
+    this.quickReplyV2 = quickReplyV2;
+  }
+
+
   /**
    * A set of reactions to a message.
    **/
@@ -268,7 +289,7 @@ public class MessageContent  implements Serializable {
     this.reactions = reactions;
   }
 
-  
+
   /**
    * Ephemeral story content.
    **/
@@ -286,7 +307,7 @@ public class MessageContent  implements Serializable {
     this.story = story;
   }
 
-  
+
   /**
    * Template notification content.
    **/
@@ -304,7 +325,24 @@ public class MessageContent  implements Serializable {
     this.template = template;
   }
 
+
+  /**
+   * Text content.
+   **/
+  public MessageContent text(ContentText text) {
+    this.text = text;
+    return this;
+  }
   
+  @ApiModelProperty(example = "null", value = "Text content.")
+  @JsonProperty("text")
+  public ContentText getText() {
+    return text;
+  }
+  public void setText(ContentText text) {
+    this.text = text;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -316,24 +354,26 @@ public class MessageContent  implements Serializable {
     }
     MessageContent messageContent = (MessageContent) o;
     return Objects.equals(this.attachment, messageContent.attachment) &&
-        Objects.equals(this.buttonResponse, messageContent.buttonResponse) &&
-        Objects.equals(this.card, messageContent.card) &&
-        Objects.equals(this.carousel, messageContent.carousel) &&
-        Objects.equals(this.contentType, messageContent.contentType) &&
-        Objects.equals(this.generic, messageContent.generic) &&
-        Objects.equals(this.list, messageContent.list) &&
-        Objects.equals(this.location, messageContent.location) &&
-        Objects.equals(this.mention, messageContent.mention) &&
-        Objects.equals(this.postback, messageContent.postback) &&
-        Objects.equals(this.quickReply, messageContent.quickReply) &&
-        Objects.equals(this.reactions, messageContent.reactions) &&
-        Objects.equals(this.story, messageContent.story) &&
-        Objects.equals(this.template, messageContent.template);
+          Objects.equals(this.buttonResponse, messageContent.buttonResponse) &&
+          Objects.equals(this.card, messageContent.card) &&
+          Objects.equals(this.carousel, messageContent.carousel) &&
+          Objects.equals(this.contentType, messageContent.contentType) &&
+          Objects.equals(this.generic, messageContent.generic) &&
+          Objects.equals(this.list, messageContent.list) &&
+          Objects.equals(this.location, messageContent.location) &&
+          Objects.equals(this.mention, messageContent.mention) &&
+          Objects.equals(this.postback, messageContent.postback) &&
+          Objects.equals(this.quickReply, messageContent.quickReply) &&
+          Objects.equals(this.quickReplyV2, messageContent.quickReplyV2) &&
+          Objects.equals(this.reactions, messageContent.reactions) &&
+          Objects.equals(this.story, messageContent.story) &&
+          Objects.equals(this.template, messageContent.template) &&
+          Objects.equals(this.text, messageContent.text);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(attachment, buttonResponse, card, carousel, contentType, generic, list, location, mention, postback, quickReply, reactions, story, template);
+    return Objects.hash(attachment, buttonResponse, card, carousel, contentType, generic, list, location, mention, postback, quickReply, quickReplyV2, reactions, story, template, text);
   }
 
   @Override
@@ -352,9 +392,11 @@ public class MessageContent  implements Serializable {
     sb.append("    mention: ").append(toIndentedString(mention)).append("\n");
     sb.append("    postback: ").append(toIndentedString(postback)).append("\n");
     sb.append("    quickReply: ").append(toIndentedString(quickReply)).append("\n");
+    sb.append("    quickReplyV2: ").append(toIndentedString(quickReplyV2)).append("\n");
     sb.append("    reactions: ").append(toIndentedString(reactions)).append("\n");
     sb.append("    story: ").append(toIndentedString(story)).append("\n");
     sb.append("    template: ").append(toIndentedString(template)).append("\n");
+    sb.append("    text: ").append(toIndentedString(text)).append("\n");
     sb.append("}");
     return sb.toString();
   }

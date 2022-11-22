@@ -38,7 +38,9 @@ public enum RequestType {
   CLOSESESSION("closeSession"),
   ECHO("echo"),
   GETJWT("getJwt"),
-  DISCONNECTCUSTOMER("disconnectCustomer");
+  DISCONNECTCUSTOMER("disconnectCustomer"),
+  RESUMETOKEN("resumeToken"),
+  SUBSCRIBETOPUSH("subscribeToPush");
 
   private String value;
 

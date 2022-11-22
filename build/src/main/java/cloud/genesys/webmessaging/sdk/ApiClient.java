@@ -32,7 +32,7 @@ import cloud.genesys.webmessaging.sdk.connector.*;
 
 public class ApiClient implements AutoCloseable {
     private static final String DEFAULT_BASE_PATH = "https://api.mypurecloud.com";
-    private static final String DEFAULT_USER_AGENT = "PureCloud SDK/java";
+    private static final String DEFAULT_USER_AGENT = "PureCloud SDK/webmessagingjava";
     private static final String USER_AGENT_HEADER = "User-Agent";
 
     private static Map<String, Authentication> buildAuthentications() {
@@ -604,7 +604,7 @@ public class ApiClient implements AutoCloseable {
         private Builder(ConnectorProperties properties) {
             this.properties = (properties != null) ? properties.copy() : new ConnectorProperties();
             withUserAgent(DEFAULT_USER_AGENT);
-            withDefaultHeader("purecloud-sdk", "7.2.1");
+            withDefaultHeader("purecloud-sdk", "8.0.0");
         }
 
         public Builder withDefaultHeader(String header, String value) {

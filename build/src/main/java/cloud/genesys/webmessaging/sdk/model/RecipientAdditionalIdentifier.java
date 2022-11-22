@@ -79,14 +79,13 @@ public class RecipientAdditionalIdentifier  implements Serializable {
     return type;
   }
 
-  
+
   @ApiModelProperty(example = "null", required = true, value = "The Identifier value.")
   @JsonProperty("value")
   public String getValue() {
     return value;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -98,7 +97,7 @@ public class RecipientAdditionalIdentifier  implements Serializable {
     }
     RecipientAdditionalIdentifier recipientAdditionalIdentifier = (RecipientAdditionalIdentifier) o;
     return Objects.equals(this.type, recipientAdditionalIdentifier.type) &&
-        Objects.equals(this.value, recipientAdditionalIdentifier.value);
+          Objects.equals(this.value, recipientAdditionalIdentifier.value);
   }
 
   @Override

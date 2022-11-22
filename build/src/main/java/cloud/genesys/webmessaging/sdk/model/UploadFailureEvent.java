@@ -42,7 +42,7 @@ public class UploadFailureEvent  implements Serializable {
     this.attachmentId = attachmentId;
   }
 
-  
+
   /**
    **/
   public UploadFailureEvent errorCode(Integer errorCode) {
@@ -59,7 +59,7 @@ public class UploadFailureEvent  implements Serializable {
     this.errorCode = errorCode;
   }
 
-  
+
   /**
    **/
   public UploadFailureEvent errorMessage(String errorMessage) {
@@ -76,7 +76,7 @@ public class UploadFailureEvent  implements Serializable {
     this.errorMessage = errorMessage;
   }
 
-  
+
   /**
    **/
   public UploadFailureEvent timestamp(String timestamp) {
@@ -93,7 +93,6 @@ public class UploadFailureEvent  implements Serializable {
     this.timestamp = timestamp;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -105,9 +104,9 @@ public class UploadFailureEvent  implements Serializable {
     }
     UploadFailureEvent uploadFailureEvent = (UploadFailureEvent) o;
     return Objects.equals(this.attachmentId, uploadFailureEvent.attachmentId) &&
-        Objects.equals(this.errorCode, uploadFailureEvent.errorCode) &&
-        Objects.equals(this.errorMessage, uploadFailureEvent.errorMessage) &&
-        Objects.equals(this.timestamp, uploadFailureEvent.timestamp);
+          Objects.equals(this.errorCode, uploadFailureEvent.errorCode) &&
+          Objects.equals(this.errorMessage, uploadFailureEvent.errorMessage) &&
+          Objects.equals(this.timestamp, uploadFailureEvent.timestamp);
   }
 
   @Override

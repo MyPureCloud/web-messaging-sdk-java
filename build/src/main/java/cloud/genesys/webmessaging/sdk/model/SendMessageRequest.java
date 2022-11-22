@@ -11,12 +11,9 @@ import java.util.Objects;
 import java.io.IOException;
 import cloud.genesys.webmessaging.sdk.model.BaseMessagingChannel;
 import cloud.genesys.webmessaging.sdk.model.IncomingNormalizedMessage;
-import cloud.genesys.webmessaging.sdk.model.RequestTypeIncomingMessage;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
 
 import java.io.Serializable;
 /**
@@ -29,7 +26,6 @@ public class SendMessageRequest  implements Serializable {
   private String token = null;
   private String time = null;
   private IncomingNormalizedMessage message = null;
-  private List<String> attachmentIds = new ArrayList<String>();
   private BaseMessagingChannel channel = null;
 
   
@@ -49,7 +45,7 @@ public class SendMessageRequest  implements Serializable {
     this.action = action;
   }
 
-  
+
   /**
    **/
   public SendMessageRequest token(String token) {
@@ -66,7 +62,7 @@ public class SendMessageRequest  implements Serializable {
     this.token = token;
   }
 
-  
+
   /**
    **/
   public SendMessageRequest time(String time) {
@@ -83,7 +79,7 @@ public class SendMessageRequest  implements Serializable {
     this.time = time;
   }
 
-  
+
   /**
    **/
   public SendMessageRequest message(IncomingNormalizedMessage message) {
@@ -100,24 +96,7 @@ public class SendMessageRequest  implements Serializable {
     this.message = message;
   }
 
-  
-  /**
-   **/
-  public SendMessageRequest attachmentIds(List<String> attachmentIds) {
-    this.attachmentIds = attachmentIds;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("attachmentIds")
-  public List<String> getAttachmentIds() {
-    return attachmentIds;
-  }
-  public void setAttachmentIds(List<String> attachmentIds) {
-    this.attachmentIds = attachmentIds;
-  }
 
-  
   /**
    **/
   public SendMessageRequest channel(BaseMessagingChannel channel) {
@@ -134,7 +113,6 @@ public class SendMessageRequest  implements Serializable {
     this.channel = channel;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -146,16 +124,15 @@ public class SendMessageRequest  implements Serializable {
     }
     SendMessageRequest sendMessageRequest = (SendMessageRequest) o;
     return Objects.equals(this.action, sendMessageRequest.action) &&
-        Objects.equals(this.token, sendMessageRequest.token) &&
-        Objects.equals(this.time, sendMessageRequest.time) &&
-        Objects.equals(this.message, sendMessageRequest.message) &&
-        Objects.equals(this.attachmentIds, sendMessageRequest.attachmentIds) &&
-        Objects.equals(this.channel, sendMessageRequest.channel);
+          Objects.equals(this.token, sendMessageRequest.token) &&
+          Objects.equals(this.time, sendMessageRequest.time) &&
+          Objects.equals(this.message, sendMessageRequest.message) &&
+          Objects.equals(this.channel, sendMessageRequest.channel);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(action, token, time, message, attachmentIds, channel);
+    return Objects.hash(action, token, time, message, channel);
   }
 
   @Override
@@ -167,7 +144,6 @@ public class SendMessageRequest  implements Serializable {
     sb.append("    token: ").append(toIndentedString(token)).append("\n");
     sb.append("    time: ").append(toIndentedString(time)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
-    sb.append("    attachmentIds: ").append(toIndentedString(attachmentIds)).append("\n");
     sb.append("    channel: ").append(toIndentedString(channel)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -45,7 +45,7 @@ public class NotificationTemplateBody  implements Serializable {
     this.parameters = parameters;
   }
 
-  
+
   /**
    * Body text. For WhatsApp, ignored.
    **/
@@ -63,7 +63,6 @@ public class NotificationTemplateBody  implements Serializable {
     this.text = text;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -75,7 +74,7 @@ public class NotificationTemplateBody  implements Serializable {
     }
     NotificationTemplateBody notificationTemplateBody = (NotificationTemplateBody) o;
     return Objects.equals(this.parameters, notificationTemplateBody.parameters) &&
-        Objects.equals(this.text, notificationTemplateBody.text);
+          Objects.equals(this.text, notificationTemplateBody.text);
   }
 
   @Override

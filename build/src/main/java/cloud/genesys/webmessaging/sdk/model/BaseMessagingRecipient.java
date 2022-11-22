@@ -23,6 +23,7 @@ public class BaseMessagingRecipient  implements Serializable {
   private String firstName = null;
   private String lastName = null;
   private String nickname = null;
+  private String image = null;
 
   
   /**
@@ -41,7 +42,7 @@ public class BaseMessagingRecipient  implements Serializable {
     this.firstName = firstName;
   }
 
-  
+
   /**
    **/
   public BaseMessagingRecipient lastName(String lastName) {
@@ -58,7 +59,7 @@ public class BaseMessagingRecipient  implements Serializable {
     this.lastName = lastName;
   }
 
-  
+
   /**
    **/
   public BaseMessagingRecipient nickname(String nickname) {
@@ -75,7 +76,23 @@ public class BaseMessagingRecipient  implements Serializable {
     this.nickname = nickname;
   }
 
+
+  /**
+   **/
+  public BaseMessagingRecipient image(String image) {
+    this.image = image;
+    return this;
+  }
   
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("image")
+  public String getImage() {
+    return image;
+  }
+  public void setImage(String image) {
+    this.image = image;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -87,13 +104,14 @@ public class BaseMessagingRecipient  implements Serializable {
     }
     BaseMessagingRecipient baseMessagingRecipient = (BaseMessagingRecipient) o;
     return Objects.equals(this.firstName, baseMessagingRecipient.firstName) &&
-        Objects.equals(this.lastName, baseMessagingRecipient.lastName) &&
-        Objects.equals(this.nickname, baseMessagingRecipient.nickname);
+          Objects.equals(this.lastName, baseMessagingRecipient.lastName) &&
+          Objects.equals(this.nickname, baseMessagingRecipient.nickname) &&
+          Objects.equals(this.image, baseMessagingRecipient.image);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(firstName, lastName, nickname);
+    return Objects.hash(firstName, lastName, nickname, image);
   }
 
   @Override
@@ -104,6 +122,7 @@ public class BaseMessagingRecipient  implements Serializable {
     sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
     sb.append("    nickname: ").append(toIndentedString(nickname)).append("\n");
+    sb.append("    image: ").append(toIndentedString(image)).append("\n");
     sb.append("}");
     return sb.toString();
   }

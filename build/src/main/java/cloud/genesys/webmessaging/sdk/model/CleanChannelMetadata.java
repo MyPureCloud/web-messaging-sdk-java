@@ -42,7 +42,6 @@ public class CleanChannelMetadata  implements Serializable {
     this.customAttributes = customAttributes;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {

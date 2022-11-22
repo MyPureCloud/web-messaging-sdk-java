@@ -18,9 +18,9 @@ import java.util.List;
 
 import java.io.Serializable;
 /**
- * Carousel content  Carousel content object.
+ * Carousel content object.
  */
-@ApiModel(description = "Carousel content  Carousel content object.")
+@ApiModel(description = "Carousel content object.")
 
 public class ContentCarousel  implements Serializable {
   
@@ -44,7 +44,6 @@ public class ContentCarousel  implements Serializable {
     this.cards = cards;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {

@@ -47,7 +47,7 @@ public class CleanMessagingChannel  implements Serializable {
     this.time = time;
   }
 
-  
+
   /**
    **/
   public CleanMessagingChannel type(ChannelType type) {
@@ -64,7 +64,7 @@ public class CleanMessagingChannel  implements Serializable {
     this.type = type;
   }
 
-  
+
   /**
    **/
   public CleanMessagingChannel messageId(String messageId) {
@@ -81,7 +81,7 @@ public class CleanMessagingChannel  implements Serializable {
     this.messageId = messageId;
   }
 
-  
+
   /**
    **/
   public CleanMessagingChannel from(CleanMessagingRecipient from) {
@@ -98,7 +98,7 @@ public class CleanMessagingChannel  implements Serializable {
     this.from = from;
   }
 
-  
+
   /**
    **/
   public CleanMessagingChannel to(CleanMessagingRecipient to) {
@@ -115,7 +115,7 @@ public class CleanMessagingChannel  implements Serializable {
     this.to = to;
   }
 
-  
+
   /**
    **/
   public CleanMessagingChannel metadata(CleanChannelMetadata metadata) {
@@ -132,7 +132,6 @@ public class CleanMessagingChannel  implements Serializable {
     this.metadata = metadata;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -144,11 +143,11 @@ public class CleanMessagingChannel  implements Serializable {
     }
     CleanMessagingChannel cleanMessagingChannel = (CleanMessagingChannel) o;
     return Objects.equals(this.time, cleanMessagingChannel.time) &&
-        Objects.equals(this.type, cleanMessagingChannel.type) &&
-        Objects.equals(this.messageId, cleanMessagingChannel.messageId) &&
-        Objects.equals(this.from, cleanMessagingChannel.from) &&
-        Objects.equals(this.to, cleanMessagingChannel.to) &&
-        Objects.equals(this.metadata, cleanMessagingChannel.metadata);
+          Objects.equals(this.type, cleanMessagingChannel.type) &&
+          Objects.equals(this.messageId, cleanMessagingChannel.messageId) &&
+          Objects.equals(this.from, cleanMessagingChannel.from) &&
+          Objects.equals(this.to, cleanMessagingChannel.to) &&
+          Objects.equals(this.metadata, cleanMessagingChannel.metadata);
   }
 
   @Override

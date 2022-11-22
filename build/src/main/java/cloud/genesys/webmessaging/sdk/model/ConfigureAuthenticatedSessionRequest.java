@@ -10,7 +10,6 @@ import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
 import cloud.genesys.webmessaging.sdk.model.OAuthParams;
-import cloud.genesys.webmessaging.sdk.model.RequestTypeConfigureAuthenticatedSession;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -26,6 +25,8 @@ public class ConfigureAuthenticatedSessionRequest  implements Serializable {
   private String token = null;
   private String deploymentId = null;
   private OAuthParams data = null;
+  private String resumeToken = null;
+  private Boolean startNew = null;
 
   
   /**
@@ -44,7 +45,7 @@ public class ConfigureAuthenticatedSessionRequest  implements Serializable {
     this.action = action;
   }
 
-  
+
   /**
    **/
   public ConfigureAuthenticatedSessionRequest token(String token) {
@@ -61,7 +62,7 @@ public class ConfigureAuthenticatedSessionRequest  implements Serializable {
     this.token = token;
   }
 
-  
+
   /**
    **/
   public ConfigureAuthenticatedSessionRequest deploymentId(String deploymentId) {
@@ -78,7 +79,7 @@ public class ConfigureAuthenticatedSessionRequest  implements Serializable {
     this.deploymentId = deploymentId;
   }
 
-  
+
   /**
    **/
   public ConfigureAuthenticatedSessionRequest data(OAuthParams data) {
@@ -95,7 +96,40 @@ public class ConfigureAuthenticatedSessionRequest  implements Serializable {
     this.data = data;
   }
 
+
+  /**
+   **/
+  public ConfigureAuthenticatedSessionRequest resumeToken(String resumeToken) {
+    this.resumeToken = resumeToken;
+    return this;
+  }
   
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("resumeToken")
+  public String getResumeToken() {
+    return resumeToken;
+  }
+  public void setResumeToken(String resumeToken) {
+    this.resumeToken = resumeToken;
+  }
+
+
+  /**
+   **/
+  public ConfigureAuthenticatedSessionRequest startNew(Boolean startNew) {
+    this.startNew = startNew;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("startNew")
+  public Boolean getStartNew() {
+    return startNew;
+  }
+  public void setStartNew(Boolean startNew) {
+    this.startNew = startNew;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -107,14 +141,16 @@ public class ConfigureAuthenticatedSessionRequest  implements Serializable {
     }
     ConfigureAuthenticatedSessionRequest configureAuthenticatedSessionRequest = (ConfigureAuthenticatedSessionRequest) o;
     return Objects.equals(this.action, configureAuthenticatedSessionRequest.action) &&
-        Objects.equals(this.token, configureAuthenticatedSessionRequest.token) &&
-        Objects.equals(this.deploymentId, configureAuthenticatedSessionRequest.deploymentId) &&
-        Objects.equals(this.data, configureAuthenticatedSessionRequest.data);
+          Objects.equals(this.token, configureAuthenticatedSessionRequest.token) &&
+          Objects.equals(this.deploymentId, configureAuthenticatedSessionRequest.deploymentId) &&
+          Objects.equals(this.data, configureAuthenticatedSessionRequest.data) &&
+          Objects.equals(this.resumeToken, configureAuthenticatedSessionRequest.resumeToken) &&
+          Objects.equals(this.startNew, configureAuthenticatedSessionRequest.startNew);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(action, token, deploymentId, data);
+    return Objects.hash(action, token, deploymentId, data, resumeToken, startNew);
   }
 
   @Override
@@ -126,6 +162,8 @@ public class ConfigureAuthenticatedSessionRequest  implements Serializable {
     sb.append("    token: ").append(toIndentedString(token)).append("\n");
     sb.append("    deploymentId: ").append(toIndentedString(deploymentId)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
+    sb.append("    resumeToken: ").append(toIndentedString(resumeToken)).append("\n");
+    sb.append("    startNew: ").append(toIndentedString(startNew)).append("\n");
     sb.append("}");
     return sb.toString();
   }

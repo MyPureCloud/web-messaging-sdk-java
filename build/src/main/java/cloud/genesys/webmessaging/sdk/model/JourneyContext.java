@@ -44,7 +44,7 @@ public class JourneyContext  implements Serializable {
     this.customer = customer;
   }
 
-  
+
   /**
    **/
   public JourneyContext customerSession(JourneyCustomerSession customerSession) {
@@ -61,7 +61,7 @@ public class JourneyContext  implements Serializable {
     this.customerSession = customerSession;
   }
 
-  
+
   /**
    **/
   public JourneyContext triggeringAction(JourneyAction triggeringAction) {
@@ -78,7 +78,6 @@ public class JourneyContext  implements Serializable {
     this.triggeringAction = triggeringAction;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -90,8 +89,8 @@ public class JourneyContext  implements Serializable {
     }
     JourneyContext journeyContext = (JourneyContext) o;
     return Objects.equals(this.customer, journeyContext.customer) &&
-        Objects.equals(this.customerSession, journeyContext.customerSession) &&
-        Objects.equals(this.triggeringAction, journeyContext.triggeringAction);
+          Objects.equals(this.customerSession, journeyContext.customerSession) &&
+          Objects.equals(this.triggeringAction, journeyContext.triggeringAction);
   }
 
   @Override

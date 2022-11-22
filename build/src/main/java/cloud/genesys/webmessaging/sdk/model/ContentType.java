@@ -26,7 +26,7 @@ class ContentTypeDeserializer extends StdDeserializer<ContentType> {
   }
 }
 /**
- * Type of this content element. If contentType = \"Attachment\" only one item is allowed.
+ * Type of this content element.
  */
  @JsonDeserialize(using = ContentTypeDeserializer.class)
 public enum ContentType {
@@ -41,8 +41,10 @@ public enum ContentType {
   NOTIFICATION("Notification"),
   POSTBACK("Postback"),
   QUICKREPLY("QuickReply"),
+  QUICKREPLYV2("QuickReplyV2"),
   REACTIONS("Reactions"),
-  STORY("Story");
+  STORY("Story"),
+  TEXT("Text");
 
   private String value;
 

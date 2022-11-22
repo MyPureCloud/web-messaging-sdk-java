@@ -40,7 +40,7 @@ public class JwtResponse  implements Serializable {
     this.jwt = jwt;
   }
 
-  
+
   /**
    **/
   public JwtResponse exp(Double exp) {
@@ -57,7 +57,6 @@ public class JwtResponse  implements Serializable {
     this.exp = exp;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -69,7 +68,7 @@ public class JwtResponse  implements Serializable {
     }
     JwtResponse jwtResponse = (JwtResponse) o;
     return Objects.equals(this.jwt, jwtResponse.jwt) &&
-        Objects.equals(this.exp, jwtResponse.exp);
+          Objects.equals(this.exp, jwtResponse.exp);
   }
 
   @Override

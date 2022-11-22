@@ -22,6 +22,7 @@ import java.io.Serializable;
 
 public class ContentAttachment  implements Serializable {
   
+  private Double contentSizeBytes = null;
   private String filename = null;
   private String id = null;
   private MediaType mediaType = null;
@@ -31,6 +32,24 @@ public class ContentAttachment  implements Serializable {
   private String url = null;
 
   
+  /**
+   * Size in bytes of the attachment content.
+   **/
+  public ContentAttachment contentSizeBytes(Double contentSizeBytes) {
+    this.contentSizeBytes = contentSizeBytes;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Size in bytes of the attachment content.")
+  @JsonProperty("contentSizeBytes")
+  public Double getContentSizeBytes() {
+    return contentSizeBytes;
+  }
+  public void setContentSizeBytes(Double contentSizeBytes) {
+    this.contentSizeBytes = contentSizeBytes;
+  }
+
+
   /**
    * Suggested file name for attachment.
    **/
@@ -48,7 +67,7 @@ public class ContentAttachment  implements Serializable {
     this.filename = filename;
   }
 
-  
+
   /**
    * Provider specific ID for attachment. For example, a LINE sticker ID.
    **/
@@ -66,7 +85,7 @@ public class ContentAttachment  implements Serializable {
     this.id = id;
   }
 
-  
+
   /**
    * The type of attachment this instance represents.
    **/
@@ -84,7 +103,7 @@ public class ContentAttachment  implements Serializable {
     this.mediaType = mediaType;
   }
 
-  
+
   /**
    * Attachment mime type (https://www.iana.org/assignments/media-types/media-types.xhtml).
    **/
@@ -102,7 +121,7 @@ public class ContentAttachment  implements Serializable {
     this.mime = mime;
   }
 
-  
+
   /**
    * Secure hash of the attachment content.
    **/
@@ -120,7 +139,7 @@ public class ContentAttachment  implements Serializable {
     this.sha256 = sha256;
   }
 
-  
+
   /**
    * Text associated with attachment such as an image caption.
    **/
@@ -138,7 +157,7 @@ public class ContentAttachment  implements Serializable {
     this.text = text;
   }
 
-  
+
   /**
    * URL of the attachment.
    **/
@@ -156,7 +175,6 @@ public class ContentAttachment  implements Serializable {
     this.url = url;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -167,18 +185,19 @@ public class ContentAttachment  implements Serializable {
       return false;
     }
     ContentAttachment contentAttachment = (ContentAttachment) o;
-    return Objects.equals(this.filename, contentAttachment.filename) &&
-        Objects.equals(this.id, contentAttachment.id) &&
-        Objects.equals(this.mediaType, contentAttachment.mediaType) &&
-        Objects.equals(this.mime, contentAttachment.mime) &&
-        Objects.equals(this.sha256, contentAttachment.sha256) &&
-        Objects.equals(this.text, contentAttachment.text) &&
-        Objects.equals(this.url, contentAttachment.url);
+    return Objects.equals(this.contentSizeBytes, contentAttachment.contentSizeBytes) &&
+          Objects.equals(this.filename, contentAttachment.filename) &&
+          Objects.equals(this.id, contentAttachment.id) &&
+          Objects.equals(this.mediaType, contentAttachment.mediaType) &&
+          Objects.equals(this.mime, contentAttachment.mime) &&
+          Objects.equals(this.sha256, contentAttachment.sha256) &&
+          Objects.equals(this.text, contentAttachment.text) &&
+          Objects.equals(this.url, contentAttachment.url);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(filename, id, mediaType, mime, sha256, text, url);
+    return Objects.hash(contentSizeBytes, filename, id, mediaType, mime, sha256, text, url);
   }
 
   @Override
@@ -186,6 +205,7 @@ public class ContentAttachment  implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContentAttachment {\n");
     
+    sb.append("    contentSizeBytes: ").append(toIndentedString(contentSizeBytes)).append("\n");
     sb.append("    filename: ").append(toIndentedString(filename)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    mediaType: ").append(toIndentedString(mediaType)).append("\n");

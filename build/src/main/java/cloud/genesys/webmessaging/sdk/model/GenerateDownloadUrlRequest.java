@@ -9,7 +9,6 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
-import cloud.genesys.webmessaging.sdk.model.RequestTypeGenerateDownloadUrl;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -42,7 +41,7 @@ public class GenerateDownloadUrlRequest  implements Serializable {
     this.action = action;
   }
 
-  
+
   /**
    **/
   public GenerateDownloadUrlRequest token(String token) {
@@ -59,7 +58,7 @@ public class GenerateDownloadUrlRequest  implements Serializable {
     this.token = token;
   }
 
-  
+
   /**
    **/
   public GenerateDownloadUrlRequest attachmentId(String attachmentId) {
@@ -76,7 +75,6 @@ public class GenerateDownloadUrlRequest  implements Serializable {
     this.attachmentId = attachmentId;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -88,8 +86,8 @@ public class GenerateDownloadUrlRequest  implements Serializable {
     }
     GenerateDownloadUrlRequest generateDownloadUrlRequest = (GenerateDownloadUrlRequest) o;
     return Objects.equals(this.action, generateDownloadUrlRequest.action) &&
-        Objects.equals(this.token, generateDownloadUrlRequest.token) &&
-        Objects.equals(this.attachmentId, generateDownloadUrlRequest.attachmentId);
+          Objects.equals(this.token, generateDownloadUrlRequest.token) &&
+          Objects.equals(this.attachmentId, generateDownloadUrlRequest.attachmentId);
   }
 
   @Override

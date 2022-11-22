@@ -42,7 +42,7 @@ public class Detail  implements Serializable {
     this.errorCode = errorCode;
   }
 
-  
+
   /**
    **/
   public Detail fieldName(String fieldName) {
@@ -59,7 +59,7 @@ public class Detail  implements Serializable {
     this.fieldName = fieldName;
   }
 
-  
+
   /**
    **/
   public Detail entityId(String entityId) {
@@ -76,7 +76,7 @@ public class Detail  implements Serializable {
     this.entityId = entityId;
   }
 
-  
+
   /**
    **/
   public Detail entityName(String entityName) {
@@ -93,7 +93,6 @@ public class Detail  implements Serializable {
     this.entityName = entityName;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -105,9 +104,9 @@ public class Detail  implements Serializable {
     }
     Detail detail = (Detail) o;
     return Objects.equals(this.errorCode, detail.errorCode) &&
-        Objects.equals(this.fieldName, detail.fieldName) &&
-        Objects.equals(this.entityId, detail.entityId) &&
-        Objects.equals(this.entityName, detail.entityName);
+          Objects.equals(this.fieldName, detail.fieldName) &&
+          Objects.equals(this.entityId, detail.entityId) &&
+          Objects.equals(this.entityName, detail.entityName);
   }
 
   @Override

@@ -19,9 +19,9 @@ import java.util.List;
 
 import java.io.Serializable;
 /**
- * Generic content object.
+ * Generic content object. (Deprecated
  */
-@ApiModel(description = "Generic content object.")
+@ApiModel(description = "Generic content object. (Deprecated")
 
 public class WebMessagingGeneric  implements Serializable {
   
@@ -49,7 +49,7 @@ public class WebMessagingGeneric  implements Serializable {
     this.title = title;
   }
 
-  
+
   /**
    * Text to show in the description.
    **/
@@ -67,7 +67,7 @@ public class WebMessagingGeneric  implements Serializable {
     this.description = description;
   }
 
-  
+
   /**
    * URL of an image.
    **/
@@ -85,7 +85,7 @@ public class WebMessagingGeneric  implements Serializable {
     this.image = image;
   }
 
-  
+
   /**
    * Actions to be taken.
    **/
@@ -103,7 +103,7 @@ public class WebMessagingGeneric  implements Serializable {
     this.actions = actions;
   }
 
-  
+
   /**
    * An array of component objects.
    **/
@@ -121,7 +121,6 @@ public class WebMessagingGeneric  implements Serializable {
     this.components = components;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -133,10 +132,10 @@ public class WebMessagingGeneric  implements Serializable {
     }
     WebMessagingGeneric webMessagingGeneric = (WebMessagingGeneric) o;
     return Objects.equals(this.title, webMessagingGeneric.title) &&
-        Objects.equals(this.description, webMessagingGeneric.description) &&
-        Objects.equals(this.image, webMessagingGeneric.image) &&
-        Objects.equals(this.actions, webMessagingGeneric.actions) &&
-        Objects.equals(this.components, webMessagingGeneric.components);
+          Objects.equals(this.description, webMessagingGeneric.description) &&
+          Objects.equals(this.image, webMessagingGeneric.image) &&
+          Objects.equals(this.actions, webMessagingGeneric.actions) &&
+          Objects.equals(this.components, webMessagingGeneric.components);
   }
 
   @Override

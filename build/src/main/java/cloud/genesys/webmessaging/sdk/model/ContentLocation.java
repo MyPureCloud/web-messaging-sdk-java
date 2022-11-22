@@ -45,7 +45,7 @@ public class ContentLocation  implements Serializable {
     this.address = address;
   }
 
-  
+
   /**
    * Latitude of the location.
    **/
@@ -63,7 +63,7 @@ public class ContentLocation  implements Serializable {
     this.latitude = latitude;
   }
 
-  
+
   /**
    * Longitude of the location.
    **/
@@ -81,7 +81,7 @@ public class ContentLocation  implements Serializable {
     this.longitude = longitude;
   }
 
-  
+
   /**
    * Location name.
    **/
@@ -99,7 +99,7 @@ public class ContentLocation  implements Serializable {
     this.text = text;
   }
 
-  
+
   /**
    * URL of the Location.
    **/
@@ -117,7 +117,6 @@ public class ContentLocation  implements Serializable {
     this.url = url;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -129,10 +128,10 @@ public class ContentLocation  implements Serializable {
     }
     ContentLocation contentLocation = (ContentLocation) o;
     return Objects.equals(this.address, contentLocation.address) &&
-        Objects.equals(this.latitude, contentLocation.latitude) &&
-        Objects.equals(this.longitude, contentLocation.longitude) &&
-        Objects.equals(this.text, contentLocation.text) &&
-        Objects.equals(this.url, contentLocation.url);
+          Objects.equals(this.latitude, contentLocation.latitude) &&
+          Objects.equals(this.longitude, contentLocation.longitude) &&
+          Objects.equals(this.text, contentLocation.text) &&
+          Objects.equals(this.url, contentLocation.url);
   }
 
   @Override

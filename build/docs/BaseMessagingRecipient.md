@@ -11,6 +11,7 @@ title: BaseMessagingRecipient
 | **firstName** | <!----><!---->**String**<!----> |  |  [optional] |
 | **lastName** | <!----><!---->**String**<!----> |  |  [optional] |
 | **nickname** | <!----><!---->**String**<!----> |  |  [optional] |
+| **image** | <!----><!---->**String**<!----> |  |  [optional] |
 {: class="table table-striped"}
 
 

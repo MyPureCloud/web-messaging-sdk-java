@@ -47,7 +47,7 @@ public class PresignedUrlResponse  implements Serializable {
     this.attachmentId = attachmentId;
   }
 
-  
+
   /**
    **/
   public PresignedUrlResponse headers(Map<String, String> headers) {
@@ -64,7 +64,7 @@ public class PresignedUrlResponse  implements Serializable {
     this.headers = headers;
   }
 
-  
+
   /**
    **/
   public PresignedUrlResponse url(String url) {
@@ -81,7 +81,7 @@ public class PresignedUrlResponse  implements Serializable {
     this.url = url;
   }
 
-  
+
   /**
    **/
   public PresignedUrlResponse fileName(String fileName) {
@@ -98,7 +98,7 @@ public class PresignedUrlResponse  implements Serializable {
     this.fileName = fileName;
   }
 
-  
+
   /**
    **/
   public PresignedUrlResponse fileSize(Integer fileSize) {
@@ -115,7 +115,7 @@ public class PresignedUrlResponse  implements Serializable {
     this.fileSize = fileSize;
   }
 
-  
+
   /**
    **/
   public PresignedUrlResponse fileType(String fileType) {
@@ -132,7 +132,6 @@ public class PresignedUrlResponse  implements Serializable {
     this.fileType = fileType;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -144,11 +143,11 @@ public class PresignedUrlResponse  implements Serializable {
     }
     PresignedUrlResponse presignedUrlResponse = (PresignedUrlResponse) o;
     return Objects.equals(this.attachmentId, presignedUrlResponse.attachmentId) &&
-        Objects.equals(this.headers, presignedUrlResponse.headers) &&
-        Objects.equals(this.url, presignedUrlResponse.url) &&
-        Objects.equals(this.fileName, presignedUrlResponse.fileName) &&
-        Objects.equals(this.fileSize, presignedUrlResponse.fileSize) &&
-        Objects.equals(this.fileType, presignedUrlResponse.fileType);
+          Objects.equals(this.headers, presignedUrlResponse.headers) &&
+          Objects.equals(this.url, presignedUrlResponse.url) &&
+          Objects.equals(this.fileName, presignedUrlResponse.fileName) &&
+          Objects.equals(this.fileSize, presignedUrlResponse.fileSize) &&
+          Objects.equals(this.fileType, presignedUrlResponse.fileType);
   }
 
   @Override

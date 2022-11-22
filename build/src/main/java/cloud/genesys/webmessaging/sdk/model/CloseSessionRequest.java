@@ -9,7 +9,6 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
-import cloud.genesys.webmessaging.sdk.model.RequestTypeCloseSession;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -41,7 +40,7 @@ public class CloseSessionRequest  implements Serializable {
     this.action = action;
   }
 
-  
+
   /**
    **/
   public CloseSessionRequest token(String token) {
@@ -58,7 +57,6 @@ public class CloseSessionRequest  implements Serializable {
     this.token = token;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -70,7 +68,7 @@ public class CloseSessionRequest  implements Serializable {
     }
     CloseSessionRequest closeSessionRequest = (CloseSessionRequest) o;
     return Objects.equals(this.action, closeSessionRequest.action) &&
-        Objects.equals(this.token, closeSessionRequest.token);
+          Objects.equals(this.token, closeSessionRequest.token);
   }
 
   @Override

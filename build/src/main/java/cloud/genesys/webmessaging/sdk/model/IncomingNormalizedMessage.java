@@ -9,6 +9,7 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
+import cloud.genesys.webmessaging.sdk.model.IncomingNormalizedMessageChannel;
 import cloud.genesys.webmessaging.sdk.model.MessageContent;
 import cloud.genesys.webmessaging.sdk.model.MessageEvent;
 import cloud.genesys.webmessaging.sdk.model.NormalizedType;
@@ -35,6 +36,7 @@ public class IncomingNormalizedMessage  implements Serializable {
   private List<MessageContent> content = new ArrayList<MessageContent>();
   private List<MessageEvent> events = new ArrayList<MessageEvent>();
   private Map<String, String> metadata = null;
+  private IncomingNormalizedMessageChannel channel = null;
 
   
   /**
@@ -53,7 +55,7 @@ public class IncomingNormalizedMessage  implements Serializable {
     this.id = id;
   }
 
-  
+
   /**
    **/
   public IncomingNormalizedMessage type(NormalizedType type) {
@@ -70,7 +72,7 @@ public class IncomingNormalizedMessage  implements Serializable {
     this.type = type;
   }
 
-  
+
   /**
    **/
   public IncomingNormalizedMessage text(String text) {
@@ -87,7 +89,7 @@ public class IncomingNormalizedMessage  implements Serializable {
     this.text = text;
   }
 
-  
+
   /**
    **/
   public IncomingNormalizedMessage status(Status status) {
@@ -104,7 +106,7 @@ public class IncomingNormalizedMessage  implements Serializable {
     this.status = status;
   }
 
-  
+
   /**
    **/
   public IncomingNormalizedMessage content(List<MessageContent> content) {
@@ -121,7 +123,7 @@ public class IncomingNormalizedMessage  implements Serializable {
     this.content = content;
   }
 
-  
+
   /**
    **/
   public IncomingNormalizedMessage events(List<MessageEvent> events) {
@@ -138,7 +140,7 @@ public class IncomingNormalizedMessage  implements Serializable {
     this.events = events;
   }
 
-  
+
   /**
    **/
   public IncomingNormalizedMessage metadata(Map<String, String> metadata) {
@@ -155,7 +157,23 @@ public class IncomingNormalizedMessage  implements Serializable {
     this.metadata = metadata;
   }
 
+
+  /**
+   **/
+  public IncomingNormalizedMessage channel(IncomingNormalizedMessageChannel channel) {
+    this.channel = channel;
+    return this;
+  }
   
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("channel")
+  public IncomingNormalizedMessageChannel getChannel() {
+    return channel;
+  }
+  public void setChannel(IncomingNormalizedMessageChannel channel) {
+    this.channel = channel;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -167,17 +185,18 @@ public class IncomingNormalizedMessage  implements Serializable {
     }
     IncomingNormalizedMessage incomingNormalizedMessage = (IncomingNormalizedMessage) o;
     return Objects.equals(this.id, incomingNormalizedMessage.id) &&
-        Objects.equals(this.type, incomingNormalizedMessage.type) &&
-        Objects.equals(this.text, incomingNormalizedMessage.text) &&
-        Objects.equals(this.status, incomingNormalizedMessage.status) &&
-        Objects.equals(this.content, incomingNormalizedMessage.content) &&
-        Objects.equals(this.events, incomingNormalizedMessage.events) &&
-        Objects.equals(this.metadata, incomingNormalizedMessage.metadata);
+          Objects.equals(this.type, incomingNormalizedMessage.type) &&
+          Objects.equals(this.text, incomingNormalizedMessage.text) &&
+          Objects.equals(this.status, incomingNormalizedMessage.status) &&
+          Objects.equals(this.content, incomingNormalizedMessage.content) &&
+          Objects.equals(this.events, incomingNormalizedMessage.events) &&
+          Objects.equals(this.metadata, incomingNormalizedMessage.metadata) &&
+          Objects.equals(this.channel, incomingNormalizedMessage.channel);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, type, text, status, content, events, metadata);
+    return Objects.hash(id, type, text, status, content, events, metadata, channel);
   }
 
   @Override
@@ -192,6 +211,7 @@ public class IncomingNormalizedMessage  implements Serializable {
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    events: ").append(toIndentedString(events)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
+    sb.append("    channel: ").append(toIndentedString(channel)).append("\n");
     sb.append("}");
     return sb.toString();
   }

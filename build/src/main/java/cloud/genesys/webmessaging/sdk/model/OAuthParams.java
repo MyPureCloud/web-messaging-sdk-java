@@ -39,7 +39,6 @@ public class OAuthParams  implements Serializable {
     this.code = code;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {

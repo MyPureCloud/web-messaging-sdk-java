@@ -42,6 +42,7 @@ public enum MessageDataType {
   JWTRESPONSE("JwtResponse"),
   GENERATEURLERROR("GenerateUrlError"),
   TOOMANYREQUESTSERRORMESSAGE("TooManyRequestsErrorMessage"),
+  RESUMETOKENRESPONSE("ResumeTokenResponse"),
   UNKNOWN("Unknown");
 
   private String value;

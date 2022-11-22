@@ -8,7 +8,7 @@ title: ListItemComponent
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **actions** | <!----><!---->[**ContentActions**](ContentActions.html)<!----> | The list item actions. |  [optional] |
+| **actions** | <!----><!---->[**ContentActions**](ContentActions.html)<!----> | The list item actions (Deprecated). |  [optional] |
 | **description** | <!----><!---->**String**<!----> | Text to show in the list item description. |  [optional] |
 | **id** | <!----><!---->**String**<!----> | An ID assigned to this list item. |  [optional] |
 | **image** | <!----><!---->**String**<!----> | URL of an image. |  [optional] |

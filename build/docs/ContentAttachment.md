@@ -8,6 +8,7 @@ title: ContentAttachment
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
+| **contentSizeBytes** | <!----><!---->**Double**<!----> | Size in bytes of the attachment content. |  [optional] |
 | **filename** | <!----><!---->**String**<!----> | Suggested file name for attachment. |  [optional] |
 | **id** | <!----><!---->**String**<!----> | Provider specific ID for attachment. For example, a LINE sticker ID. |  [optional] |
 | **mediaType** | <!----><!---->[**MediaType**](MediaType.html)<!----> | The type of attachment this instance represents. |  |

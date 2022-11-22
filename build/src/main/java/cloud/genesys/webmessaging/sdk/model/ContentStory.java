@@ -44,7 +44,7 @@ public class ContentStory  implements Serializable {
     this.replyToId = replyToId;
   }
 
-  
+
   /**
    * Type of ephemeral story attachment.
    **/
@@ -62,7 +62,7 @@ public class ContentStory  implements Serializable {
     this.type = type;
   }
 
-  
+
   /**
    * URL to the ephemeral story.
    **/
@@ -80,7 +80,6 @@ public class ContentStory  implements Serializable {
     this.url = url;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -92,8 +91,8 @@ public class ContentStory  implements Serializable {
     }
     ContentStory contentStory = (ContentStory) o;
     return Objects.equals(this.replyToId, contentStory.replyToId) &&
-        Objects.equals(this.type, contentStory.type) &&
-        Objects.equals(this.url, contentStory.url);
+          Objects.equals(this.type, contentStory.type) &&
+          Objects.equals(this.url, contentStory.url);
   }
 
   @Override

@@ -9,6 +9,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
+import cloud.genesys.webmessaging.sdk.model.ContentCard;
+import cloud.genesys.webmessaging.sdk.model.ContentCarousel;
 import cloud.genesys.webmessaging.sdk.model.WebMessagingAttachment;
 import cloud.genesys.webmessaging.sdk.model.WebMessagingButtonResponse;
 import cloud.genesys.webmessaging.sdk.model.WebMessagingGeneric;
@@ -48,7 +50,9 @@ public class WebMessagingContent  implements Serializable {
     ATTACHMENT("Attachment"),
     QUICKREPLY("QuickReply"),
     BUTTONRESPONSE("ButtonResponse"),
-    GENERICTEMPLATE("GenericTemplate");
+    GENERICTEMPLATE("GenericTemplate"),
+    CARD("Card"),
+    CAROUSEL("Carousel");
 
     private String value;
 
@@ -80,6 +84,8 @@ public class WebMessagingContent  implements Serializable {
   private WebMessagingQuickReply quickReply = null;
   private WebMessagingButtonResponse buttonResponse = null;
   private WebMessagingGeneric generic = null;
+  private ContentCard card = null;
+  private ContentCarousel carousel = null;
 
   
   @ApiModelProperty(example = "null", value = "Type of this content element. If contentType = \"Attachment\" only one item is allowed.")
@@ -88,14 +94,14 @@ public class WebMessagingContent  implements Serializable {
     return contentType;
   }
 
-  
+
   @ApiModelProperty(example = "null", value = "Attachment content.")
   @JsonProperty("attachment")
   public WebMessagingAttachment getAttachment() {
     return attachment;
   }
 
-  
+
   /**
    * Quick reply content.
    **/
@@ -113,7 +119,7 @@ public class WebMessagingContent  implements Serializable {
     this.quickReply = quickReply;
   }
 
-  
+
   /**
    * Button response content.
    **/
@@ -131,16 +137,16 @@ public class WebMessagingContent  implements Serializable {
     this.buttonResponse = buttonResponse;
   }
 
-  
+
   /**
-   * Generic content.
+   * Generic content (Deprecated).
    **/
   public WebMessagingContent generic(WebMessagingGeneric generic) {
     this.generic = generic;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Generic content.")
+  @ApiModelProperty(example = "null", value = "Generic content (Deprecated).")
   @JsonProperty("generic")
   public WebMessagingGeneric getGeneric() {
     return generic;
@@ -149,7 +155,42 @@ public class WebMessagingContent  implements Serializable {
     this.generic = generic;
   }
 
+
+  /**
+   * Card content
+   **/
+  public WebMessagingContent card(ContentCard card) {
+    this.card = card;
+    return this;
+  }
   
+  @ApiModelProperty(example = "null", value = "Card content")
+  @JsonProperty("card")
+  public ContentCard getCard() {
+    return card;
+  }
+  public void setCard(ContentCard card) {
+    this.card = card;
+  }
+
+
+  /**
+   * Carousel content
+   **/
+  public WebMessagingContent carousel(ContentCarousel carousel) {
+    this.carousel = carousel;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Carousel content")
+  @JsonProperty("carousel")
+  public ContentCarousel getCarousel() {
+    return carousel;
+  }
+  public void setCarousel(ContentCarousel carousel) {
+    this.carousel = carousel;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -161,15 +202,17 @@ public class WebMessagingContent  implements Serializable {
     }
     WebMessagingContent webMessagingContent = (WebMessagingContent) o;
     return Objects.equals(this.contentType, webMessagingContent.contentType) &&
-        Objects.equals(this.attachment, webMessagingContent.attachment) &&
-        Objects.equals(this.quickReply, webMessagingContent.quickReply) &&
-        Objects.equals(this.buttonResponse, webMessagingContent.buttonResponse) &&
-        Objects.equals(this.generic, webMessagingContent.generic);
+          Objects.equals(this.attachment, webMessagingContent.attachment) &&
+          Objects.equals(this.quickReply, webMessagingContent.quickReply) &&
+          Objects.equals(this.buttonResponse, webMessagingContent.buttonResponse) &&
+          Objects.equals(this.generic, webMessagingContent.generic) &&
+          Objects.equals(this.card, webMessagingContent.card) &&
+          Objects.equals(this.carousel, webMessagingContent.carousel);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(contentType, attachment, quickReply, buttonResponse, generic);
+    return Objects.hash(contentType, attachment, quickReply, buttonResponse, generic, card, carousel);
   }
 
   @Override
@@ -182,6 +225,8 @@ public class WebMessagingContent  implements Serializable {
     sb.append("    quickReply: ").append(toIndentedString(quickReply)).append("\n");
     sb.append("    buttonResponse: ").append(toIndentedString(buttonResponse)).append("\n");
     sb.append("    generic: ").append(toIndentedString(generic)).append("\n");
+    sb.append("    card: ").append(toIndentedString(card)).append("\n");
+    sb.append("    carousel: ").append(toIndentedString(carousel)).append("\n");
     sb.append("}");
     return sb.toString();
   }

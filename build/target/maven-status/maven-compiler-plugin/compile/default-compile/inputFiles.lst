@@ -2,6 +2,7 @@
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/TextType.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/connector/ApiClientConnectorProperties.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/ContentLocation.java
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/FileType.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/RequestTypeConfigureAuthenticatedSession.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/ButtonComponent.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/WebMessagingContent.java
@@ -70,6 +71,7 @@
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/SendMessageRequest.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/ContentList.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/connector/okhttp/OkHttpClientConnectorProvider.java
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/AllowedMedia.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/BaseMessageType.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/WebMessagingMessage.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/Configuration.java
@@ -98,6 +100,7 @@
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/UploadSuccessEvent.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/JourneyCustomer.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/IDType.java
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/FileUploadMode.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/EventPresenceType.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/RequestTypeGetJwt.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/AdditionalIDType.java

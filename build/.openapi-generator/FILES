@@ -3,6 +3,7 @@
 README.md
 docs/Action.md
 docs/AdditionalIDType.md
+docs/AllowedMedia.md
 docs/AttachmentDeletedResponse.md
 docs/BaseChannelMetadata.md
 docs/BaseContentAttachment.md
@@ -55,6 +56,8 @@ docs/EventPresenceType.md
 docs/EventType.md
 docs/EventTyping.md
 docs/EventTypingType.md
+docs/FileType.md
+docs/FileUploadMode.md
 docs/GenerateDownloadUrlRequest.md
 docs/GenerateUploadUrlRequest.md
 docs/GenerateUrlError.md
@@ -142,6 +145,7 @@ src/main/java/cloud/genesys/webmessaging/sdk/auth/Authentication.java
 src/main/java/cloud/genesys/webmessaging/sdk/auth/OAuth.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/Action.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/AdditionalIDType.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/AllowedMedia.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/AttachmentDeletedResponse.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/BaseChannelMetadata.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/BaseContentAttachment.java
@@ -194,6 +198,8 @@ src/main/java/cloud/genesys/webmessaging/sdk/model/EventPresenceType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/EventType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/EventTyping.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/EventTypingType.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/FileType.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/FileUploadMode.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/GenerateDownloadUrlRequest.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/GenerateUploadUrlRequest.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/GenerateUrlError.java

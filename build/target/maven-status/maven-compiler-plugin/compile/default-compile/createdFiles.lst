@@ -16,6 +16,7 @@ cloud/genesys/webmessaging/sdk/model/RequestTypeConfigureAuthenticatedSessionDes
 cloud/genesys/webmessaging/sdk/model/EventMessage.class
 cloud/genesys/webmessaging/sdk/model/ContentAttachment.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingMessage$DirectionEnumDeserializer.class
+cloud/genesys/webmessaging/sdk/model/FileType.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingMessage$TypeEnum.class
 cloud/genesys/webmessaging/sdk/model/RequestTypeGenerateUploadUrl.class
 cloud/genesys/webmessaging/sdk/model/ContentCardAction$TypeEnum.class
@@ -26,6 +27,7 @@ cloud/genesys/webmessaging/sdk/model/ListType.class
 cloud/genesys/webmessaging/sdk/model/TextTypeDeserializer.class
 cloud/genesys/webmessaging/sdk/model/ConfigureSessionRequest.class
 cloud/genesys/webmessaging/sdk/model/MediaType.class
+cloud/genesys/webmessaging/sdk/model/FileUploadMode.class
 cloud/genesys/webmessaging/sdk/api/request/GetWebmessagingMessagesRequest$Builder.class
 cloud/genesys/webmessaging/sdk/model/IDType.class
 cloud/genesys/webmessaging/sdk/model/BaseMessagingRecipient.class
@@ -154,6 +156,7 @@ cloud/genesys/webmessaging/sdk/LocalDateSerializer.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingButtonResponse$TypeEnumDeserializer.class
 cloud/genesys/webmessaging/sdk/model/IDTypeDeserializer.class
 cloud/genesys/webmessaging/sdk/ApiRequest.class
+cloud/genesys/webmessaging/sdk/model/AllowedMedia.class
 cloud/genesys/webmessaging/sdk/connector/okhttp/OkHttpClientConnector.class
 cloud/genesys/webmessaging/sdk/api/WebMessagingApi$2.class
 cloud/genesys/webmessaging/sdk/model/RequestTypeDeleteAttachment.class

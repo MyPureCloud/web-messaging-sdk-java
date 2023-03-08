@@ -1,88 +1,34 @@
-Platform API version: 6333
+Platform API version: 6640
 
 
-# Major Changes (6 changes)
+# Major Changes (1 change)
 
-**CardAction** (1 change)
+**CloseSessionRequest** (1 change)
 
-* Model CardAction was removed
+* Required property closeAllConnections was added
 
-**ContentCard** (2 changes)
 
-* Property actions was changed from CardAction[] to array
-* Property defaultAction was changed from CardAction to ContentCardAction
+# Minor Changes (5 changes)
 
-**IncomingNormalizedMessage** (1 change)
+**FileType** (1 change)
 
-* Required property channel was added
+* Model was added
 
-**SendMessageRequest** (1 change)
+**FileUploadMode** (1 change)
 
-* Property attachmentIds was removed
+* Model was added
+
+**AllowedMedia** (1 change)
+
+* Model was added
 
 **SessionResponse** (1 change)
 
-* Property sessionId was removed
-
-
-# Minor Changes (18 changes)
-
-**ConfigureSessionRequest** (2 changes)
-
-* Optional property resumeToken was added
-* Optional property startNew was added
-
-**ContentAttachment** (1 change)
-
-* Optional property contentSizeBytes was added
-
-**ContentCardAction** (1 change)
-
-* Model was added
-
-**ContentQuickReplyV2** (1 change)
-
-* Model was added
-
-**ContentText** (1 change)
-
-* Model was added
-
-**MessageContent** (2 changes)
-
-* Optional property quickReplyV2 was added
-* Optional property text was added
-
-**BaseMessagingRecipient** (1 change)
-
-* Optional property image was added
-
-**ConfigureAuthenticatedSessionRequest** (2 changes)
-
-* Optional property resumeToken was added
-* Optional property startNew was added
-
-**SessionResponse** (1 change)
-
-* Optional property readOnly was added
-
-**ResumeTokenResponse** (1 change)
-
-* Model was added
+* Optional property allowedMedia was added
 
 **StructuredMessage** (1 change)
 
-* Optional property metadata was added
-
-**CleanMessagingRecipient** (1 change)
-
-* Optional property image was added
-
-**CleanMessageContent** (3 changes)
-
-* Optional property carousel was added
-* Optional property text was added
-* Optional property quickReplyV2 was added
+* Optional property events was added
 
 
 # Point Changes (0 changes)

@@ -15,6 +15,7 @@ title: StructuredMessage
 | **channel** | <!----><!---->[**BaseMessagingChannel**](BaseMessagingChannel.html)<!----> |  |  [optional] |
 | **content** | <!----><!---->[**List&lt;BaseMessagingContent&gt;**](BaseMessagingContent.html)<!----> |  |  [optional] |
 | **metadata** | <!----><!---->**Map&lt;String, String&gt;**<!----> |  |  [optional] |
+| **events** | <!----><!---->[**List&lt;MessageEvent&gt;**](MessageEvent.html)<!----> |  |  [optional] |
 {: class="table table-striped"}
 
 

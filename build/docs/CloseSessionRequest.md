@@ -10,6 +10,7 @@ title: CloseSessionRequest
 | ------------ | ------------- | ------------- | ------------- |
 | **action** | <!----><!---->[**RequestTypeCloseSession**](RequestTypeCloseSession.html)<!----> |  |  |
 | **token** | <!----><!---->**String**<!----> |  |  |
+| **closeAllConnections** | <!----><!---->**Boolean**<!----> |  |  |
 {: class="table table-striped"}
 
 

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
+import cloud.genesys.webmessaging.sdk.model.AllowedMedia;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -23,6 +24,7 @@ public class SessionResponse  implements Serializable {
   private Boolean connected = null;
   private Boolean newSession = null;
   private Boolean readOnly = null;
+  private AllowedMedia allowedMedia = null;
 
   
   /**
@@ -76,6 +78,23 @@ public class SessionResponse  implements Serializable {
   }
 
 
+  /**
+   **/
+  public SessionResponse allowedMedia(AllowedMedia allowedMedia) {
+    this.allowedMedia = allowedMedia;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("allowedMedia")
+  public AllowedMedia getAllowedMedia() {
+    return allowedMedia;
+  }
+  public void setAllowedMedia(AllowedMedia allowedMedia) {
+    this.allowedMedia = allowedMedia;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -87,12 +106,13 @@ public class SessionResponse  implements Serializable {
     SessionResponse sessionResponse = (SessionResponse) o;
     return Objects.equals(this.connected, sessionResponse.connected) &&
           Objects.equals(this.newSession, sessionResponse.newSession) &&
-          Objects.equals(this.readOnly, sessionResponse.readOnly);
+          Objects.equals(this.readOnly, sessionResponse.readOnly) &&
+          Objects.equals(this.allowedMedia, sessionResponse.allowedMedia);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(connected, newSession, readOnly);
+    return Objects.hash(connected, newSession, readOnly, allowedMedia);
   }
 
   @Override
@@ -103,6 +123,7 @@ public class SessionResponse  implements Serializable {
     sb.append("    connected: ").append(toIndentedString(connected)).append("\n");
     sb.append("    newSession: ").append(toIndentedString(newSession)).append("\n");
     sb.append("    readOnly: ").append(toIndentedString(readOnly)).append("\n");
+    sb.append("    allowedMedia: ").append(toIndentedString(allowedMedia)).append("\n");
     sb.append("}");
     return sb.toString();
   }

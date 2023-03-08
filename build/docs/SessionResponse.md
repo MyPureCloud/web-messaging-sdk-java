@@ -11,6 +11,7 @@ title: SessionResponse
 | **connected** | <!----><!---->**Boolean**<!----> |  |  |
 | **newSession** | <!----><!---->**Boolean**<!----> |  |  [optional] |
 | **readOnly** | <!----><!---->**Boolean**<!----> |  |  [optional] |
+| **allowedMedia** | <!----><!---->[**AllowedMedia**](AllowedMedia.html)<!----> |  |  [optional] |
 {: class="table table-striped"}
 
 

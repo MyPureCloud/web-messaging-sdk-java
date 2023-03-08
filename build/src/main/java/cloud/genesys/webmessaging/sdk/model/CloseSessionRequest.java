@@ -22,6 +22,7 @@ public class CloseSessionRequest  implements Serializable {
   
   private RequestTypeCloseSession action = null;
   private String token = null;
+  private Boolean closeAllConnections = null;
 
   
   /**
@@ -58,6 +59,23 @@ public class CloseSessionRequest  implements Serializable {
   }
 
 
+  /**
+   **/
+  public CloseSessionRequest closeAllConnections(Boolean closeAllConnections) {
+    this.closeAllConnections = closeAllConnections;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("closeAllConnections")
+  public Boolean getCloseAllConnections() {
+    return closeAllConnections;
+  }
+  public void setCloseAllConnections(Boolean closeAllConnections) {
+    this.closeAllConnections = closeAllConnections;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -68,12 +86,13 @@ public class CloseSessionRequest  implements Serializable {
     }
     CloseSessionRequest closeSessionRequest = (CloseSessionRequest) o;
     return Objects.equals(this.action, closeSessionRequest.action) &&
-          Objects.equals(this.token, closeSessionRequest.token);
+          Objects.equals(this.token, closeSessionRequest.token) &&
+          Objects.equals(this.closeAllConnections, closeSessionRequest.closeAllConnections);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(action, token);
+    return Objects.hash(action, token, closeAllConnections);
   }
 
   @Override
@@ -83,6 +102,7 @@ public class CloseSessionRequest  implements Serializable {
     
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
     sb.append("    token: ").append(toIndentedString(token)).append("\n");
+    sb.append("    closeAllConnections: ").append(toIndentedString(closeAllConnections)).append("\n");
     sb.append("}");
     return sb.toString();
   }

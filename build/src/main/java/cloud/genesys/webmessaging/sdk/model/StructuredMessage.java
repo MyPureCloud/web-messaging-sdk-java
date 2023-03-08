@@ -12,6 +12,7 @@ import java.io.IOException;
 import cloud.genesys.webmessaging.sdk.model.BaseMessagingChannel;
 import cloud.genesys.webmessaging.sdk.model.BaseMessagingContent;
 import cloud.genesys.webmessaging.sdk.model.Direction;
+import cloud.genesys.webmessaging.sdk.model.MessageEvent;
 import cloud.genesys.webmessaging.sdk.model.NormalizedType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
@@ -35,6 +36,7 @@ public class StructuredMessage  implements Serializable {
   private BaseMessagingChannel channel = null;
   private List<BaseMessagingContent> content = new ArrayList<BaseMessagingContent>();
   private Map<String, String> metadata = null;
+  private List<MessageEvent> events = new ArrayList<MessageEvent>();
 
   
   /**
@@ -156,6 +158,23 @@ public class StructuredMessage  implements Serializable {
   }
 
 
+  /**
+   **/
+  public StructuredMessage events(List<MessageEvent> events) {
+    this.events = events;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("events")
+  public List<MessageEvent> getEvents() {
+    return events;
+  }
+  public void setEvents(List<MessageEvent> events) {
+    this.events = events;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -171,12 +190,13 @@ public class StructuredMessage  implements Serializable {
           Objects.equals(this.id, structuredMessage.id) &&
           Objects.equals(this.channel, structuredMessage.channel) &&
           Objects.equals(this.content, structuredMessage.content) &&
-          Objects.equals(this.metadata, structuredMessage.metadata);
+          Objects.equals(this.metadata, structuredMessage.metadata) &&
+          Objects.equals(this.events, structuredMessage.events);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(text, type, direction, id, channel, content, metadata);
+    return Objects.hash(text, type, direction, id, channel, content, metadata, events);
   }
 
   @Override
@@ -191,6 +211,7 @@ public class StructuredMessage  implements Serializable {
     sb.append("    channel: ").append(toIndentedString(channel)).append("\n");
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
+    sb.append("    events: ").append(toIndentedString(events)).append("\n");
     sb.append("}");
     return sb.toString();
   }

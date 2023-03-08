@@ -5,6 +5,11 @@ title: WebMessagingClient
 
 | Method | Description |
 | ------------- | ------------- |
+| [**hasPresenceEvents**](WebMessagingClient.html#hasPresenceEvents1) | Inspect a StructuredMessage, looking for Presence events ({@link EventType#PRESENCE} ) 
+ |
+| [**hasTypingEvents**](WebMessagingClient.html#hasTypingEvents1) | Inspect a StructuredMessage, looking for Typing events ({@link EventType#TYPING} ) 
+ |
+| [**hasEvents**](WebMessagingClient.html#hasEvents1) | Inspect a StructuredMessage, looking for a type of event ({@link EventType} ) |
 | [**WebMessagingClient**](WebMessagingClient.html#WebMessagingClient1) | Creates a new Web Messaging client |
 | [**WebMessagingClient**](WebMessagingClient.html#WebMessagingClient2) | Creates a new Web Messaging client |
 | [**joinConversation**](WebMessagingClient.html#joinConversation1) | Full service operation to connect the WebSocket and configure the session |
@@ -51,13 +56,79 @@ title: WebMessagingClient
 
 <h1>Constructors</h1>
 
+<a name="hasPresenceEvents1"></a>
+
+# **hasPresenceEvents**
+
+
+
+> hasPresenceEvents(message)
+
+Inspect a StructuredMessage, looking for Presence events ({@link EventType#PRESENCE} ) 
+
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **message** | **StructuredMessage**| message to introspect for Presence events |
+{: class="table-striped"}
+
+<a name="hasTypingEvents1"></a>
+
+# **hasTypingEvents**
+
+
+
+> hasTypingEvents(message)
+
+Inspect a StructuredMessage, looking for Typing events ({@link EventType#TYPING} ) 
+
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **message** | **StructuredMessage**| message to introspect for Typing events |
+{: class="table-striped"}
+
+
+
+<h1>Methods</h1>
+
+<a name="hasEvents1"></a>
+
+# **hasEvents**
+
+
+
+> static hasEvents(message, type)
+
+Inspect a StructuredMessage, looking for a type of event ({@link EventType} )
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **message** | **EventType**| message to introspect for events |
+| **type** | **StructuredMessage**| type of event to look for |
+{: class="table-striped"}
+
+
+### Return type
+
+**static**
+
 <a name="WebMessagingClient1"></a>
 
 # **WebMessagingClient**
 
 
 
-> WebMessagingClient(address)
+>  WebMessagingClient(address)
 
 Creates a new Web Messaging client
 
@@ -75,7 +146,7 @@ Creates a new Web Messaging client
 
 
 
-> WebMessagingClient(region)
+>  WebMessagingClient(region)
 
 Creates a new Web Messaging client
 
@@ -86,10 +157,6 @@ Creates a new Web Messaging client
 | ------------- | ------------- | ------------- | ------------- |
 | **region** | **GenesysCloudRegionWebSocketHosts**| The WebSocket server's Genesys Cloud region   |
 {: class="table-striped"}
-
-
-
-<h1>Methods</h1>
 
 <a name="joinConversation1"></a>
 
@@ -221,7 +288,7 @@ Configures a new session with a randomly generated session token
 
 
 
-> void configureSession(deploymentId, token, origin)
+> void configureSession(deploymentId, token, origin, startNew)
 
 Configures a session using the provided session token. This can be used to reconnect to active sessions.
 
@@ -230,9 +297,10 @@ Configures a session using the provided session token. This can be used to recon
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **deploymentId** | **String**| The ID of the Web Messaging deployment |
+| **deploymentId** | **Optional<Boolean>**| The ID of the Web Messaging deployment |
 | **token** | **String**| The session token |
-| **origin** | **String**| Represents the origin of the request. You can restrict access in Messenger Deployments   |
+| **origin** | **String**| Represents the origin of the request. You can restrict access in Messenger Deployments |
+| **startNew** | **String**| true if you want to start a new session for your currently read-only session (after a Presence event of type    |
 {: class="table-striped"}
 
 

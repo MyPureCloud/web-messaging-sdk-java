@@ -195,12 +195,12 @@
     <dependency>
       <groupId>io.swagger</groupId>
       <artifactId>swagger-annotations</artifactId>
-      <version>1.6.8</version>
+      <version>1.6.9</version>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
-      <version>2.0.3</version>
+      <version>2.0.6</version>
     </dependency>
     <!-- HTTP client: apache httpclient -->
     <dependency>
@@ -227,7 +227,7 @@
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
-      <version>2.14.0</version>
+      <version>2.14.1</version>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.jaxrs</groupId>
@@ -265,8 +265,8 @@
     <swagger-annotations-version>1.5.8</swagger-annotations-version>
     <slf4j-version>1.7.36</slf4j-version>
     <jersey-version>1.19.1</jersey-version>
-    <jackson-version>2.14.0</jackson-version>
-    <jodatime-version>2.10.14</jodatime-version>
+    <jackson-version>2.14.1</jackson-version>
+    <jodatime-version>2.12.2</jodatime-version>
     <maven-plugin-version>1.0.0</maven-plugin-version>
     <apache-httpclient-version>4.5.13</apache-httpclient-version>
     <okhttpclient-version>4.10.0</okhttpclient-version>

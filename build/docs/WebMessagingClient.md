@@ -25,7 +25,10 @@ title: WebMessagingClient
 | [**ping**](WebMessagingClient.html#ping1) | Sends a message that will cause a response to ensure the connection is active |
 | [**sendMessage**](WebMessagingClient.html#sendMessage1) | Sends a message to the conversation |
 | [**sendMessage**](WebMessagingClient.html#sendMessage2) | Sends a message to the conversation with customAttributes |
-| [**sendPresenceEvent**](WebMessagingClient.html#sendPresenceEvent1) | send an event of type Presence join |
+| [**sendPresenceEvent**](WebMessagingClient.html#sendPresenceEvent1) | send a Presence event by specifying the subtype |
+| [**sendPresenceEvent**](WebMessagingClient.html#sendPresenceEvent2) | send an event of type Presence join for backward compatibility |
+| [**sendPresenceEventJoin**](WebMessagingClient.html#sendPresenceEventJoin1) | send an event of type Presence join |
+| [**sendPresenceEventEndUserClear**](WebMessagingClient.html#sendPresenceEventEndUserClear1) | send an event of type Presence clear |
 | [**sendTypingEvent**](WebMessagingClient.html#sendTypingEvent1) | send an event of type Typing on |
 | [**attachment**](WebMessagingClient.html#attachment1) | send a request to generate an upload url for an attachment |
 | [**getAttachment**](WebMessagingClient.html#getAttachment1) | send a request to generate a download url for an attachment |
@@ -47,6 +50,7 @@ title: WebMessagingClient
 | [**uploadFailureEvent**](WebMessagingClient.html#uploadFailureEvent1) | Raised for responses to url requests (type == BaseResponseType.RESPONSE, class = PresignedUrlResponse) |
 | [**connectionClosedEvent**](WebMessagingClient.html#connectionClosedEvent1) | Raised for responses to url requests (type == BaseResponseType.RESPONSE, class = SessionResponse) |
 | [**sessionExpiredEvent**](WebMessagingClient.html#sessionExpiredEvent1) | Raised for responses to url requests (type == BaseResponseType.RESPONSE, class = SessionResponse) |
+| [**sessionClearedEvent**](WebMessagingClient.html#sessionClearedEvent1) | Raised for responses to url requests (type == BaseResponseType.RESPONSE, class = SessionResponse) |
 | [**jwtResponse**](WebMessagingClient.html#jwtResponse1) | Raised for responses to url requests (type == BaseResponseType.RESPONSE, class = SessionResponse) |
 | [**unexpectedMessage**](WebMessagingClient.html#unexpectedMessage1) | Raised for unmatched BaseResponseType |
 | [**webSocketConnected**](WebMessagingClient.html#webSocketConnected1) | Raised when the connection to the remote server has been established |
@@ -442,7 +446,46 @@ Sends a message to the conversation with customAttributes
 
 > void sendPresenceEvent()
 
+send a Presence event by specifying the subtype
+### Return type
+
+**void**
+
+<a name="sendPresenceEvent2"></a>
+
+# **sendPresenceEvent**
+
+
+
+> void sendPresenceEvent()
+
+send an event of type Presence join for backward compatibility
+### Return type
+
+**void**
+
+<a name="sendPresenceEventJoin1"></a>
+
+# **sendPresenceEventJoin**
+
+
+
+> void sendPresenceEventJoin()
+
 send an event of type Presence join
+### Return type
+
+**void**
+
+<a name="sendPresenceEventEndUserClear1"></a>
+
+# **sendPresenceEventEndUserClear**
+
+
+
+> void sendPresenceEventEndUserClear()
+
+send an event of type Presence clear
 ### Return type
 
 **void**
@@ -842,6 +885,30 @@ Raised for responses to url requests (type == BaseResponseType.RESPONSE, class =
 | ------------- | ------------- | ------------- | ------------- |
 | **sessionExpiredEvent** | **String**| The deserialized event |
 | **rawMessage** | **SessionExpiredEvent**| The raw message payload JSON as a string   |
+{: class="table-striped"}
+
+
+### Return type
+
+**void**
+
+<a name="sessionClearedEvent1"></a>
+
+# **sessionClearedEvent**
+
+
+
+> void sessionClearedEvent(sessionClearedEvent, rawMessage)
+
+Raised for responses to url requests (type == BaseResponseType.RESPONSE, class = SessionResponse)
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sessionClearedEvent** | **String**| The deserialized event |
+| **rawMessage** | **SessionClearedEvent**| The raw message payload JSON as a string   |
 {: class="table-striped"}
 
 

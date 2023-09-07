@@ -40,7 +40,8 @@ public enum RequestType {
   GETJWT("getJwt"),
   DISCONNECTCUSTOMER("disconnectCustomer"),
   RESUMETOKEN("resumeToken"),
-  SUBSCRIBETOPUSH("subscribeToPush");
+  SUBSCRIBETOPUSH("subscribeToPush"),
+  GETCONFIGURATION("getConfiguration");
 
   private String value;
 

@@ -49,7 +49,7 @@ public class IncomingNormalizedMessageChannel  implements Serializable {
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("messageId")
   public String getMessageId() {
     return messageId;

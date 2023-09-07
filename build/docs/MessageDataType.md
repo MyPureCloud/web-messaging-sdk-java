@@ -31,11 +31,17 @@ title: MessageDataType
 
 * `JWTRESPONSE` (value: `"JwtResponse"`)
 
+* `GETCONFIGURATIONRESPONSE` (value: `"GetConfigurationResponse"`)
+
 * `GENERATEURLERROR` (value: `"GenerateUrlError"`)
 
 * `TOOMANYREQUESTSERRORMESSAGE` (value: `"TooManyRequestsErrorMessage"`)
 
 * `RESUMETOKENRESPONSE` (value: `"ResumeTokenResponse"`)
+
+* `SESSIONCLEAREDEVENT` (value: `"SessionClearedEvent"`)
+
+* `ERROR` (value: `"Error"`)
 
 * `UNKNOWN` (value: `"Unknown"`)
 

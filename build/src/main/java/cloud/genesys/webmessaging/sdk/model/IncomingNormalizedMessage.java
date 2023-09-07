@@ -80,7 +80,7 @@ public class IncomingNormalizedMessage  implements Serializable {
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("text")
   public String getText() {
     return text;
@@ -165,7 +165,7 @@ public class IncomingNormalizedMessage  implements Serializable {
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("channel")
   public IncomingNormalizedMessageChannel getChannel() {
     return channel;

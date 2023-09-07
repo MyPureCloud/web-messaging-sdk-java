@@ -10,6 +10,7 @@ import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
 import cloud.genesys.webmessaging.sdk.model.Detail;
+import cloud.genesys.webmessaging.sdk.model.Limit;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -35,6 +36,7 @@ public class ErrorBody  implements Serializable {
   private String contextId = null;
   private List<Detail> details = new ArrayList<Detail>();
   private List<ErrorBody> errors = new ArrayList<ErrorBody>();
+  private Limit limit = null;
 
   
   /**
@@ -207,6 +209,23 @@ public class ErrorBody  implements Serializable {
   }
 
 
+  /**
+   **/
+  public ErrorBody limit(Limit limit) {
+    this.limit = limit;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("limit")
+  public Limit getLimit() {
+    return limit;
+  }
+  public void setLimit(Limit limit) {
+    this.limit = limit;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -225,12 +244,13 @@ public class ErrorBody  implements Serializable {
           Objects.equals(this.messageParams, errorBody.messageParams) &&
           Objects.equals(this.contextId, errorBody.contextId) &&
           Objects.equals(this.details, errorBody.details) &&
-          Objects.equals(this.errors, errorBody.errors);
+          Objects.equals(this.errors, errorBody.errors) &&
+          Objects.equals(this.limit, errorBody.limit);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(message, code, status, entityId, entityName, messageWithParams, messageParams, contextId, details, errors);
+    return Objects.hash(message, code, status, entityId, entityName, messageWithParams, messageParams, contextId, details, errors, limit);
   }
 
   @Override
@@ -248,6 +268,7 @@ public class ErrorBody  implements Serializable {
     sb.append("    contextId: ").append(toIndentedString(contextId)).append("\n");
     sb.append("    details: ").append(toIndentedString(details)).append("\n");
     sb.append("    errors: ").append(toIndentedString(errors)).append("\n");
+    sb.append("    limit: ").append(toIndentedString(limit)).append("\n");
     sb.append("}");
     return sb.toString();
   }

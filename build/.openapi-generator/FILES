@@ -48,6 +48,7 @@ docs/DeleteAttachmentRequest.md
 docs/Detail.md
 docs/Direction.md
 docs/ErrorBody.md
+docs/ErrorMessage.md
 docs/EventCoBrowse.md
 docs/EventCoBrowseType.md
 docs/EventMessage.md
@@ -61,6 +62,8 @@ docs/FileUploadMode.md
 docs/GenerateDownloadUrlRequest.md
 docs/GenerateUploadUrlRequest.md
 docs/GenerateUrlError.md
+docs/GetConfigurationRequest.md
+docs/GetConfigurationResponse.md
 docs/GetJwtRequest.md
 docs/HeaderType.md
 docs/IDType.md
@@ -73,6 +76,7 @@ docs/JourneyContext.md
 docs/JourneyCustomer.md
 docs/JourneyCustomerSession.md
 docs/JwtResponse.md
+docs/Limit.md
 docs/ListItemComponent.md
 docs/ListItemType.md
 docs/ListType.md
@@ -100,12 +104,14 @@ docs/RequestTypeDeleteAttachment.md
 docs/RequestTypeEchoMessage.md
 docs/RequestTypeGenerateDownloadUrl.md
 docs/RequestTypeGenerateUploadUrl.md
+docs/RequestTypeGetConfiguration.md
 docs/RequestTypeGetJwt.md
 docs/RequestTypeIncomingMessage.md
 docs/ResponseMessage.md
 docs/ResumeTokenResponse.md
 docs/SendEchoRequest.md
 docs/SendMessageRequest.md
+docs/SessionClearedEvent.md
 docs/SessionExpiredEvent.md
 docs/SessionResponse.md
 docs/Status.md
@@ -190,6 +196,7 @@ src/main/java/cloud/genesys/webmessaging/sdk/model/DeleteAttachmentRequest.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/Detail.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/Direction.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ErrorBody.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/ErrorMessage.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/EventCoBrowse.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/EventCoBrowseType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/EventMessage.java
@@ -203,6 +210,8 @@ src/main/java/cloud/genesys/webmessaging/sdk/model/FileUploadMode.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/GenerateDownloadUrlRequest.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/GenerateUploadUrlRequest.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/GenerateUrlError.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/GetConfigurationRequest.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/GetConfigurationResponse.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/GetJwtRequest.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/HeaderType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/IDType.java
@@ -215,6 +224,7 @@ src/main/java/cloud/genesys/webmessaging/sdk/model/JourneyContext.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/JourneyCustomer.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/JourneyCustomerSession.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/JwtResponse.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/Limit.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ListItemComponent.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ListItemType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ListType.java
@@ -242,12 +252,14 @@ src/main/java/cloud/genesys/webmessaging/sdk/model/RequestTypeDeleteAttachment.j
 src/main/java/cloud/genesys/webmessaging/sdk/model/RequestTypeEchoMessage.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/RequestTypeGenerateDownloadUrl.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/RequestTypeGenerateUploadUrl.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/RequestTypeGetConfiguration.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/RequestTypeGetJwt.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/RequestTypeIncomingMessage.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ResponseMessage.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ResumeTokenResponse.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/SendEchoRequest.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/SendMessageRequest.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/SessionClearedEvent.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/SessionExpiredEvent.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/SessionResponse.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/Status.java

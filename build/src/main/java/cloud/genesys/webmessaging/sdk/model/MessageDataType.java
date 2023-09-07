@@ -40,9 +40,12 @@ public enum MessageDataType {
   LOGOUTEVENT("LogoutEvent"),
   SESSIONEXPIREDEVENT("SessionExpiredEvent"),
   JWTRESPONSE("JwtResponse"),
+  GETCONFIGURATIONRESPONSE("GetConfigurationResponse"),
   GENERATEURLERROR("GenerateUrlError"),
   TOOMANYREQUESTSERRORMESSAGE("TooManyRequestsErrorMessage"),
   RESUMETOKENRESPONSE("ResumeTokenResponse"),
+  SESSIONCLEAREDEVENT("SessionClearedEvent"),
+  ERROR("Error"),
   UNKNOWN("Unknown");
 
   private String value;

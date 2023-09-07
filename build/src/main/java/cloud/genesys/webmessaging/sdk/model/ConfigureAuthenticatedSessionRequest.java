@@ -27,6 +27,7 @@ public class ConfigureAuthenticatedSessionRequest  implements Serializable {
   private OAuthParams data = null;
   private String resumeToken = null;
   private Boolean startNew = null;
+  private Boolean stepUp = null;
 
   
   /**
@@ -131,6 +132,23 @@ public class ConfigureAuthenticatedSessionRequest  implements Serializable {
   }
 
 
+  /**
+   **/
+  public ConfigureAuthenticatedSessionRequest stepUp(Boolean stepUp) {
+    this.stepUp = stepUp;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("stepUp")
+  public Boolean getStepUp() {
+    return stepUp;
+  }
+  public void setStepUp(Boolean stepUp) {
+    this.stepUp = stepUp;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -145,12 +163,13 @@ public class ConfigureAuthenticatedSessionRequest  implements Serializable {
           Objects.equals(this.deploymentId, configureAuthenticatedSessionRequest.deploymentId) &&
           Objects.equals(this.data, configureAuthenticatedSessionRequest.data) &&
           Objects.equals(this.resumeToken, configureAuthenticatedSessionRequest.resumeToken) &&
-          Objects.equals(this.startNew, configureAuthenticatedSessionRequest.startNew);
+          Objects.equals(this.startNew, configureAuthenticatedSessionRequest.startNew) &&
+          Objects.equals(this.stepUp, configureAuthenticatedSessionRequest.stepUp);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(action, token, deploymentId, data, resumeToken, startNew);
+    return Objects.hash(action, token, deploymentId, data, resumeToken, startNew, stepUp);
   }
 
   @Override
@@ -164,6 +183,7 @@ public class ConfigureAuthenticatedSessionRequest  implements Serializable {
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("    resumeToken: ").append(toIndentedString(resumeToken)).append("\n");
     sb.append("    startNew: ").append(toIndentedString(startNew)).append("\n");
+    sb.append("    stepUp: ").append(toIndentedString(stepUp)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -20,11 +20,65 @@ import java.io.Serializable;
 
 public class TooManyRequestsErrorMessage  implements Serializable {
   
+  private String name = null;
+  private String message = null;
+  private String stack = null;
   private Integer errorCode = null;
   private String errorMessage = null;
   private Integer retryAfter = null;
 
   
+  /**
+   **/
+  public TooManyRequestsErrorMessage name(String name) {
+    this.name = name;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("name")
+  public String getName() {
+    return name;
+  }
+  public void setName(String name) {
+    this.name = name;
+  }
+
+
+  /**
+   **/
+  public TooManyRequestsErrorMessage message(String message) {
+    this.message = message;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("message")
+  public String getMessage() {
+    return message;
+  }
+  public void setMessage(String message) {
+    this.message = message;
+  }
+
+
+  /**
+   **/
+  public TooManyRequestsErrorMessage stack(String stack) {
+    this.stack = stack;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("stack")
+  public String getStack() {
+    return stack;
+  }
+  public void setStack(String stack) {
+    this.stack = stack;
+  }
+
+
   /**
    **/
   public TooManyRequestsErrorMessage errorCode(Integer errorCode) {
@@ -85,14 +139,17 @@ public class TooManyRequestsErrorMessage  implements Serializable {
       return false;
     }
     TooManyRequestsErrorMessage tooManyRequestsErrorMessage = (TooManyRequestsErrorMessage) o;
-    return Objects.equals(this.errorCode, tooManyRequestsErrorMessage.errorCode) &&
+    return Objects.equals(this.name, tooManyRequestsErrorMessage.name) &&
+          Objects.equals(this.message, tooManyRequestsErrorMessage.message) &&
+          Objects.equals(this.stack, tooManyRequestsErrorMessage.stack) &&
+          Objects.equals(this.errorCode, tooManyRequestsErrorMessage.errorCode) &&
           Objects.equals(this.errorMessage, tooManyRequestsErrorMessage.errorMessage) &&
           Objects.equals(this.retryAfter, tooManyRequestsErrorMessage.retryAfter);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(errorCode, errorMessage, retryAfter);
+    return Objects.hash(name, message, stack, errorCode, errorMessage, retryAfter);
   }
 
   @Override
@@ -100,6 +157,9 @@ public class TooManyRequestsErrorMessage  implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class TooManyRequestsErrorMessage {\n");
     
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    message: ").append(toIndentedString(message)).append("\n");
+    sb.append("    stack: ").append(toIndentedString(stack)).append("\n");
     sb.append("    errorCode: ").append(toIndentedString(errorCode)).append("\n");
     sb.append("    errorMessage: ").append(toIndentedString(errorMessage)).append("\n");
     sb.append("    retryAfter: ").append(toIndentedString(retryAfter)).append("\n");

@@ -20,12 +20,66 @@ import java.io.Serializable;
 
 public class GenerateUrlError  implements Serializable {
   
+  private String name = null;
+  private String message = null;
+  private String stack = null;
   private Integer errorCode = null;
   private String errorMessage = null;
   private String attachmentId = null;
   private String timestamp = null;
 
   
+  /**
+   **/
+  public GenerateUrlError name(String name) {
+    this.name = name;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("name")
+  public String getName() {
+    return name;
+  }
+  public void setName(String name) {
+    this.name = name;
+  }
+
+
+  /**
+   **/
+  public GenerateUrlError message(String message) {
+    this.message = message;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("message")
+  public String getMessage() {
+    return message;
+  }
+  public void setMessage(String message) {
+    this.message = message;
+  }
+
+
+  /**
+   **/
+  public GenerateUrlError stack(String stack) {
+    this.stack = stack;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("stack")
+  public String getStack() {
+    return stack;
+  }
+  public void setStack(String stack) {
+    this.stack = stack;
+  }
+
+
   /**
    **/
   public GenerateUrlError errorCode(Integer errorCode) {
@@ -103,7 +157,10 @@ public class GenerateUrlError  implements Serializable {
       return false;
     }
     GenerateUrlError generateUrlError = (GenerateUrlError) o;
-    return Objects.equals(this.errorCode, generateUrlError.errorCode) &&
+    return Objects.equals(this.name, generateUrlError.name) &&
+          Objects.equals(this.message, generateUrlError.message) &&
+          Objects.equals(this.stack, generateUrlError.stack) &&
+          Objects.equals(this.errorCode, generateUrlError.errorCode) &&
           Objects.equals(this.errorMessage, generateUrlError.errorMessage) &&
           Objects.equals(this.attachmentId, generateUrlError.attachmentId) &&
           Objects.equals(this.timestamp, generateUrlError.timestamp);
@@ -111,7 +168,7 @@ public class GenerateUrlError  implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(errorCode, errorMessage, attachmentId, timestamp);
+    return Objects.hash(name, message, stack, errorCode, errorMessage, attachmentId, timestamp);
   }
 
   @Override
@@ -119,6 +176,9 @@ public class GenerateUrlError  implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class GenerateUrlError {\n");
     
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    message: ").append(toIndentedString(message)).append("\n");
+    sb.append("    stack: ").append(toIndentedString(stack)).append("\n");
     sb.append("    errorCode: ").append(toIndentedString(errorCode)).append("\n");
     sb.append("    errorMessage: ").append(toIndentedString(errorMessage)).append("\n");
     sb.append("    attachmentId: ").append(toIndentedString(attachmentId)).append("\n");

@@ -33,5 +33,7 @@ title: RequestType
 
 * `SUBSCRIBETOPUSH` (value: `"subscribeToPush"`)
 
+* `GETCONFIGURATION` (value: `"getConfiguration"`)
+
 
 

@@ -8,6 +8,9 @@ title: GenerateUrlError
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
+| **name** | <!----><!---->**String**<!----> |  |  |
+| **message** | <!----><!---->**String**<!----> |  |  |
+| **stack** | <!----><!---->**String**<!----> |  |  [optional] |
 | **errorCode** | <!----><!---->**Integer**<!----> |  |  |
 | **errorMessage** | <!----><!---->**String**<!----> |  |  |
 | **attachmentId** | <!----><!---->**String**<!----> |  |  [optional] |

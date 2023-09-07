@@ -30,6 +30,7 @@ class EventPresenceTypeDeserializer extends StdDeserializer<EventPresenceType> {
  */
  @JsonDeserialize(using = EventPresenceTypeDeserializer.class)
 public enum EventPresenceType {
+  CLEAR("Clear"),
   DISCONNECT("Disconnect"),
   JOIN("Join");
 

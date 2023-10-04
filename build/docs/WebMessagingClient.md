@@ -217,7 +217,7 @@ Full service operation to connect the WebSocket and configure the session
 
 
 
-> void connect(deploymentId, origin, connectionTimeout)
+> void connect(deploymentId, origin, connectionTimeout, userAgent)
 
 Establishes a connection to Genesys Cloud via a WebSocket
 
@@ -226,9 +226,10 @@ Establishes a connection to Genesys Cloud via a WebSocket
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **deploymentId** | **Optional<Integer>**| deploymentId to connect to |
-| **origin** | **String**| origin header to add |
-| **connectionTimeout** | **String**| connection timeout, in second, to use   |
+| **deploymentId** | **Optional<String>**| deploymentId to connect to |
+| **origin** | **Optional<Integer>**| origin header to add |
+| **connectionTimeout** | **String**| connection timeout, in second, to use |
+| **userAgent** | **String**| user-agent string to be set in header connecting to the websocket. Optional, default of WebMessagingSdk-"version" will be used   |
 {: class="table-striped"}
 
 

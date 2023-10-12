@@ -15,5 +15,7 @@ title: EventPresenceType
 
 * `JOIN` (value: `"Join"`)
 
+* `SIGNIN` (value: `"SignIn"`)
+
 
 

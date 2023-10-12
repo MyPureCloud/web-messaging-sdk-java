@@ -29,6 +29,7 @@ public class SessionResponse  implements Serializable {
   private Boolean clearedExistingSession = null;
   private AllowedMedia allowedMedia = null;
   private List<String> blockedExtensions = new ArrayList<String>();
+  private Double maxCustomDataBytes = null;
 
   
   /**
@@ -133,6 +134,23 @@ public class SessionResponse  implements Serializable {
   }
 
 
+  /**
+   **/
+  public SessionResponse maxCustomDataBytes(Double maxCustomDataBytes) {
+    this.maxCustomDataBytes = maxCustomDataBytes;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("maxCustomDataBytes")
+  public Double getMaxCustomDataBytes() {
+    return maxCustomDataBytes;
+  }
+  public void setMaxCustomDataBytes(Double maxCustomDataBytes) {
+    this.maxCustomDataBytes = maxCustomDataBytes;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -147,12 +165,13 @@ public class SessionResponse  implements Serializable {
           Objects.equals(this.readOnly, sessionResponse.readOnly) &&
           Objects.equals(this.clearedExistingSession, sessionResponse.clearedExistingSession) &&
           Objects.equals(this.allowedMedia, sessionResponse.allowedMedia) &&
-          Objects.equals(this.blockedExtensions, sessionResponse.blockedExtensions);
+          Objects.equals(this.blockedExtensions, sessionResponse.blockedExtensions) &&
+          Objects.equals(this.maxCustomDataBytes, sessionResponse.maxCustomDataBytes);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(connected, newSession, readOnly, clearedExistingSession, allowedMedia, blockedExtensions);
+    return Objects.hash(connected, newSession, readOnly, clearedExistingSession, allowedMedia, blockedExtensions, maxCustomDataBytes);
   }
 
   @Override
@@ -166,6 +185,7 @@ public class SessionResponse  implements Serializable {
     sb.append("    clearedExistingSession: ").append(toIndentedString(clearedExistingSession)).append("\n");
     sb.append("    allowedMedia: ").append(toIndentedString(allowedMedia)).append("\n");
     sb.append("    blockedExtensions: ").append(toIndentedString(blockedExtensions)).append("\n");
+    sb.append("    maxCustomDataBytes: ").append(toIndentedString(maxCustomDataBytes)).append("\n");
     sb.append("}");
     return sb.toString();
   }

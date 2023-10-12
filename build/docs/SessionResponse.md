@@ -14,6 +14,7 @@ title: SessionResponse
 | **clearedExistingSession** | <!----><!---->**Boolean**<!----> |  |  [optional] |
 | **allowedMedia** | <!----><!---->[**AllowedMedia**](AllowedMedia.html)<!----> |  |  [optional] |
 | **blockedExtensions** | <!----><!---->**List&lt;String&gt;**<!----> |  |  [optional] |
+| **maxCustomDataBytes** | <!----><!---->**Double**<!----> |  |  [optional] |
 {: class="table table-striped"}
 
 

@@ -32,7 +32,8 @@ class EventPresenceTypeDeserializer extends StdDeserializer<EventPresenceType> {
 public enum EventPresenceType {
   CLEAR("Clear"),
   DISCONNECT("Disconnect"),
-  JOIN("Join");
+  JOIN("Join"),
+  SIGNIN("SignIn");
 
   private String value;
 

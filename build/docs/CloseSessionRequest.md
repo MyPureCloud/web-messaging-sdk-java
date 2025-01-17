@@ -1,17 +1,16 @@
----
-title: CloseSessionRequest
----
-## CloseSessionRequest
+# CloseSessionRequest
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **action** | <!----><!---->[**RequestTypeCloseSession**](RequestTypeCloseSession.html)<!----> |  |  |
-| **token** | <!----><!---->**String**<!----> |  |  |
-| **closeAllConnections** | <!----><!---->**Boolean**<!----> |  |  |
-{: class="table table-striped"}
+| **action** | [**RequestTypeCloseSession**](RequestTypeCloseSession) |  |  |
+| **token** | **String** |  |  |
+| **tracingId** | **String** |  |  [optional] |
+| **closeAllConnections** | **Boolean** |  |  |
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

@@ -1,16 +1,14 @@
----
-title: IncomingNormalizedMessageChannel
----
-## IncomingNormalizedMessageChannel
+# IncomingNormalizedMessageChannel
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **metadata** | <!----><!---->[**IncomingNormalizedMessageChannelMetadata**](IncomingNormalizedMessage_channel_metadata.html)<!----> |  |  [optional] |
-| **messageId** | <!----><!---->**String**<!----> |  |  [optional] |
-{: class="table table-striped"}
+| **metadata** | [**IncomingNormalizedMessageChannelMetadata**](IncomingNormalizedMessage_channel_metadata) |  |  [optional] |
+| **messageId** | **String** |  |  [optional] |
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

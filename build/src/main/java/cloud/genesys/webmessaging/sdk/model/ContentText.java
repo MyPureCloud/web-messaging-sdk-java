@@ -13,6 +13,8 @@ import cloud.genesys.webmessaging.sdk.model.TextType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.HashMap;
+import java.util.Map;
 
 import java.io.Serializable;
 /**
@@ -20,7 +22,7 @@ import java.io.Serializable;
  */
 @ApiModel(description = "Text content.  Message content element containing text only.")
 
-public class ContentText  implements Serializable {
+public class ContentText extends HashMap<String, Object> implements Serializable {
   
   private String body = null;
   private TextType type = null;
@@ -72,19 +74,20 @@ public class ContentText  implements Serializable {
     }
     ContentText contentText = (ContentText) o;
     return Objects.equals(this.body, contentText.body) &&
-          Objects.equals(this.type, contentText.type);
+          Objects.equals(this.type, contentText.type) &&
+          super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(body, type);
+    return Objects.hash(body, type, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContentText {\n");
-    
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    body: ").append(toIndentedString(body)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");

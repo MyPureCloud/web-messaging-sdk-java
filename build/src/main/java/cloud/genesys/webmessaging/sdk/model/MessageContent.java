@@ -13,6 +13,7 @@ import cloud.genesys.webmessaging.sdk.model.ContentAttachment;
 import cloud.genesys.webmessaging.sdk.model.ContentButtonResponse;
 import cloud.genesys.webmessaging.sdk.model.ContentCard;
 import cloud.genesys.webmessaging.sdk.model.ContentCarousel;
+import cloud.genesys.webmessaging.sdk.model.ContentDatePicker;
 import cloud.genesys.webmessaging.sdk.model.ContentGeneric;
 import cloud.genesys.webmessaging.sdk.model.ContentList;
 import cloud.genesys.webmessaging.sdk.model.ContentLocation;
@@ -29,7 +30,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import java.io.Serializable;
 /**
@@ -37,13 +40,14 @@ import java.io.Serializable;
  */
 @ApiModel(description = "Message content element. If contentType = \"Attachment\" only one item is allowed.")
 
-public class MessageContent  implements Serializable {
+public class MessageContent extends HashMap<String, Object> implements Serializable {
   
   private ContentAttachment attachment = null;
   private ContentButtonResponse buttonResponse = null;
   private ContentCard card = null;
   private ContentCarousel carousel = null;
   private ContentType contentType = null;
+  private ContentDatePicker datePicker = null;
   private ContentGeneric generic = null;
   private ContentList list = null;
   private ContentLocation location = null;
@@ -143,6 +147,24 @@ public class MessageContent  implements Serializable {
   }
   public void setContentType(ContentType contentType) {
     this.contentType = contentType;
+  }
+
+
+  /**
+   * DatePicker content.
+   **/
+  public MessageContent datePicker(ContentDatePicker datePicker) {
+    this.datePicker = datePicker;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "DatePicker content.")
+  @JsonProperty("datePicker")
+  public ContentDatePicker getDatePicker() {
+    return datePicker;
+  }
+  public void setDatePicker(ContentDatePicker datePicker) {
+    this.datePicker = datePicker;
   }
 
 
@@ -358,6 +380,7 @@ public class MessageContent  implements Serializable {
           Objects.equals(this.card, messageContent.card) &&
           Objects.equals(this.carousel, messageContent.carousel) &&
           Objects.equals(this.contentType, messageContent.contentType) &&
+          Objects.equals(this.datePicker, messageContent.datePicker) &&
           Objects.equals(this.generic, messageContent.generic) &&
           Objects.equals(this.list, messageContent.list) &&
           Objects.equals(this.location, messageContent.location) &&
@@ -368,24 +391,26 @@ public class MessageContent  implements Serializable {
           Objects.equals(this.reactions, messageContent.reactions) &&
           Objects.equals(this.story, messageContent.story) &&
           Objects.equals(this.template, messageContent.template) &&
-          Objects.equals(this.text, messageContent.text);
+          Objects.equals(this.text, messageContent.text) &&
+          super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(attachment, buttonResponse, card, carousel, contentType, generic, list, location, mention, postback, quickReply, quickReplyV2, reactions, story, template, text);
+    return Objects.hash(attachment, buttonResponse, card, carousel, contentType, datePicker, generic, list, location, mention, postback, quickReply, quickReplyV2, reactions, story, template, text, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class MessageContent {\n");
-    
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    attachment: ").append(toIndentedString(attachment)).append("\n");
     sb.append("    buttonResponse: ").append(toIndentedString(buttonResponse)).append("\n");
     sb.append("    card: ").append(toIndentedString(card)).append("\n");
     sb.append("    carousel: ").append(toIndentedString(carousel)).append("\n");
     sb.append("    contentType: ").append(toIndentedString(contentType)).append("\n");
+    sb.append("    datePicker: ").append(toIndentedString(datePicker)).append("\n");
     sb.append("    generic: ").append(toIndentedString(generic)).append("\n");
     sb.append("    list: ").append(toIndentedString(list)).append("\n");
     sb.append("    location: ").append(toIndentedString(location)).append("\n");

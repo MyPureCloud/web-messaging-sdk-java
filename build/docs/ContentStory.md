@@ -1,17 +1,15 @@
----
-title: ContentStory
----
-## ContentStory
+# ContentStory
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **replyToId** | <!----><!---->**String**<!----> | ID of the ephemeral story being replied to. |  [optional] |
-| **type** | <!----><!---->[**StoryType**](StoryType.html)<!----> | Type of ephemeral story attachment. |  |
-| **url** | <!----><!---->**String**<!----> | URL to the ephemeral story. |  |
-{: class="table table-striped"}
+| **replyToId** | **String** | ID of the ephemeral story being replied to. |  [optional] |
+| **type** | [**StoryType**](StoryType) | Type of ephemeral story attachment. |  |
+| **url** | **String** | URL to the ephemeral story. |  |
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

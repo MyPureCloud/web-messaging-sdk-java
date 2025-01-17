@@ -1,7 +1,4 @@
----
-title: ContentType
----
-## ContentType
+# ContentType
 
 
 # ContentType
@@ -16,6 +13,8 @@ title: ContentType
 * `CARD` (value: `"Card"`)
 
 * `CAROUSEL` (value: `"Carousel"`)
+
+* `DATEPICKER` (value: `"DatePicker"`)
 
 * `GENERICTEMPLATE` (value: `"GenericTemplate"`)
 
@@ -41,3 +40,5 @@ title: ContentType
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

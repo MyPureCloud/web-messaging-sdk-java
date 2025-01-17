@@ -1,15 +1,13 @@
----
-title: EventPresence
----
-## EventPresence
+# EventPresence
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **type** | <!----><!---->[**EventPresenceType**](EventPresenceType.html)<!----> | Describes the type of Presence event. |  |
-{: class="table table-striped"}
+| **type** | [**EventPresenceType**](EventPresenceType) | Describes the type of Presence event. |  |
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

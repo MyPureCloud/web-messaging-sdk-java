@@ -13,6 +13,8 @@ import cloud.genesys.webmessaging.sdk.model.EventTypingType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.HashMap;
+import java.util.Map;
 
 import java.io.Serializable;
 /**
@@ -20,7 +22,7 @@ import java.io.Serializable;
  */
 @ApiModel(description = "Typing event.  A Typing event.")
 
-public class EventTyping  implements Serializable {
+public class EventTyping extends HashMap<String, Object> implements Serializable {
   
   private Double duration = null;
   private EventTypingType type = null;
@@ -72,19 +74,20 @@ public class EventTyping  implements Serializable {
     }
     EventTyping eventTyping = (EventTyping) o;
     return Objects.equals(this.duration, eventTyping.duration) &&
-          Objects.equals(this.type, eventTyping.type);
+          Objects.equals(this.type, eventTyping.type) &&
+          super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(duration, type);
+    return Objects.hash(duration, type, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EventTyping {\n");
-    
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    duration: ").append(toIndentedString(duration)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");

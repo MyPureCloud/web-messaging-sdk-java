@@ -27,6 +27,7 @@ public class GetConfigurationResponse  implements Serializable {
   private List<String> blockedExtensions = new ArrayList<String>();
   private Double maxCustomDataBytes = null;
   private Boolean messageRoutingEnabled = null;
+  private Double sessionDurationSeconds = null;
 
   
   /**
@@ -97,6 +98,23 @@ public class GetConfigurationResponse  implements Serializable {
   }
 
 
+  /**
+   **/
+  public GetConfigurationResponse sessionDurationSeconds(Double sessionDurationSeconds) {
+    this.sessionDurationSeconds = sessionDurationSeconds;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("sessionDurationSeconds")
+  public Double getSessionDurationSeconds() {
+    return sessionDurationSeconds;
+  }
+  public void setSessionDurationSeconds(Double sessionDurationSeconds) {
+    this.sessionDurationSeconds = sessionDurationSeconds;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -109,12 +127,13 @@ public class GetConfigurationResponse  implements Serializable {
     return Objects.equals(this.allowedMedia, getConfigurationResponse.allowedMedia) &&
           Objects.equals(this.blockedExtensions, getConfigurationResponse.blockedExtensions) &&
           Objects.equals(this.maxCustomDataBytes, getConfigurationResponse.maxCustomDataBytes) &&
-          Objects.equals(this.messageRoutingEnabled, getConfigurationResponse.messageRoutingEnabled);
+          Objects.equals(this.messageRoutingEnabled, getConfigurationResponse.messageRoutingEnabled) &&
+          Objects.equals(this.sessionDurationSeconds, getConfigurationResponse.sessionDurationSeconds);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(allowedMedia, blockedExtensions, maxCustomDataBytes, messageRoutingEnabled);
+    return Objects.hash(allowedMedia, blockedExtensions, maxCustomDataBytes, messageRoutingEnabled, sessionDurationSeconds);
   }
 
   @Override
@@ -126,6 +145,7 @@ public class GetConfigurationResponse  implements Serializable {
     sb.append("    blockedExtensions: ").append(toIndentedString(blockedExtensions)).append("\n");
     sb.append("    maxCustomDataBytes: ").append(toIndentedString(maxCustomDataBytes)).append("\n");
     sb.append("    messageRoutingEnabled: ").append(toIndentedString(messageRoutingEnabled)).append("\n");
+    sb.append("    sessionDurationSeconds: ").append(toIndentedString(sessionDurationSeconds)).append("\n");
     sb.append("}");
     return sb.toString();
   }

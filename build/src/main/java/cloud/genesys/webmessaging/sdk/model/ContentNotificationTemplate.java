@@ -10,11 +10,16 @@ import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
 import cloud.genesys.webmessaging.sdk.model.NotificationTemplateBody;
+import cloud.genesys.webmessaging.sdk.model.NotificationTemplateButton;
 import cloud.genesys.webmessaging.sdk.model.NotificationTemplateFooter;
 import cloud.genesys.webmessaging.sdk.model.NotificationTemplateHeader;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import java.io.Serializable;
 /**
@@ -22,9 +27,10 @@ import java.io.Serializable;
  */
 @ApiModel(description = "Template notification content.  Template notification object.")
 
-public class ContentNotificationTemplate  implements Serializable {
+public class ContentNotificationTemplate extends HashMap<String, Object> implements Serializable {
   
   private NotificationTemplateBody body = null;
+  private List<NotificationTemplateButton> buttons = new ArrayList<NotificationTemplateButton>();
   private NotificationTemplateFooter footer = null;
   private NotificationTemplateHeader header = null;
   private String id = null;
@@ -46,6 +52,24 @@ public class ContentNotificationTemplate  implements Serializable {
   }
   public void setBody(NotificationTemplateBody body) {
     this.body = body;
+  }
+
+
+  /**
+   * Template buttons
+   **/
+  public ContentNotificationTemplate buttons(List<NotificationTemplateButton> buttons) {
+    this.buttons = buttons;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Template buttons")
+  @JsonProperty("buttons")
+  public List<NotificationTemplateButton> getButtons() {
+    return buttons;
+  }
+  public void setButtons(List<NotificationTemplateButton> buttons) {
+    this.buttons = buttons;
   }
 
 
@@ -131,23 +155,26 @@ public class ContentNotificationTemplate  implements Serializable {
     }
     ContentNotificationTemplate contentNotificationTemplate = (ContentNotificationTemplate) o;
     return Objects.equals(this.body, contentNotificationTemplate.body) &&
+          Objects.equals(this.buttons, contentNotificationTemplate.buttons) &&
           Objects.equals(this.footer, contentNotificationTemplate.footer) &&
           Objects.equals(this.header, contentNotificationTemplate.header) &&
           Objects.equals(this.id, contentNotificationTemplate.id) &&
-          Objects.equals(this.language, contentNotificationTemplate.language);
+          Objects.equals(this.language, contentNotificationTemplate.language) &&
+          super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(body, footer, header, id, language);
+    return Objects.hash(body, buttons, footer, header, id, language, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContentNotificationTemplate {\n");
-    
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    body: ").append(toIndentedString(body)).append("\n");
+    sb.append("    buttons: ").append(toIndentedString(buttons)).append("\n");
     sb.append("    footer: ").append(toIndentedString(footer)).append("\n");
     sb.append("    header: ").append(toIndentedString(header)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");

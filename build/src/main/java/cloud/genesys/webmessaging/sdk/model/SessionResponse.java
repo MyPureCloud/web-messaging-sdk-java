@@ -30,6 +30,8 @@ public class SessionResponse  implements Serializable {
   private AllowedMedia allowedMedia = null;
   private List<String> blockedExtensions = new ArrayList<String>();
   private Double maxCustomDataBytes = null;
+  private Double durationSeconds = null;
+  private Double expirationDate = null;
 
   
   /**
@@ -151,6 +153,40 @@ public class SessionResponse  implements Serializable {
   }
 
 
+  /**
+   **/
+  public SessionResponse durationSeconds(Double durationSeconds) {
+    this.durationSeconds = durationSeconds;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("durationSeconds")
+  public Double getDurationSeconds() {
+    return durationSeconds;
+  }
+  public void setDurationSeconds(Double durationSeconds) {
+    this.durationSeconds = durationSeconds;
+  }
+
+
+  /**
+   **/
+  public SessionResponse expirationDate(Double expirationDate) {
+    this.expirationDate = expirationDate;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("expirationDate")
+  public Double getExpirationDate() {
+    return expirationDate;
+  }
+  public void setExpirationDate(Double expirationDate) {
+    this.expirationDate = expirationDate;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -166,12 +202,14 @@ public class SessionResponse  implements Serializable {
           Objects.equals(this.clearedExistingSession, sessionResponse.clearedExistingSession) &&
           Objects.equals(this.allowedMedia, sessionResponse.allowedMedia) &&
           Objects.equals(this.blockedExtensions, sessionResponse.blockedExtensions) &&
-          Objects.equals(this.maxCustomDataBytes, sessionResponse.maxCustomDataBytes);
+          Objects.equals(this.maxCustomDataBytes, sessionResponse.maxCustomDataBytes) &&
+          Objects.equals(this.durationSeconds, sessionResponse.durationSeconds) &&
+          Objects.equals(this.expirationDate, sessionResponse.expirationDate);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(connected, newSession, readOnly, clearedExistingSession, allowedMedia, blockedExtensions, maxCustomDataBytes);
+    return Objects.hash(connected, newSession, readOnly, clearedExistingSession, allowedMedia, blockedExtensions, maxCustomDataBytes, durationSeconds, expirationDate);
   }
 
   @Override
@@ -186,6 +224,8 @@ public class SessionResponse  implements Serializable {
     sb.append("    allowedMedia: ").append(toIndentedString(allowedMedia)).append("\n");
     sb.append("    blockedExtensions: ").append(toIndentedString(blockedExtensions)).append("\n");
     sb.append("    maxCustomDataBytes: ").append(toIndentedString(maxCustomDataBytes)).append("\n");
+    sb.append("    durationSeconds: ").append(toIndentedString(durationSeconds)).append("\n");
+    sb.append("    expirationDate: ").append(toIndentedString(expirationDate)).append("\n");
     sb.append("}");
     return sb.toString();
   }

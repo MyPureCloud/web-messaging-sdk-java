@@ -1,23 +1,21 @@
----
-title: CleanMessage
----
-## CleanMessage
+# CleanMessage
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **text** | <!----><!---->**String**<!----> |  |  [optional] |
-| **type** | <!----><!---->[**NormalizedType**](NormalizedType.html)<!----> |  |  |
-| **direction** | <!----><!---->[**Direction**](Direction.html)<!----> |  |  [optional] |
-| **id** | <!----><!---->**String**<!----> |  |  [optional] |
-| **channel** | <!----><!---->[**CleanMessagingChannel**](CleanMessagingChannel.html)<!----> |  |  [optional] |
-| **content** | <!----><!---->[**List&lt;CleanMessageContent&gt;**](CleanMessageContent.html)<!----> |  |  [optional] |
-| **metadata** | <!----><!---->**Map&lt;String, String&gt;**<!----> |  |  [optional] |
-| **events** | <!----><!---->[**List&lt;CleanMessageEvent&gt;**](CleanMessageEvent.html)<!----> |  |  [optional] |
-| **originatingEntity** | <!----><!---->[**OriginatingEntity**](OriginatingEntity.html)<!----> |  |  [optional] |
-{: class="table table-striped"}
+| **text** | **String** |  |  [optional] |
+| **type** | [**NormalizedType**](NormalizedType) |  |  |
+| **direction** | [**Direction**](Direction) |  |  [optional] |
+| **id** | **String** |  |  [optional] |
+| **channel** | [**CleanMessagingChannel**](CleanMessagingChannel) |  |  [optional] |
+| **content** | [**List&lt;CleanMessageContent&gt;**](CleanMessageContent) |  |  [optional] |
+| **metadata** | **Map&lt;String, String&gt;** |  |  [optional] |
+| **events** | [**List&lt;CleanMessageEvent&gt;**](CleanMessageEvent) |  |  [optional] |
+| **originatingEntity** | [**OriginatingEntity**](OriginatingEntity) |  |  [optional] |
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

@@ -1,7 +1,4 @@
----
-title: Direction
----
-## Direction
+# Direction
 
 
 # Direction
@@ -15,3 +12,5 @@ title: Direction
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

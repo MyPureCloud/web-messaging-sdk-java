@@ -9,15 +9,15 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URI;
+import java.net.URLEncoder;
 import java.net.http.HttpClient;
 import java.net.http.WebSocket.Builder;
 import java.net.http.WebSocket.Listener;
 import java.net.http.WebSocket;
+import java.nio.charset.StandardCharsets;
 import java.time.Duration;
-import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.EventListener;
@@ -41,35 +41,56 @@ public class WebMessagingClient {
     private final ArrayList<SessionListener> sessionListeners = new ArrayList<>();
     private ApiClient apiClient;
 
+    private AllowedMedia allowedMediaInbound;
+
+    public AllowedMedia getAllowedMediaInbound() {
+        return allowedMediaInbound;
+    }
+
+    public void setAllowedMediaInbound(AllowedMedia allowedMediaInbound) {
+        this.allowedMediaInbound = allowedMediaInbound;
+    }
+
     /**
-    * Inspect a StructuredMessage, looking for Presence events ({@link EventType#PRESENCE} )
+     * check if a provided mime type is among the allowed one in configuration for inbound content.
+     * @param mimeType
+     * @return true if the mime type is part of the allowed media, false otherwise
+     * @see #getSupportedContentConfiguration(String, String, String)
+     * @see #allowedMediaInbound
+     */
+    public boolean isMimeTypeAllowedInbound(String mimeType) {
+        return FileUtils.isMimeTypeSupported(mimeType, allowedMediaInbound.getInbound());
+    }
+
+    /**
+    * Inspect a StructuredMessage, looking for Presence events ({@link EventTypeEnum#PRESENCE} )
     * @param message message to introspect for Presence events
     * @return true if a Presence event exists in this message, false otherwise
-    * @see EventType#PRESENCE
+    * @see EventTypeEnum#PRESENCE
     */
     static public boolean hasPresenceEvents(StructuredMessage message) {
-        return hasEvents(message, EventType.PRESENCE);
+        return hasEvents(message, EventTypeEnum.PRESENCE);
     }
 
     /**
-    * Inspect a StructuredMessage, looking for Typing events ({@link EventType#TYPING} )
+    * Inspect a StructuredMessage, looking for Typing events ({@link EventTypeEnum#TYPING} )
     * @param message message to introspect for Typing events
     * @return true if a Typing event exists in this message, false otherwise
-    * @see EventType#TYPING
+    * @see EventTypeEnum#TYPING
     */
     static public boolean hasTypingEvents(StructuredMessage message) {
-        return hasEvents(message, EventType.TYPING);
+        return hasEvents(message, EventTypeEnum.TYPING);
     }
 
     /**
-    * Inspect a StructuredMessage, looking for a type of event ({@link EventType} )
+    * Inspect a StructuredMessage, looking for a type of event ({@link EventTypeEnum} )
     *
     * @param message message to introspect for events
     * @param type type of event to look for
     * @return true if this type of event exists in this message, false otherwise
-    * @see EventType
+    * @see EventTypeEnum
     */
-    static public boolean hasEvents(StructuredMessage message, EventType type) {
+    static public boolean hasEvents(StructuredMessage message, EventTypeEnum type) {
         return message.getEvents().stream().anyMatch(messageEvent -> messageEvent.getEventType() == type);
     }
 
@@ -151,7 +172,11 @@ public class WebMessagingClient {
             }
 
             @Override
-                public void sessionClearedEvent(SessionClearedEvent sessionClearedResponse, String rawMessage) {
+            public void sessionClearedEvent(SessionClearedEvent sessionClearedResponse, String rawMessage) {
+            }
+
+            @Override
+            public void getConfigurationResponse(GetConfigurationResponse response, String rawMessage) {
             }
 
             @Override
@@ -191,9 +216,9 @@ public class WebMessagingClient {
      * @param deploymentId      deploymentId to connect to
      * @param origin            origin header to add
      * @param connectionTimeout connection timeout, in second, to use
-     * @param userAgent user-agent string to be set in header connecting to the websocket. Optional, default of WebMessagingSdk-"version" will be used
+     * @param applicationName string to be set in query parameter when connecting to the websocket. Will be URL encoded. Optional, default of WebMessagingSdk-"version" will be used
      */
-    public void connect(String deploymentId, String origin, Optional<Integer> connectionTimeout, Optional<String> userAgent) {
+    public void connect(String deploymentId, String origin, Optional<Integer> connectionTimeout, Optional<String> applicationName) {
         // Create listener
         Listener listener = new Listener() {
             @Override
@@ -234,13 +259,15 @@ public class WebMessagingClient {
                 .newHttpClient()
                 .newWebSocketBuilder()
                 .header("Origin", origin)
-                .header("deploymentId", deploymentId)
-                .header("user-agent", userAgent.orElse("WebMessagingSDK-1.0.0"));
+                .header("deploymentId", deploymentId);
 
         if (connectionTimeout.isPresent()) {
             builder.connectTimeout(Duration.ofSeconds(connectionTimeout.get()));
         }
-        CompletableFuture<WebSocket> completableFuture = builder.buildAsync(URI.create(webSocketAddress + "?deploymentId=" + deploymentId), listener);
+        String urlEncodedAppName = URLEncoder.encode(applicationName.orElse("WebMessagingSDK-1.0.0"), StandardCharsets.UTF_8);
+
+        CompletableFuture<WebSocket> completableFuture = builder.buildAsync(URI.create(webSocketAddress + "?deploymentId=" + deploymentId +
+                "&application="+urlEncodedAppName), listener);
 
         // Connect to WebSocket server
         completableFuture.join();
@@ -346,6 +373,27 @@ public class WebMessagingClient {
         }
     }
 
+    public void getSupportedContentConfiguration(String deploymentId, String token, String origin) {
+        try {
+            this.token = token;
+            this.deploymentId = deploymentId;
+            if (apiClient == null) {
+                initializeApiClient(origin);
+            }
+
+            // Create configuration request
+            GetConfigurationRequest getConfigurationRequest = new GetConfigurationRequest();
+            getConfigurationRequest.setAction(RequestTypeGetConfiguration.GETCONFIGURATION);
+            getConfigurationRequest.setDeploymentId(deploymentId);
+            getConfigurationRequest.setToken(token);
+            String payload = objectMapper.writeValueAsString(getConfigurationRequest);
+
+            webSocket.sendText(payload, true);
+        } catch (JsonProcessingException e) {
+            // no-op
+        }
+    }
+
     /**
      * Closes the WebSocket connection
      */
@@ -433,7 +481,7 @@ public class WebMessagingClient {
             sendMessageRequest.message(new IncomingNormalizedMessage()
                     .type(NormalizedType.EVENT)
                     .events(Collections.singletonList(new MessageEvent()
-                            .eventType(EventType.PRESENCE)
+                            .eventType(EventTypeEnum.PRESENCE)
                             .presence(new EventPresence()
                                     .type(type))
                     ))
@@ -487,7 +535,7 @@ public class WebMessagingClient {
             sendMessageRequest.message(new IncomingNormalizedMessage()
                     .type(NormalizedType.EVENT)
                     .events(Collections.singletonList(new MessageEvent()
-                            .eventType(EventType.TYPING)
+                            .eventType(EventTypeEnum.TYPING)
                             .typing(new EventTyping().type(EventTypingType.ON))
                     ))
             );
@@ -600,6 +648,8 @@ public class WebMessagingClient {
         Object response = objectMapper.convertValue(baseMessage.getBody(), messageClass);
         switch (className) {
             case "SessionResponse":
+                //set the configured allowed media for Supported Content Profile
+                setAllowedMediaInbound(((SessionResponse)response).getAllowedMedia());
                 // Invoke each listener
                 for (SessionListener sessionListener : sessionListeners) {
                     sessionListener.sessionResponse((SessionResponse) response, rawMessage);
@@ -638,6 +688,12 @@ public class WebMessagingClient {
             case "SessionClearedEvent":
                 for (SessionListener sessionListener : sessionListeners) {
                     sessionListener.sessionClearedEvent((SessionClearedEvent) response, rawMessage);
+                }
+                break;
+            case "GetConfigurationResponse":
+                setAllowedMediaInbound(((GetConfigurationResponse)response).getAllowedMedia());
+                for (SessionListener sessionListener : sessionListeners) {
+                    sessionListener.getConfigurationResponse((GetConfigurationResponse) response, rawMessage);
                 }
                 break;
             case "JwtResponse":
@@ -836,6 +892,15 @@ public class WebMessagingClient {
          * @param rawMessage  The raw message payload JSON as a string
          */
         public void jwtResponse(JwtResponse jwtResponse, String rawMessage);
+
+
+        /**
+        * Raised for responses to url requests (type == BaseResponseType.RESPONSE, class = SessionResponse)
+        *
+        * @param response    The deserialized response
+        * @param rawMessage  The raw message payload JSON as a string
+        */
+        public void getConfigurationResponse(GetConfigurationResponse response, String rawMessage);
 
         /**
          * Raised for unmatched BaseResponseType

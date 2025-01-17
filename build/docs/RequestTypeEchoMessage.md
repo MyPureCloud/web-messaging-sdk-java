@@ -1,7 +1,4 @@
----
-title: RequestTypeEchoMessage
----
-## RequestTypeEchoMessage
+# RequestTypeEchoMessage
 
 
 # RequestTypeEchoMessage
@@ -13,3 +10,5 @@ title: RequestTypeEchoMessage
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

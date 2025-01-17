@@ -22,6 +22,7 @@ public class GenerateUploadUrlRequest  implements Serializable {
   
   private RequestTypeGenerateUploadUrl action = null;
   private String token = null;
+  private String tracingId = null;
   private String attachmentId = null;
   private String fileName = null;
   private String fileType = null;
@@ -60,6 +61,23 @@ public class GenerateUploadUrlRequest  implements Serializable {
   }
   public void setToken(String token) {
     this.token = token;
+  }
+
+
+  /**
+   **/
+  public GenerateUploadUrlRequest tracingId(String tracingId) {
+    this.tracingId = tracingId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("tracingId")
+  public String getTracingId() {
+    return tracingId;
+  }
+  public void setTracingId(String tracingId) {
+    this.tracingId = tracingId;
   }
 
 
@@ -159,6 +177,7 @@ public class GenerateUploadUrlRequest  implements Serializable {
     GenerateUploadUrlRequest generateUploadUrlRequest = (GenerateUploadUrlRequest) o;
     return Objects.equals(this.action, generateUploadUrlRequest.action) &&
           Objects.equals(this.token, generateUploadUrlRequest.token) &&
+          Objects.equals(this.tracingId, generateUploadUrlRequest.tracingId) &&
           Objects.equals(this.attachmentId, generateUploadUrlRequest.attachmentId) &&
           Objects.equals(this.fileName, generateUploadUrlRequest.fileName) &&
           Objects.equals(this.fileType, generateUploadUrlRequest.fileType) &&
@@ -168,7 +187,7 @@ public class GenerateUploadUrlRequest  implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(action, token, attachmentId, fileName, fileType, fileSize, fileMd5);
+    return Objects.hash(action, token, tracingId, attachmentId, fileName, fileType, fileSize, fileMd5);
   }
 
   @Override
@@ -178,6 +197,7 @@ public class GenerateUploadUrlRequest  implements Serializable {
     
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
     sb.append("    token: ").append(toIndentedString(token)).append("\n");
+    sb.append("    tracingId: ").append(toIndentedString(tracingId)).append("\n");
     sb.append("    attachmentId: ").append(toIndentedString(attachmentId)).append("\n");
     sb.append("    fileName: ").append(toIndentedString(fileName)).append("\n");
     sb.append("    fileType: ").append(toIndentedString(fileType)).append("\n");

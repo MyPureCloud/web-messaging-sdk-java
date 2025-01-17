@@ -1,7 +1,4 @@
----
-title: MediaType
----
-## MediaType
+# MediaType
 
 
 # MediaType
@@ -21,3 +18,5 @@ title: MediaType
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

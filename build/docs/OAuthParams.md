@@ -1,15 +1,13 @@
----
-title: OAuthParams
----
-## OAuthParams
+# OAuthParams
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **code** | <!----><!---->**String**<!----> |  |  |
-{: class="table table-striped"}
+| **code** | **String** |  |  |
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

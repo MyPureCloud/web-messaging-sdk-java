@@ -15,7 +15,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import java.io.Serializable;
 /**
@@ -23,7 +25,7 @@ import java.io.Serializable;
  */
 @ApiModel(description = "Generic content (Deprecated).  Deprecated, should use Card.")
 
-public class ContentGeneric  implements Serializable {
+public class ContentGeneric extends HashMap<String, Object> implements Serializable {
   
   private ContentActions actions = null;
   private List<ButtonComponent> components = new ArrayList<ButtonComponent>();
@@ -175,19 +177,20 @@ public class ContentGeneric  implements Serializable {
           Objects.equals(this.id, contentGeneric.id) &&
           Objects.equals(this.image, contentGeneric.image) &&
           Objects.equals(this.title, contentGeneric.title) &&
-          Objects.equals(this.video, contentGeneric.video);
+          Objects.equals(this.video, contentGeneric.video) &&
+          super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(actions, components, description, id, image, title, video);
+    return Objects.hash(actions, components, description, id, image, title, video, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContentGeneric {\n");
-    
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    actions: ").append(toIndentedString(actions)).append("\n");
     sb.append("    components: ").append(toIndentedString(components)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");

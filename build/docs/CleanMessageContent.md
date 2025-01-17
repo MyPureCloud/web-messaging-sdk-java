@@ -1,23 +1,21 @@
----
-title: CleanMessageContent
----
-## CleanMessageContent
+# CleanMessageContent
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **attachment** | <!----><!---->[**CleanContentAttachment**](CleanContentAttachment.html)<!----> |  |  [optional] |
-| **contentType** | <!----><!---->[**ContentType**](ContentType.html)<!----> |  |  |
-| **buttonResponse** | <!----><!---->[**ContentButtonResponse**](ContentButtonResponse.html)<!----> |  |  [optional] |
-| **generic** | <!----><!---->[**ContentGeneric**](ContentGeneric.html)<!----> |  |  [optional] |
-| **card** | <!----><!---->[**ContentCard**](ContentCard.html)<!----> |  |  [optional] |
-| **carousel** | <!----><!---->[**ContentCarousel**](ContentCarousel.html)<!----> |  |  [optional] |
-| **quickReply** | <!----><!---->[**ContentQuickReply**](ContentQuickReply.html)<!----> |  |  [optional] |
-| **text** | <!----><!---->[**ContentText**](ContentText.html)<!----> |  |  [optional] |
-| **quickReplyV2** | <!----><!---->[**ContentQuickReplyV2**](ContentQuickReplyV2.html)<!----> |  |  [optional] |
-{: class="table table-striped"}
+| **attachment** | [**CleanContentAttachment**](CleanContentAttachment) |  |  [optional] |
+| **contentType** | [**ContentType**](ContentType) |  |  |
+| **buttonResponse** | [**ContentButtonResponse**](ContentButtonResponse) |  |  [optional] |
+| **generic** | [**ContentGeneric**](ContentGeneric) |  |  [optional] |
+| **card** | [**ContentCard**](ContentCard) |  |  [optional] |
+| **carousel** | [**ContentCarousel**](ContentCarousel) |  |  [optional] |
+| **quickReply** | [**ContentQuickReply**](ContentQuickReply) |  |  [optional] |
+| **text** | [**ContentText**](ContentText) |  |  [optional] |
+| **quickReplyV2** | [**ContentQuickReplyV2**](ContentQuickReplyV2) |  |  [optional] |
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

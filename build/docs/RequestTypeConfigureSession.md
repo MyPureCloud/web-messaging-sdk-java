@@ -1,7 +1,4 @@
----
-title: RequestTypeConfigureSession
----
-## RequestTypeConfigureSession
+# RequestTypeConfigureSession
 
 
 # RequestTypeConfigureSession
@@ -13,3 +10,5 @@ title: RequestTypeConfigureSession
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

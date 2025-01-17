@@ -1,7 +1,4 @@
----
-title: RequestTypeGetJwt
----
-## RequestTypeGetJwt
+# RequestTypeGetJwt
 
 
 # RequestTypeGetJwt
@@ -13,3 +10,5 @@ title: RequestTypeGetJwt
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

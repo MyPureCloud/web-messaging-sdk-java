@@ -15,7 +15,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import java.io.Serializable;
 /**
@@ -23,10 +25,11 @@ import java.io.Serializable;
  */
 @ApiModel(description = "Information about the recipient the message is received from.  Information about the recipient the message is sent to or received from.  Information about the recipient the message is sent to.  Mention content.")
 
-public class MessagingRecipient  implements Serializable {
+public class MessagingRecipient extends HashMap<String, Object> implements Serializable {
   
   private List<RecipientAdditionalIdentifier> additionalIds = new ArrayList<RecipientAdditionalIdentifier>();
   private String email = null;
+  private String externalContactId = null;
   private String firstName = null;
   private String id = null;
   private IDType idType = null;
@@ -68,6 +71,24 @@ public class MessagingRecipient  implements Serializable {
   }
   public void setEmail(String email) {
     this.email = email;
+  }
+
+
+  /**
+   * The identifier of the external contact.
+   **/
+  public MessagingRecipient externalContactId(String externalContactId) {
+    this.externalContactId = externalContactId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "The identifier of the external contact.")
+  @JsonProperty("externalContactId")
+  public String getExternalContactId() {
+    return externalContactId;
+  }
+  public void setExternalContactId(String externalContactId) {
+    this.externalContactId = externalContactId;
   }
 
 
@@ -190,26 +211,29 @@ public class MessagingRecipient  implements Serializable {
     MessagingRecipient messagingRecipient = (MessagingRecipient) o;
     return Objects.equals(this.additionalIds, messagingRecipient.additionalIds) &&
           Objects.equals(this.email, messagingRecipient.email) &&
+          Objects.equals(this.externalContactId, messagingRecipient.externalContactId) &&
           Objects.equals(this.firstName, messagingRecipient.firstName) &&
           Objects.equals(this.id, messagingRecipient.id) &&
           Objects.equals(this.idType, messagingRecipient.idType) &&
           Objects.equals(this.image, messagingRecipient.image) &&
           Objects.equals(this.lastName, messagingRecipient.lastName) &&
-          Objects.equals(this.nickname, messagingRecipient.nickname);
+          Objects.equals(this.nickname, messagingRecipient.nickname) &&
+          super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(additionalIds, email, firstName, id, idType, image, lastName, nickname);
+    return Objects.hash(additionalIds, email, externalContactId, firstName, id, idType, image, lastName, nickname, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class MessagingRecipient {\n");
-    
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    additionalIds: ").append(toIndentedString(additionalIds)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    externalContactId: ").append(toIndentedString(externalContactId)).append("\n");
     sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idType: ").append(toIndentedString(idType)).append("\n");

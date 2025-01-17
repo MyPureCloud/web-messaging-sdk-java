@@ -34,6 +34,7 @@ public enum ContentType {
   BUTTONRESPONSE("ButtonResponse"),
   CARD("Card"),
   CAROUSEL("Carousel"),
+  DATEPICKER("DatePicker"),
   GENERICTEMPLATE("GenericTemplate"),
   LISTTEMPLATE("ListTemplate"),
   LOCATION("Location"),

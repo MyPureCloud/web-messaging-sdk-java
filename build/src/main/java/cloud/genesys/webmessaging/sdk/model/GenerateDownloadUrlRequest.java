@@ -22,6 +22,7 @@ public class GenerateDownloadUrlRequest  implements Serializable {
   
   private RequestTypeGenerateDownloadUrl action = null;
   private String token = null;
+  private String tracingId = null;
   private String attachmentId = null;
 
   
@@ -61,6 +62,23 @@ public class GenerateDownloadUrlRequest  implements Serializable {
 
   /**
    **/
+  public GenerateDownloadUrlRequest tracingId(String tracingId) {
+    this.tracingId = tracingId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("tracingId")
+  public String getTracingId() {
+    return tracingId;
+  }
+  public void setTracingId(String tracingId) {
+    this.tracingId = tracingId;
+  }
+
+
+  /**
+   **/
   public GenerateDownloadUrlRequest attachmentId(String attachmentId) {
     this.attachmentId = attachmentId;
     return this;
@@ -87,12 +105,13 @@ public class GenerateDownloadUrlRequest  implements Serializable {
     GenerateDownloadUrlRequest generateDownloadUrlRequest = (GenerateDownloadUrlRequest) o;
     return Objects.equals(this.action, generateDownloadUrlRequest.action) &&
           Objects.equals(this.token, generateDownloadUrlRequest.token) &&
+          Objects.equals(this.tracingId, generateDownloadUrlRequest.tracingId) &&
           Objects.equals(this.attachmentId, generateDownloadUrlRequest.attachmentId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(action, token, attachmentId);
+    return Objects.hash(action, token, tracingId, attachmentId);
   }
 
   @Override
@@ -102,6 +121,7 @@ public class GenerateDownloadUrlRequest  implements Serializable {
     
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
     sb.append("    token: ").append(toIndentedString(token)).append("\n");
+    sb.append("    tracingId: ").append(toIndentedString(tracingId)).append("\n");
     sb.append("    attachmentId: ").append(toIndentedString(attachmentId)).append("\n");
     sb.append("}");
     return sb.toString();

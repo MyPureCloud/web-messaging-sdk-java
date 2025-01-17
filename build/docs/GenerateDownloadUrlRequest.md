@@ -1,17 +1,16 @@
----
-title: GenerateDownloadUrlRequest
----
-## GenerateDownloadUrlRequest
+# GenerateDownloadUrlRequest
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **action** | <!----><!---->[**RequestTypeGenerateDownloadUrl**](RequestTypeGenerateDownloadUrl.html)<!----> |  |  |
-| **token** | <!----><!---->**String**<!----> |  |  |
-| **attachmentId** | <!----><!---->**String**<!----> |  |  |
-{: class="table table-striped"}
+| **action** | [**RequestTypeGenerateDownloadUrl**](RequestTypeGenerateDownloadUrl) |  |  |
+| **token** | **String** |  |  |
+| **tracingId** | **String** |  |  [optional] |
+| **attachmentId** | **String** |  |  |
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

@@ -1,7 +1,4 @@
----
-title: RequestType
----
-## RequestType
+# RequestType
 
 
 # RequestType
@@ -31,9 +28,9 @@ title: RequestType
 
 * `RESUMETOKEN` (value: `"resumeToken"`)
 
-* `SUBSCRIBETOPUSH` (value: `"subscribeToPush"`)
-
 * `GETCONFIGURATION` (value: `"getConfiguration"`)
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

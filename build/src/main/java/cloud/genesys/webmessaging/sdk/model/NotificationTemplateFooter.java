@@ -12,6 +12,8 @@ import java.io.IOException;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.HashMap;
+import java.util.Map;
 
 import java.io.Serializable;
 /**
@@ -19,7 +21,7 @@ import java.io.Serializable;
  */
 @ApiModel(description = "The template footer.  Template footer object.")
 
-public class NotificationTemplateFooter  implements Serializable {
+public class NotificationTemplateFooter extends HashMap<String, Object> implements Serializable {
   
   private String text = null;
 
@@ -51,19 +53,20 @@ public class NotificationTemplateFooter  implements Serializable {
       return false;
     }
     NotificationTemplateFooter notificationTemplateFooter = (NotificationTemplateFooter) o;
-    return Objects.equals(this.text, notificationTemplateFooter.text);
+    return Objects.equals(this.text, notificationTemplateFooter.text) &&
+          super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(text);
+    return Objects.hash(text, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NotificationTemplateFooter {\n");
-    
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    text: ").append(toIndentedString(text)).append("\n");
     sb.append("}");
     return sb.toString();

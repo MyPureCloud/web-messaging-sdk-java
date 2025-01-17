@@ -1,17 +1,16 @@
----
-title: DeleteAttachmentRequest
----
-## DeleteAttachmentRequest
+# DeleteAttachmentRequest
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **action** | <!----><!---->[**RequestTypeDeleteAttachment**](RequestTypeDeleteAttachment.html)<!----> |  |  |
-| **token** | <!----><!---->**String**<!----> |  |  |
-| **attachmentId** | <!----><!---->**String**<!----> |  |  |
-{: class="table table-striped"}
+| **action** | [**RequestTypeDeleteAttachment**](RequestTypeDeleteAttachment) |  |  |
+| **token** | **String** |  |  |
+| **tracingId** | **String** |  |  [optional] |
+| **attachmentId** | **String** |  |  |
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

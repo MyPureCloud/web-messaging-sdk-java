@@ -42,6 +42,7 @@ public class Limit  implements Serializable {
   public enum NamespaceEnum {
     OUTDATEDSDKVERSION("OutdatedSdkVersion"),
     AGENT_ASSISTANT("agent.assistant"),
+    ANALYTICS_AGENTS("analytics.agents"),
     ANALYTICS_ALERTING("analytics.alerting"),
     ANALYTICS("analytics"),
     ANALYTICS_REALTIME("analytics.realtime"),
@@ -54,6 +55,7 @@ public class Limit  implements Serializable {
     AUTOMATION_TESTING("automation.testing"),
     BOTS("bots"),
     BOTS_VOICE("bots.voice"),
+    BUSINESS_RULES("business.rules"),
     CALLBACK("callback"),
     COBROWSE("cobrowse"),
     CONTENT_MANAGEMENT("content.management"),
@@ -62,8 +64,10 @@ public class Limit  implements Serializable {
     DATATABLES("datatables"),
     DIRECTORY("directory"),
     EMAIL("email"),
+    EMPLOYEE_ENGAGEMENT("employee.engagement"),
     EVENT_ORCHESTRATION("event.orchestration"),
     EXTERNAL_CONTACTS("external.contacts"),
+    GAMIFICATION("gamification"),
     GCV("gcv"),
     GDPR("gdpr"),
     GROUPS("groups"),
@@ -71,6 +75,7 @@ public class Limit  implements Serializable {
     INFRASTRUCTUREASCODE("infrastructureascode"),
     INTEGRATIONS("integrations"),
     INTENT_MINER("intent.miner"),
+    INTERNAL_MESSAGING("internal.messaging"),
     JOURNEY("journey"),
     KNOWLEDGE("knowledge"),
     LANGUAGE_UNDERSTANDING("language.understanding"),
@@ -79,6 +84,7 @@ public class Limit  implements Serializable {
     MARKETPLACE("marketplace"),
     MEDIA_COMMUNICATIONS("media.communications"),
     MESSAGING("messaging"),
+    MICRO_FRONTEND("micro.frontend"),
     NOTIFICATIONS("notifications"),
     ONBOARDING("onboarding"),
     OUTBOUND("outbound"),
@@ -93,6 +99,7 @@ public class Limit  implements Serializable {
     SEARCH("search"),
     SECONDARY_AUTOMATION_TESTING("secondary.automation.testing"),
     SKILLS("skills"),
+    SOCIAL_MEDIA("social.media"),
     SPEECH_AND_TEXT_ANALYTICS("speech.and.text.analytics"),
     SPEECH_INTEGRATION("speech.integration"),
     SUPPORTABILITY("supportability"),
@@ -104,7 +111,9 @@ public class Limit  implements Serializable {
     WEB_MESSAGING("web.messaging"),
     WEBCHAT("webchat"),
     WEBHOOKS("webhooks"),
-    WORKFORCE_MANAGEMENT("workforce.management");
+    WORKFORCE_MANAGEMENT_FORECAST("workforce.management.forecast"),
+    WORKFORCE_MANAGEMENT("workforce.management"),
+    SYSTEM("system");
 
     private String value;
 

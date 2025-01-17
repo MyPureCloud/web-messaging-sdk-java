@@ -1,16 +1,14 @@
----
-title: BaseMessagingContent
----
-## BaseMessagingContent
+# BaseMessagingContent
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **attachment** | <!----><!---->[**BaseContentAttachment**](BaseContentAttachment.html)<!----> |  |  [optional] |
-| **contentType** | <!----><!---->[**ContentType**](ContentType.html)<!----> |  |  |
-{: class="table table-striped"}
+| **attachment** | [**BaseContentAttachment**](BaseContentAttachment) |  |  [optional] |
+| **contentType** | [**ContentType**](ContentType) |  |  |
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

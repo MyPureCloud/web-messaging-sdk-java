@@ -1,7 +1,4 @@
----
-title: TextType
----
-## TextType
+# TextType
 
 
 # TextType
@@ -13,3 +10,5 @@ title: TextType
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

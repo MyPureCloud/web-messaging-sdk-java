@@ -1,7 +1,4 @@
----
-title: Action
----
-## Action
+# Action
 
 
 # Action
@@ -13,3 +10,5 @@ title: Action
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

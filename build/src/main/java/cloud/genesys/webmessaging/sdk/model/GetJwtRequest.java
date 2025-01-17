@@ -22,6 +22,7 @@ public class GetJwtRequest  implements Serializable {
   
   private RequestTypeGetJwt action = null;
   private String token = null;
+  private String tracingId = null;
 
   
   /**
@@ -58,6 +59,23 @@ public class GetJwtRequest  implements Serializable {
   }
 
 
+  /**
+   **/
+  public GetJwtRequest tracingId(String tracingId) {
+    this.tracingId = tracingId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("tracingId")
+  public String getTracingId() {
+    return tracingId;
+  }
+  public void setTracingId(String tracingId) {
+    this.tracingId = tracingId;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -68,12 +86,13 @@ public class GetJwtRequest  implements Serializable {
     }
     GetJwtRequest getJwtRequest = (GetJwtRequest) o;
     return Objects.equals(this.action, getJwtRequest.action) &&
-          Objects.equals(this.token, getJwtRequest.token);
+          Objects.equals(this.token, getJwtRequest.token) &&
+          Objects.equals(this.tracingId, getJwtRequest.tracingId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(action, token);
+    return Objects.hash(action, token, tracingId);
   }
 
   @Override
@@ -83,6 +102,7 @@ public class GetJwtRequest  implements Serializable {
     
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
     sb.append("    token: ").append(toIndentedString(token)).append("\n");
+    sb.append("    tracingId: ").append(toIndentedString(tracingId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

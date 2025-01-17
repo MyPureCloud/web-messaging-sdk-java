@@ -26,6 +26,7 @@ public class BaseMessage  implements Serializable {
   private MessageDataType _class = null;
   private Integer code = null;
   private Object body = null;
+  private String tracingId = null;
 
   
   /**
@@ -96,6 +97,23 @@ public class BaseMessage  implements Serializable {
   }
 
 
+  /**
+   **/
+  public BaseMessage tracingId(String tracingId) {
+    this.tracingId = tracingId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("tracingId")
+  public String getTracingId() {
+    return tracingId;
+  }
+  public void setTracingId(String tracingId) {
+    this.tracingId = tracingId;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -108,12 +126,13 @@ public class BaseMessage  implements Serializable {
     return Objects.equals(this.type, baseMessage.type) &&
           Objects.equals(this._class, baseMessage._class) &&
           Objects.equals(this.code, baseMessage.code) &&
-          Objects.equals(this.body, baseMessage.body);
+          Objects.equals(this.body, baseMessage.body) &&
+          Objects.equals(this.tracingId, baseMessage.tracingId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(type, _class, code, body);
+    return Objects.hash(type, _class, code, body, tracingId);
   }
 
   @Override
@@ -125,6 +144,7 @@ public class BaseMessage  implements Serializable {
     sb.append("    _class: ").append(toIndentedString(_class)).append("\n");
     sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    body: ").append(toIndentedString(body)).append("\n");
+    sb.append("    tracingId: ").append(toIndentedString(tracingId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

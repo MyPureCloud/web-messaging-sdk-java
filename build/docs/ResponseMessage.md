@@ -1,14 +1,12 @@
----
-title: ResponseMessage
----
-## ResponseMessage
+# ResponseMessage
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-{: class="table table-striped"}
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

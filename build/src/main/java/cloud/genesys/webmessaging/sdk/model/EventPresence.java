@@ -13,6 +13,8 @@ import cloud.genesys.webmessaging.sdk.model.EventPresenceType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.HashMap;
+import java.util.Map;
 
 import java.io.Serializable;
 /**
@@ -20,7 +22,7 @@ import java.io.Serializable;
  */
 @ApiModel(description = "Presence event.  A Presence event.")
 
-public class EventPresence  implements Serializable {
+public class EventPresence extends HashMap<String, Object> implements Serializable {
   
   private EventPresenceType type = null;
 
@@ -52,19 +54,20 @@ public class EventPresence  implements Serializable {
       return false;
     }
     EventPresence eventPresence = (EventPresence) o;
-    return Objects.equals(this.type, eventPresence.type);
+    return Objects.equals(this.type, eventPresence.type) &&
+          super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(type);
+    return Objects.hash(type, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EventPresence {\n");
-    
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();

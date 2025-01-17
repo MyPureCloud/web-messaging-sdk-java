@@ -9,10 +9,12 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
-import cloud.genesys.webmessaging.sdk.model.EventCoBrowseType;
+import cloud.genesys.webmessaging.sdk.model.EventType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.HashMap;
+import java.util.Map;
 
 import java.io.Serializable;
 /**
@@ -20,11 +22,11 @@ import java.io.Serializable;
  */
 @ApiModel(description = "CoBrowse event.  A CoBrowse event.")
 
-public class EventCoBrowse  implements Serializable {
+public class EventCoBrowse extends HashMap<String, Object> implements Serializable {
   
   private String sessionId = null;
   private String sessionJoinToken = null;
-  private EventCoBrowseType type = null;
+  private EventType type = null;
 
   
   /**
@@ -66,17 +68,17 @@ public class EventCoBrowse  implements Serializable {
   /**
    * Describes the type of CoBrowse event.
    **/
-  public EventCoBrowse type(EventCoBrowseType type) {
+  public EventCoBrowse type(EventType type) {
     this.type = type;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "Describes the type of CoBrowse event.")
   @JsonProperty("type")
-  public EventCoBrowseType getType() {
+  public EventType getType() {
     return type;
   }
-  public void setType(EventCoBrowseType type) {
+  public void setType(EventType type) {
     this.type = type;
   }
 
@@ -92,19 +94,20 @@ public class EventCoBrowse  implements Serializable {
     EventCoBrowse eventCoBrowse = (EventCoBrowse) o;
     return Objects.equals(this.sessionId, eventCoBrowse.sessionId) &&
           Objects.equals(this.sessionJoinToken, eventCoBrowse.sessionJoinToken) &&
-          Objects.equals(this.type, eventCoBrowse.type);
+          Objects.equals(this.type, eventCoBrowse.type) &&
+          super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sessionId, sessionJoinToken, type);
+    return Objects.hash(sessionId, sessionJoinToken, type, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EventCoBrowse {\n");
-    
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    sessionId: ").append(toIndentedString(sessionId)).append("\n");
     sb.append("    sessionJoinToken: ").append(toIndentedString(sessionJoinToken)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");

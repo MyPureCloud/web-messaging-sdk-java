@@ -1,18 +1,18 @@
----
-title: CleanMessageEvent
----
-## CleanMessageEvent
+# CleanMessageEvent
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **coBrowse** | <!----><!---->[**EventCoBrowse**](EventCoBrowse.html)<!----> | CoBrowse event. |  [optional] |
-| **eventType** | <!----><!---->[**EventType**](EventType.html)<!----> |  |  |
-| **presence** | <!----><!---->[**EventPresence**](EventPresence.html)<!----> | Presence event. |  [optional] |
-| **typing** | <!----><!---->[**EventTyping**](EventTyping.html)<!----> | Typing event. |  [optional] |
-{: class="table table-striped"}
+| **coBrowse** | [**EventCoBrowse**](EventCoBrowse) | CoBrowse event. |  [optional] |
+| **eventType** | [**EventTypeEnum**](EventTypeEnum) |  |  |
+| **presence** | [**EventPresence**](EventPresence) | Presence event. |  [optional] |
+| **reactions** | [**List&lt;ContentReaction&gt;**](ContentReaction) | A list of reactions to a message. |  [optional] |
+| **typing** | [**EventTyping**](EventTyping) | Typing event. |  [optional] |
+| **video** | [**EventVideo**](EventVideo) | Video event. |  [optional] |
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

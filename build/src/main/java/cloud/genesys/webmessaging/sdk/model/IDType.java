@@ -32,7 +32,8 @@ class IDTypeDeserializer extends StdDeserializer<IDType> {
 public enum IDType {
   EMAIL("Email"),
   OPAQUE("Opaque"),
-  PHONE("Phone");
+  PHONE("Phone"),
+  TOPIC("Topic");
 
   private String value;
 

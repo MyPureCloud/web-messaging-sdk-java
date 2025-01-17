@@ -604,7 +604,7 @@ public class ApiClient implements AutoCloseable {
         private Builder(ConnectorProperties properties) {
             this.properties = (properties != null) ? properties.copy() : new ConnectorProperties();
             withUserAgent(DEFAULT_USER_AGENT);
-            withDefaultHeader("purecloud-sdk", "11.1.0");
+            withDefaultHeader("purecloud-sdk", "12.0.0");
         }
 
         public Builder withDefaultHeader(String header, String value) {
@@ -909,6 +909,7 @@ public class ApiClient implements AutoCloseable {
         private int retryCountBeforeBackOff = 0;
         private long retryAfterMs;
         private Stopwatch stopwatch = null;
+        private long defaultMaxRetry = 180000L;
 
         private final List<Integer> statusCodes = Arrays.asList(429, 502, 503, 504);
         private static Logger LOGGER = LoggerFactory.getLogger(Retry.class);
@@ -931,7 +932,12 @@ public class ApiClient implements AutoCloseable {
                 }
                 //If status code is 429 then wait until retry-after time and retry. OR If status code is retryable then for the first 5 times: wait until retry-after time and retry.
                 if (connectorResponse.getStatusCode() == 429 || retryCountBeforeBackOff++ < maxRetriesBeforeBackoff) {
-                    return waitBeforeRetry(retryAfterMs);
+                   // Some APIs started sending in daily max limit breach with 429 and retry-after that can be anywhere from few minutes to hours. It is not a pausible option
+                   // to retry in such scenarios. For WebMessaging SDK this retry Max time is set to 3 Minutes.
+                   if (retryAfterMs > defaultMaxRetry) {
+                     return false;
+                   }
+                   return waitBeforeRetry(retryAfterMs);
                 }
 
                 //If status code is 50x then wait for every 3 Sec and retry until 5 minutes then after wait for every 9 Sec and retry until next 5 minutes afterwards wait for every 27 Sec and retry.

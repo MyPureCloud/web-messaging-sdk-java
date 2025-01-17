@@ -1,7 +1,4 @@
----
-title: RequestTypeGetConfiguration
----
-## RequestTypeGetConfiguration
+# RequestTypeGetConfiguration
 
 
 # RequestTypeGetConfiguration
@@ -13,3 +10,5 @@ title: RequestTypeGetConfiguration
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

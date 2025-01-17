@@ -12,6 +12,8 @@ import java.io.IOException;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.HashMap;
+import java.util.Map;
 
 import java.io.Serializable;
 /**
@@ -19,7 +21,7 @@ import java.io.Serializable;
  */
 @ApiModel(description = "Structured message postback (Deprecated).  Postback response object representing the click of a rich media button (Deprecated).")
 
-public class ContentPostback  implements Serializable {
+public class ContentPostback extends HashMap<String, Object> implements Serializable {
   
   private String id = null;
   private String payload = null;
@@ -91,19 +93,20 @@ public class ContentPostback  implements Serializable {
     ContentPostback contentPostback = (ContentPostback) o;
     return Objects.equals(this.id, contentPostback.id) &&
           Objects.equals(this.payload, contentPostback.payload) &&
-          Objects.equals(this.text, contentPostback.text);
+          Objects.equals(this.text, contentPostback.text) &&
+          super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, payload, text);
+    return Objects.hash(id, payload, text, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContentPostback {\n");
-    
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    payload: ").append(toIndentedString(payload)).append("\n");
     sb.append("    text: ").append(toIndentedString(text)).append("\n");

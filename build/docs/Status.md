@@ -1,7 +1,4 @@
----
-title: Status
----
-## Status
+# Status
 
 
 # Status
@@ -23,3 +20,5 @@ title: Status
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

@@ -32,13 +32,16 @@ class ReactionTypeDeserializer extends StdDeserializer<ReactionType> {
 public enum ReactionType {
   ANGRY("Angry"),
   CARE("Care"),
+  COMMENT("Comment"),
   HAHA("Haha"),
   LIKE("Like"),
   LOVE("Love"),
   NONE("None"),
   PRIDE("Pride"),
   SAD("Sad"),
+  SHARE("Share"),
   THANKFUL("Thankful"),
+  VIEW("View"),
   WOW("Wow");
 
   private String value;

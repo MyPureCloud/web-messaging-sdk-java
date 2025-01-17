@@ -1,15 +1,13 @@
----
-title: AttachmentDeletedResponse
----
-## AttachmentDeletedResponse
+# AttachmentDeletedResponse
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **attachmentId** | <!----><!---->**String**<!----> |  |  |
-{: class="table table-striped"}
+| **attachmentId** | **String** |  |  |
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

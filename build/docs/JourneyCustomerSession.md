@@ -1,16 +1,14 @@
----
-title: JourneyCustomerSession
----
-## JourneyCustomerSession
+# JourneyCustomerSession
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **id** | <!----><!---->**String**<!----> |  |  |
-| **type** | <!----><!---->**String**<!----> |  |  |
-{: class="table table-striped"}
+| **id** | **String** |  |  |
+| **type** | **String** |  |  |
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

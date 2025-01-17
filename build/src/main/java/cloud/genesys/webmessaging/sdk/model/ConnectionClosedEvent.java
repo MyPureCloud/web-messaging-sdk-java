@@ -9,6 +9,9 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 import java.io.Serializable;
 /**
@@ -17,8 +20,26 @@ import java.io.Serializable;
 
 public class ConnectionClosedEvent  implements Serializable {
   
+  private String reasonCode = null;
 
   
+  /**
+   **/
+  public ConnectionClosedEvent reasonCode(String reasonCode) {
+    this.reasonCode = reasonCode;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("reasonCode")
+  public String getReasonCode() {
+    return reasonCode;
+  }
+  public void setReasonCode(String reasonCode) {
+    this.reasonCode = reasonCode;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -27,12 +48,13 @@ public class ConnectionClosedEvent  implements Serializable {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    ConnectionClosedEvent connectionClosedEvent = (ConnectionClosedEvent) o;
+    return Objects.equals(this.reasonCode, connectionClosedEvent.reasonCode);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(reasonCode);
   }
 
   @Override
@@ -40,6 +62,7 @@ public class ConnectionClosedEvent  implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectionClosedEvent {\n");
     
+    sb.append("    reasonCode: ").append(toIndentedString(reasonCode)).append("\n");
     sb.append("}");
     return sb.toString();
   }

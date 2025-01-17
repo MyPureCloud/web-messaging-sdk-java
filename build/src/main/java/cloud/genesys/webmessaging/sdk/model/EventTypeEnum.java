@@ -13,45 +13,46 @@ import io.swagger.annotations.ApiModel;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 import java.io.Serializable;
-class EventCoBrowseTypeDeserializer extends StdDeserializer<EventCoBrowseType> {
-  public EventCoBrowseTypeDeserializer() {
-    super(EventCoBrowseTypeDeserializer.class);
+class EventTypeEnumDeserializer extends StdDeserializer<EventTypeEnum> {
+  public EventTypeEnumDeserializer() {
+    super(EventTypeEnumDeserializer.class);
   }
 
   @Override
-  public EventCoBrowseType deserialize(JsonParser jsonParser, DeserializationContext ctxt)
+  public EventTypeEnum deserialize(JsonParser jsonParser, DeserializationContext ctxt)
           throws IOException {
     JsonNode node = jsonParser.getCodec().readTree(jsonParser);
-    return EventCoBrowseType.fromString(node.toString().replace("\"", ""));
+    return EventTypeEnum.fromString(node.toString().replace("\"", ""));
   }
 }
 /**
- * Describes the type of CoBrowse event.
+ * Type of this event element
  */
- @JsonDeserialize(using = EventCoBrowseTypeDeserializer.class)
-public enum EventCoBrowseType {
-  OFFERING("Offering"),
-  OFFERINGACCEPTED("OfferingAccepted"),
-  OFFERINGEXPIRED("OfferingExpired"),
-  OFFERINGREJECTED("OfferingRejected");
+ @JsonDeserialize(using = EventTypeEnumDeserializer.class)
+public enum EventTypeEnum {
+  COBROWSE("CoBrowse"),
+  PRESENCE("Presence"),
+  REACTIONS("Reactions"),
+  TYPING("Typing"),
+  VIDEO("Video");
 
   private String value;
 
-  EventCoBrowseType(String value) {
+  EventTypeEnum(String value) {
     this.value = value;
   }
 
   @JsonCreator
-  public static EventCoBrowseType fromString(String key) {
+  public static EventTypeEnum fromString(String key) {
     if (key == null) return null;
 
-    for (EventCoBrowseType value : EventCoBrowseType.values()) {
+    for (EventTypeEnum value : EventTypeEnum.values()) {
       if (key.equalsIgnoreCase(value.toString())) {
         return value;
       }
     }
 
-    return EventCoBrowseType.values()[0];
+    return EventTypeEnum.values()[0];
   }
 
   @Override

@@ -9,13 +9,19 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
+import cloud.genesys.webmessaging.sdk.model.ContentReaction;
 import cloud.genesys.webmessaging.sdk.model.EventCoBrowse;
 import cloud.genesys.webmessaging.sdk.model.EventPresence;
-import cloud.genesys.webmessaging.sdk.model.EventType;
+import cloud.genesys.webmessaging.sdk.model.EventTypeEnum;
 import cloud.genesys.webmessaging.sdk.model.EventTyping;
+import cloud.genesys.webmessaging.sdk.model.EventVideo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import java.io.Serializable;
 /**
@@ -23,12 +29,14 @@ import java.io.Serializable;
  */
 @ApiModel(description = "Message event element.  Examples include: system messages, typing indicators, cobrowse offerings.")
 
-public class MessageEvent  implements Serializable {
+public class MessageEvent extends HashMap<String, Object> implements Serializable {
   
   private EventCoBrowse coBrowse = null;
-  private EventType eventType = null;
+  private EventTypeEnum eventType = null;
   private EventPresence presence = null;
+  private List<ContentReaction> reactions = new ArrayList<ContentReaction>();
   private EventTyping typing = null;
+  private EventVideo video = null;
 
   
   /**
@@ -51,17 +59,17 @@ public class MessageEvent  implements Serializable {
 
   /**
    **/
-  public MessageEvent eventType(EventType eventType) {
+  public MessageEvent eventType(EventTypeEnum eventType) {
     this.eventType = eventType;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("eventType")
-  public EventType getEventType() {
+  public EventTypeEnum getEventType() {
     return eventType;
   }
-  public void setEventType(EventType eventType) {
+  public void setEventType(EventTypeEnum eventType) {
     this.eventType = eventType;
   }
 
@@ -85,6 +93,24 @@ public class MessageEvent  implements Serializable {
 
 
   /**
+   * A list of reactions to a message.
+   **/
+  public MessageEvent reactions(List<ContentReaction> reactions) {
+    this.reactions = reactions;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "A list of reactions to a message.")
+  @JsonProperty("reactions")
+  public List<ContentReaction> getReactions() {
+    return reactions;
+  }
+  public void setReactions(List<ContentReaction> reactions) {
+    this.reactions = reactions;
+  }
+
+
+  /**
    * Typing event.
    **/
   public MessageEvent typing(EventTyping typing) {
@@ -102,6 +128,24 @@ public class MessageEvent  implements Serializable {
   }
 
 
+  /**
+   * Video event.
+   **/
+  public MessageEvent video(EventVideo video) {
+    this.video = video;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Video event.")
+  @JsonProperty("video")
+  public EventVideo getVideo() {
+    return video;
+  }
+  public void setVideo(EventVideo video) {
+    this.video = video;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -114,23 +158,28 @@ public class MessageEvent  implements Serializable {
     return Objects.equals(this.coBrowse, messageEvent.coBrowse) &&
           Objects.equals(this.eventType, messageEvent.eventType) &&
           Objects.equals(this.presence, messageEvent.presence) &&
-          Objects.equals(this.typing, messageEvent.typing);
+          Objects.equals(this.reactions, messageEvent.reactions) &&
+          Objects.equals(this.typing, messageEvent.typing) &&
+          Objects.equals(this.video, messageEvent.video) &&
+          super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(coBrowse, eventType, presence, typing);
+    return Objects.hash(coBrowse, eventType, presence, reactions, typing, video, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class MessageEvent {\n");
-    
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    coBrowse: ").append(toIndentedString(coBrowse)).append("\n");
     sb.append("    eventType: ").append(toIndentedString(eventType)).append("\n");
     sb.append("    presence: ").append(toIndentedString(presence)).append("\n");
+    sb.append("    reactions: ").append(toIndentedString(reactions)).append("\n");
     sb.append("    typing: ").append(toIndentedString(typing)).append("\n");
+    sb.append("    video: ").append(toIndentedString(video)).append("\n");
     sb.append("}");
     return sb.toString();
   }

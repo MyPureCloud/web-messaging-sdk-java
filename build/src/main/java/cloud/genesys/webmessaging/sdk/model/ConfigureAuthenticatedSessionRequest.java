@@ -23,11 +23,11 @@ public class ConfigureAuthenticatedSessionRequest  implements Serializable {
   
   private RequestTypeConfigureAuthenticatedSession action = null;
   private String token = null;
+  private String tracingId = null;
   private String deploymentId = null;
   private OAuthParams data = null;
   private String resumeToken = null;
   private Boolean startNew = null;
-  private Boolean stepUp = null;
 
   
   /**
@@ -61,6 +61,23 @@ public class ConfigureAuthenticatedSessionRequest  implements Serializable {
   }
   public void setToken(String token) {
     this.token = token;
+  }
+
+
+  /**
+   **/
+  public ConfigureAuthenticatedSessionRequest tracingId(String tracingId) {
+    this.tracingId = tracingId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("tracingId")
+  public String getTracingId() {
+    return tracingId;
+  }
+  public void setTracingId(String tracingId) {
+    this.tracingId = tracingId;
   }
 
 
@@ -132,23 +149,6 @@ public class ConfigureAuthenticatedSessionRequest  implements Serializable {
   }
 
 
-  /**
-   **/
-  public ConfigureAuthenticatedSessionRequest stepUp(Boolean stepUp) {
-    this.stepUp = stepUp;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("stepUp")
-  public Boolean getStepUp() {
-    return stepUp;
-  }
-  public void setStepUp(Boolean stepUp) {
-    this.stepUp = stepUp;
-  }
-
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -160,16 +160,16 @@ public class ConfigureAuthenticatedSessionRequest  implements Serializable {
     ConfigureAuthenticatedSessionRequest configureAuthenticatedSessionRequest = (ConfigureAuthenticatedSessionRequest) o;
     return Objects.equals(this.action, configureAuthenticatedSessionRequest.action) &&
           Objects.equals(this.token, configureAuthenticatedSessionRequest.token) &&
+          Objects.equals(this.tracingId, configureAuthenticatedSessionRequest.tracingId) &&
           Objects.equals(this.deploymentId, configureAuthenticatedSessionRequest.deploymentId) &&
           Objects.equals(this.data, configureAuthenticatedSessionRequest.data) &&
           Objects.equals(this.resumeToken, configureAuthenticatedSessionRequest.resumeToken) &&
-          Objects.equals(this.startNew, configureAuthenticatedSessionRequest.startNew) &&
-          Objects.equals(this.stepUp, configureAuthenticatedSessionRequest.stepUp);
+          Objects.equals(this.startNew, configureAuthenticatedSessionRequest.startNew);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(action, token, deploymentId, data, resumeToken, startNew, stepUp);
+    return Objects.hash(action, token, tracingId, deploymentId, data, resumeToken, startNew);
   }
 
   @Override
@@ -179,11 +179,11 @@ public class ConfigureAuthenticatedSessionRequest  implements Serializable {
     
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
     sb.append("    token: ").append(toIndentedString(token)).append("\n");
+    sb.append("    tracingId: ").append(toIndentedString(tracingId)).append("\n");
     sb.append("    deploymentId: ").append(toIndentedString(deploymentId)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("    resumeToken: ").append(toIndentedString(resumeToken)).append("\n");
     sb.append("    startNew: ").append(toIndentedString(startNew)).append("\n");
-    sb.append("    stepUp: ").append(toIndentedString(stepUp)).append("\n");
     sb.append("}");
     return sb.toString();
   }

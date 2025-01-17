@@ -23,6 +23,7 @@ public class ConfigureSessionRequest  implements Serializable {
   
   private RequestTypeConfigureSession action = null;
   private String token = null;
+  private String tracingId = null;
   private String deploymentId = null;
   private JourneyContext journeyContext = null;
   private String resumeToken = null;
@@ -60,6 +61,23 @@ public class ConfigureSessionRequest  implements Serializable {
   }
   public void setToken(String token) {
     this.token = token;
+  }
+
+
+  /**
+   **/
+  public ConfigureSessionRequest tracingId(String tracingId) {
+    this.tracingId = tracingId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("tracingId")
+  public String getTracingId() {
+    return tracingId;
+  }
+  public void setTracingId(String tracingId) {
+    this.tracingId = tracingId;
   }
 
 
@@ -142,6 +160,7 @@ public class ConfigureSessionRequest  implements Serializable {
     ConfigureSessionRequest configureSessionRequest = (ConfigureSessionRequest) o;
     return Objects.equals(this.action, configureSessionRequest.action) &&
           Objects.equals(this.token, configureSessionRequest.token) &&
+          Objects.equals(this.tracingId, configureSessionRequest.tracingId) &&
           Objects.equals(this.deploymentId, configureSessionRequest.deploymentId) &&
           Objects.equals(this.journeyContext, configureSessionRequest.journeyContext) &&
           Objects.equals(this.resumeToken, configureSessionRequest.resumeToken) &&
@@ -150,7 +169,7 @@ public class ConfigureSessionRequest  implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(action, token, deploymentId, journeyContext, resumeToken, startNew);
+    return Objects.hash(action, token, tracingId, deploymentId, journeyContext, resumeToken, startNew);
   }
 
   @Override
@@ -160,6 +179,7 @@ public class ConfigureSessionRequest  implements Serializable {
     
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
     sb.append("    token: ").append(toIndentedString(token)).append("\n");
+    sb.append("    tracingId: ").append(toIndentedString(tracingId)).append("\n");
     sb.append("    deploymentId: ").append(toIndentedString(deploymentId)).append("\n");
     sb.append("    journeyContext: ").append(toIndentedString(journeyContext)).append("\n");
     sb.append("    resumeToken: ").append(toIndentedString(resumeToken)).append("\n");

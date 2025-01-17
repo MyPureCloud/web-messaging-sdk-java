@@ -1,20 +1,18 @@
----
-title: CleanMessagingChannel
----
-## CleanMessagingChannel
+# CleanMessagingChannel
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **time** | <!----><!---->**String**<!----> |  |  [optional] |
-| **type** | <!----><!---->[**ChannelType**](ChannelType.html)<!----> |  |  [optional] |
-| **messageId** | <!----><!---->**String**<!----> |  |  [optional] |
-| **from** | <!----><!---->[**CleanMessagingRecipient**](CleanMessagingRecipient.html)<!----> |  |  [optional] |
-| **to** | <!----><!---->[**CleanMessagingRecipient**](CleanMessagingRecipient.html)<!----> |  |  [optional] |
-| **metadata** | <!----><!---->[**CleanChannelMetadata**](CleanChannelMetadata.html)<!----> |  |  [optional] |
-{: class="table table-striped"}
+| **time** | **String** |  |  [optional] |
+| **type** | [**ChannelType**](ChannelType) |  |  [optional] |
+| **messageId** | **String** |  |  [optional] |
+| **from** | [**CleanMessagingRecipient**](CleanMessagingRecipient) |  |  [optional] |
+| **to** | [**CleanMessagingRecipient**](CleanMessagingRecipient) |  |  [optional] |
+| **metadata** | [**CleanChannelMetadata**](CleanChannelMetadata) |  |  [optional] |
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

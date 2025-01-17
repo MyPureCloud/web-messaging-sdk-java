@@ -13,6 +13,8 @@ import cloud.genesys.webmessaging.sdk.model.StoryType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.HashMap;
+import java.util.Map;
 
 import java.io.Serializable;
 /**
@@ -20,7 +22,7 @@ import java.io.Serializable;
  */
 @ApiModel(description = "Ephemeral story content.  An ephemeral story.")
 
-public class ContentStory  implements Serializable {
+public class ContentStory extends HashMap<String, Object> implements Serializable {
   
   private String replyToId = null;
   private StoryType type = null;
@@ -92,19 +94,20 @@ public class ContentStory  implements Serializable {
     ContentStory contentStory = (ContentStory) o;
     return Objects.equals(this.replyToId, contentStory.replyToId) &&
           Objects.equals(this.type, contentStory.type) &&
-          Objects.equals(this.url, contentStory.url);
+          Objects.equals(this.url, contentStory.url) &&
+          super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(replyToId, type, url);
+    return Objects.hash(replyToId, type, url, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContentStory {\n");
-    
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    replyToId: ").append(toIndentedString(replyToId)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    url: ").append(toIndentedString(url)).append("\n");

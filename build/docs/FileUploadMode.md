@@ -1,16 +1,14 @@
----
-title: FileUploadMode
----
-## FileUploadMode
+# FileUploadMode
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **fileTypes** | <!----><!---->[**List&lt;FileType&gt;**](FileType.html)<!----> |  |  |
-| **maxFileSizeKB** | <!----><!---->**Double**<!----> |  |  |
-{: class="table table-striped"}
+| **fileTypes** | [**List&lt;FileType&gt;**](FileType) |  |  |
+| **maxFileSizeKB** | **Double** |  |  |
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

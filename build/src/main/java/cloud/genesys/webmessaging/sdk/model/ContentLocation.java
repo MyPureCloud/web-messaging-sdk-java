@@ -12,6 +12,8 @@ import java.io.IOException;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.HashMap;
+import java.util.Map;
 
 import java.io.Serializable;
 /**
@@ -19,7 +21,7 @@ import java.io.Serializable;
  */
 @ApiModel(description = "Location content.  Location object.")
 
-public class ContentLocation  implements Serializable {
+public class ContentLocation extends HashMap<String, Object> implements Serializable {
   
   private String address = null;
   private Double latitude = null;
@@ -131,19 +133,20 @@ public class ContentLocation  implements Serializable {
           Objects.equals(this.latitude, contentLocation.latitude) &&
           Objects.equals(this.longitude, contentLocation.longitude) &&
           Objects.equals(this.text, contentLocation.text) &&
-          Objects.equals(this.url, contentLocation.url);
+          Objects.equals(this.url, contentLocation.url) &&
+          super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(address, latitude, longitude, text, url);
+    return Objects.hash(address, latitude, longitude, text, url, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContentLocation {\n");
-    
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    address: ").append(toIndentedString(address)).append("\n");
     sb.append("    latitude: ").append(toIndentedString(latitude)).append("\n");
     sb.append("    longitude: ").append(toIndentedString(longitude)).append("\n");

@@ -1,7 +1,4 @@
----
-title: ReactionType
----
-## ReactionType
+# ReactionType
 
 
 # ReactionType
@@ -12,6 +9,8 @@ title: ReactionType
 * `ANGRY` (value: `"Angry"`)
 
 * `CARE` (value: `"Care"`)
+
+* `COMMENT` (value: `"Comment"`)
 
 * `HAHA` (value: `"Haha"`)
 
@@ -25,9 +24,15 @@ title: ReactionType
 
 * `SAD` (value: `"Sad"`)
 
+* `SHARE` (value: `"Share"`)
+
 * `THANKFUL` (value: `"Thankful"`)
+
+* `VIEW` (value: `"View"`)
 
 * `WOW` (value: `"Wow"`)
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

@@ -33,6 +33,8 @@ docs/ContentButtonResponse.md
 docs/ContentCard.md
 docs/ContentCardAction.md
 docs/ContentCarousel.md
+docs/ContentDatePicker.md
+docs/ContentDatePickerAvailableTime.md
 docs/ContentGeneric.md
 docs/ContentList.md
 docs/ContentLocation.md
@@ -50,13 +52,14 @@ docs/Direction.md
 docs/ErrorBody.md
 docs/ErrorMessage.md
 docs/EventCoBrowse.md
-docs/EventCoBrowseType.md
 docs/EventMessage.md
 docs/EventPresence.md
 docs/EventPresenceType.md
 docs/EventType.md
+docs/EventTypeEnum.md
 docs/EventTyping.md
 docs/EventTypingType.md
+docs/EventVideo.md
 docs/FileType.md
 docs/FileUploadMode.md
 docs/GenerateDownloadUrlRequest.md
@@ -88,6 +91,7 @@ docs/MessageEvent.md
 docs/MessagingRecipient.md
 docs/NormalizedType.md
 docs/NotificationTemplateBody.md
+docs/NotificationTemplateButton.md
 docs/NotificationTemplateFooter.md
 docs/NotificationTemplateHeader.md
 docs/NotificationTemplateParameter.md
@@ -117,6 +121,7 @@ docs/SessionResponse.md
 docs/Status.md
 docs/StoryType.md
 docs/StructuredMessage.md
+docs/TemplateButtonType.md
 docs/TextType.md
 docs/TooManyRequestsErrorMessage.md
 docs/UploadFailureEvent.md
@@ -139,6 +144,7 @@ props.properties
 src/main/java/cloud/genesys/webmessaging/sdk/ApiClient.java
 src/main/java/cloud/genesys/webmessaging/sdk/ApiDateFormat.java
 src/main/java/cloud/genesys/webmessaging/sdk/Configuration.java
+src/main/java/cloud/genesys/webmessaging/sdk/FileUtils.java
 src/main/java/cloud/genesys/webmessaging/sdk/GenesysCloudRegionWebSocketHosts.java
 src/main/java/cloud/genesys/webmessaging/sdk/LocalDateDeserializer.java
 src/main/java/cloud/genesys/webmessaging/sdk/Pair.java
@@ -181,6 +187,8 @@ src/main/java/cloud/genesys/webmessaging/sdk/model/ContentButtonResponse.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentCard.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentCardAction.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentCarousel.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/ContentDatePicker.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/ContentDatePickerAvailableTime.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentGeneric.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentList.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentLocation.java
@@ -198,13 +206,14 @@ src/main/java/cloud/genesys/webmessaging/sdk/model/Direction.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ErrorBody.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ErrorMessage.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/EventCoBrowse.java
-src/main/java/cloud/genesys/webmessaging/sdk/model/EventCoBrowseType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/EventMessage.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/EventPresence.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/EventPresenceType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/EventType.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/EventTypeEnum.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/EventTyping.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/EventTypingType.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/EventVideo.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/FileType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/FileUploadMode.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/GenerateDownloadUrlRequest.java
@@ -236,6 +245,7 @@ src/main/java/cloud/genesys/webmessaging/sdk/model/MessageEvent.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/MessagingRecipient.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/NormalizedType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/NotificationTemplateBody.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/NotificationTemplateButton.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/NotificationTemplateFooter.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/NotificationTemplateHeader.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/NotificationTemplateParameter.java
@@ -265,6 +275,7 @@ src/main/java/cloud/genesys/webmessaging/sdk/model/SessionResponse.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/Status.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/StoryType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/StructuredMessage.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/TemplateButtonType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/TextType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/TooManyRequestsErrorMessage.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/UploadFailureEvent.java

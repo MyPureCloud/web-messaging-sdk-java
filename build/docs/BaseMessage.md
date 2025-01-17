@@ -1,18 +1,17 @@
----
-title: BaseMessage
----
-## BaseMessage
+# BaseMessage
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **type** | <!----><!---->[**BaseMessageType**](BaseMessageType.html)<!----> |  |  |
-| **_class** | <!----><!---->[**MessageDataType**](MessageDataType.html)<!----> |  |  |
-| **code** | <!----><!---->**Integer**<!----> |  |  |
-| **body** | <!----><!---->**Object**<!----> |  |  |
-{: class="table table-striped"}
+| **type** | [**BaseMessageType**](BaseMessageType) |  |  |
+| **_class** | [**MessageDataType**](MessageDataType) |  |  |
+| **code** | **Integer** |  |  |
+| **body** | **Object** |  |  |
+| **tracingId** | **String** |  |  [optional] |
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

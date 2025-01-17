@@ -22,6 +22,7 @@ public class GetConfigurationRequest  implements Serializable {
   
   private RequestTypeGetConfiguration action = null;
   private String token = null;
+  private String tracingId = null;
   private String deploymentId = null;
 
   
@@ -61,6 +62,23 @@ public class GetConfigurationRequest  implements Serializable {
 
   /**
    **/
+  public GetConfigurationRequest tracingId(String tracingId) {
+    this.tracingId = tracingId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("tracingId")
+  public String getTracingId() {
+    return tracingId;
+  }
+  public void setTracingId(String tracingId) {
+    this.tracingId = tracingId;
+  }
+
+
+  /**
+   **/
   public GetConfigurationRequest deploymentId(String deploymentId) {
     this.deploymentId = deploymentId;
     return this;
@@ -87,12 +105,13 @@ public class GetConfigurationRequest  implements Serializable {
     GetConfigurationRequest getConfigurationRequest = (GetConfigurationRequest) o;
     return Objects.equals(this.action, getConfigurationRequest.action) &&
           Objects.equals(this.token, getConfigurationRequest.token) &&
+          Objects.equals(this.tracingId, getConfigurationRequest.tracingId) &&
           Objects.equals(this.deploymentId, getConfigurationRequest.deploymentId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(action, token, deploymentId);
+    return Objects.hash(action, token, tracingId, deploymentId);
   }
 
   @Override
@@ -102,6 +121,7 @@ public class GetConfigurationRequest  implements Serializable {
     
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
     sb.append("    token: ").append(toIndentedString(token)).append("\n");
+    sb.append("    tracingId: ").append(toIndentedString(tracingId)).append("\n");
     sb.append("    deploymentId: ").append(toIndentedString(deploymentId)).append("\n");
     sb.append("}");
     return sb.toString();

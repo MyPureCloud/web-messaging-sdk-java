@@ -1,7 +1,4 @@
----
-title: RequestTypeGenerateUploadUrl
----
-## RequestTypeGenerateUploadUrl
+# RequestTypeGenerateUploadUrl
 
 
 # RequestTypeGenerateUploadUrl
@@ -13,3 +10,5 @@ title: RequestTypeGenerateUploadUrl
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

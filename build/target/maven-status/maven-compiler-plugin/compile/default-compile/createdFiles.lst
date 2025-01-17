@@ -26,6 +26,7 @@ cloud/genesys/webmessaging/sdk/model/Detail.class
 cloud/genesys/webmessaging/sdk/model/ListType.class
 cloud/genesys/webmessaging/sdk/model/TextTypeDeserializer.class
 cloud/genesys/webmessaging/sdk/model/ConfigureSessionRequest.class
+cloud/genesys/webmessaging/sdk/model/NotificationTemplateButton.class
 cloud/genesys/webmessaging/sdk/model/MediaType.class
 cloud/genesys/webmessaging/sdk/model/FileUploadMode.class
 cloud/genesys/webmessaging/sdk/api/request/GetWebmessagingMessagesRequest$Builder.class
@@ -50,6 +51,7 @@ cloud/genesys/webmessaging/sdk/model/GenerateUrlError.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingAttachment$MediaTypeEnum.class
 cloud/genesys/webmessaging/sdk/connector/ApiClientConnectorProperties.class
 cloud/genesys/webmessaging/sdk/model/Limit$NamespaceEnum.class
+cloud/genesys/webmessaging/sdk/model/ContentDatePicker.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingEvent$EventTypeEnum.class
 cloud/genesys/webmessaging/sdk/LocalDateDeserializer.class
 cloud/genesys/webmessaging/sdk/model/RequestTypeConfigureAuthenticatedSession.class
@@ -66,7 +68,6 @@ cloud/genesys/webmessaging/sdk/model/RequestTypeGenerateDownloadUrl.class
 cloud/genesys/webmessaging/sdk/model/RequestTypeIncomingMessage.class
 cloud/genesys/webmessaging/sdk/model/UploadFailureEvent.class
 cloud/genesys/webmessaging/sdk/model/RequestTypeGenerateDownloadUrlDeserializer.class
-cloud/genesys/webmessaging/sdk/model/EventCoBrowseType.class
 cloud/genesys/webmessaging/sdk/model/OriginatingEntityDeserializer.class
 cloud/genesys/webmessaging/sdk/model/NotificationTemplateBody.class
 cloud/genesys/webmessaging/sdk/model/ErrorMessage.class
@@ -88,6 +89,8 @@ cloud/genesys/webmessaging/sdk/model/BaseMessageTypeDeserializer.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingEvent.class
 cloud/genesys/webmessaging/sdk/model/ContentButtonResponse.class
 cloud/genesys/webmessaging/sdk/model/JourneyAction.class
+cloud/genesys/webmessaging/sdk/model/EventVideo.class
+cloud/genesys/webmessaging/sdk/model/EventTypeEnumDeserializer.class
 cloud/genesys/webmessaging/sdk/model/AdditionalIDType.class
 cloud/genesys/webmessaging/sdk/model/ContentQuickReplyV2.class
 cloud/genesys/webmessaging/sdk/model/TooManyRequestsErrorMessage.class
@@ -112,11 +115,13 @@ cloud/genesys/webmessaging/sdk/connector/okhttp/OkHttpResponse.class
 cloud/genesys/webmessaging/sdk/model/ConnectionClosedEvent.class
 cloud/genesys/webmessaging/sdk/Pair.class
 cloud/genesys/webmessaging/sdk/model/ContentCardAction.class
+cloud/genesys/webmessaging/sdk/model/ContentDatePickerAvailableTime.class
 cloud/genesys/webmessaging/sdk/model/ReactionTypeDeserializer.class
 cloud/genesys/webmessaging/sdk/model/ContentActions.class
 cloud/genesys/webmessaging/sdk/api/WebMessagingApi$1.class
 cloud/genesys/webmessaging/sdk/model/ListItemComponent.class
 cloud/genesys/webmessaging/sdk/model/GetConfigurationRequest.class
+cloud/genesys/webmessaging/sdk/FileUtils.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingMessage$OriginatingEntityEnum.class
 cloud/genesys/webmessaging/sdk/model/EventTypeDeserializer.class
 cloud/genesys/webmessaging/sdk/model/JourneyActionMap.class
@@ -141,6 +146,7 @@ cloud/genesys/webmessaging/sdk/model/CleanMessageContent.class
 cloud/genesys/webmessaging/sdk/model/ContentTypeDeserializer.class
 cloud/genesys/webmessaging/sdk/connector/ApiClientConnectorRequest.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingEventCoBrowse$TypeEnum.class
+cloud/genesys/webmessaging/sdk/model/EventTypeEnum.class
 cloud/genesys/webmessaging/sdk/model/RequestTypeIncomingMessageDeserializer.class
 cloud/genesys/webmessaging/sdk/model/GetJwtRequest.class
 cloud/genesys/webmessaging/sdk/model/NotificationTemplateFooter.class
@@ -148,7 +154,6 @@ cloud/genesys/webmessaging/sdk/model/Limit.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingMessage$DirectionEnum.class
 cloud/genesys/webmessaging/sdk/connector/ApiClientConnectorResponse.class
 cloud/genesys/webmessaging/sdk/model/SessionClearedEvent.class
-cloud/genesys/webmessaging/sdk/model/EventCoBrowseTypeDeserializer.class
 cloud/genesys/webmessaging/sdk/model/ListTypeDeserializer.class
 cloud/genesys/webmessaging/sdk/model/IncomingNormalizedMessage.class
 cloud/genesys/webmessaging/sdk/JodaApiDateFormat.class
@@ -225,6 +230,7 @@ cloud/genesys/webmessaging/sdk/connector/apache/ApacheHttpClientConnector.class
 cloud/genesys/webmessaging/sdk/model/NormalizedType.class
 cloud/genesys/webmessaging/sdk/ApiClient$ApiRequestWrapper.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingAttachment$MediaTypeEnumDeserializer.class
+cloud/genesys/webmessaging/sdk/model/TemplateButtonTypeDeserializer.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingContent.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingButtonResponse$TypeEnum.class
 cloud/genesys/webmessaging/sdk/model/NormalizedTypeDeserializer.class
@@ -233,6 +239,7 @@ cloud/genesys/webmessaging/sdk/model/CloseSessionRequest.class
 cloud/genesys/webmessaging/sdk/model/ContentNotificationTemplate.class
 cloud/genesys/webmessaging/sdk/ApiClient$ApiResponseWrapper.class
 cloud/genesys/webmessaging/sdk/model/ContentType.class
+cloud/genesys/webmessaging/sdk/model/TemplateButtonType.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingChannel.class
 cloud/genesys/webmessaging/sdk/model/UploadSuccessEvent.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingEventCoBrowse$TypeEnumDeserializer.class

@@ -1,7 +1,4 @@
----
-title: IDType
----
-## IDType
+# IDType
 
 
 # IDType
@@ -15,5 +12,9 @@ title: IDType
 
 * `PHONE` (value: `"Phone"`)
 
+* `TOPIC` (value: `"Topic"`)
 
 
+
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

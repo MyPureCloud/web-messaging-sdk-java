@@ -1,20 +1,14 @@
----
-title: Limit
----
-## Limit
+# Limit
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **key** | <!----><!---->**String**<!----> |  |  [optional] |
-| **namespace** | [**NamespaceEnum**](#NamespaceEnum)<!----> |  |  [optional] |
-| **value** | <!----><!---->**Long**<!----> |  |  [optional] |
-{: class="table table-striped"}
+| **key** | **String** |  |  [optional] |
+| **namespace** | [**NamespaceEnum**](#Enum--NamespaceEnum) |  |  [optional] |
+| **value** | **Long** |  |  [optional] |
 
-
-<a name="NamespaceEnum"></a>
 
 ## Enum: NamespaceEnum
 
@@ -22,6 +16,7 @@ title: Limit
 | ---- | ----- |
 | OUTDATEDSDKVERSION | &quot;OutdatedSdkVersion&quot; | 
 | AGENT_ASSISTANT | &quot;agent.assistant&quot; | 
+| ANALYTICS_AGENTS | &quot;analytics.agents&quot; | 
 | ANALYTICS_ALERTING | &quot;analytics.alerting&quot; | 
 | ANALYTICS | &quot;analytics&quot; | 
 | ANALYTICS_REALTIME | &quot;analytics.realtime&quot; | 
@@ -34,6 +29,7 @@ title: Limit
 | AUTOMATION_TESTING | &quot;automation.testing&quot; | 
 | BOTS | &quot;bots&quot; | 
 | BOTS_VOICE | &quot;bots.voice&quot; | 
+| BUSINESS_RULES | &quot;business.rules&quot; | 
 | CALLBACK | &quot;callback&quot; | 
 | COBROWSE | &quot;cobrowse&quot; | 
 | CONTENT_MANAGEMENT | &quot;content.management&quot; | 
@@ -42,8 +38,10 @@ title: Limit
 | DATATABLES | &quot;datatables&quot; | 
 | DIRECTORY | &quot;directory&quot; | 
 | EMAIL | &quot;email&quot; | 
+| EMPLOYEE_ENGAGEMENT | &quot;employee.engagement&quot; | 
 | EVENT_ORCHESTRATION | &quot;event.orchestration&quot; | 
 | EXTERNAL_CONTACTS | &quot;external.contacts&quot; | 
+| GAMIFICATION | &quot;gamification&quot; | 
 | GCV | &quot;gcv&quot; | 
 | GDPR | &quot;gdpr&quot; | 
 | GROUPS | &quot;groups&quot; | 
@@ -51,6 +49,7 @@ title: Limit
 | INFRASTRUCTUREASCODE | &quot;infrastructureascode&quot; | 
 | INTEGRATIONS | &quot;integrations&quot; | 
 | INTENT_MINER | &quot;intent.miner&quot; | 
+| INTERNAL_MESSAGING | &quot;internal.messaging&quot; | 
 | JOURNEY | &quot;journey&quot; | 
 | KNOWLEDGE | &quot;knowledge&quot; | 
 | LANGUAGE_UNDERSTANDING | &quot;language.understanding&quot; | 
@@ -59,6 +58,7 @@ title: Limit
 | MARKETPLACE | &quot;marketplace&quot; | 
 | MEDIA_COMMUNICATIONS | &quot;media.communications&quot; | 
 | MESSAGING | &quot;messaging&quot; | 
+| MICRO_FRONTEND | &quot;micro.frontend&quot; | 
 | NOTIFICATIONS | &quot;notifications&quot; | 
 | ONBOARDING | &quot;onboarding&quot; | 
 | OUTBOUND | &quot;outbound&quot; | 
@@ -73,6 +73,7 @@ title: Limit
 | SEARCH | &quot;search&quot; | 
 | SECONDARY_AUTOMATION_TESTING | &quot;secondary.automation.testing&quot; | 
 | SKILLS | &quot;skills&quot; | 
+| SOCIAL_MEDIA | &quot;social.media&quot; | 
 | SPEECH_AND_TEXT_ANALYTICS | &quot;speech.and.text.analytics&quot; | 
 | SPEECH_INTEGRATION | &quot;speech.integration&quot; | 
 | SUPPORTABILITY | &quot;supportability&quot; | 
@@ -84,8 +85,11 @@ title: Limit
 | WEB_MESSAGING | &quot;web.messaging&quot; | 
 | WEBCHAT | &quot;webchat&quot; | 
 | WEBHOOKS | &quot;webhooks&quot; | 
+| WORKFORCE_MANAGEMENT_FORECAST | &quot;workforce.management.forecast&quot; | 
 | WORKFORCE_MANAGEMENT | &quot;workforce.management&quot; | 
-{: class="table table-striped"}
+| SYSTEM | &quot;system&quot; | 
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

@@ -1,18 +1,12 @@
----
-title: WebMessagingEventPresence
----
-## WebMessagingEventPresence
+# WebMessagingEventPresence
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **type** | [**TypeEnum**](#TypeEnum)<!----> | Describes the type of Presence event. |  |
-{: class="table table-striped"}
+| **type** | [**TypeEnum**](#Enum--TypeEnum) | Describes the type of Presence event. |  |
 
-
-<a name="TypeEnum"></a>
 
 ## Enum: TypeEnum
 
@@ -21,7 +15,10 @@ title: WebMessagingEventPresence
 | OUTDATEDSDKVERSION | &quot;OutdatedSdkVersion&quot; | 
 | JOIN | &quot;Join&quot; | 
 | DISCONNECT | &quot;Disconnect&quot; | 
-{: class="table table-striped"}
+| CLEAR | &quot;Clear&quot; | 
+| SIGNIN | &quot;SignIn&quot; | 
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

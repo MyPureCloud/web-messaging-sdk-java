@@ -1,7 +1,4 @@
----
-title: ListType
----
-## ListType
+# ListType
 
 
 # ListType
@@ -15,3 +12,5 @@ title: ListType
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

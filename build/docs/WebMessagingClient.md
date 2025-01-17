@@ -5,11 +5,13 @@ title: WebMessagingClient
 
 | Method | Description |
 | ------------- | ------------- |
-| [**hasPresenceEvents**](WebMessagingClient.html#hasPresenceEvents1) | Inspect a StructuredMessage, looking for Presence events ({@link EventType#PRESENCE} ) 
+| [**isMimeTypeAllowedInbound**](WebMessagingClient.html#isMimeTypeAllowedInbound1) | check if a provided mime type is among the allowed one in configuration for inbound content. 
  |
-| [**hasTypingEvents**](WebMessagingClient.html#hasTypingEvents1) | Inspect a StructuredMessage, looking for Typing events ({@link EventType#TYPING} ) 
+| [**hasPresenceEvents**](WebMessagingClient.html#hasPresenceEvents1) | Inspect a StructuredMessage, looking for Presence events ({@link EventTypeEnum#PRESENCE} ) 
  |
-| [**hasEvents**](WebMessagingClient.html#hasEvents1) | Inspect a StructuredMessage, looking for a type of event ({@link EventType} ) |
+| [**hasTypingEvents**](WebMessagingClient.html#hasTypingEvents1) | Inspect a StructuredMessage, looking for Typing events ({@link EventTypeEnum#TYPING} ) 
+ |
+| [**hasEvents**](WebMessagingClient.html#hasEvents1) | Inspect a StructuredMessage, looking for a type of event ({@link EventTypeEnum} ) |
 | [**WebMessagingClient**](WebMessagingClient.html#WebMessagingClient1) | Creates a new Web Messaging client |
 | [**WebMessagingClient**](WebMessagingClient.html#WebMessagingClient2) | Creates a new Web Messaging client |
 | [**joinConversation**](WebMessagingClient.html#joinConversation1) | Full service operation to connect the WebSocket and configure the session |
@@ -52,6 +54,7 @@ title: WebMessagingClient
 | [**sessionExpiredEvent**](WebMessagingClient.html#sessionExpiredEvent1) | Raised for responses to url requests (type == BaseResponseType.RESPONSE, class = SessionResponse) |
 | [**sessionClearedEvent**](WebMessagingClient.html#sessionClearedEvent1) | Raised for responses to url requests (type == BaseResponseType.RESPONSE, class = SessionResponse) |
 | [**jwtResponse**](WebMessagingClient.html#jwtResponse1) | Raised for responses to url requests (type == BaseResponseType.RESPONSE, class = SessionResponse) |
+| [**getConfigurationResponse**](WebMessagingClient.html#getConfigurationResponse1) | Raised for responses to url requests (type == BaseResponseType.RESPONSE, class = SessionResponse) |
 | [**unexpectedMessage**](WebMessagingClient.html#unexpectedMessage1) | Raised for unmatched BaseResponseType |
 | [**webSocketConnected**](WebMessagingClient.html#webSocketConnected1) | Raised when the connection to the remote server has been established |
 | [**webSocketDisconnected**](WebMessagingClient.html#webSocketDisconnected1) | Raised when the connection to the remote server has been closed |
@@ -59,6 +62,25 @@ title: WebMessagingClient
 {: class="table-striped"}
 
 <h1>Constructors</h1>
+
+<a name="isMimeTypeAllowedInbound1"></a>
+
+# **isMimeTypeAllowedInbound**
+
+
+
+> isMimeTypeAllowedInbound(mimeType)
+
+check if a provided mime type is among the allowed one in configuration for inbound content. 
+
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **mimeType** | **String**| undefined |
+{: class="table-striped"}
 
 <a name="hasPresenceEvents1"></a>
 
@@ -68,7 +90,7 @@ title: WebMessagingClient
 
 > hasPresenceEvents(message)
 
-Inspect a StructuredMessage, looking for Presence events ({@link EventType#PRESENCE} ) 
+Inspect a StructuredMessage, looking for Presence events ({@link EventTypeEnum#PRESENCE} ) 
 
 
 ### Parameters
@@ -79,15 +101,19 @@ Inspect a StructuredMessage, looking for Presence events ({@link EventType#PRESE
 | **message** | **StructuredMessage**| message to introspect for Presence events |
 {: class="table-striped"}
 
+
+
+<h1>Methods</h1>
+
 <a name="hasTypingEvents1"></a>
 
 # **hasTypingEvents**
 
 
 
-> hasTypingEvents(message)
+> static hasTypingEvents(message)
 
-Inspect a StructuredMessage, looking for Typing events ({@link EventType#TYPING} ) 
+Inspect a StructuredMessage, looking for Typing events ({@link EventTypeEnum#TYPING} ) 
 
 
 ### Parameters
@@ -99,8 +125,9 @@ Inspect a StructuredMessage, looking for Typing events ({@link EventType#TYPING}
 {: class="table-striped"}
 
 
+### Return type
 
-<h1>Methods</h1>
+**static**
 
 <a name="hasEvents1"></a>
 
@@ -110,14 +137,14 @@ Inspect a StructuredMessage, looking for Typing events ({@link EventType#TYPING}
 
 > static hasEvents(message, type)
 
-Inspect a StructuredMessage, looking for a type of event ({@link EventType} )
+Inspect a StructuredMessage, looking for a type of event ({@link EventTypeEnum} )
 
 ### Parameters
 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **message** | **EventType**| message to introspect for events |
+| **message** | **EventTypeEnum**| message to introspect for events |
 | **type** | **StructuredMessage**| type of event to look for |
 {: class="table-striped"}
 
@@ -217,7 +244,7 @@ Full service operation to connect the WebSocket and configure the session
 
 
 
-> void connect(deploymentId, origin, connectionTimeout, userAgent)
+> void connect(deploymentId, origin, connectionTimeout, applicationName)
 
 Establishes a connection to Genesys Cloud via a WebSocket
 
@@ -229,7 +256,7 @@ Establishes a connection to Genesys Cloud via a WebSocket
 | **deploymentId** | **Optional<String>**| deploymentId to connect to |
 | **origin** | **Optional<Integer>**| origin header to add |
 | **connectionTimeout** | **String**| connection timeout, in second, to use |
-| **userAgent** | **String**| user-agent string to be set in header connecting to the websocket. Optional, default of WebMessagingSdk-"version" will be used   |
+| **applicationName** | **String**| string to be set in query parameter when connecting to the websocket. Will be URL encoded. Optional, default of WebMessagingSdk-"version" will be used   |
 {: class="table-striped"}
 
 
@@ -934,6 +961,30 @@ Raised for responses to url requests (type == BaseResponseType.RESPONSE, class =
 | ------------- | ------------- | ------------- | ------------- |
 | **jwtResponse** | **String**| The deserialized event |
 | **rawMessage** | **JwtResponse**| The raw message payload JSON as a string   |
+{: class="table-striped"}
+
+
+### Return type
+
+**void**
+
+<a name="getConfigurationResponse1"></a>
+
+# **getConfigurationResponse**
+
+
+
+> void getConfigurationResponse(response, rawMessage)
+
+Raised for responses to url requests (type == BaseResponseType.RESPONSE, class = SessionResponse)
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **response** | **String**| The deserialized response |
+| **rawMessage** | **GetConfigurationResponse**| The raw message payload JSON as a string   |
 {: class="table-striped"}
 
 

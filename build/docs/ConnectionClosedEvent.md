@@ -1,14 +1,13 @@
----
-title: ConnectionClosedEvent
----
-## ConnectionClosedEvent
+# ConnectionClosedEvent
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-{: class="table table-striped"}
+| **reasonCode** | **String** |  |  [optional] |
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

@@ -1,7 +1,4 @@
----
-title: EventType
----
-## EventType
+# EventType
 
 
 # EventType
@@ -9,11 +6,15 @@ title: EventType
 ## Enum
 
 
-* `COBROWSE` (value: `"CoBrowse"`)
+* `OFFERING` (value: `"Offering"`)
 
-* `PRESENCE` (value: `"Presence"`)
+* `OFFERINGACCEPTED` (value: `"OfferingAccepted"`)
 
-* `TYPING` (value: `"Typing"`)
+* `OFFERINGEXPIRED` (value: `"OfferingExpired"`)
+
+* `OFFERINGREJECTED` (value: `"OfferingRejected"`)
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

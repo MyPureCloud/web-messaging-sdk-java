@@ -26,13 +26,14 @@ class EventTypeDeserializer extends StdDeserializer<EventType> {
   }
 }
 /**
- * Type of this event element
+ * Describes the type of CoBrowse event.  Describes the type of Video event.
  */
  @JsonDeserialize(using = EventTypeDeserializer.class)
 public enum EventType {
-  COBROWSE("CoBrowse"),
-  PRESENCE("Presence"),
-  TYPING("Typing");
+  OFFERING("Offering"),
+  OFFERINGACCEPTED("OfferingAccepted"),
+  OFFERINGEXPIRED("OfferingExpired"),
+  OFFERINGREJECTED("OfferingRejected");
 
   private String value;
 

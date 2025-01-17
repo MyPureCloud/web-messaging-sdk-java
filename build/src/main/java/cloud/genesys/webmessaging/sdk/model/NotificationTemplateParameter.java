@@ -12,6 +12,8 @@ import java.io.IOException;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.HashMap;
+import java.util.Map;
 
 import java.io.Serializable;
 /**
@@ -19,7 +21,7 @@ import java.io.Serializable;
  */
 @ApiModel(description = "Template parameters for placeholders in template.")
 
-public class NotificationTemplateParameter  implements Serializable {
+public class NotificationTemplateParameter extends HashMap<String, Object> implements Serializable {
   
   private String name = null;
   private String text = null;
@@ -71,19 +73,20 @@ public class NotificationTemplateParameter  implements Serializable {
     }
     NotificationTemplateParameter notificationTemplateParameter = (NotificationTemplateParameter) o;
     return Objects.equals(this.name, notificationTemplateParameter.name) &&
-          Objects.equals(this.text, notificationTemplateParameter.text);
+          Objects.equals(this.text, notificationTemplateParameter.text) &&
+          super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, text);
+    return Objects.hash(name, text, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NotificationTemplateParameter {\n");
-    
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    text: ").append(toIndentedString(text)).append("\n");
     sb.append("}");

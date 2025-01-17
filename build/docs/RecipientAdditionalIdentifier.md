@@ -1,19 +1,13 @@
----
-title: RecipientAdditionalIdentifier
----
-## RecipientAdditionalIdentifier
+# RecipientAdditionalIdentifier
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **type** | [**TypeEnum**](#TypeEnum)<!----> | Type of the Identifier |  |
-| **value** | <!----><!---->**String**<!----> | The Identifier value. |  |
-{: class="table table-striped"}
+| **type** | [**TypeEnum**](#Enum--TypeEnum) | Type of the Identifier |  |
+| **value** | **String** | The Identifier value. |  |
 
-
-<a name="TypeEnum"></a>
 
 ## Enum: TypeEnum
 
@@ -22,7 +16,11 @@ title: RecipientAdditionalIdentifier
 | OUTDATEDSDKVERSION | &quot;OutdatedSdkVersion&quot; | 
 | DEPLOYMENT | &quot;Deployment&quot; | 
 | SUBJECT | &quot;Subject&quot; | 
-{: class="table table-striped"}
+| TOPIC | &quot;Topic&quot; | 
+| INGESTIONRULE | &quot;IngestionRule&quot; | 
+| INGESTIONRULEVERSION | &quot;IngestionRuleVersion&quot; | 
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

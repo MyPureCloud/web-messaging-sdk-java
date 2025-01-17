@@ -1,16 +1,14 @@
----
-title: JourneyActionMap
----
-## JourneyActionMap
+# JourneyActionMap
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **id** | <!----><!---->**String**<!----> |  |  |
-| **version** | <!----><!---->**Integer**<!----> |  |  |
-{: class="table table-striped"}
+| **id** | **String** |  |  |
+| **version** | **Integer** |  |  |
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

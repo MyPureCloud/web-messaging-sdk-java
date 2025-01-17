@@ -13,6 +13,8 @@ import cloud.genesys.webmessaging.sdk.model.ButtonResponseType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.HashMap;
+import java.util.Map;
 
 import java.io.Serializable;
 /**
@@ -20,7 +22,7 @@ import java.io.Serializable;
  */
 @ApiModel(description = "Button response content.  Button response object representing the click of a structured message button, such as a quick reply.")
 
-public class ContentButtonResponse  implements Serializable {
+public class ContentButtonResponse extends HashMap<String, Object> implements Serializable {
   
   private String id = null;
   private String payload = null;
@@ -112,19 +114,20 @@ public class ContentButtonResponse  implements Serializable {
     return Objects.equals(this.id, contentButtonResponse.id) &&
           Objects.equals(this.payload, contentButtonResponse.payload) &&
           Objects.equals(this.text, contentButtonResponse.text) &&
-          Objects.equals(this.type, contentButtonResponse.type);
+          Objects.equals(this.type, contentButtonResponse.type) &&
+          super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, payload, text, type);
+    return Objects.hash(id, payload, text, type, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContentButtonResponse {\n");
-    
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    payload: ").append(toIndentedString(payload)).append("\n");
     sb.append("    text: ").append(toIndentedString(text)).append("\n");

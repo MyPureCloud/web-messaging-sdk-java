@@ -1,15 +1,13 @@
----
-title: ContentCarousel
----
-## ContentCarousel
+# ContentCarousel
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **cards** | <!----><!---->[**List&lt;ContentCard&gt;**](ContentCard.html)<!----> | An array of card objects. |  |
-{: class="table table-striped"}
+| **cards** | [**List&lt;ContentCard&gt;**](ContentCard) | An array of card objects. |  |
 
 
 
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_

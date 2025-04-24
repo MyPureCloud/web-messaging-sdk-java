@@ -1,14 +1,11 @@
-# DeleteAttachmentRequest
+# BaseResponse
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **action** | [**RequestTypeDeleteAttachment**](RequestTypeDeleteAttachment) |  |  |
-| **token** | **String** |  |  |
 | **tracingId** | **String** |  |  [optional] |
-| **attachmentId** | **String** |  |  |
 
 
 

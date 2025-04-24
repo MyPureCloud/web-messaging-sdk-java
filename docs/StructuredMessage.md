@@ -5,6 +5,7 @@
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
+| **tracingId** | **String** |  |  [optional] |
 | **text** | **String** |  |  [optional] |
 | **type** | [**NormalizedType**](NormalizedType) |  |  |
 | **direction** | [**Direction**](Direction) |  |  [optional] |
@@ -17,4 +18,4 @@
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:13.0.0_

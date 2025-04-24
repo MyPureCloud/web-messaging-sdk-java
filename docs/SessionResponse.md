@@ -5,6 +5,7 @@
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
+| **tracingId** | **String** |  |  [optional] |
 | **connected** | **Boolean** |  |  |
 | **newSession** | **Boolean** |  |  [optional] |
 | **readOnly** | **Boolean** |  |  [optional] |
@@ -14,8 +15,9 @@
 | **maxCustomDataBytes** | **Double** |  |  [optional] |
 | **durationSeconds** | **Double** |  |  [optional] |
 | **expirationDate** | **Double** |  |  [optional] |
+| **autoStarted** | **Boolean** |  |  [optional] |
 
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:13.0.0_

@@ -17,8 +17,9 @@
 | DISCONNECT | &quot;Disconnect&quot; | 
 | CLEAR | &quot;Clear&quot; | 
 | SIGNIN | &quot;SignIn&quot; | 
+| SESSIONEXPIRED | &quot;SessionExpired&quot; | 
 
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:13.0.0_

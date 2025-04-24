@@ -12,8 +12,6 @@ import java.io.IOException;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.HashMap;
-import java.util.Map;
 
 import java.io.Serializable;
 /**
@@ -21,7 +19,7 @@ import java.io.Serializable;
  */
 @ApiModel(description = "A datepicker available time that a user can take.")
 
-public class ContentDatePickerAvailableTime extends HashMap<String, Object> implements Serializable {
+public class ContentDatePickerAvailableTime  implements Serializable {
   
   private String dateTime = null;
   private Double duration = null;
@@ -73,20 +71,19 @@ public class ContentDatePickerAvailableTime extends HashMap<String, Object> impl
     }
     ContentDatePickerAvailableTime contentDatePickerAvailableTime = (ContentDatePickerAvailableTime) o;
     return Objects.equals(this.dateTime, contentDatePickerAvailableTime.dateTime) &&
-          Objects.equals(this.duration, contentDatePickerAvailableTime.duration) &&
-          super.equals(o);
+          Objects.equals(this.duration, contentDatePickerAvailableTime.duration);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(dateTime, duration, super.hashCode());
+    return Objects.hash(dateTime, duration);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContentDatePickerAvailableTime {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    
     sb.append("    dateTime: ").append(toIndentedString(dateTime)).append("\n");
     sb.append("    duration: ").append(toIndentedString(duration)).append("\n");
     sb.append("}");

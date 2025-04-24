@@ -25,6 +25,7 @@ public class ErrorMessage  implements Serializable {
   private String stack = null;
   private Integer errorCode = null;
   private String errorMessage = null;
+  private String tracingId = null;
 
   
   /**
@@ -112,6 +113,23 @@ public class ErrorMessage  implements Serializable {
   }
 
 
+  /**
+   **/
+  public ErrorMessage tracingId(String tracingId) {
+    this.tracingId = tracingId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("tracingId")
+  public String getTracingId() {
+    return tracingId;
+  }
+  public void setTracingId(String tracingId) {
+    this.tracingId = tracingId;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -125,12 +143,13 @@ public class ErrorMessage  implements Serializable {
           Objects.equals(this.message, errorMessage.message) &&
           Objects.equals(this.stack, errorMessage.stack) &&
           Objects.equals(this.errorCode, errorMessage.errorCode) &&
-          Objects.equals(this.errorMessage, errorMessage.errorMessage);
+          Objects.equals(this.errorMessage, errorMessage.errorMessage) &&
+          Objects.equals(this.tracingId, errorMessage.tracingId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, message, stack, errorCode, errorMessage);
+    return Objects.hash(name, message, stack, errorCode, errorMessage, tracingId);
   }
 
   @Override
@@ -143,6 +162,7 @@ public class ErrorMessage  implements Serializable {
     sb.append("    stack: ").append(toIndentedString(stack)).append("\n");
     sb.append("    errorCode: ").append(toIndentedString(errorCode)).append("\n");
     sb.append("    errorMessage: ").append(toIndentedString(errorMessage)).append("\n");
+    sb.append("    tracingId: ").append(toIndentedString(tracingId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

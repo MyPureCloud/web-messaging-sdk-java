@@ -20,9 +20,27 @@ import java.io.Serializable;
 
 public class ConnectionClosedEvent  implements Serializable {
   
+  private String tracingId = null;
   private String reasonCode = null;
 
   
+  /**
+   **/
+  public ConnectionClosedEvent tracingId(String tracingId) {
+    this.tracingId = tracingId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("tracingId")
+  public String getTracingId() {
+    return tracingId;
+  }
+  public void setTracingId(String tracingId) {
+    this.tracingId = tracingId;
+  }
+
+
   /**
    **/
   public ConnectionClosedEvent reasonCode(String reasonCode) {
@@ -49,12 +67,13 @@ public class ConnectionClosedEvent  implements Serializable {
       return false;
     }
     ConnectionClosedEvent connectionClosedEvent = (ConnectionClosedEvent) o;
-    return Objects.equals(this.reasonCode, connectionClosedEvent.reasonCode);
+    return Objects.equals(this.tracingId, connectionClosedEvent.tracingId) &&
+          Objects.equals(this.reasonCode, connectionClosedEvent.reasonCode);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(reasonCode);
+    return Objects.hash(tracingId, reasonCode);
   }
 
   @Override
@@ -62,6 +81,7 @@ public class ConnectionClosedEvent  implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectionClosedEvent {\n");
     
+    sb.append("    tracingId: ").append(toIndentedString(tracingId)).append("\n");
     sb.append("    reasonCode: ").append(toIndentedString(reasonCode)).append("\n");
     sb.append("}");
     return sb.toString();

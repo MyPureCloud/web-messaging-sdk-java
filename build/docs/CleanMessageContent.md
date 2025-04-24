@@ -11,6 +11,7 @@
 | **generic** | [**ContentGeneric**](ContentGeneric) |  |  [optional] |
 | **card** | [**ContentCard**](ContentCard) |  |  [optional] |
 | **carousel** | [**ContentCarousel**](ContentCarousel) |  |  [optional] |
+| **datePicker** | [**ContentDatePicker**](ContentDatePicker) |  |  [optional] |
 | **quickReply** | [**ContentQuickReply**](ContentQuickReply) |  |  [optional] |
 | **text** | [**ContentText**](ContentText) |  |  [optional] |
 | **quickReplyV2** | [**ContentQuickReplyV2**](ContentQuickReplyV2) |  |  [optional] |
@@ -18,4 +19,4 @@
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:13.0.0_

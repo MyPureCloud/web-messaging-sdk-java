@@ -20,11 +20,29 @@ import java.io.Serializable;
 
 public class UploadSuccessEvent  implements Serializable {
   
+  private String tracingId = null;
   private String attachmentId = null;
   private String downloadUrl = null;
   private String timestamp = null;
 
   
+  /**
+   **/
+  public UploadSuccessEvent tracingId(String tracingId) {
+    this.tracingId = tracingId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("tracingId")
+  public String getTracingId() {
+    return tracingId;
+  }
+  public void setTracingId(String tracingId) {
+    this.tracingId = tracingId;
+  }
+
+
   /**
    **/
   public UploadSuccessEvent attachmentId(String attachmentId) {
@@ -85,14 +103,15 @@ public class UploadSuccessEvent  implements Serializable {
       return false;
     }
     UploadSuccessEvent uploadSuccessEvent = (UploadSuccessEvent) o;
-    return Objects.equals(this.attachmentId, uploadSuccessEvent.attachmentId) &&
+    return Objects.equals(this.tracingId, uploadSuccessEvent.tracingId) &&
+          Objects.equals(this.attachmentId, uploadSuccessEvent.attachmentId) &&
           Objects.equals(this.downloadUrl, uploadSuccessEvent.downloadUrl) &&
           Objects.equals(this.timestamp, uploadSuccessEvent.timestamp);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(attachmentId, downloadUrl, timestamp);
+    return Objects.hash(tracingId, attachmentId, downloadUrl, timestamp);
   }
 
   @Override
@@ -100,6 +119,7 @@ public class UploadSuccessEvent  implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class UploadSuccessEvent {\n");
     
+    sb.append("    tracingId: ").append(toIndentedString(tracingId)).append("\n");
     sb.append("    attachmentId: ").append(toIndentedString(attachmentId)).append("\n");
     sb.append("    downloadUrl: ").append(toIndentedString(downloadUrl)).append("\n");
     sb.append("    timestamp: ").append(toIndentedString(timestamp)).append("\n");

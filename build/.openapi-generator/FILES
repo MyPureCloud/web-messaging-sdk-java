@@ -12,6 +12,7 @@ docs/BaseMessageType.md
 docs/BaseMessagingChannel.md
 docs/BaseMessagingContent.md
 docs/BaseMessagingRecipient.md
+docs/BaseResponse.md
 docs/ButtonComponent.md
 docs/ButtonResponseType.md
 docs/CardActionType.md
@@ -99,6 +100,7 @@ docs/OAuthParams.md
 docs/OriginatingEntity.md
 docs/PresignedUrlResponse.md
 docs/ReactionType.md
+docs/Reason.md
 docs/RecipientAdditionalIdentifier.md
 docs/RequestType.md
 docs/RequestTypeCloseSession.md
@@ -166,6 +168,7 @@ src/main/java/cloud/genesys/webmessaging/sdk/model/BaseMessageType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/BaseMessagingChannel.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/BaseMessagingContent.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/BaseMessagingRecipient.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/BaseResponse.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ButtonComponent.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ButtonResponseType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/CardActionType.java
@@ -253,6 +256,7 @@ src/main/java/cloud/genesys/webmessaging/sdk/model/OAuthParams.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/OriginatingEntity.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/PresignedUrlResponse.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ReactionType.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/Reason.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/RecipientAdditionalIdentifier.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/RequestType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/RequestTypeCloseSession.java

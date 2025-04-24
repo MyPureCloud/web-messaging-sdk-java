@@ -5,6 +5,9 @@ title: WebMessagingClient
 
 | Method | Description |
 | ------------- | ------------- |
+| [**getWebSocket**](WebMessagingClient.html#getWebSocket1) | Returns the current WebSocket connection instance. |
+| [**getDefaultAppName**](WebMessagingClient.html#getDefaultAppName1) | get the default app name, mainly read from property file
+ |
 | [**isMimeTypeAllowedInbound**](WebMessagingClient.html#isMimeTypeAllowedInbound1) | check if a provided mime type is among the allowed one in configuration for inbound content. 
  |
 | [**hasPresenceEvents**](WebMessagingClient.html#hasPresenceEvents1) | Inspect a StructuredMessage, looking for Presence events ({@link EventTypeEnum#PRESENCE} ) 
@@ -28,13 +31,17 @@ title: WebMessagingClient
 | [**sendMessage**](WebMessagingClient.html#sendMessage1) | Sends a message to the conversation |
 | [**sendMessage**](WebMessagingClient.html#sendMessage2) | Sends a message to the conversation with customAttributes |
 | [**sendPresenceEvent**](WebMessagingClient.html#sendPresenceEvent1) | send a Presence event by specifying the subtype |
-| [**sendPresenceEvent**](WebMessagingClient.html#sendPresenceEvent2) | send an event of type Presence join for backward compatibility |
+| [**sendPresenceEvent**](WebMessagingClient.html#sendPresenceEvent2) | send a Presence event by specifying the subtype |
+| [**sendPresenceEvent**](WebMessagingClient.html#sendPresenceEvent3) | send an event of type Presence join for backward compatibility |
 | [**sendPresenceEventJoin**](WebMessagingClient.html#sendPresenceEventJoin1) | send an event of type Presence join |
 | [**sendPresenceEventEndUserClear**](WebMessagingClient.html#sendPresenceEventEndUserClear1) | send an event of type Presence clear |
 | [**sendTypingEvent**](WebMessagingClient.html#sendTypingEvent1) | send an event of type Typing on |
 | [**attachment**](WebMessagingClient.html#attachment1) | send a request to generate an upload url for an attachment |
+| [**attachment**](WebMessagingClient.html#attachment2) | send a request to generate an upload url for an attachment and trace the request using the provided tracingId |
 | [**getAttachment**](WebMessagingClient.html#getAttachment1) | send a request to generate a download url for an attachment |
-| [**deleteAttachment**](WebMessagingClient.html#deleteAttachment1) | delete an attachment. Must not have been sent |
+| [**getAttachment**](WebMessagingClient.html#getAttachment2) | send a request to generate a download url for an attachment and trace the request using the provided tracingId |
+| [**deleteAttachment**](WebMessagingClient.html#deleteAttachment1) | delete an attachment. Must not have been sent and trace the request using the provided tracingId |
+| [**deleteAttachment**](WebMessagingClient.html#deleteAttachment2) | delete an attachment. Must not have been sent |
 | [**deserialize**](WebMessagingClient.html#deserialize1) | Deserializes a message payload |
 | [**onSessionEvent**](WebMessagingClient.html#onSessionEvent1) | Invokes appropriate handler for incoming WebSocket messages |
 | [**onWebSocketConnected**](WebMessagingClient.html#onWebSocketConnected1) | Invokes registered listeners when the connection to the remote server has been established |
@@ -63,13 +70,34 @@ title: WebMessagingClient
 
 <h1>Constructors</h1>
 
+<a name="getWebSocket1"></a>
+
+# **getWebSocket**
+
+
+
+> getWebSocket()
+
+Returns the current WebSocket connection instance.<a name="getDefaultAppName1"></a>
+
+# **getDefaultAppName**
+
+
+
+> getDefaultAppName()
+
+get the default app name, mainly read from property file
+
+
+<h1>Methods</h1>
+
 <a name="isMimeTypeAllowedInbound1"></a>
 
 # **isMimeTypeAllowedInbound**
 
 
 
-> isMimeTypeAllowedInbound(mimeType)
+> boolean isMimeTypeAllowedInbound(mimeType)
 
 check if a provided mime type is among the allowed one in configuration for inbound content. 
 
@@ -82,13 +110,18 @@ check if a provided mime type is among the allowed one in configuration for inbo
 | **mimeType** | **String**| undefined |
 {: class="table-striped"}
 
+
+### Return type
+
+**boolean**
+
 <a name="hasPresenceEvents1"></a>
 
 # **hasPresenceEvents**
 
 
 
-> hasPresenceEvents(message)
+> static hasPresenceEvents(message)
 
 Inspect a StructuredMessage, looking for Presence events ({@link EventTypeEnum#PRESENCE} ) 
 
@@ -102,8 +135,9 @@ Inspect a StructuredMessage, looking for Presence events ({@link EventTypeEnum#P
 {: class="table-striped"}
 
 
+### Return type
 
-<h1>Methods</h1>
+**static**
 
 <a name="hasTypingEvents1"></a>
 
@@ -380,8 +414,8 @@ Configures an authenticated session using the provided session token. This can b
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **deploymentId** | **OAuthParams**| The ID of the Web Messaging deployment |
-| **token** | **String**| The session token |
+| **deploymentId** | ****| The ID of the Web Messaging deployment |
+| **token** | **OAuthParams**| The session token |
 | **origin** | **String**| Represents the origin of the request. You can restrict access in Messenger Deployments |
 | **data** | **String**| The session OAuthParams for configuring Authenticated Session   |
 {: class="table-striped"}
@@ -457,8 +491,8 @@ Sends a message to the conversation with customAttributes
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **message** | **String...**| The text to send |
-| **customAttributes** | **String>**| Key Value Pair that allows custom data to be sent with a message |
-| **attachmentIds** | **Map<String**| The Id of the attachments being sent with the message   |
+| **customAttributes** | **String**| Key Value Pair that allows custom data to be sent with a message |
+| **attachmentIds** | **String>**| The Id of the attachments being sent with the message   |
 {: class="table-striped"}
 
 
@@ -480,6 +514,19 @@ send a Presence event by specifying the subtype
 **void**
 
 <a name="sendPresenceEvent2"></a>
+
+# **sendPresenceEvent**
+
+
+
+> void sendPresenceEvent()
+
+send a Presence event by specifying the subtype
+### Return type
+
+**void**
+
+<a name="sendPresenceEvent3"></a>
 
 # **sendPresenceEvent**
 
@@ -544,6 +591,19 @@ send a request to generate an upload url for an attachment
 
 **void**
 
+<a name="attachment2"></a>
+
+# **attachment**
+
+
+
+> void attachment()
+
+send a request to generate an upload url for an attachment and trace the request using the provided tracingId
+### Return type
+
+**void**
+
 <a name="getAttachment1"></a>
 
 # **getAttachment**
@@ -557,7 +617,33 @@ send a request to generate a download url for an attachment
 
 **void**
 
+<a name="getAttachment2"></a>
+
+# **getAttachment**
+
+
+
+> void getAttachment()
+
+send a request to generate a download url for an attachment and trace the request using the provided tracingId
+### Return type
+
+**void**
+
 <a name="deleteAttachment1"></a>
+
+# **deleteAttachment**
+
+
+
+> void deleteAttachment()
+
+delete an attachment. Must not have been sent and trace the request using the provided tracingId
+### Return type
+
+**void**
+
+<a name="deleteAttachment2"></a>
 
 # **deleteAttachment**
 

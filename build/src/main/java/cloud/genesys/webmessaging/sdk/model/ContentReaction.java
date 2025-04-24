@@ -13,8 +13,6 @@ import cloud.genesys.webmessaging.sdk.model.ReactionType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.HashMap;
-import java.util.Map;
 
 import java.io.Serializable;
 /**
@@ -22,7 +20,7 @@ import java.io.Serializable;
  */
 @ApiModel(description = "User reaction to public message.")
 
-public class ContentReaction extends HashMap<String, Object> implements Serializable {
+public class ContentReaction  implements Serializable {
   
   private Double count = null;
   private ReactionType reactionType = null;
@@ -74,20 +72,19 @@ public class ContentReaction extends HashMap<String, Object> implements Serializ
     }
     ContentReaction contentReaction = (ContentReaction) o;
     return Objects.equals(this.count, contentReaction.count) &&
-          Objects.equals(this.reactionType, contentReaction.reactionType) &&
-          super.equals(o);
+          Objects.equals(this.reactionType, contentReaction.reactionType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(count, reactionType, super.hashCode());
+    return Objects.hash(count, reactionType);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContentReaction {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    
     sb.append("    count: ").append(toIndentedString(count)).append("\n");
     sb.append("    reactionType: ").append(toIndentedString(reactionType)).append("\n");
     sb.append("}");

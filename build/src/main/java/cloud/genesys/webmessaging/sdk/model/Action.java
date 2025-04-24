@@ -9,7 +9,6 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
-import io.swagger.annotations.ApiModel;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 import java.io.Serializable;
@@ -26,7 +25,7 @@ class ActionDeserializer extends StdDeserializer<Action> {
   }
 }
 /**
- * Specifies the type of action that is triggered upon clicking the quick reply.
+ * Gets or Sets Action
  */
  @JsonDeserialize(using = ActionDeserializer.class)
 public enum Action {

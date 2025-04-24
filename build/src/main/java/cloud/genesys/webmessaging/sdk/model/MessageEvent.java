@@ -19,9 +19,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import java.io.Serializable;
 /**
@@ -29,7 +27,7 @@ import java.io.Serializable;
  */
 @ApiModel(description = "Message event element.  Examples include: system messages, typing indicators, cobrowse offerings.")
 
-public class MessageEvent extends HashMap<String, Object> implements Serializable {
+public class MessageEvent  implements Serializable {
   
   private EventCoBrowse coBrowse = null;
   private EventTypeEnum eventType = null;
@@ -160,20 +158,19 @@ public class MessageEvent extends HashMap<String, Object> implements Serializabl
           Objects.equals(this.presence, messageEvent.presence) &&
           Objects.equals(this.reactions, messageEvent.reactions) &&
           Objects.equals(this.typing, messageEvent.typing) &&
-          Objects.equals(this.video, messageEvent.video) &&
-          super.equals(o);
+          Objects.equals(this.video, messageEvent.video);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(coBrowse, eventType, presence, reactions, typing, video, super.hashCode());
+    return Objects.hash(coBrowse, eventType, presence, reactions, typing, video);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class MessageEvent {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    
     sb.append("    coBrowse: ").append(toIndentedString(coBrowse)).append("\n");
     sb.append("    eventType: ").append(toIndentedString(eventType)).append("\n");
     sb.append("    presence: ").append(toIndentedString(presence)).append("\n");

@@ -14,8 +14,6 @@ import cloud.genesys.webmessaging.sdk.model.ListItemType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.HashMap;
-import java.util.Map;
 
 import java.io.Serializable;
 /**
@@ -23,7 +21,7 @@ import java.io.Serializable;
  */
 @ApiModel(description = "An entry in a List template.")
 
-public class ListItemComponent extends HashMap<String, Object> implements Serializable {
+public class ListItemComponent  implements Serializable {
   
   private ContentActions actions = null;
   private String description = null;
@@ -175,20 +173,19 @@ public class ListItemComponent extends HashMap<String, Object> implements Serial
           Objects.equals(this.image, listItemComponent.image) &&
           Objects.equals(this.rmid, listItemComponent.rmid) &&
           Objects.equals(this.title, listItemComponent.title) &&
-          Objects.equals(this.type, listItemComponent.type) &&
-          super.equals(o);
+          Objects.equals(this.type, listItemComponent.type);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(actions, description, id, image, rmid, title, type, super.hashCode());
+    return Objects.hash(actions, description, id, image, rmid, title, type);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ListItemComponent {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    
     sb.append("    actions: ").append(toIndentedString(actions)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");

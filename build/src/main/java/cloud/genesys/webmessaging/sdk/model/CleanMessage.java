@@ -30,6 +30,7 @@ import java.io.Serializable;
 
 public class CleanMessage  implements Serializable {
   
+  private String tracingId = null;
   private String text = null;
   private NormalizedType type = null;
   private Direction direction = null;
@@ -41,6 +42,23 @@ public class CleanMessage  implements Serializable {
   private OriginatingEntity originatingEntity = null;
 
   
+  /**
+   **/
+  public CleanMessage tracingId(String tracingId) {
+    this.tracingId = tracingId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("tracingId")
+  public String getTracingId() {
+    return tracingId;
+  }
+  public void setTracingId(String tracingId) {
+    this.tracingId = tracingId;
+  }
+
+
   /**
    **/
   public CleanMessage text(String text) {
@@ -203,7 +221,8 @@ public class CleanMessage  implements Serializable {
       return false;
     }
     CleanMessage cleanMessage = (CleanMessage) o;
-    return Objects.equals(this.text, cleanMessage.text) &&
+    return Objects.equals(this.tracingId, cleanMessage.tracingId) &&
+          Objects.equals(this.text, cleanMessage.text) &&
           Objects.equals(this.type, cleanMessage.type) &&
           Objects.equals(this.direction, cleanMessage.direction) &&
           Objects.equals(this.id, cleanMessage.id) &&
@@ -216,7 +235,7 @@ public class CleanMessage  implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(text, type, direction, id, channel, content, metadata, events, originatingEntity);
+    return Objects.hash(tracingId, text, type, direction, id, channel, content, metadata, events, originatingEntity);
   }
 
   @Override
@@ -224,6 +243,7 @@ public class CleanMessage  implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class CleanMessage {\n");
     
+    sb.append("    tracingId: ").append(toIndentedString(tracingId)).append("\n");
     sb.append("    text: ").append(toIndentedString(text)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    direction: ").append(toIndentedString(direction)).append("\n");

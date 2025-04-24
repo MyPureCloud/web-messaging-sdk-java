@@ -25,6 +25,7 @@ public class TooManyRequestsErrorMessage  implements Serializable {
   private String stack = null;
   private Integer errorCode = null;
   private String errorMessage = null;
+  private String tracingId = null;
   private Integer retryAfter = null;
 
   
@@ -115,6 +116,23 @@ public class TooManyRequestsErrorMessage  implements Serializable {
 
   /**
    **/
+  public TooManyRequestsErrorMessage tracingId(String tracingId) {
+    this.tracingId = tracingId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("tracingId")
+  public String getTracingId() {
+    return tracingId;
+  }
+  public void setTracingId(String tracingId) {
+    this.tracingId = tracingId;
+  }
+
+
+  /**
+   **/
   public TooManyRequestsErrorMessage retryAfter(Integer retryAfter) {
     this.retryAfter = retryAfter;
     return this;
@@ -144,12 +162,13 @@ public class TooManyRequestsErrorMessage  implements Serializable {
           Objects.equals(this.stack, tooManyRequestsErrorMessage.stack) &&
           Objects.equals(this.errorCode, tooManyRequestsErrorMessage.errorCode) &&
           Objects.equals(this.errorMessage, tooManyRequestsErrorMessage.errorMessage) &&
+          Objects.equals(this.tracingId, tooManyRequestsErrorMessage.tracingId) &&
           Objects.equals(this.retryAfter, tooManyRequestsErrorMessage.retryAfter);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, message, stack, errorCode, errorMessage, retryAfter);
+    return Objects.hash(name, message, stack, errorCode, errorMessage, tracingId, retryAfter);
   }
 
   @Override
@@ -162,6 +181,7 @@ public class TooManyRequestsErrorMessage  implements Serializable {
     sb.append("    stack: ").append(toIndentedString(stack)).append("\n");
     sb.append("    errorCode: ").append(toIndentedString(errorCode)).append("\n");
     sb.append("    errorMessage: ").append(toIndentedString(errorMessage)).append("\n");
+    sb.append("    tracingId: ").append(toIndentedString(tracingId)).append("\n");
     sb.append("    retryAfter: ").append(toIndentedString(retryAfter)).append("\n");
     sb.append("}");
     return sb.toString();

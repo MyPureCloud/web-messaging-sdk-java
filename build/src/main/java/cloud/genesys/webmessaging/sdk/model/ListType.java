@@ -9,7 +9,6 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
-import io.swagger.annotations.ApiModel;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 import java.io.Serializable;
@@ -26,7 +25,7 @@ class ListTypeDeserializer extends StdDeserializer<ListType> {
   }
 }
 /**
- * The type of list this instance represents.
+ * Gets or Sets ListType
  */
  @JsonDeserialize(using = ListTypeDeserializer.class)
 public enum ListType {

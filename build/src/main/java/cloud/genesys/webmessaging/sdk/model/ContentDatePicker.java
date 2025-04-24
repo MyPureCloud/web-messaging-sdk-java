@@ -14,9 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import java.io.Serializable;
 /**
@@ -24,11 +22,11 @@ import java.io.Serializable;
  */
 @ApiModel(description = "DatePicker content.  DatePicker content object.")
 
-public class ContentDatePicker extends HashMap<String, Object> implements Serializable {
+public class ContentDatePicker  implements Serializable {
   
   private List<ContentDatePickerAvailableTime> availableTimes = new ArrayList<ContentDatePickerAvailableTime>();
-  private Object dateMaximum = null;
-  private Object dateMinimum = null;
+  private String dateMaximum = null;
+  private String dateMinimum = null;
   private String imageUrl = null;
   private String subtitle = null;
   private String title = null;
@@ -55,17 +53,17 @@ public class ContentDatePicker extends HashMap<String, Object> implements Serial
   /**
    * The maximum Date Enabled in the datepicker calendar
    **/
-  public ContentDatePicker dateMaximum(Object dateMaximum) {
+  public ContentDatePicker dateMaximum(String dateMaximum) {
     this.dateMaximum = dateMaximum;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "The maximum Date Enabled in the datepicker calendar")
   @JsonProperty("dateMaximum")
-  public Object getDateMaximum() {
+  public String getDateMaximum() {
     return dateMaximum;
   }
-  public void setDateMaximum(Object dateMaximum) {
+  public void setDateMaximum(String dateMaximum) {
     this.dateMaximum = dateMaximum;
   }
 
@@ -73,17 +71,17 @@ public class ContentDatePicker extends HashMap<String, Object> implements Serial
   /**
    * The minimum Date Enabled in the datepicker calendar
    **/
-  public ContentDatePicker dateMinimum(Object dateMinimum) {
+  public ContentDatePicker dateMinimum(String dateMinimum) {
     this.dateMinimum = dateMinimum;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "The minimum Date Enabled in the datepicker calendar")
   @JsonProperty("dateMinimum")
-  public Object getDateMinimum() {
+  public String getDateMinimum() {
     return dateMinimum;
   }
-  public void setDateMinimum(Object dateMinimum) {
+  public void setDateMinimum(String dateMinimum) {
     this.dateMinimum = dateMinimum;
   }
 
@@ -156,20 +154,19 @@ public class ContentDatePicker extends HashMap<String, Object> implements Serial
           Objects.equals(this.dateMinimum, contentDatePicker.dateMinimum) &&
           Objects.equals(this.imageUrl, contentDatePicker.imageUrl) &&
           Objects.equals(this.subtitle, contentDatePicker.subtitle) &&
-          Objects.equals(this.title, contentDatePicker.title) &&
-          super.equals(o);
+          Objects.equals(this.title, contentDatePicker.title);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(availableTimes, dateMaximum, dateMinimum, imageUrl, subtitle, title, super.hashCode());
+    return Objects.hash(availableTimes, dateMaximum, dateMinimum, imageUrl, subtitle, title);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContentDatePicker {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    
     sb.append("    availableTimes: ").append(toIndentedString(availableTimes)).append("\n");
     sb.append("    dateMaximum: ").append(toIndentedString(dateMaximum)).append("\n");
     sb.append("    dateMinimum: ").append(toIndentedString(dateMinimum)).append("\n");

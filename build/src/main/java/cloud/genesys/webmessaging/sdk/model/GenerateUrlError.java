@@ -25,6 +25,7 @@ public class GenerateUrlError  implements Serializable {
   private String stack = null;
   private Integer errorCode = null;
   private String errorMessage = null;
+  private String tracingId = null;
   private String attachmentId = null;
   private String timestamp = null;
 
@@ -116,6 +117,23 @@ public class GenerateUrlError  implements Serializable {
 
   /**
    **/
+  public GenerateUrlError tracingId(String tracingId) {
+    this.tracingId = tracingId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("tracingId")
+  public String getTracingId() {
+    return tracingId;
+  }
+  public void setTracingId(String tracingId) {
+    this.tracingId = tracingId;
+  }
+
+
+  /**
+   **/
   public GenerateUrlError attachmentId(String attachmentId) {
     this.attachmentId = attachmentId;
     return this;
@@ -162,13 +180,14 @@ public class GenerateUrlError  implements Serializable {
           Objects.equals(this.stack, generateUrlError.stack) &&
           Objects.equals(this.errorCode, generateUrlError.errorCode) &&
           Objects.equals(this.errorMessage, generateUrlError.errorMessage) &&
+          Objects.equals(this.tracingId, generateUrlError.tracingId) &&
           Objects.equals(this.attachmentId, generateUrlError.attachmentId) &&
           Objects.equals(this.timestamp, generateUrlError.timestamp);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, message, stack, errorCode, errorMessage, attachmentId, timestamp);
+    return Objects.hash(name, message, stack, errorCode, errorMessage, tracingId, attachmentId, timestamp);
   }
 
   @Override
@@ -181,6 +200,7 @@ public class GenerateUrlError  implements Serializable {
     sb.append("    stack: ").append(toIndentedString(stack)).append("\n");
     sb.append("    errorCode: ").append(toIndentedString(errorCode)).append("\n");
     sb.append("    errorMessage: ").append(toIndentedString(errorMessage)).append("\n");
+    sb.append("    tracingId: ").append(toIndentedString(tracingId)).append("\n");
     sb.append("    attachmentId: ").append(toIndentedString(attachmentId)).append("\n");
     sb.append("    timestamp: ").append(toIndentedString(timestamp)).append("\n");
     sb.append("}");

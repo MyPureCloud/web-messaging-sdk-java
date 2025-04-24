@@ -37,10 +37,12 @@
 | DATAACTIONS | &quot;dataactions&quot; | 
 | DATATABLES | &quot;datatables&quot; | 
 | DIRECTORY | &quot;directory&quot; | 
+| DSAR | &quot;dsar&quot; | 
 | EMAIL | &quot;email&quot; | 
 | EMPLOYEE_ENGAGEMENT | &quot;employee.engagement&quot; | 
 | EVENT_ORCHESTRATION | &quot;event.orchestration&quot; | 
 | EXTERNAL_CONTACTS | &quot;external.contacts&quot; | 
+| EXTERNAL_EVENTS_DATA_INGESTION | &quot;external.events.data.ingestion&quot; | 
 | GAMIFICATION | &quot;gamification&quot; | 
 | GCV | &quot;gcv&quot; | 
 | GDPR | &quot;gdpr&quot; | 
@@ -92,4 +94,4 @@
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:12.0.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:13.0.0_

@@ -20,10 +20,28 @@ import java.io.Serializable;
 
 public class JwtResponse  implements Serializable {
   
+  private String tracingId = null;
   private String jwt = null;
   private Double exp = null;
 
   
+  /**
+   **/
+  public JwtResponse tracingId(String tracingId) {
+    this.tracingId = tracingId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("tracingId")
+  public String getTracingId() {
+    return tracingId;
+  }
+  public void setTracingId(String tracingId) {
+    this.tracingId = tracingId;
+  }
+
+
   /**
    **/
   public JwtResponse jwt(String jwt) {
@@ -67,13 +85,14 @@ public class JwtResponse  implements Serializable {
       return false;
     }
     JwtResponse jwtResponse = (JwtResponse) o;
-    return Objects.equals(this.jwt, jwtResponse.jwt) &&
+    return Objects.equals(this.tracingId, jwtResponse.tracingId) &&
+          Objects.equals(this.jwt, jwtResponse.jwt) &&
           Objects.equals(this.exp, jwtResponse.exp);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(jwt, exp);
+    return Objects.hash(tracingId, jwt, exp);
   }
 
   @Override
@@ -81,6 +100,7 @@ public class JwtResponse  implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class JwtResponse {\n");
     
+    sb.append("    tracingId: ").append(toIndentedString(tracingId)).append("\n");
     sb.append("    jwt: ").append(toIndentedString(jwt)).append("\n");
     sb.append("    exp: ").append(toIndentedString(exp)).append("\n");
     sb.append("}");

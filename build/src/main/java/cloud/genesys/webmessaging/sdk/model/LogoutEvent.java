@@ -9,6 +9,9 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 import java.io.Serializable;
 /**
@@ -17,8 +20,26 @@ import java.io.Serializable;
 
 public class LogoutEvent  implements Serializable {
   
+  private String tracingId = null;
 
   
+  /**
+   **/
+  public LogoutEvent tracingId(String tracingId) {
+    this.tracingId = tracingId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("tracingId")
+  public String getTracingId() {
+    return tracingId;
+  }
+  public void setTracingId(String tracingId) {
+    this.tracingId = tracingId;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -27,12 +48,13 @@ public class LogoutEvent  implements Serializable {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    LogoutEvent logoutEvent = (LogoutEvent) o;
+    return Objects.equals(this.tracingId, logoutEvent.tracingId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(tracingId);
   }
 
   @Override
@@ -40,6 +62,7 @@ public class LogoutEvent  implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class LogoutEvent {\n");
     
+    sb.append("    tracingId: ").append(toIndentedString(tracingId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

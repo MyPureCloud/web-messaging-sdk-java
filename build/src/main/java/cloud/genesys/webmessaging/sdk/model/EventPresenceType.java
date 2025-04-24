@@ -33,6 +33,7 @@ public enum EventPresenceType {
   CLEAR("Clear"),
   DISCONNECT("Disconnect"),
   JOIN("Join"),
+  SESSIONEXPIRED("SessionExpired"),
   SIGNIN("SignIn");
 
   private String value;

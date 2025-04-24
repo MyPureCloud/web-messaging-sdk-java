@@ -13,7 +13,9 @@ cloud/genesys/webmessaging/sdk/ApiRequestBuilder$2.class
 cloud/genesys/webmessaging/sdk/model/JwtResponse.class
 cloud/genesys/webmessaging/sdk/model/BaseMessagingContent.class
 cloud/genesys/webmessaging/sdk/model/RequestTypeConfigureAuthenticatedSessionDeserializer.class
+cloud/genesys/webmessaging/sdk/model/Reason$CodeEnum.class
 cloud/genesys/webmessaging/sdk/model/EventMessage.class
+cloud/genesys/webmessaging/sdk/model/BaseResponse.class
 cloud/genesys/webmessaging/sdk/model/ContentAttachment.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingMessage$DirectionEnumDeserializer.class
 cloud/genesys/webmessaging/sdk/model/FileType.class
@@ -88,6 +90,7 @@ cloud/genesys/webmessaging/sdk/connector/apache/ApacheHttpClientConnectorProvide
 cloud/genesys/webmessaging/sdk/model/BaseMessageTypeDeserializer.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingEvent.class
 cloud/genesys/webmessaging/sdk/model/ContentButtonResponse.class
+cloud/genesys/webmessaging/sdk/model/WebMessagingMessage$StatusEnum.class
 cloud/genesys/webmessaging/sdk/model/JourneyAction.class
 cloud/genesys/webmessaging/sdk/model/EventVideo.class
 cloud/genesys/webmessaging/sdk/model/EventTypeEnumDeserializer.class
@@ -121,6 +124,7 @@ cloud/genesys/webmessaging/sdk/model/ContentActions.class
 cloud/genesys/webmessaging/sdk/api/WebMessagingApi$1.class
 cloud/genesys/webmessaging/sdk/model/ListItemComponent.class
 cloud/genesys/webmessaging/sdk/model/GetConfigurationRequest.class
+cloud/genesys/webmessaging/sdk/model/WebMessagingMessage$StatusEnumDeserializer.class
 cloud/genesys/webmessaging/sdk/FileUtils.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingMessage$OriginatingEntityEnum.class
 cloud/genesys/webmessaging/sdk/model/EventTypeDeserializer.class
@@ -167,6 +171,7 @@ cloud/genesys/webmessaging/sdk/connector/apache/ApacheHttpResponse.class
 cloud/genesys/webmessaging/sdk/LocalDateSerializer.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingButtonResponse$TypeEnumDeserializer.class
 cloud/genesys/webmessaging/sdk/model/IDTypeDeserializer.class
+cloud/genesys/webmessaging/sdk/model/Reason.class
 cloud/genesys/webmessaging/sdk/ApiRequest.class
 cloud/genesys/webmessaging/sdk/model/AllowedMedia.class
 cloud/genesys/webmessaging/sdk/connector/okhttp/OkHttpClientConnector.class
@@ -215,6 +220,7 @@ cloud/genesys/webmessaging/sdk/model/ContentStory.class
 cloud/genesys/webmessaging/sdk/model/ContentLocation.class
 cloud/genesys/webmessaging/sdk/model/OriginatingEntity.class
 cloud/genesys/webmessaging/sdk/model/BaseContentAttachment.class
+cloud/genesys/webmessaging/sdk/model/Reason$CodeEnumDeserializer.class
 cloud/genesys/webmessaging/sdk/model/BaseMessage.class
 cloud/genesys/webmessaging/sdk/model/Limit$NamespaceEnumDeserializer.class
 cloud/genesys/webmessaging/sdk/model/MessageEvent.class

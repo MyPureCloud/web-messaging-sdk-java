@@ -20,9 +20,27 @@ import java.io.Serializable;
 
 public class AttachmentDeletedResponse  implements Serializable {
   
+  private String tracingId = null;
   private String attachmentId = null;
 
   
+  /**
+   **/
+  public AttachmentDeletedResponse tracingId(String tracingId) {
+    this.tracingId = tracingId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("tracingId")
+  public String getTracingId() {
+    return tracingId;
+  }
+  public void setTracingId(String tracingId) {
+    this.tracingId = tracingId;
+  }
+
+
   /**
    **/
   public AttachmentDeletedResponse attachmentId(String attachmentId) {
@@ -49,12 +67,13 @@ public class AttachmentDeletedResponse  implements Serializable {
       return false;
     }
     AttachmentDeletedResponse attachmentDeletedResponse = (AttachmentDeletedResponse) o;
-    return Objects.equals(this.attachmentId, attachmentDeletedResponse.attachmentId);
+    return Objects.equals(this.tracingId, attachmentDeletedResponse.tracingId) &&
+          Objects.equals(this.attachmentId, attachmentDeletedResponse.attachmentId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(attachmentId);
+    return Objects.hash(tracingId, attachmentId);
   }
 
   @Override
@@ -62,6 +81,7 @@ public class AttachmentDeletedResponse  implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class AttachmentDeletedResponse {\n");
     
+    sb.append("    tracingId: ").append(toIndentedString(tracingId)).append("\n");
     sb.append("    attachmentId: ").append(toIndentedString(attachmentId)).append("\n");
     sb.append("}");
     return sb.toString();

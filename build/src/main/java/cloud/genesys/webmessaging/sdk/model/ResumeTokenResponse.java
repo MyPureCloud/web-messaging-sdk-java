@@ -20,10 +20,28 @@ import java.io.Serializable;
 
 public class ResumeTokenResponse  implements Serializable {
   
+  private String tracingId = null;
   private String resumeToken = null;
   private Double exp = null;
 
   
+  /**
+   **/
+  public ResumeTokenResponse tracingId(String tracingId) {
+    this.tracingId = tracingId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("tracingId")
+  public String getTracingId() {
+    return tracingId;
+  }
+  public void setTracingId(String tracingId) {
+    this.tracingId = tracingId;
+  }
+
+
   /**
    **/
   public ResumeTokenResponse resumeToken(String resumeToken) {
@@ -67,13 +85,14 @@ public class ResumeTokenResponse  implements Serializable {
       return false;
     }
     ResumeTokenResponse resumeTokenResponse = (ResumeTokenResponse) o;
-    return Objects.equals(this.resumeToken, resumeTokenResponse.resumeToken) &&
+    return Objects.equals(this.tracingId, resumeTokenResponse.tracingId) &&
+          Objects.equals(this.resumeToken, resumeTokenResponse.resumeToken) &&
           Objects.equals(this.exp, resumeTokenResponse.exp);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(resumeToken, exp);
+    return Objects.hash(tracingId, resumeToken, exp);
   }
 
   @Override
@@ -81,6 +100,7 @@ public class ResumeTokenResponse  implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class ResumeTokenResponse {\n");
     
+    sb.append("    tracingId: ").append(toIndentedString(tracingId)).append("\n");
     sb.append("    resumeToken: ").append(toIndentedString(resumeToken)).append("\n");
     sb.append("    exp: ").append(toIndentedString(exp)).append("\n");
     sb.append("}");

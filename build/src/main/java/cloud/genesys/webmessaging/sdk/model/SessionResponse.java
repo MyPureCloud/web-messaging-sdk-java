@@ -23,6 +23,7 @@ import java.io.Serializable;
 
 public class SessionResponse  implements Serializable {
   
+  private String tracingId = null;
   private Boolean connected = null;
   private Boolean newSession = null;
   private Boolean readOnly = null;
@@ -32,8 +33,26 @@ public class SessionResponse  implements Serializable {
   private Double maxCustomDataBytes = null;
   private Double durationSeconds = null;
   private Double expirationDate = null;
+  private Boolean autoStarted = null;
 
   
+  /**
+   **/
+  public SessionResponse tracingId(String tracingId) {
+    this.tracingId = tracingId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("tracingId")
+  public String getTracingId() {
+    return tracingId;
+  }
+  public void setTracingId(String tracingId) {
+    this.tracingId = tracingId;
+  }
+
+
   /**
    **/
   public SessionResponse connected(Boolean connected) {
@@ -187,6 +206,23 @@ public class SessionResponse  implements Serializable {
   }
 
 
+  /**
+   **/
+  public SessionResponse autoStarted(Boolean autoStarted) {
+    this.autoStarted = autoStarted;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("autoStarted")
+  public Boolean getAutoStarted() {
+    return autoStarted;
+  }
+  public void setAutoStarted(Boolean autoStarted) {
+    this.autoStarted = autoStarted;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -196,7 +232,8 @@ public class SessionResponse  implements Serializable {
       return false;
     }
     SessionResponse sessionResponse = (SessionResponse) o;
-    return Objects.equals(this.connected, sessionResponse.connected) &&
+    return Objects.equals(this.tracingId, sessionResponse.tracingId) &&
+          Objects.equals(this.connected, sessionResponse.connected) &&
           Objects.equals(this.newSession, sessionResponse.newSession) &&
           Objects.equals(this.readOnly, sessionResponse.readOnly) &&
           Objects.equals(this.clearedExistingSession, sessionResponse.clearedExistingSession) &&
@@ -204,12 +241,13 @@ public class SessionResponse  implements Serializable {
           Objects.equals(this.blockedExtensions, sessionResponse.blockedExtensions) &&
           Objects.equals(this.maxCustomDataBytes, sessionResponse.maxCustomDataBytes) &&
           Objects.equals(this.durationSeconds, sessionResponse.durationSeconds) &&
-          Objects.equals(this.expirationDate, sessionResponse.expirationDate);
+          Objects.equals(this.expirationDate, sessionResponse.expirationDate) &&
+          Objects.equals(this.autoStarted, sessionResponse.autoStarted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(connected, newSession, readOnly, clearedExistingSession, allowedMedia, blockedExtensions, maxCustomDataBytes, durationSeconds, expirationDate);
+    return Objects.hash(tracingId, connected, newSession, readOnly, clearedExistingSession, allowedMedia, blockedExtensions, maxCustomDataBytes, durationSeconds, expirationDate, autoStarted);
   }
 
   @Override
@@ -217,6 +255,7 @@ public class SessionResponse  implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class SessionResponse {\n");
     
+    sb.append("    tracingId: ").append(toIndentedString(tracingId)).append("\n");
     sb.append("    connected: ").append(toIndentedString(connected)).append("\n");
     sb.append("    newSession: ").append(toIndentedString(newSession)).append("\n");
     sb.append("    readOnly: ").append(toIndentedString(readOnly)).append("\n");
@@ -226,6 +265,7 @@ public class SessionResponse  implements Serializable {
     sb.append("    maxCustomDataBytes: ").append(toIndentedString(maxCustomDataBytes)).append("\n");
     sb.append("    durationSeconds: ").append(toIndentedString(durationSeconds)).append("\n");
     sb.append("    expirationDate: ").append(toIndentedString(expirationDate)).append("\n");
+    sb.append("    autoStarted: ").append(toIndentedString(autoStarted)).append("\n");
     sb.append("}");
     return sb.toString();
   }

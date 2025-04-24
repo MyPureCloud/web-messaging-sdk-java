@@ -23,6 +23,7 @@ import java.io.Serializable;
 
 public class GetConfigurationResponse  implements Serializable {
   
+  private String tracingId = null;
   private AllowedMedia allowedMedia = null;
   private List<String> blockedExtensions = new ArrayList<String>();
   private Double maxCustomDataBytes = null;
@@ -30,6 +31,23 @@ public class GetConfigurationResponse  implements Serializable {
   private Double sessionDurationSeconds = null;
 
   
+  /**
+   **/
+  public GetConfigurationResponse tracingId(String tracingId) {
+    this.tracingId = tracingId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("tracingId")
+  public String getTracingId() {
+    return tracingId;
+  }
+  public void setTracingId(String tracingId) {
+    this.tracingId = tracingId;
+  }
+
+
   /**
    **/
   public GetConfigurationResponse allowedMedia(AllowedMedia allowedMedia) {
@@ -124,7 +142,8 @@ public class GetConfigurationResponse  implements Serializable {
       return false;
     }
     GetConfigurationResponse getConfigurationResponse = (GetConfigurationResponse) o;
-    return Objects.equals(this.allowedMedia, getConfigurationResponse.allowedMedia) &&
+    return Objects.equals(this.tracingId, getConfigurationResponse.tracingId) &&
+          Objects.equals(this.allowedMedia, getConfigurationResponse.allowedMedia) &&
           Objects.equals(this.blockedExtensions, getConfigurationResponse.blockedExtensions) &&
           Objects.equals(this.maxCustomDataBytes, getConfigurationResponse.maxCustomDataBytes) &&
           Objects.equals(this.messageRoutingEnabled, getConfigurationResponse.messageRoutingEnabled) &&
@@ -133,7 +152,7 @@ public class GetConfigurationResponse  implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(allowedMedia, blockedExtensions, maxCustomDataBytes, messageRoutingEnabled, sessionDurationSeconds);
+    return Objects.hash(tracingId, allowedMedia, blockedExtensions, maxCustomDataBytes, messageRoutingEnabled, sessionDurationSeconds);
   }
 
   @Override
@@ -141,6 +160,7 @@ public class GetConfigurationResponse  implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class GetConfigurationResponse {\n");
     
+    sb.append("    tracingId: ").append(toIndentedString(tracingId)).append("\n");
     sb.append("    allowedMedia: ").append(toIndentedString(allowedMedia)).append("\n");
     sb.append("    blockedExtensions: ").append(toIndentedString(blockedExtensions)).append("\n");
     sb.append("    maxCustomDataBytes: ").append(toIndentedString(maxCustomDataBytes)).append("\n");

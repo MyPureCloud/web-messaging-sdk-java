@@ -12,6 +12,7 @@
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/EventMessage.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/ConfigureSessionRequest.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/connector/ApiClientConnectorProperty.java
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/Reason.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/connector/apache/ApacheHttpClientConnectorProvider.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/ContentQuickReply.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/NormalizedType.java
@@ -55,6 +56,7 @@
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/CardActionType.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/CleanChannelMetadata.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/NotificationTemplateBody.java
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/BaseResponse.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/Limit.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/GenerateUrlError.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/JodaApiDateFormat.java

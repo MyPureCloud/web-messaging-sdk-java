@@ -17,9 +17,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import java.io.Serializable;
 /**
@@ -27,7 +25,7 @@ import java.io.Serializable;
  */
 @ApiModel(description = "Template notification content.  Template notification object.")
 
-public class ContentNotificationTemplate extends HashMap<String, Object> implements Serializable {
+public class ContentNotificationTemplate  implements Serializable {
   
   private NotificationTemplateBody body = null;
   private List<NotificationTemplateButton> buttons = new ArrayList<NotificationTemplateButton>();
@@ -159,20 +157,19 @@ public class ContentNotificationTemplate extends HashMap<String, Object> impleme
           Objects.equals(this.footer, contentNotificationTemplate.footer) &&
           Objects.equals(this.header, contentNotificationTemplate.header) &&
           Objects.equals(this.id, contentNotificationTemplate.id) &&
-          Objects.equals(this.language, contentNotificationTemplate.language) &&
-          super.equals(o);
+          Objects.equals(this.language, contentNotificationTemplate.language);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(body, buttons, footer, header, id, language, super.hashCode());
+    return Objects.hash(body, buttons, footer, header, id, language);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContentNotificationTemplate {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    
     sb.append("    body: ").append(toIndentedString(body)).append("\n");
     sb.append("    buttons: ").append(toIndentedString(buttons)).append("\n");
     sb.append("    footer: ").append(toIndentedString(footer)).append("\n");

@@ -15,9 +15,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import java.io.Serializable;
 /**
@@ -25,7 +23,7 @@ import java.io.Serializable;
  */
 @ApiModel(description = "Information about the recipient the message is received from.  Information about the recipient the message is sent to or received from.  Information about the recipient the message is sent to.  Mention content.")
 
-public class MessagingRecipient extends HashMap<String, Object> implements Serializable {
+public class MessagingRecipient  implements Serializable {
   
   private List<RecipientAdditionalIdentifier> additionalIds = new ArrayList<RecipientAdditionalIdentifier>();
   private String email = null;
@@ -217,20 +215,19 @@ public class MessagingRecipient extends HashMap<String, Object> implements Seria
           Objects.equals(this.idType, messagingRecipient.idType) &&
           Objects.equals(this.image, messagingRecipient.image) &&
           Objects.equals(this.lastName, messagingRecipient.lastName) &&
-          Objects.equals(this.nickname, messagingRecipient.nickname) &&
-          super.equals(o);
+          Objects.equals(this.nickname, messagingRecipient.nickname);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(additionalIds, email, externalContactId, firstName, id, idType, image, lastName, nickname, super.hashCode());
+    return Objects.hash(additionalIds, email, externalContactId, firstName, id, idType, image, lastName, nickname);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class MessagingRecipient {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    
     sb.append("    additionalIds: ").append(toIndentedString(additionalIds)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    externalContactId: ").append(toIndentedString(externalContactId)).append("\n");

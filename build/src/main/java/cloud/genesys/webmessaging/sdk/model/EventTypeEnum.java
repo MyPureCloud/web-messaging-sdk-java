@@ -9,7 +9,6 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
-import io.swagger.annotations.ApiModel;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 import java.io.Serializable;
@@ -26,7 +25,7 @@ class EventTypeEnumDeserializer extends StdDeserializer<EventTypeEnum> {
   }
 }
 /**
- * Type of this event element
+ * Gets or Sets EventTypeEnum
  */
  @JsonDeserialize(using = EventTypeEnumDeserializer.class)
 public enum EventTypeEnum {

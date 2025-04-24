@@ -13,8 +13,6 @@ import cloud.genesys.webmessaging.sdk.model.EventType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.HashMap;
-import java.util.Map;
 
 import java.io.Serializable;
 /**
@@ -22,7 +20,7 @@ import java.io.Serializable;
  */
 @ApiModel(description = "Video event.  A Video event.")
 
-public class EventVideo extends HashMap<String, Object> implements Serializable {
+public class EventVideo  implements Serializable {
   
   private String jwt = null;
   private String offeringId = null;
@@ -94,20 +92,19 @@ public class EventVideo extends HashMap<String, Object> implements Serializable 
     EventVideo eventVideo = (EventVideo) o;
     return Objects.equals(this.jwt, eventVideo.jwt) &&
           Objects.equals(this.offeringId, eventVideo.offeringId) &&
-          Objects.equals(this.type, eventVideo.type) &&
-          super.equals(o);
+          Objects.equals(this.type, eventVideo.type);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(jwt, offeringId, type, super.hashCode());
+    return Objects.hash(jwt, offeringId, type);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EventVideo {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    
     sb.append("    jwt: ").append(toIndentedString(jwt)).append("\n");
     sb.append("    offeringId: ").append(toIndentedString(offeringId)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");

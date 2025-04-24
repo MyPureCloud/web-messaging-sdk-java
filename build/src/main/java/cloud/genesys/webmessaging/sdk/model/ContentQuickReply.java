@@ -13,8 +13,6 @@ import cloud.genesys.webmessaging.sdk.model.Action;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.HashMap;
-import java.util.Map;
 
 import java.io.Serializable;
 /**
@@ -22,7 +20,7 @@ import java.io.Serializable;
  */
 @ApiModel(description = "Quick reply content.  Quick reply object.")
 
-public class ContentQuickReply extends HashMap<String, Object> implements Serializable {
+public class ContentQuickReply  implements Serializable {
   
   private Action action = null;
   private String id = null;
@@ -134,20 +132,19 @@ public class ContentQuickReply extends HashMap<String, Object> implements Serial
           Objects.equals(this.id, contentQuickReply.id) &&
           Objects.equals(this.image, contentQuickReply.image) &&
           Objects.equals(this.payload, contentQuickReply.payload) &&
-          Objects.equals(this.text, contentQuickReply.text) &&
-          super.equals(o);
+          Objects.equals(this.text, contentQuickReply.text);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(action, id, image, payload, text, super.hashCode());
+    return Objects.hash(action, id, image, payload, text);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContentQuickReply {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    image: ").append(toIndentedString(image)).append("\n");

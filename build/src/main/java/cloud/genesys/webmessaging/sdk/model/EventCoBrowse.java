@@ -13,8 +13,6 @@ import cloud.genesys.webmessaging.sdk.model.EventType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.HashMap;
-import java.util.Map;
 
 import java.io.Serializable;
 /**
@@ -22,7 +20,7 @@ import java.io.Serializable;
  */
 @ApiModel(description = "CoBrowse event.  A CoBrowse event.")
 
-public class EventCoBrowse extends HashMap<String, Object> implements Serializable {
+public class EventCoBrowse  implements Serializable {
   
   private String sessionId = null;
   private String sessionJoinToken = null;
@@ -94,20 +92,19 @@ public class EventCoBrowse extends HashMap<String, Object> implements Serializab
     EventCoBrowse eventCoBrowse = (EventCoBrowse) o;
     return Objects.equals(this.sessionId, eventCoBrowse.sessionId) &&
           Objects.equals(this.sessionJoinToken, eventCoBrowse.sessionJoinToken) &&
-          Objects.equals(this.type, eventCoBrowse.type) &&
-          super.equals(o);
+          Objects.equals(this.type, eventCoBrowse.type);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sessionId, sessionJoinToken, type, super.hashCode());
+    return Objects.hash(sessionId, sessionJoinToken, type);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EventCoBrowse {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    
     sb.append("    sessionId: ").append(toIndentedString(sessionId)).append("\n");
     sb.append("    sessionJoinToken: ").append(toIndentedString(sessionJoinToken)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");

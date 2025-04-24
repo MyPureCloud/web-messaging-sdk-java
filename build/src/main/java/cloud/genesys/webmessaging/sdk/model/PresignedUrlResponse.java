@@ -23,6 +23,7 @@ import java.io.Serializable;
 
 public class PresignedUrlResponse  implements Serializable {
   
+  private String tracingId = null;
   private String attachmentId = null;
   private Map<String, String> headers = null;
   private String url = null;
@@ -31,6 +32,23 @@ public class PresignedUrlResponse  implements Serializable {
   private String fileType = null;
 
   
+  /**
+   **/
+  public PresignedUrlResponse tracingId(String tracingId) {
+    this.tracingId = tracingId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("tracingId")
+  public String getTracingId() {
+    return tracingId;
+  }
+  public void setTracingId(String tracingId) {
+    this.tracingId = tracingId;
+  }
+
+
   /**
    **/
   public PresignedUrlResponse attachmentId(String attachmentId) {
@@ -142,7 +160,8 @@ public class PresignedUrlResponse  implements Serializable {
       return false;
     }
     PresignedUrlResponse presignedUrlResponse = (PresignedUrlResponse) o;
-    return Objects.equals(this.attachmentId, presignedUrlResponse.attachmentId) &&
+    return Objects.equals(this.tracingId, presignedUrlResponse.tracingId) &&
+          Objects.equals(this.attachmentId, presignedUrlResponse.attachmentId) &&
           Objects.equals(this.headers, presignedUrlResponse.headers) &&
           Objects.equals(this.url, presignedUrlResponse.url) &&
           Objects.equals(this.fileName, presignedUrlResponse.fileName) &&
@@ -152,7 +171,7 @@ public class PresignedUrlResponse  implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(attachmentId, headers, url, fileName, fileSize, fileType);
+    return Objects.hash(tracingId, attachmentId, headers, url, fileName, fileSize, fileType);
   }
 
   @Override
@@ -160,6 +179,7 @@ public class PresignedUrlResponse  implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class PresignedUrlResponse {\n");
     
+    sb.append("    tracingId: ").append(toIndentedString(tracingId)).append("\n");
     sb.append("    attachmentId: ").append(toIndentedString(attachmentId)).append("\n");
     sb.append("    headers: ").append(toIndentedString(headers)).append("\n");
     sb.append("    url: ").append(toIndentedString(url)).append("\n");

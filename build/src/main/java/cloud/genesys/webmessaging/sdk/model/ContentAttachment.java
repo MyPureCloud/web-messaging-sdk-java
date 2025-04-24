@@ -13,8 +13,6 @@ import cloud.genesys.webmessaging.sdk.model.MediaType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.HashMap;
-import java.util.Map;
 
 import java.io.Serializable;
 /**
@@ -22,7 +20,7 @@ import java.io.Serializable;
  */
 @ApiModel(description = "Attachment content.  Media template header image.  Attachment object.")
 
-public class ContentAttachment extends HashMap<String, Object> implements Serializable {
+public class ContentAttachment  implements Serializable {
   
   private Double contentSizeBytes = null;
   private String filename = null;
@@ -194,20 +192,19 @@ public class ContentAttachment extends HashMap<String, Object> implements Serial
           Objects.equals(this.mime, contentAttachment.mime) &&
           Objects.equals(this.sha256, contentAttachment.sha256) &&
           Objects.equals(this.text, contentAttachment.text) &&
-          Objects.equals(this.url, contentAttachment.url) &&
-          super.equals(o);
+          Objects.equals(this.url, contentAttachment.url);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(contentSizeBytes, filename, id, mediaType, mime, sha256, text, url, super.hashCode());
+    return Objects.hash(contentSizeBytes, filename, id, mediaType, mime, sha256, text, url);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContentAttachment {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    
     sb.append("    contentSizeBytes: ").append(toIndentedString(contentSizeBytes)).append("\n");
     sb.append("    filename: ").append(toIndentedString(filename)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");

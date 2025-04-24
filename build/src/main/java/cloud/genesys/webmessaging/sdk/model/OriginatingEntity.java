@@ -9,7 +9,6 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
-import io.swagger.annotations.ApiModel;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 import java.io.Serializable;
@@ -26,7 +25,7 @@ class OriginatingEntityDeserializer extends StdDeserializer<OriginatingEntity> {
   }
 }
 /**
- * Specifies if this message was sent by a human agent or bot. The platform may use this to apply appropriate provider policies.
+ * Gets or Sets OriginatingEntity
  */
  @JsonDeserialize(using = OriginatingEntityDeserializer.class)
 public enum OriginatingEntity {

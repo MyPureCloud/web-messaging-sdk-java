@@ -13,6 +13,7 @@ import cloud.genesys.webmessaging.sdk.model.CleanContentAttachment;
 import cloud.genesys.webmessaging.sdk.model.ContentButtonResponse;
 import cloud.genesys.webmessaging.sdk.model.ContentCard;
 import cloud.genesys.webmessaging.sdk.model.ContentCarousel;
+import cloud.genesys.webmessaging.sdk.model.ContentDatePicker;
 import cloud.genesys.webmessaging.sdk.model.ContentGeneric;
 import cloud.genesys.webmessaging.sdk.model.ContentQuickReply;
 import cloud.genesys.webmessaging.sdk.model.ContentQuickReplyV2;
@@ -35,6 +36,7 @@ public class CleanMessageContent  implements Serializable {
   private ContentGeneric generic = null;
   private ContentCard card = null;
   private ContentCarousel carousel = null;
+  private ContentDatePicker datePicker = null;
   private ContentQuickReply quickReply = null;
   private ContentText text = null;
   private ContentQuickReplyV2 quickReplyV2 = null;
@@ -144,6 +146,23 @@ public class CleanMessageContent  implements Serializable {
 
   /**
    **/
+  public CleanMessageContent datePicker(ContentDatePicker datePicker) {
+    this.datePicker = datePicker;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("datePicker")
+  public ContentDatePicker getDatePicker() {
+    return datePicker;
+  }
+  public void setDatePicker(ContentDatePicker datePicker) {
+    this.datePicker = datePicker;
+  }
+
+
+  /**
+   **/
   public CleanMessageContent quickReply(ContentQuickReply quickReply) {
     this.quickReply = quickReply;
     return this;
@@ -208,6 +227,7 @@ public class CleanMessageContent  implements Serializable {
           Objects.equals(this.generic, cleanMessageContent.generic) &&
           Objects.equals(this.card, cleanMessageContent.card) &&
           Objects.equals(this.carousel, cleanMessageContent.carousel) &&
+          Objects.equals(this.datePicker, cleanMessageContent.datePicker) &&
           Objects.equals(this.quickReply, cleanMessageContent.quickReply) &&
           Objects.equals(this.text, cleanMessageContent.text) &&
           Objects.equals(this.quickReplyV2, cleanMessageContent.quickReplyV2);
@@ -215,7 +235,7 @@ public class CleanMessageContent  implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(attachment, contentType, buttonResponse, generic, card, carousel, quickReply, text, quickReplyV2);
+    return Objects.hash(attachment, contentType, buttonResponse, generic, card, carousel, datePicker, quickReply, text, quickReplyV2);
   }
 
   @Override
@@ -229,6 +249,7 @@ public class CleanMessageContent  implements Serializable {
     sb.append("    generic: ").append(toIndentedString(generic)).append("\n");
     sb.append("    card: ").append(toIndentedString(card)).append("\n");
     sb.append("    carousel: ").append(toIndentedString(carousel)).append("\n");
+    sb.append("    datePicker: ").append(toIndentedString(datePicker)).append("\n");
     sb.append("    quickReply: ").append(toIndentedString(quickReply)).append("\n");
     sb.append("    text: ").append(toIndentedString(text)).append("\n");
     sb.append("    quickReplyV2: ").append(toIndentedString(quickReplyV2)).append("\n");

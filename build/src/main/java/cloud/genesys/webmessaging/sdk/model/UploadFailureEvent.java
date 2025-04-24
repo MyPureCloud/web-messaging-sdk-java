@@ -20,12 +20,30 @@ import java.io.Serializable;
 
 public class UploadFailureEvent  implements Serializable {
   
+  private String tracingId = null;
   private String attachmentId = null;
   private Integer errorCode = null;
   private String errorMessage = null;
   private String timestamp = null;
 
   
+  /**
+   **/
+  public UploadFailureEvent tracingId(String tracingId) {
+    this.tracingId = tracingId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("tracingId")
+  public String getTracingId() {
+    return tracingId;
+  }
+  public void setTracingId(String tracingId) {
+    this.tracingId = tracingId;
+  }
+
+
   /**
    **/
   public UploadFailureEvent attachmentId(String attachmentId) {
@@ -103,7 +121,8 @@ public class UploadFailureEvent  implements Serializable {
       return false;
     }
     UploadFailureEvent uploadFailureEvent = (UploadFailureEvent) o;
-    return Objects.equals(this.attachmentId, uploadFailureEvent.attachmentId) &&
+    return Objects.equals(this.tracingId, uploadFailureEvent.tracingId) &&
+          Objects.equals(this.attachmentId, uploadFailureEvent.attachmentId) &&
           Objects.equals(this.errorCode, uploadFailureEvent.errorCode) &&
           Objects.equals(this.errorMessage, uploadFailureEvent.errorMessage) &&
           Objects.equals(this.timestamp, uploadFailureEvent.timestamp);
@@ -111,7 +130,7 @@ public class UploadFailureEvent  implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(attachmentId, errorCode, errorMessage, timestamp);
+    return Objects.hash(tracingId, attachmentId, errorCode, errorMessage, timestamp);
   }
 
   @Override
@@ -119,6 +138,7 @@ public class UploadFailureEvent  implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class UploadFailureEvent {\n");
     
+    sb.append("    tracingId: ").append(toIndentedString(tracingId)).append("\n");
     sb.append("    attachmentId: ").append(toIndentedString(attachmentId)).append("\n");
     sb.append("    errorCode: ").append(toIndentedString(errorCode)).append("\n");
     sb.append("    errorMessage: ").append(toIndentedString(errorMessage)).append("\n");

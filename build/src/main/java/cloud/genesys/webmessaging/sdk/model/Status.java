@@ -9,7 +9,6 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
-import io.swagger.annotations.ApiModel;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 import java.io.Serializable;
@@ -26,7 +25,7 @@ class StatusDeserializer extends StdDeserializer<Status> {
   }
 }
 /**
- * Message receipt status, only used with type Receipt.
+ * Gets or Sets Status
  */
  @JsonDeserialize(using = StatusDeserializer.class)
 public enum Status {

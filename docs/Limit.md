@@ -18,6 +18,7 @@
 | AGENT_ASSISTANT | &quot;agent.assistant&quot; | 
 | ANALYTICS_AGENTS | &quot;analytics.agents&quot; | 
 | ANALYTICS_ALERTING | &quot;analytics.alerting&quot; | 
+| ANALYTICS_DATA_EXTRACTION | &quot;analytics.data.extraction&quot; | 
 | ANALYTICS | &quot;analytics&quot; | 
 | ANALYTICS_REALTIME | &quot;analytics.realtime&quot; | 
 | ANALYTICS_REPORTING_SETTINGS | &quot;analytics.reporting.settings&quot; | 
@@ -47,6 +48,7 @@
 | GCV | &quot;gcv&quot; | 
 | GDPR | &quot;gdpr&quot; | 
 | GROUPS | &quot;groups&quot; | 
+| GUIDES | &quot;guides&quot; | 
 | HISTORICAL_ADHERENCE | &quot;historical.adherence&quot; | 
 | INFRASTRUCTUREASCODE | &quot;infrastructureascode&quot; | 
 | INTEGRATIONS | &quot;integrations&quot; | 
@@ -94,4 +96,4 @@
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:13.0.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:14.0.0_

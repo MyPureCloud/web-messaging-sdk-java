@@ -18,8 +18,9 @@
 | OUTDATEDSDKVERSION | &quot;OutdatedSdkVersion&quot; | 
 | BUTTON | &quot;Button&quot; | 
 | QUICKREPLY | &quot;QuickReply&quot; | 
+| DATEPICKER | &quot;DatePicker&quot; | 
 
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:13.0.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:14.0.0_

@@ -12,6 +12,7 @@
 | **generic** | [**WebMessagingGeneric**](WebMessagingGeneric) | Generic content (Deprecated). |  [optional] |
 | **card** | [**ContentCard**](ContentCard) | Card content |  [optional] |
 | **carousel** | [**ContentCarousel**](ContentCarousel) | Carousel content |  [optional] |
+| **datePicker** | [**ContentDatePicker**](ContentDatePicker) | DatePicker content |  [optional] |
 
 
 ## Enum: ContentTypeEnum
@@ -25,8 +26,9 @@
 | GENERICTEMPLATE | &quot;GenericTemplate&quot; | 
 | CARD | &quot;Card&quot; | 
 | CAROUSEL | &quot;Carousel&quot; | 
+| DATEPICKER | &quot;DatePicker&quot; | 
 
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:13.0.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:14.0.0_

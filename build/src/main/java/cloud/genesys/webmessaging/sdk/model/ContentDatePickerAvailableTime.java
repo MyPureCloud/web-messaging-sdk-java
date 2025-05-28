@@ -12,6 +12,7 @@ import java.io.IOException;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Date;
 
 import java.io.Serializable;
 /**
@@ -21,43 +22,43 @@ import java.io.Serializable;
 
 public class ContentDatePickerAvailableTime  implements Serializable {
   
-  private String dateTime = null;
-  private Double duration = null;
+  private Long duration = null;
+  private Date dateTime = null;
 
   
-  /**
-   * The date and times of the event being scheduled.
-   **/
-  public ContentDatePickerAvailableTime dateTime(String dateTime) {
-    this.dateTime = dateTime;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", required = true, value = "The date and times of the event being scheduled.")
-  @JsonProperty("dateTime")
-  public String getDateTime() {
-    return dateTime;
-  }
-  public void setDateTime(String dateTime) {
-    this.dateTime = dateTime;
-  }
-
-
   /**
    * The duration of the scheduling event in seconds.
    **/
-  public ContentDatePickerAvailableTime duration(Double duration) {
+  public ContentDatePickerAvailableTime duration(Long duration) {
     this.duration = duration;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "The duration of the scheduling event in seconds.")
+  @ApiModelProperty(example = "null", value = "The duration of the scheduling event in seconds.")
   @JsonProperty("duration")
-  public Double getDuration() {
+  public Long getDuration() {
     return duration;
   }
-  public void setDuration(Double duration) {
+  public void setDuration(Long duration) {
     this.duration = duration;
+  }
+
+
+  /**
+   * The date and times of the event being scheduled. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+   **/
+  public ContentDatePickerAvailableTime dateTime(Date dateTime) {
+    this.dateTime = dateTime;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "The date and times of the event being scheduled. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z")
+  @JsonProperty("dateTime")
+  public Date getDateTime() {
+    return dateTime;
+  }
+  public void setDateTime(Date dateTime) {
+    this.dateTime = dateTime;
   }
 
 
@@ -70,13 +71,13 @@ public class ContentDatePickerAvailableTime  implements Serializable {
       return false;
     }
     ContentDatePickerAvailableTime contentDatePickerAvailableTime = (ContentDatePickerAvailableTime) o;
-    return Objects.equals(this.dateTime, contentDatePickerAvailableTime.dateTime) &&
-          Objects.equals(this.duration, contentDatePickerAvailableTime.duration);
+    return Objects.equals(this.duration, contentDatePickerAvailableTime.duration) &&
+          Objects.equals(this.dateTime, contentDatePickerAvailableTime.dateTime);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(dateTime, duration);
+    return Objects.hash(duration, dateTime);
   }
 
   @Override
@@ -84,8 +85,8 @@ public class ContentDatePickerAvailableTime  implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContentDatePickerAvailableTime {\n");
     
-    sb.append("    dateTime: ").append(toIndentedString(dateTime)).append("\n");
     sb.append("    duration: ").append(toIndentedString(duration)).append("\n");
+    sb.append("    dateTime: ").append(toIndentedString(dateTime)).append("\n");
     sb.append("}");
     return sb.toString();
   }

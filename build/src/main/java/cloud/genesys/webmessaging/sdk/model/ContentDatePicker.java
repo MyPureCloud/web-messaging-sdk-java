@@ -14,93 +14,40 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import java.io.Serializable;
 /**
- * DatePicker content.  DatePicker content object.
+ * DatePicker content object.
  */
-@ApiModel(description = "DatePicker content.  DatePicker content object.")
+@ApiModel(description = "DatePicker content object.")
 
 public class ContentDatePicker  implements Serializable {
   
-  private List<ContentDatePickerAvailableTime> availableTimes = new ArrayList<ContentDatePickerAvailableTime>();
-  private String dateMaximum = null;
-  private String dateMinimum = null;
-  private String imageUrl = null;
-  private String subtitle = null;
   private String title = null;
+  private String subtitle = null;
+  private String imageUrl = null;
+  private Date dateMinimum = null;
+  private Date dateMaximum = null;
+  private List<ContentDatePickerAvailableTime> availableTimes = new ArrayList<ContentDatePickerAvailableTime>();
 
   
   /**
-   * An array of available times objects.
+   * Text to show in the title.
    **/
-  public ContentDatePicker availableTimes(List<ContentDatePickerAvailableTime> availableTimes) {
-    this.availableTimes = availableTimes;
+  public ContentDatePicker title(String title) {
+    this.title = title;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "An array of available times objects.")
-  @JsonProperty("availableTimes")
-  public List<ContentDatePickerAvailableTime> getAvailableTimes() {
-    return availableTimes;
+  @ApiModelProperty(example = "null", value = "Text to show in the title.")
+  @JsonProperty("title")
+  public String getTitle() {
+    return title;
   }
-  public void setAvailableTimes(List<ContentDatePickerAvailableTime> availableTimes) {
-    this.availableTimes = availableTimes;
-  }
-
-
-  /**
-   * The maximum Date Enabled in the datepicker calendar
-   **/
-  public ContentDatePicker dateMaximum(String dateMaximum) {
-    this.dateMaximum = dateMaximum;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "The maximum Date Enabled in the datepicker calendar")
-  @JsonProperty("dateMaximum")
-  public String getDateMaximum() {
-    return dateMaximum;
-  }
-  public void setDateMaximum(String dateMaximum) {
-    this.dateMaximum = dateMaximum;
-  }
-
-
-  /**
-   * The minimum Date Enabled in the datepicker calendar
-   **/
-  public ContentDatePicker dateMinimum(String dateMinimum) {
-    this.dateMinimum = dateMinimum;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "The minimum Date Enabled in the datepicker calendar")
-  @JsonProperty("dateMinimum")
-  public String getDateMinimum() {
-    return dateMinimum;
-  }
-  public void setDateMinimum(String dateMinimum) {
-    this.dateMinimum = dateMinimum;
-  }
-
-
-  /**
-   * URL of an image
-   **/
-  public ContentDatePicker imageUrl(String imageUrl) {
-    this.imageUrl = imageUrl;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "URL of an image")
-  @JsonProperty("imageUrl")
-  public String getImageUrl() {
-    return imageUrl;
-  }
-  public void setImageUrl(String imageUrl) {
-    this.imageUrl = imageUrl;
+  public void setTitle(String title) {
+    this.title = title;
   }
 
 
@@ -123,20 +70,74 @@ public class ContentDatePicker  implements Serializable {
 
 
   /**
-   * Text to show in the title.
+   * URL of an image
    **/
-  public ContentDatePicker title(String title) {
-    this.title = title;
+  public ContentDatePicker imageUrl(String imageUrl) {
+    this.imageUrl = imageUrl;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Text to show in the title.")
-  @JsonProperty("title")
-  public String getTitle() {
-    return title;
+  @ApiModelProperty(example = "null", value = "URL of an image")
+  @JsonProperty("imageUrl")
+  public String getImageUrl() {
+    return imageUrl;
   }
-  public void setTitle(String title) {
-    this.title = title;
+  public void setImageUrl(String imageUrl) {
+    this.imageUrl = imageUrl;
+  }
+
+
+  /**
+   * The minimum Date Enabled in the datepicker calendar. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+   **/
+  public ContentDatePicker dateMinimum(Date dateMinimum) {
+    this.dateMinimum = dateMinimum;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "The minimum Date Enabled in the datepicker calendar. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z")
+  @JsonProperty("dateMinimum")
+  public Date getDateMinimum() {
+    return dateMinimum;
+  }
+  public void setDateMinimum(Date dateMinimum) {
+    this.dateMinimum = dateMinimum;
+  }
+
+
+  /**
+   * The maximum Date Enabled in the datepicker calendar. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+   **/
+  public ContentDatePicker dateMaximum(Date dateMaximum) {
+    this.dateMaximum = dateMaximum;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "The maximum Date Enabled in the datepicker calendar. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z")
+  @JsonProperty("dateMaximum")
+  public Date getDateMaximum() {
+    return dateMaximum;
+  }
+  public void setDateMaximum(Date dateMaximum) {
+    this.dateMaximum = dateMaximum;
+  }
+
+
+  /**
+   * An array of available times objects.
+   **/
+  public ContentDatePicker availableTimes(List<ContentDatePickerAvailableTime> availableTimes) {
+    this.availableTimes = availableTimes;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "An array of available times objects.")
+  @JsonProperty("availableTimes")
+  public List<ContentDatePickerAvailableTime> getAvailableTimes() {
+    return availableTimes;
+  }
+  public void setAvailableTimes(List<ContentDatePickerAvailableTime> availableTimes) {
+    this.availableTimes = availableTimes;
   }
 
 
@@ -149,17 +150,17 @@ public class ContentDatePicker  implements Serializable {
       return false;
     }
     ContentDatePicker contentDatePicker = (ContentDatePicker) o;
-    return Objects.equals(this.availableTimes, contentDatePicker.availableTimes) &&
-          Objects.equals(this.dateMaximum, contentDatePicker.dateMaximum) &&
-          Objects.equals(this.dateMinimum, contentDatePicker.dateMinimum) &&
-          Objects.equals(this.imageUrl, contentDatePicker.imageUrl) &&
+    return Objects.equals(this.title, contentDatePicker.title) &&
           Objects.equals(this.subtitle, contentDatePicker.subtitle) &&
-          Objects.equals(this.title, contentDatePicker.title);
+          Objects.equals(this.imageUrl, contentDatePicker.imageUrl) &&
+          Objects.equals(this.dateMinimum, contentDatePicker.dateMinimum) &&
+          Objects.equals(this.dateMaximum, contentDatePicker.dateMaximum) &&
+          Objects.equals(this.availableTimes, contentDatePicker.availableTimes);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(availableTimes, dateMaximum, dateMinimum, imageUrl, subtitle, title);
+    return Objects.hash(title, subtitle, imageUrl, dateMinimum, dateMaximum, availableTimes);
   }
 
   @Override
@@ -167,12 +168,12 @@ public class ContentDatePicker  implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContentDatePicker {\n");
     
-    sb.append("    availableTimes: ").append(toIndentedString(availableTimes)).append("\n");
-    sb.append("    dateMaximum: ").append(toIndentedString(dateMaximum)).append("\n");
-    sb.append("    dateMinimum: ").append(toIndentedString(dateMinimum)).append("\n");
-    sb.append("    imageUrl: ").append(toIndentedString(imageUrl)).append("\n");
-    sb.append("    subtitle: ").append(toIndentedString(subtitle)).append("\n");
     sb.append("    title: ").append(toIndentedString(title)).append("\n");
+    sb.append("    subtitle: ").append(toIndentedString(subtitle)).append("\n");
+    sb.append("    imageUrl: ").append(toIndentedString(imageUrl)).append("\n");
+    sb.append("    dateMinimum: ").append(toIndentedString(dateMinimum)).append("\n");
+    sb.append("    dateMaximum: ").append(toIndentedString(dateMaximum)).append("\n");
+    sb.append("    availableTimes: ").append(toIndentedString(availableTimes)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -5,10 +5,10 @@
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **dateTime** | **String** | The date and times of the event being scheduled. |  |
-| **duration** | **Double** | The duration of the scheduling event in seconds. |  |
+| **duration** | **Long** | The duration of the scheduling event in seconds. |  [optional] |
+| **dateTime** | [**Date**](Date) | The date and times of the event being scheduled. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z |  [optional] |
 
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:13.0.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:14.0.0_

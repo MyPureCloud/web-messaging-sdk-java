@@ -13,6 +13,7 @@
 | **card** | [**ContentCard**](ContentCard) | Card content |  [optional] |
 | **carousel** | [**ContentCarousel**](ContentCarousel) | Carousel content |  [optional] |
 | **datePicker** | [**ContentDatePicker**](ContentDatePicker) | DatePicker content |  [optional] |
+| **listPicker** | [**ConversationContentListPicker**](ConversationContentListPicker) | ListPicker content |  [optional] |
 
 
 ## Enum: ContentTypeEnum
@@ -27,8 +28,9 @@
 | CARD | &quot;Card&quot; | 
 | CAROUSEL | &quot;Carousel&quot; | 
 | DATEPICKER | &quot;DatePicker&quot; | 
+| LISTPICKER | &quot;ListPicker&quot; | 
 
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:14.0.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:15.0.0_

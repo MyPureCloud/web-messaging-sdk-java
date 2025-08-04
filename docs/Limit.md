@@ -85,10 +85,13 @@
 | TELEPHONY_CONFIGURATION | &quot;telephony.configuration&quot; | 
 | USAGE | &quot;usage&quot; | 
 | USERS | &quot;users&quot; | 
+| USERS_RULES | &quot;users.rules&quot; | 
+| VOICE_TRANSCRIPTION | &quot;voice.transcription&quot; | 
 | WEB_DEPLOYMENTS | &quot;web.deployments&quot; | 
 | WEB_MESSAGING | &quot;web.messaging&quot; | 
 | WEBCHAT | &quot;webchat&quot; | 
 | WEBHOOKS | &quot;webhooks&quot; | 
+| WORKFORCE_MANAGEMENT_AGENT_AVAILABILITY | &quot;workforce.management.agent.availability&quot; | 
 | WORKFORCE_MANAGEMENT_FORECAST | &quot;workforce.management.forecast&quot; | 
 | WORKFORCE_MANAGEMENT | &quot;workforce.management&quot; | 
 | SYSTEM | &quot;system&quot; | 
@@ -96,4 +99,4 @@
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:14.0.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:15.0.0_

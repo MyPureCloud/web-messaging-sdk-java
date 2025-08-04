@@ -6,6 +6,12 @@
 ## Enum
 
 
+* `AUTHENTICATE` (value: `"Authenticate"`)
+
+* `AUTHENTICATECANCEL` (value: `"AuthenticateCancel"`)
+
+* `AUTHENTICATEFAILURE` (value: `"AuthenticateFailure"`)
+
 * `CLEAR` (value: `"Clear"`)
 
 * `DISCONNECT` (value: `"Disconnect"`)
@@ -19,4 +25,4 @@
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:14.0.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:15.0.0_

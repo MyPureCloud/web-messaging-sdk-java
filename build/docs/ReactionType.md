@@ -22,6 +22,8 @@
 
 * `PRIDE` (value: `"Pride"`)
 
+* `RATING` (value: `"Rating"`)
+
 * `SAD` (value: `"Sad"`)
 
 * `SHARE` (value: `"Share"`)
@@ -35,4 +37,4 @@
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:14.0.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:15.0.0_

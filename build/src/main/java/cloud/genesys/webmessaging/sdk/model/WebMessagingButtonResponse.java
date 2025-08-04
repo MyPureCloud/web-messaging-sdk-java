@@ -44,7 +44,8 @@ public class WebMessagingButtonResponse  implements Serializable {
     OUTDATEDSDKVERSION("OutdatedSdkVersion"),
     BUTTON("Button"),
     QUICKREPLY("QuickReply"),
-    DATEPICKER("DatePicker");
+    DATEPICKER("DatePicker"),
+    LISTPICKER("ListPicker");
 
     private String value;
 

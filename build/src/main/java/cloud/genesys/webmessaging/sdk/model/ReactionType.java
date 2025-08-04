@@ -38,6 +38,7 @@ public enum ReactionType {
   LOVE("Love"),
   NONE("None"),
   PRIDE("Pride"),
+  RATING("Rating"),
   SAD("Sad"),
   SHARE("Share"),
   THANKFUL("Thankful"),

@@ -26,6 +26,7 @@ public class ContentQuickReply  implements Serializable {
   private String id = null;
   private String image = null;
   private String payload = null;
+  private String summaryText = null;
   private String text = null;
 
   
@@ -102,6 +103,24 @@ public class ContentQuickReply  implements Serializable {
 
 
   /**
+   * Summary of what the quick reply relates to.
+   **/
+  public ContentQuickReply summaryText(String summaryText) {
+    this.summaryText = summaryText;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Summary of what the quick reply relates to.")
+  @JsonProperty("summaryText")
+  public String getSummaryText() {
+    return summaryText;
+  }
+  public void setSummaryText(String summaryText) {
+    this.summaryText = summaryText;
+  }
+
+
+  /**
    * Text to show inside the quick reply. This is also used as the response text after clicking on the quick reply.
    **/
   public ContentQuickReply text(String text) {
@@ -132,12 +151,13 @@ public class ContentQuickReply  implements Serializable {
           Objects.equals(this.id, contentQuickReply.id) &&
           Objects.equals(this.image, contentQuickReply.image) &&
           Objects.equals(this.payload, contentQuickReply.payload) &&
+          Objects.equals(this.summaryText, contentQuickReply.summaryText) &&
           Objects.equals(this.text, contentQuickReply.text);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(action, id, image, payload, text);
+    return Objects.hash(action, id, image, payload, summaryText, text);
   }
 
   @Override
@@ -149,6 +169,7 @@ public class ContentQuickReply  implements Serializable {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    image: ").append(toIndentedString(image)).append("\n");
     sb.append("    payload: ").append(toIndentedString(payload)).append("\n");
+    sb.append("    summaryText: ").append(toIndentedString(summaryText)).append("\n");
     sb.append("    text: ").append(toIndentedString(text)).append("\n");
     sb.append("}");
     return sb.toString();

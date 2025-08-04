@@ -30,6 +30,9 @@ class EventPresenceTypeDeserializer extends StdDeserializer<EventPresenceType> {
  */
  @JsonDeserialize(using = EventPresenceTypeDeserializer.class)
 public enum EventPresenceType {
+  AUTHENTICATE("Authenticate"),
+  AUTHENTICATECANCEL("AuthenticateCancel"),
+  AUTHENTICATEFAILURE("AuthenticateFailure"),
   CLEAR("Clear"),
   DISCONNECT("Disconnect"),
   JOIN("Join"),

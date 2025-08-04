@@ -21,6 +21,10 @@
       "class": "StatEventFlowOutcomeTopicStatsNotification"
     },
     {
+      "topic": "v2.analytics.queues.{id}.activity",
+      "class": "V2QueueObservationObservationNotification"
+    },
+    {
       "topic": "v2.analytics.queues.{id}.observations",
       "class": "StatEventQueueTopicStatsNotification"
     },
@@ -155,6 +159,10 @@
     {
       "topic": "v2.externalcontacts.contacts.{id}",
       "class": "ExternalContactsContactChangedTopicContact"
+    },
+    {
+      "topic": "v2.externalcontacts.contacts.{id}.journey.segments",
+      "class": "JourneySegmentAssignmentEventsNotificationSegmentAssignmentEventsNotification"
     },
     {
       "topic": "v2.externalcontacts.contacts.{id}.journey.sessions",
@@ -333,6 +341,14 @@
       "class": "DialerOutboundSettingsConfigChangeOutboundSettings"
     },
     {
+      "topic": "v2.outbound.whatsapp.campaigns.contact.postContact",
+      "class": "OutboundMessagingCampaignPostContactWhatsappEventTopicOutboundMessagingCampaignPostContactWhatsAppEvent"
+    },
+    {
+      "topic": "v2.outbound.whatsapp.campaigns.contact.preContact",
+      "class": "OutboundMessagingCampaignPreContactWhatsappEventTopicOutboundMessagingCampaignPreContactWhatsAppEvent"
+    },
+    {
       "topic": "v2.outbound.whatsappcampaigns.{id}",
       "class": "OutboundMessagingWhatsappCampaignConfigChangeMessagingCampaign"
     },
@@ -393,6 +409,18 @@
       "class": "QueueUserEventTopicQueueMember"
     },
     {
+      "topic": "v2.speechandtextanalytics.conversation.{id}.empathy",
+      "class": "V2StaEmpathyOverallTopicOverallEmpathyMessage"
+    },
+    {
+      "topic": "v2.speechandtextanalytics.conversation.{id}.sentiment",
+      "class": "V2StaSentimentOverallTopicOverallSentimentMessage"
+    },
+    {
+      "topic": "v2.speechandtextanalytics.conversation.{id}.topics",
+      "class": "V2StaTopicsDetectedTopicTopicsDetectedMessage"
+    },
+    {
       "topic": "v2.speechandtextanalytics.programs.general.jobs.{id}",
       "class": "CreateGeneralProgramTopicsDefinitionsJob"
     },
@@ -403,6 +431,10 @@
     {
       "topic": "v2.speechandtextanalytics.programs.topiclinks.jobs.{id}",
       "class": "ProgramTopicLinksTopicsDefinitionsJob"
+    },
+    {
+      "topic": "v2.speechandtextanalytics.reprocessing.jobs.{id}",
+      "class": "V2ReprocessJobStateChangedTopicJobStateChanged"
     },
     {
       "topic": "v2.speechandtextanalytics.topics.publishjobs.{id}",
@@ -735,6 +767,10 @@
     {
       "topic": "v2.workforcemanagement.businessunits.{id}.adherence.explanations",
       "class": "WfmAgentAdherenceExplanationChangedBusinessUnitTopicAdherenceExplanationChangedNotification"
+    },
+    {
+      "topic": "v2.workforcemanagement.businessunits.{id}.capacityplans.{id}.staffingrequirements",
+      "class": "CapacityPlanningRequirementsResultTopicStaffingRequirementsNotification"
     },
     {
       "topic": "v2.workforcemanagement.businessunits.{id}.forecasts.staffingrequirement",

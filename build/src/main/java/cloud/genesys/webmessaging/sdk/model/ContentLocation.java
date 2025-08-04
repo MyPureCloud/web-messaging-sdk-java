@@ -15,9 +15,9 @@ import io.swagger.annotations.ApiModelProperty;
 
 import java.io.Serializable;
 /**
- * Location content.  Location object.
+ * The location of the event.  Location content.  User Location object  Location object.
  */
-@ApiModel(description = "Location content.  Location object.")
+@ApiModel(description = "The location of the event.  Location content.  User Location object  Location object.")
 
 public class ContentLocation  implements Serializable {
   
@@ -90,7 +90,7 @@ public class ContentLocation  implements Serializable {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Location name.")
+  @ApiModelProperty(example = "null", required = true, value = "Location name.")
   @JsonProperty("text")
   public String getText() {
     return text;

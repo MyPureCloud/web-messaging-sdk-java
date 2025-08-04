@@ -26,12 +26,14 @@ class ButtonResponseTypeDeserializer extends StdDeserializer<ButtonResponseType>
   }
 }
 /**
- * Describes the button that resulted in the Button Response.
+ * Describes the button or component that resulted in the Button Response.
  */
  @JsonDeserialize(using = ButtonResponseTypeDeserializer.class)
 public enum ButtonResponseType {
   BUTTON("Button"),
   DATEPICKER("DatePicker"),
+  FORM("Form"),
+  LISTPICKER("ListPicker"),
   QUICKREPLY("QuickReply");
 
   private String value;

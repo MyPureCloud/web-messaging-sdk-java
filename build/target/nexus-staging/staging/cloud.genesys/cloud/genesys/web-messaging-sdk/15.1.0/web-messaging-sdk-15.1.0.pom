@@ -6,7 +6,7 @@
   <groupId>cloud.genesys</groupId>
   <artifactId>web-messaging-sdk</artifactId>
   <name>web-messaging-sdk</name>
-  <version>15.0.0</version>
+  <version>15.1.0</version>
   <description>A customer-side development kit for creating custom Genesys Cloud Web Messaging experiences</description>
   <url>https://developer.mypurecloud.com/api/rest/client-libraries/webmessaging-java/</url>
 

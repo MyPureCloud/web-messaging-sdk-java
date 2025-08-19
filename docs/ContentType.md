@@ -55,4 +55,4 @@
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:15.0.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:15.1.0_

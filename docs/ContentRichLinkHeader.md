@@ -1,11 +1,12 @@
-# BaseChannelMetadata
+# ContentRichLinkHeader
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **customAttributes** | **Map&lt;String, String&gt;** |  |  [optional] |
+| **type** | [**Type**](Type) | Describes the Rich Link header type. |  |
+| **value** | **String** | Rich Link header value |  |
 
 
 

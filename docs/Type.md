@@ -1,14 +1,18 @@
-# HeaderType
+# Type
 
 
-# HeaderType
+# Type
 
 ## Enum
 
 
-* `MEDIA` (value: `"Media"`)
+* `FILE` (value: `"File"`)
+
+* `IMAGE` (value: `"Image"`)
 
 * `TEXT` (value: `"Text"`)
+
+* `VIDEO` (value: `"Video"`)
 
 
 

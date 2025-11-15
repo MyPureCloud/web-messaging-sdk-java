@@ -26,8 +26,9 @@
 | MEDIATYPENOTALLOWED | &quot;MediaTypeNotAllowed&quot; | 
 | INVALIDMEDIACONTENTLENGTH | &quot;InvalidMediaContentLength&quot; | 
 | RECIPIENTOPTEDOUT | &quot;RecipientOptedOut&quot; | 
+| DATAFILTERED | &quot;DataFiltered&quot; | 
 
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:15.1.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:15.2.0_

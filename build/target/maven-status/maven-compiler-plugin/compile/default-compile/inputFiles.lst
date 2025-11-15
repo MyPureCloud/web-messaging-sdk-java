@@ -18,6 +18,7 @@
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/EventTypeEnum.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/Pair.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/GetConfigurationResponse.java
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/ContentRichLinkHeader.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/NotificationTemplateButton.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/LogoutEvent.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/connector/apache/ApacheHttpClientConnector.java
@@ -118,6 +119,7 @@
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/SessionExpiredEvent.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/CloseSessionRequest.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/ContentGeneric.java
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/ContentRichLink.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/HeaderType.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/BaseMessagingChannel.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/TextType.java
@@ -175,6 +177,7 @@
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/StructuredMessage.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/EventTypingType.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/RequestType.java
+/var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/Type.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/Direction.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/UploadSuccessEvent.java
 /var/build/workspace/build-platform-sdks-pipeline/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/RequestTypeGetJwt.java

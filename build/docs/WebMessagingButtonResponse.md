@@ -9,6 +9,7 @@
 | **type** | [**TypeEnum**](#Enum--TypeEnum) | Describes the button that resulted in the Button Response. |  [optional] |
 | **text** | **String** | The response text from the button click. |  |
 | **payload** | **String** | The response payload associated with the clicked button. |  |
+| **originatingMessageId** | **String** | Id of original structured message that this message responds to. |  |
 
 
 ## Enum: TypeEnum
@@ -24,4 +25,4 @@
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:15.1.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:15.2.0_

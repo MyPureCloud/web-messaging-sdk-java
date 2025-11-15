@@ -28,6 +28,7 @@ import cloud.genesys.webmessaging.sdk.model.ContentPush;
 import cloud.genesys.webmessaging.sdk.model.ContentQuickReply;
 import cloud.genesys.webmessaging.sdk.model.ContentQuickReplyV2;
 import cloud.genesys.webmessaging.sdk.model.ContentReaction;
+import cloud.genesys.webmessaging.sdk.model.ContentRichLink;
 import cloud.genesys.webmessaging.sdk.model.ContentRoadsideAssistance;
 import cloud.genesys.webmessaging.sdk.model.ContentStory;
 import cloud.genesys.webmessaging.sdk.model.ContentText;
@@ -67,6 +68,7 @@ public class MessageContent  implements Serializable {
   private ContentQuickReply quickReply = null;
   private ContentQuickReplyV2 quickReplyV2 = null;
   private List<ContentReaction> reactions = new ArrayList<ContentReaction>();
+  private ContentRichLink richLink = null;
   private ContentRoadsideAssistance roadsideAssistance = null;
   private ContentStory story = null;
   private ContentNotificationTemplate template = null;
@@ -433,6 +435,24 @@ public class MessageContent  implements Serializable {
 
 
   /**
+   * A Rich Link button.
+   **/
+  public MessageContent richLink(ContentRichLink richLink) {
+    this.richLink = richLink;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "A Rich Link button.")
+  @JsonProperty("richLink")
+  public ContentRichLink getRichLink() {
+    return richLink;
+  }
+  public void setRichLink(ContentRichLink richLink) {
+    this.richLink = richLink;
+  }
+
+
+  /**
    * Roadside Assistance content
    **/
   public MessageContent roadsideAssistance(ContentRoadsideAssistance roadsideAssistance) {
@@ -533,6 +553,7 @@ public class MessageContent  implements Serializable {
           Objects.equals(this.quickReply, messageContent.quickReply) &&
           Objects.equals(this.quickReplyV2, messageContent.quickReplyV2) &&
           Objects.equals(this.reactions, messageContent.reactions) &&
+          Objects.equals(this.richLink, messageContent.richLink) &&
           Objects.equals(this.roadsideAssistance, messageContent.roadsideAssistance) &&
           Objects.equals(this.story, messageContent.story) &&
           Objects.equals(this.template, messageContent.template) &&
@@ -541,7 +562,7 @@ public class MessageContent  implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(attachment, buttonResponse, card, carousel, contentType, datePicker, form, generic, interactiveApplication, list, listPicker, location, mention, paymentRequest, paymentResponse, postback, push, quickReply, quickReplyV2, reactions, roadsideAssistance, story, template, text);
+    return Objects.hash(attachment, buttonResponse, card, carousel, contentType, datePicker, form, generic, interactiveApplication, list, listPicker, location, mention, paymentRequest, paymentResponse, postback, push, quickReply, quickReplyV2, reactions, richLink, roadsideAssistance, story, template, text);
   }
 
   @Override
@@ -569,6 +590,7 @@ public class MessageContent  implements Serializable {
     sb.append("    quickReply: ").append(toIndentedString(quickReply)).append("\n");
     sb.append("    quickReplyV2: ").append(toIndentedString(quickReplyV2)).append("\n");
     sb.append("    reactions: ").append(toIndentedString(reactions)).append("\n");
+    sb.append("    richLink: ").append(toIndentedString(richLink)).append("\n");
     sb.append("    roadsideAssistance: ").append(toIndentedString(roadsideAssistance)).append("\n");
     sb.append("    story: ").append(toIndentedString(story)).append("\n");
     sb.append("    template: ").append(toIndentedString(template)).append("\n");

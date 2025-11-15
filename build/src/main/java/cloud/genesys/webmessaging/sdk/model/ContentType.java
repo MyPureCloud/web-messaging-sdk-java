@@ -49,6 +49,7 @@ public enum ContentType {
   QUICKREPLY("QuickReply"),
   QUICKREPLYV2("QuickReplyV2"),
   REACTIONS("Reactions"),
+  RICHLINK("RichLink"),
   ROADSIDEASSISTANCE("RoadsideAssistance"),
   STORY("Story"),
   TEXT("Text");

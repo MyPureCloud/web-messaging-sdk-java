@@ -58,6 +58,8 @@ docs/ContentQuickReplyV2.md
 docs/ContentReaction.md
 docs/ContentReceivedReplyMessage.md
 docs/ContentRequiredContactField.md
+docs/ContentRichLink.md
+docs/ContentRichLinkHeader.md
 docs/ContentRoadsideAssistance.md
 docs/ContentStory.md
 docs/ContentText.md
@@ -161,6 +163,7 @@ docs/StructuredMessage.md
 docs/TemplateButtonType.md
 docs/TextType.md
 docs/TooManyRequestsErrorMessage.md
+docs/Type.md
 docs/UploadFailureEvent.md
 docs/UploadSuccessEvent.md
 docs/WebMessagingApi.json
@@ -249,6 +252,8 @@ src/main/java/cloud/genesys/webmessaging/sdk/model/ContentQuickReplyV2.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentReaction.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentReceivedReplyMessage.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentRequiredContactField.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/ContentRichLink.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/ContentRichLinkHeader.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentRoadsideAssistance.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentStory.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentText.java
@@ -352,6 +357,7 @@ src/main/java/cloud/genesys/webmessaging/sdk/model/StructuredMessage.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/TemplateButtonType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/TextType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/TooManyRequestsErrorMessage.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/Type.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/UploadFailureEvent.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/UploadSuccessEvent.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/WebMessagingAttachment.java

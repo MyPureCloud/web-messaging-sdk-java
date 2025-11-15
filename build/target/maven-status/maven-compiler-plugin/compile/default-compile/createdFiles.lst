@@ -120,6 +120,7 @@ cloud/genesys/webmessaging/sdk/model/EventPresenceTypeDeserializer.class
 cloud/genesys/webmessaging/sdk/model/FormComponentTypeDeserializer.class
 cloud/genesys/webmessaging/sdk/model/ContentCard.class
 cloud/genesys/webmessaging/sdk/model/ContentText.class
+cloud/genesys/webmessaging/sdk/model/ContentRichLink.class
 cloud/genesys/webmessaging/sdk/model/SessionResponse.class
 cloud/genesys/webmessaging/sdk/model/StoryType.class
 cloud/genesys/webmessaging/sdk/model/FormComponentType.class
@@ -229,6 +230,7 @@ cloud/genesys/webmessaging/sdk/model/ResumeTokenResponse.class
 cloud/genesys/webmessaging/sdk/model/ContentGeneric.class
 cloud/genesys/webmessaging/sdk/api/WebMessagingApi.class
 cloud/genesys/webmessaging/sdk/model/ContentCardAction$TypeEnumDeserializer.class
+cloud/genesys/webmessaging/sdk/model/TypeDeserializer.class
 cloud/genesys/webmessaging/sdk/model/ContentCarousel.class
 cloud/genesys/webmessaging/sdk/model/EventPresenceType.class
 cloud/genesys/webmessaging/sdk/model/DeleteAttachmentRequest.class
@@ -263,6 +265,7 @@ cloud/genesys/webmessaging/sdk/model/BaseMessage.class
 cloud/genesys/webmessaging/sdk/model/Limit$NamespaceEnumDeserializer.class
 cloud/genesys/webmessaging/sdk/model/MessageEvent.class
 cloud/genesys/webmessaging/sdk/ApiClient$RetryConfiguration.class
+cloud/genesys/webmessaging/sdk/model/Type.class
 cloud/genesys/webmessaging/sdk/model/DirectionDeserializer.class
 cloud/genesys/webmessaging/sdk/model/FormResponseComponent.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingContent$ContentTypeEnum.class
@@ -272,6 +275,7 @@ cloud/genesys/webmessaging/sdk/model/RequestTypeConfigureSessionDeserializer.cla
 cloud/genesys/webmessaging/sdk/model/OAuthParams.class
 cloud/genesys/webmessaging/sdk/model/BaseChannelMetadata.class
 cloud/genesys/webmessaging/sdk/model/ChannelType.class
+cloud/genesys/webmessaging/sdk/model/ContentRichLinkHeader.class
 cloud/genesys/webmessaging/sdk/connector/apache/ApacheHttpClientConnector.class
 cloud/genesys/webmessaging/sdk/model/NormalizedType.class
 cloud/genesys/webmessaging/sdk/ApiClient$ApiRequestWrapper.class

@@ -1,4 +1,4 @@
-Platform API version: 9727
+Platform API version: 9841
 
 
 
@@ -6,24 +6,33 @@ Platform API version: 9727
 # Major Changes (0 changes)
 
 
-# Minor Changes (5 changes)
+# Minor Changes (8 changes)
 
-**ContentReceivedReplyMessage** (2 changes)
+**ContentInput** (2 changes)
 
-* Optional property buttonLabel was added
-* Optional property header was added
+* Optional property autoCompleteType was added
+* Optional property keyboardType was added
 
-**ContentRichLinkHeader** (1 change)
+**MessagingRecipient** (2 changes)
+
+* Optional property externalContactDivisionId was added
+* Optional property externalOrganizationId was added
+
+**NotificationTemplateButton** (1 change)
+
+* Optional property payload was added
+
+**NotificationTemplateCard** (1 change)
 
 * Model was added
 
-**ContentRichLink** (1 change)
+**NotificationTemplateCarousel** (1 change)
 
 * Model was added
 
-**MessageContent** (1 change)
+**ContentNotificationTemplate** (1 change)
 
-* Optional property richLink was added
+* Optional property carousel was added
 
 
 # Point Changes (0 changes)

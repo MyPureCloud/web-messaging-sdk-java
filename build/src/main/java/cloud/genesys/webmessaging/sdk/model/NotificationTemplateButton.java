@@ -27,6 +27,7 @@ public class NotificationTemplateButton  implements Serializable {
   
   private Double index = null;
   private List<NotificationTemplateParameter> parameters = new ArrayList<NotificationTemplateParameter>();
+  private String payload = null;
   private String phoneNumber = null;
   private String text = null;
   private TemplateButtonType type = null;
@@ -66,6 +67,24 @@ public class NotificationTemplateButton  implements Serializable {
   }
   public void setParameters(List<NotificationTemplateParameter> parameters) {
     this.parameters = parameters;
+  }
+
+
+  /**
+   * Content of the payload to be included in the quick reply response when the button is pressed.
+   **/
+  public NotificationTemplateButton payload(String payload) {
+    this.payload = payload;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Content of the payload to be included in the quick reply response when the button is pressed.")
+  @JsonProperty("payload")
+  public String getPayload() {
+    return payload;
+  }
+  public void setPayload(String payload) {
+    this.payload = payload;
   }
 
 
@@ -152,6 +171,7 @@ public class NotificationTemplateButton  implements Serializable {
     NotificationTemplateButton notificationTemplateButton = (NotificationTemplateButton) o;
     return Objects.equals(this.index, notificationTemplateButton.index) &&
           Objects.equals(this.parameters, notificationTemplateButton.parameters) &&
+          Objects.equals(this.payload, notificationTemplateButton.payload) &&
           Objects.equals(this.phoneNumber, notificationTemplateButton.phoneNumber) &&
           Objects.equals(this.text, notificationTemplateButton.text) &&
           Objects.equals(this.type, notificationTemplateButton.type) &&
@@ -160,7 +180,7 @@ public class NotificationTemplateButton  implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(index, parameters, phoneNumber, text, type, url);
+    return Objects.hash(index, parameters, payload, phoneNumber, text, type, url);
   }
 
   @Override
@@ -170,6 +190,7 @@ public class NotificationTemplateButton  implements Serializable {
     
     sb.append("    index: ").append(toIndentedString(index)).append("\n");
     sb.append("    parameters: ").append(toIndentedString(parameters)).append("\n");
+    sb.append("    payload: ").append(toIndentedString(payload)).append("\n");
     sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
     sb.append("    text: ").append(toIndentedString(text)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");

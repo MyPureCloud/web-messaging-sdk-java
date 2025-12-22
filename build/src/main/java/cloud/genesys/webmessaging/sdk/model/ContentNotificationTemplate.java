@@ -11,6 +11,7 @@ import java.util.Objects;
 import java.io.IOException;
 import cloud.genesys.webmessaging.sdk.model.NotificationTemplateBody;
 import cloud.genesys.webmessaging.sdk.model.NotificationTemplateButton;
+import cloud.genesys.webmessaging.sdk.model.NotificationTemplateCarousel;
 import cloud.genesys.webmessaging.sdk.model.NotificationTemplateFooter;
 import cloud.genesys.webmessaging.sdk.model.NotificationTemplateHeader;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -29,6 +30,7 @@ public class ContentNotificationTemplate  implements Serializable {
   
   private NotificationTemplateBody body = null;
   private List<NotificationTemplateButton> buttons = new ArrayList<NotificationTemplateButton>();
+  private NotificationTemplateCarousel carousel = null;
   private NotificationTemplateFooter footer = null;
   private NotificationTemplateHeader header = null;
   private String id = null;
@@ -68,6 +70,24 @@ public class ContentNotificationTemplate  implements Serializable {
   }
   public void setButtons(List<NotificationTemplateButton> buttons) {
     this.buttons = buttons;
+  }
+
+
+  /**
+   * The template carousel.
+   **/
+  public ContentNotificationTemplate carousel(NotificationTemplateCarousel carousel) {
+    this.carousel = carousel;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "The template carousel.")
+  @JsonProperty("carousel")
+  public NotificationTemplateCarousel getCarousel() {
+    return carousel;
+  }
+  public void setCarousel(NotificationTemplateCarousel carousel) {
+    this.carousel = carousel;
   }
 
 
@@ -154,6 +174,7 @@ public class ContentNotificationTemplate  implements Serializable {
     ContentNotificationTemplate contentNotificationTemplate = (ContentNotificationTemplate) o;
     return Objects.equals(this.body, contentNotificationTemplate.body) &&
           Objects.equals(this.buttons, contentNotificationTemplate.buttons) &&
+          Objects.equals(this.carousel, contentNotificationTemplate.carousel) &&
           Objects.equals(this.footer, contentNotificationTemplate.footer) &&
           Objects.equals(this.header, contentNotificationTemplate.header) &&
           Objects.equals(this.id, contentNotificationTemplate.id) &&
@@ -162,7 +183,7 @@ public class ContentNotificationTemplate  implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(body, buttons, footer, header, id, language);
+    return Objects.hash(body, buttons, carousel, footer, header, id, language);
   }
 
   @Override
@@ -172,6 +193,7 @@ public class ContentNotificationTemplate  implements Serializable {
     
     sb.append("    body: ").append(toIndentedString(body)).append("\n");
     sb.append("    buttons: ").append(toIndentedString(buttons)).append("\n");
+    sb.append("    carousel: ").append(toIndentedString(carousel)).append("\n");
     sb.append("    footer: ").append(toIndentedString(footer)).append("\n");
     sb.append("    header: ").append(toIndentedString(header)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");

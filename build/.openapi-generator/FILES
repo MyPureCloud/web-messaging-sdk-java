@@ -5,6 +5,7 @@ docs/Action.md
 docs/AdditionalIDType.md
 docs/AllowedMedia.md
 docs/AttachmentDeletedResponse.md
+docs/AutoCompleteType.md
 docs/BaseChannelMetadata.md
 docs/BaseContentAttachment.md
 docs/BaseMessage.md
@@ -111,6 +112,7 @@ docs/JourneyContext.md
 docs/JourneyCustomer.md
 docs/JourneyCustomerSession.md
 docs/JwtResponse.md
+docs/KeyboardType.md
 docs/Limit.md
 docs/ListItemComponent.md
 docs/ListItemType.md
@@ -125,6 +127,8 @@ docs/NormalizedType.md
 docs/NotificationMessage.md
 docs/NotificationTemplateBody.md
 docs/NotificationTemplateButton.md
+docs/NotificationTemplateCard.md
+docs/NotificationTemplateCarousel.md
 docs/NotificationTemplateFooter.md
 docs/NotificationTemplateHeader.md
 docs/NotificationTemplateParameter.md
@@ -199,6 +203,7 @@ src/main/java/cloud/genesys/webmessaging/sdk/model/Action.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/AdditionalIDType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/AllowedMedia.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/AttachmentDeletedResponse.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/AutoCompleteType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/BaseChannelMetadata.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/BaseContentAttachment.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/BaseMessage.java
@@ -305,6 +310,7 @@ src/main/java/cloud/genesys/webmessaging/sdk/model/JourneyContext.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/JourneyCustomer.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/JourneyCustomerSession.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/JwtResponse.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/KeyboardType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/Limit.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ListItemComponent.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ListItemType.java
@@ -319,6 +325,8 @@ src/main/java/cloud/genesys/webmessaging/sdk/model/NormalizedType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/NotificationMessage.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/NotificationTemplateBody.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/NotificationTemplateButton.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/NotificationTemplateCard.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/NotificationTemplateCarousel.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/NotificationTemplateFooter.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/NotificationTemplateHeader.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/NotificationTemplateParameter.java

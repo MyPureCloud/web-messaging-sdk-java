@@ -27,7 +27,9 @@ public class MessagingRecipient  implements Serializable {
   
   private List<RecipientAdditionalIdentifier> additionalIds = new ArrayList<RecipientAdditionalIdentifier>();
   private String email = null;
+  private String externalContactDivisionId = null;
   private String externalContactId = null;
+  private String externalOrganizationId = null;
   private String firstName = null;
   private String id = null;
   private IDType idType = null;
@@ -73,6 +75,24 @@ public class MessagingRecipient  implements Serializable {
 
 
   /**
+   * The ID of the division the external contact is a member of. Must be set to '*' for the Unassigned division.
+   **/
+  public MessagingRecipient externalContactDivisionId(String externalContactDivisionId) {
+    this.externalContactDivisionId = externalContactDivisionId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "The ID of the division the external contact is a member of. Must be set to '*' for the Unassigned division.")
+  @JsonProperty("externalContactDivisionId")
+  public String getExternalContactDivisionId() {
+    return externalContactDivisionId;
+  }
+  public void setExternalContactDivisionId(String externalContactDivisionId) {
+    this.externalContactDivisionId = externalContactDivisionId;
+  }
+
+
+  /**
    * The identifier of the external contact.
    **/
   public MessagingRecipient externalContactId(String externalContactId) {
@@ -87,6 +107,24 @@ public class MessagingRecipient  implements Serializable {
   }
   public void setExternalContactId(String externalContactId) {
     this.externalContactId = externalContactId;
+  }
+
+
+  /**
+   * The identifier of the external organization the external contact is associated to.
+   **/
+  public MessagingRecipient externalOrganizationId(String externalOrganizationId) {
+    this.externalOrganizationId = externalOrganizationId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "The identifier of the external organization the external contact is associated to.")
+  @JsonProperty("externalOrganizationId")
+  public String getExternalOrganizationId() {
+    return externalOrganizationId;
+  }
+  public void setExternalOrganizationId(String externalOrganizationId) {
+    this.externalOrganizationId = externalOrganizationId;
   }
 
 
@@ -209,7 +247,9 @@ public class MessagingRecipient  implements Serializable {
     MessagingRecipient messagingRecipient = (MessagingRecipient) o;
     return Objects.equals(this.additionalIds, messagingRecipient.additionalIds) &&
           Objects.equals(this.email, messagingRecipient.email) &&
+          Objects.equals(this.externalContactDivisionId, messagingRecipient.externalContactDivisionId) &&
           Objects.equals(this.externalContactId, messagingRecipient.externalContactId) &&
+          Objects.equals(this.externalOrganizationId, messagingRecipient.externalOrganizationId) &&
           Objects.equals(this.firstName, messagingRecipient.firstName) &&
           Objects.equals(this.id, messagingRecipient.id) &&
           Objects.equals(this.idType, messagingRecipient.idType) &&
@@ -220,7 +260,7 @@ public class MessagingRecipient  implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(additionalIds, email, externalContactId, firstName, id, idType, image, lastName, nickname);
+    return Objects.hash(additionalIds, email, externalContactDivisionId, externalContactId, externalOrganizationId, firstName, id, idType, image, lastName, nickname);
   }
 
   @Override
@@ -230,7 +270,9 @@ public class MessagingRecipient  implements Serializable {
     
     sb.append("    additionalIds: ").append(toIndentedString(additionalIds)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    externalContactDivisionId: ").append(toIndentedString(externalContactDivisionId)).append("\n");
     sb.append("    externalContactId: ").append(toIndentedString(externalContactId)).append("\n");
+    sb.append("    externalOrganizationId: ").append(toIndentedString(externalOrganizationId)).append("\n");
     sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idType: ").append(toIndentedString(idType)).append("\n");

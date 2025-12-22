@@ -7,6 +7,7 @@
 | ------------ | ------------- | ------------- | ------------- |
 | **body** | [**NotificationTemplateBody**](NotificationTemplateBody) | The template body. |  |
 | **buttons** | [**List&lt;NotificationTemplateButton&gt;**](NotificationTemplateButton) | Template buttons |  [optional] |
+| **carousel** | [**NotificationTemplateCarousel**](NotificationTemplateCarousel) | The template carousel. |  [optional] |
 | **footer** | [**NotificationTemplateFooter**](NotificationTemplateFooter) | The template footer. |  [optional] |
 | **header** | [**NotificationTemplateHeader**](NotificationTemplateHeader) | The template header. |  [optional] |
 | **id** | **String** | The messaging provider template ID. For WhatsApp, 'namespace@name'. |  [optional] |
@@ -15,4 +16,4 @@
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:15.2.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:15.3.0_

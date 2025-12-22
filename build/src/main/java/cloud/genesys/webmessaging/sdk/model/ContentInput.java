@@ -9,6 +9,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
+import cloud.genesys.webmessaging.sdk.model.AutoCompleteType;
+import cloud.genesys.webmessaging.sdk.model.KeyboardType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -21,14 +23,34 @@ import java.io.Serializable;
 
 public class ContentInput  implements Serializable {
   
+  private AutoCompleteType autoCompleteType = null;
   private String id = null;
   private Boolean isMultipleLine = null;
   private Boolean isRequired = null;
+  private KeyboardType keyboardType = null;
   private String placeholderText = null;
   private String subtitle = null;
   private String title = null;
 
   
+  /**
+   * A string value representing the keyboard and system information about the expected semantic meaning for the content that users enter.
+   **/
+  public ContentInput autoCompleteType(AutoCompleteType autoCompleteType) {
+    this.autoCompleteType = autoCompleteType;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "A string value representing the keyboard and system information about the expected semantic meaning for the content that users enter.")
+  @JsonProperty("autoCompleteType")
+  public AutoCompleteType getAutoCompleteType() {
+    return autoCompleteType;
+  }
+  public void setAutoCompleteType(AutoCompleteType autoCompleteType) {
+    this.autoCompleteType = autoCompleteType;
+  }
+
+
   /**
    * Unique identifier for the input
    **/
@@ -80,6 +102,24 @@ public class ContentInput  implements Serializable {
   }
   public void setIsRequired(Boolean isRequired) {
     this.isRequired = isRequired;
+  }
+
+
+  /**
+   * Type of keyboard to be shown.
+   **/
+  public ContentInput keyboardType(KeyboardType keyboardType) {
+    this.keyboardType = keyboardType;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Type of keyboard to be shown.")
+  @JsonProperty("keyboardType")
+  public KeyboardType getKeyboardType() {
+    return keyboardType;
+  }
+  public void setKeyboardType(KeyboardType keyboardType) {
+    this.keyboardType = keyboardType;
   }
 
 
@@ -146,9 +186,11 @@ public class ContentInput  implements Serializable {
       return false;
     }
     ContentInput contentInput = (ContentInput) o;
-    return Objects.equals(this.id, contentInput.id) &&
+    return Objects.equals(this.autoCompleteType, contentInput.autoCompleteType) &&
+          Objects.equals(this.id, contentInput.id) &&
           Objects.equals(this.isMultipleLine, contentInput.isMultipleLine) &&
           Objects.equals(this.isRequired, contentInput.isRequired) &&
+          Objects.equals(this.keyboardType, contentInput.keyboardType) &&
           Objects.equals(this.placeholderText, contentInput.placeholderText) &&
           Objects.equals(this.subtitle, contentInput.subtitle) &&
           Objects.equals(this.title, contentInput.title);
@@ -156,7 +198,7 @@ public class ContentInput  implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, isMultipleLine, isRequired, placeholderText, subtitle, title);
+    return Objects.hash(autoCompleteType, id, isMultipleLine, isRequired, keyboardType, placeholderText, subtitle, title);
   }
 
   @Override
@@ -164,9 +206,11 @@ public class ContentInput  implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContentInput {\n");
     
+    sb.append("    autoCompleteType: ").append(toIndentedString(autoCompleteType)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    isMultipleLine: ").append(toIndentedString(isMultipleLine)).append("\n");
     sb.append("    isRequired: ").append(toIndentedString(isRequired)).append("\n");
+    sb.append("    keyboardType: ").append(toIndentedString(keyboardType)).append("\n");
     sb.append("    placeholderText: ").append(toIndentedString(placeholderText)).append("\n");
     sb.append("    subtitle: ").append(toIndentedString(subtitle)).append("\n");
     sb.append("    title: ").append(toIndentedString(title)).append("\n");

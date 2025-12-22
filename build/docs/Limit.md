@@ -15,8 +15,9 @@
 | Name | Value |
 | ---- | ----- |
 | OUTDATEDSDKVERSION | &quot;OutdatedSdkVersion&quot; | 
-| WORKFORCE_MANAGEMENT | &quot;workforce.management&quot; | 
+| WORKFORCE_MANAGEMENT_FORECAST | &quot;workforce.management.forecast&quot; | 
 | AGENT_ASSISTANT | &quot;agent.assistant&quot; | 
+| AGENTIC_VIRTUAL_AGENTS | &quot;agentic.virtual.agents&quot; | 
 | ANALYTICS_AGENTS | &quot;analytics.agents&quot; | 
 | ANALYTICS_ALERTING | &quot;analytics.alerting&quot; | 
 | ANALYTICS_DATA_EXTRACTION | &quot;analytics.data.extraction&quot; | 
@@ -37,6 +38,7 @@
 | COBROWSE | &quot;cobrowse&quot; | 
 | CONTENT_MANAGEMENT | &quot;content.management&quot; | 
 | CONVERSATION | &quot;conversation&quot; | 
+| COPILOT | &quot;copilot&quot; | 
 | DATAACTIONS | &quot;dataactions&quot; | 
 | DATATABLES | &quot;datatables&quot; | 
 | DIRECTORY | &quot;directory&quot; | 
@@ -95,10 +97,11 @@
 | WEBCHAT | &quot;webchat&quot; | 
 | WEBHOOKS | &quot;webhooks&quot; | 
 | WORKFORCE_MANAGEMENT_AGENT_AVAILABILITY | &quot;workforce.management.agent.availability&quot; | 
-| WORKFORCE_MANAGEMENT_FORECAST | &quot;workforce.management.forecast&quot; | 
+| WORKFORCE_MANAGEMENT | &quot;workforce.management&quot; | 
+| WORKFORCE_MANAGEMENT_SHIFT_TRADING | &quot;workforce.management.shift.trading&quot; | 
 | SYSTEM | &quot;system&quot; | 
 
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:15.2.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:15.3.0_

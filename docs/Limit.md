@@ -38,6 +38,7 @@
 | COBROWSE | &quot;cobrowse&quot; | 
 | CONTENT_MANAGEMENT | &quot;content.management&quot; | 
 | CONVERSATION | &quot;conversation&quot; | 
+| COPILOT | &quot;copilot&quot; | 
 | DATAACTIONS | &quot;dataactions&quot; | 
 | DATATABLES | &quot;datatables&quot; | 
 | DIRECTORY | &quot;directory&quot; | 
@@ -103,4 +104,4 @@
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:15.2.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:15.3.0_

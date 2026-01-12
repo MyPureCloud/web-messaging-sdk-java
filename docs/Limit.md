@@ -98,10 +98,11 @@
 | WEBHOOKS | &quot;webhooks&quot; | 
 | WORKFORCE_MANAGEMENT_AGENT_AVAILABILITY | &quot;workforce.management.agent.availability&quot; | 
 | WORKFORCE_MANAGEMENT | &quot;workforce.management&quot; | 
+| WORKFORCE_MANAGEMENT_SELF_SCHEDULE | &quot;workforce.management.self.schedule&quot; | 
 | WORKFORCE_MANAGEMENT_SHIFT_TRADING | &quot;workforce.management.shift.trading&quot; | 
 | SYSTEM | &quot;system&quot; | 
 
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:15.3.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:16.0.0_

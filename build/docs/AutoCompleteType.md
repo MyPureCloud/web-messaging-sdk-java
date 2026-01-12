@@ -85,4 +85,4 @@
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:15.3.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:16.0.0_

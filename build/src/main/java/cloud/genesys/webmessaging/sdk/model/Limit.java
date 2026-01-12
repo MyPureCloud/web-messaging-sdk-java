@@ -124,6 +124,7 @@ public class Limit  implements Serializable {
     WEBHOOKS("webhooks"),
     WORKFORCE_MANAGEMENT_AGENT_AVAILABILITY("workforce.management.agent.availability"),
     WORKFORCE_MANAGEMENT("workforce.management"),
+    WORKFORCE_MANAGEMENT_SELF_SCHEDULE("workforce.management.self.schedule"),
     WORKFORCE_MANAGEMENT_SHIFT_TRADING("workforce.management.shift.trading"),
     SYSTEM("system");
 

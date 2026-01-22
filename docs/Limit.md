@@ -15,14 +15,6 @@
 | Name | Value |
 | ---- | ----- |
 | OUTDATEDSDKVERSION | &quot;OutdatedSdkVersion&quot; | 
-| WORKFORCE_MANAGEMENT_FORECAST | &quot;workforce.management.forecast&quot; | 
-| AGENT_ASSISTANT | &quot;agent.assistant&quot; | 
-| AGENTIC_VIRTUAL_AGENTS | &quot;agentic.virtual.agents&quot; | 
-| ANALYTICS_AGENTS | &quot;analytics.agents&quot; | 
-| ANALYTICS_ALERTING | &quot;analytics.alerting&quot; | 
-| ANALYTICS_DATA_EXTRACTION | &quot;analytics.data.extraction&quot; | 
-| ANALYTICS | &quot;analytics&quot; | 
-| ANALYTICS_REALTIME | &quot;analytics.realtime&quot; | 
 | ANALYTICS_REPORTING_SETTINGS | &quot;analytics.reporting.settings&quot; | 
 | ARCHITECT | &quot;architect&quot; | 
 | AUDIOHOOK | &quot;audiohook&quot; | 
@@ -97,9 +89,17 @@
 | WEBCHAT | &quot;webchat&quot; | 
 | WEBHOOKS | &quot;webhooks&quot; | 
 | WORKFORCE_MANAGEMENT_AGENT_AVAILABILITY | &quot;workforce.management.agent.availability&quot; | 
+| WORKFORCE_MANAGEMENT_FORECAST | &quot;workforce.management.forecast&quot; | 
 | WORKFORCE_MANAGEMENT | &quot;workforce.management&quot; | 
 | WORKFORCE_MANAGEMENT_SELF_SCHEDULE | &quot;workforce.management.self.schedule&quot; | 
 | WORKFORCE_MANAGEMENT_SHIFT_TRADING | &quot;workforce.management.shift.trading&quot; | 
+| AGENT_ASSISTANT | &quot;agent.assistant&quot; | 
+| AGENTIC_VIRTUAL_AGENTS | &quot;agentic.virtual.agents&quot; | 
+| ANALYTICS_AGENTS | &quot;analytics.agents&quot; | 
+| ANALYTICS_ALERTING | &quot;analytics.alerting&quot; | 
+| ANALYTICS_DATA_EXTRACTION | &quot;analytics.data.extraction&quot; | 
+| ANALYTICS | &quot;analytics&quot; | 
+| ANALYTICS_REALTIME | &quot;analytics.realtime&quot; | 
 | SYSTEM | &quot;system&quot; | 
 
 

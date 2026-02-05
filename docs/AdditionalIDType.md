@@ -12,6 +12,8 @@
 
 * `INGESTIONRULEVERSION` (value: `"IngestionRuleVersion"`)
 
+* `PHONENUMBER` (value: `"PhoneNumber"`)
+
 * `SUBJECT` (value: `"Subject"`)
 
 * `TOPIC` (value: `"Topic"`)

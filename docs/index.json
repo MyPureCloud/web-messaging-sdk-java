@@ -99,6 +99,7 @@
   "GetConfigurationRequest.md",
   "GetConfigurationResponse.md",
   "GetJwtRequest.md",
+  "Header.md",
   "HeaderType.md",
   "IDType.md",
   "IncomingNormalizedMessage.md",

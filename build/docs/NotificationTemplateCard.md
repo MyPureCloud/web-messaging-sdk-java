@@ -7,9 +7,9 @@
 | ------------ | ------------- | ------------- | ------------- |
 | **body** | [**NotificationTemplateBody**](NotificationTemplateBody) | The template body. |  [optional] |
 | **buttons** | **List&lt;Object&gt;** | Template buttons (max 2 for WhatsApp carousel cards) |  |
-| **header** | [**NotificationTemplateHeader**](NotificationTemplateHeader) | The template header. |  |
+| **header** | [**Header**](Header) | The template header. |  |
 
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:16.0.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:17.0.0_

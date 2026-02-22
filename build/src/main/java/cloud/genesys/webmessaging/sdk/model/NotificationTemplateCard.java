@@ -9,8 +9,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
+import cloud.genesys.webmessaging.sdk.model.Header;
 import cloud.genesys.webmessaging.sdk.model.NotificationTemplateBody;
-import cloud.genesys.webmessaging.sdk.model.NotificationTemplateHeader;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -27,7 +27,7 @@ public class NotificationTemplateCard  implements Serializable {
   
   private NotificationTemplateBody body = null;
   private List<Object> buttons = new ArrayList<Object>();
-  private NotificationTemplateHeader header = null;
+  private Header header = null;
 
   
   /**
@@ -69,17 +69,17 @@ public class NotificationTemplateCard  implements Serializable {
   /**
    * The template header.
    **/
-  public NotificationTemplateCard header(NotificationTemplateHeader header) {
+  public NotificationTemplateCard header(Header header) {
     this.header = header;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "The template header.")
   @JsonProperty("header")
-  public NotificationTemplateHeader getHeader() {
+  public Header getHeader() {
     return header;
   }
-  public void setHeader(NotificationTemplateHeader header) {
+  public void setHeader(Header header) {
     this.header = header;
   }
 

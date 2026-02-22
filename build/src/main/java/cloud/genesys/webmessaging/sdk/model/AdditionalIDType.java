@@ -33,6 +33,7 @@ public enum AdditionalIDType {
   DEPLOYMENT("Deployment"),
   INGESTIONRULE("IngestionRule"),
   INGESTIONRULEVERSION("IngestionRuleVersion"),
+  PHONENUMBER("PhoneNumber"),
   SUBJECT("Subject"),
   TOPIC("Topic");
 

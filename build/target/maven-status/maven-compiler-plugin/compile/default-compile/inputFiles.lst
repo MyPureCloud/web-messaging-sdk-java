@@ -95,6 +95,7 @@
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/CleanMessageContent.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/NotificationTemplateHeader.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/ContentDatePickerAvailableTime.java
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/Header.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/GenesysCloudRegionWebSocketHosts.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/NotificationTemplateCard.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/ConnectionClosedEvent.java

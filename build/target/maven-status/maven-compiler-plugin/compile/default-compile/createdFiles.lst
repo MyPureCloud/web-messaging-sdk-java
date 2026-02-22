@@ -133,6 +133,7 @@ cloud/genesys/webmessaging/sdk/PagedResource.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingQuickReply$ActionEnum.class
 cloud/genesys/webmessaging/sdk/model/IncomingNormalizedMessageChannelMetadata.class
 cloud/genesys/webmessaging/sdk/StringUtil.class
+cloud/genesys/webmessaging/sdk/model/Header.class
 cloud/genesys/webmessaging/sdk/model/AutoCompleteTypeDeserializer.class
 cloud/genesys/webmessaging/sdk/model/BaseMessageType.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingButtonResponse.class

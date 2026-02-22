@@ -101,6 +101,7 @@ docs/GenerateUrlError.md
 docs/GetConfigurationRequest.md
 docs/GetConfigurationResponse.md
 docs/GetJwtRequest.md
+docs/Header.md
 docs/HeaderType.md
 docs/IDType.md
 docs/IncomingNormalizedMessage.md
@@ -299,6 +300,7 @@ src/main/java/cloud/genesys/webmessaging/sdk/model/GenerateUrlError.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/GetConfigurationRequest.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/GetConfigurationResponse.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/GetJwtRequest.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/Header.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/HeaderType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/IDType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/IncomingNormalizedMessage.java

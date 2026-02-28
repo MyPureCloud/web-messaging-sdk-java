@@ -1,20 +1,12 @@
-Platform API version: 10068
+Platform API version: 10094
 
 
 
 
-# Major Changes (1 change)
-
-**NotificationTemplateCard** (1 change)
-
-* Property header was changed from NotificationTemplateHeader to Header
+# Major Changes (0 changes)
 
 
-# Minor Changes (1 change)
-
-**Header** (1 change)
-
-* Model was added
+# Minor Changes (0 changes)
 
 
 # Point Changes (0 changes)

@@ -330,7 +330,7 @@ Check whether the underlying websocket's output is closed
 
 
 
-> void configureSession(deploymentId, origin)
+> CompletableFuture<WebSocket> configureSession(deploymentId, origin)
 
 Configures a new session with a randomly generated session token
 
@@ -340,13 +340,13 @@ Configures a new session with a randomly generated session token
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **deploymentId** | **String**| The ID of the Web Messaging deployment |
-| **origin** | **String**| Represents the origin of the request. You can restrict access in Messenger Deployments   |
+| **origin** | **String**| Represents the origin of the request. You can restrict access in Messenger Deployments |
 {: class="table-striped"}
 
 
 ### Return type
 
-**void**
+**CompletableFuture<WebSocket>**
 
 <a name="configureSession2"></a>
 
@@ -354,7 +354,7 @@ Configures a new session with a randomly generated session token
 
 
 
-> void configureSession(deploymentId, token, origin, startNew)
+> CompletableFuture<WebSocket> configureSession(deploymentId, token, origin, startNew)
 
 Configures a session using the provided session token. This can be used to reconnect to active sessions.
 
@@ -366,13 +366,13 @@ Configures a session using the provided session token. This can be used to recon
 | **deploymentId** | **Optional<Boolean>**| The ID of the Web Messaging deployment |
 | **token** | **String**| The session token |
 | **origin** | **String**| Represents the origin of the request. You can restrict access in Messenger Deployments |
-| **startNew** | **String**| true if you want to start a new session for your currently read-only session (after a Presence event of type    |
+| **startNew** | **String**| true if you want to start a new session for your currently read-only session (after a Presence event of type |
 {: class="table-striped"}
 
 
 ### Return type
 
-**void**
+**CompletableFuture<WebSocket>**
 
 <a name="configureAuthenticatedSession1"></a>
 
@@ -380,7 +380,7 @@ Configures a session using the provided session token. This can be used to recon
 
 
 
-> void configureAuthenticatedSession(deploymentId, origin, data)
+> CompletableFuture<WebSocket> configureAuthenticatedSession(deploymentId, origin, data)
 
 Configures a new authenticated session with a randomly generated session token
 
@@ -391,13 +391,13 @@ Configures a new authenticated session with a randomly generated session token
 | ------------- | ------------- | ------------- | ------------- |
 | **deploymentId** | **OAuthParams**| The ID of the Web Messaging deployment |
 | **origin** | **String**| Represents the origin of the request. You can restrict access in Messenger Deployments |
-| **data** | **String**| The session OAuthParams for configuring Authenticated Session   |
+| **data** | **String**| The session OAuthParams for configuring Authenticated Session |
 {: class="table-striped"}
 
 
 ### Return type
 
-**void**
+**CompletableFuture<WebSocket>**
 
 <a name="configureAuthenticatedSession2"></a>
 
@@ -405,7 +405,7 @@ Configures a new authenticated session with a randomly generated session token
 
 
 
-> void configureAuthenticatedSession(deploymentId, token, origin, data)
+> CompletableFuture<WebSocket> configureAuthenticatedSession(deploymentId, token, origin, data)
 
 Configures an authenticated session using the provided session token. This can be used to reconnect to active sessions.
 
@@ -417,13 +417,13 @@ Configures an authenticated session using the provided session token. This can b
 | **deploymentId** | ****| The ID of the Web Messaging deployment |
 | **token** | **OAuthParams**| The session token |
 | **origin** | **String**| Represents the origin of the request. You can restrict access in Messenger Deployments |
-| **data** | **String**| The session OAuthParams for configuring Authenticated Session   |
+| **data** | **String**| The session OAuthParams for configuring Authenticated Session |
 {: class="table-striped"}
 
 
 ### Return type
 
-**void**
+**CompletableFuture<WebSocket>**
 
 <a name="disconnect1"></a>
 
@@ -444,12 +444,12 @@ Closes the WebSocket connection
 
 
 
-> void ping()
+> CompletableFuture<WebSocket> ping()
 
 Sends a message that will cause a response to ensure the connection is active
 ### Return type
 
-**void**
+**CompletableFuture<WebSocket>**
 
 <a name="sendMessage1"></a>
 
@@ -457,7 +457,7 @@ Sends a message that will cause a response to ensure the connection is active
 
 
 
-> void sendMessage(message, attachmentIds)
+> CompletableFuture<WebSocket> sendMessage(message, attachmentIds)
 
 Sends a message to the conversation
 
@@ -473,7 +473,7 @@ Sends a message to the conversation
 
 ### Return type
 
-**void**
+**CompletableFuture<WebSocket>**
 
 <a name="sendMessage2"></a>
 
@@ -481,7 +481,7 @@ Sends a message to the conversation
 
 
 
-> void sendMessage(message, customAttributes, attachmentIds)
+> CompletableFuture<WebSocket> sendMessage(message, customAttributes, attachmentIds)
 
 Sends a message to the conversation with customAttributes
 
@@ -498,7 +498,7 @@ Sends a message to the conversation with customAttributes
 
 ### Return type
 
-**void**
+**CompletableFuture<WebSocket>**
 
 <a name="sendPresenceEvent1"></a>
 
@@ -506,12 +506,12 @@ Sends a message to the conversation with customAttributes
 
 
 
-> void sendPresenceEvent()
+> CompletableFuture<WebSocket> sendPresenceEvent()
 
 send a Presence event by specifying the subtype
 ### Return type
 
-**void**
+**CompletableFuture<WebSocket>**
 
 <a name="sendPresenceEvent2"></a>
 
@@ -519,12 +519,12 @@ send a Presence event by specifying the subtype
 
 
 
-> void sendPresenceEvent()
+> CompletableFuture<WebSocket> sendPresenceEvent()
 
 send a Presence event by specifying the subtype
 ### Return type
 
-**void**
+**CompletableFuture<WebSocket>**
 
 <a name="sendPresenceEvent3"></a>
 
@@ -532,12 +532,12 @@ send a Presence event by specifying the subtype
 
 
 
-> void sendPresenceEvent()
+> CompletableFuture<WebSocket> sendPresenceEvent()
 
 send an event of type Presence join for backward compatibility
 ### Return type
 
-**void**
+**CompletableFuture<WebSocket>**
 
 <a name="sendPresenceEventJoin1"></a>
 
@@ -545,12 +545,12 @@ send an event of type Presence join for backward compatibility
 
 
 
-> void sendPresenceEventJoin()
+> CompletableFuture<WebSocket> sendPresenceEventJoin()
 
 send an event of type Presence join
 ### Return type
 
-**void**
+**CompletableFuture<WebSocket>**
 
 <a name="sendPresenceEventEndUserClear1"></a>
 
@@ -558,12 +558,12 @@ send an event of type Presence join
 
 
 
-> void sendPresenceEventEndUserClear()
+> CompletableFuture<WebSocket> sendPresenceEventEndUserClear()
 
 send an event of type Presence clear
 ### Return type
 
-**void**
+**CompletableFuture<WebSocket>**
 
 <a name="sendTypingEvent1"></a>
 
@@ -571,12 +571,12 @@ send an event of type Presence clear
 
 
 
-> void sendTypingEvent()
+> CompletableFuture<WebSocket> sendTypingEvent()
 
 send an event of type Typing on
 ### Return type
 
-**void**
+**CompletableFuture<WebSocket>**
 
 <a name="attachment1"></a>
 
@@ -584,12 +584,12 @@ send an event of type Typing on
 
 
 
-> void attachment()
+> CompletableFuture<WebSocket> attachment()
 
 send a request to generate an upload url for an attachment
 ### Return type
 
-**void**
+**CompletableFuture<WebSocket>**
 
 <a name="attachment2"></a>
 
@@ -597,12 +597,12 @@ send a request to generate an upload url for an attachment
 
 
 
-> void attachment()
+> CompletableFuture<WebSocket> attachment()
 
 send a request to generate an upload url for an attachment and trace the request using the provided tracingId
 ### Return type
 
-**void**
+**CompletableFuture<WebSocket>**
 
 <a name="getAttachment1"></a>
 
@@ -610,12 +610,12 @@ send a request to generate an upload url for an attachment and trace the request
 
 
 
-> void getAttachment()
+> CompletableFuture<WebSocket> getAttachment()
 
 send a request to generate a download url for an attachment
 ### Return type
 
-**void**
+**CompletableFuture<WebSocket>**
 
 <a name="getAttachment2"></a>
 
@@ -623,12 +623,12 @@ send a request to generate a download url for an attachment
 
 
 
-> void getAttachment()
+> CompletableFuture<WebSocket> getAttachment()
 
 send a request to generate a download url for an attachment and trace the request using the provided tracingId
 ### Return type
 
-**void**
+**CompletableFuture<WebSocket>**
 
 <a name="deleteAttachment1"></a>
 
@@ -636,12 +636,12 @@ send a request to generate a download url for an attachment and trace the reques
 
 
 
-> void deleteAttachment()
+> CompletableFuture<WebSocket> deleteAttachment()
 
 delete an attachment. Must not have been sent and trace the request using the provided tracingId
 ### Return type
 
-**void**
+**CompletableFuture<WebSocket>**
 
 <a name="deleteAttachment2"></a>
 
@@ -649,12 +649,12 @@ delete an attachment. Must not have been sent and trace the request using the pr
 
 
 
-> void deleteAttachment()
+> CompletableFuture<WebSocket> deleteAttachment()
 
 delete an attachment. Must not have been sent
 ### Return type
 
-**void**
+**CompletableFuture<WebSocket>**
 
 <a name="deserialize1"></a>
 

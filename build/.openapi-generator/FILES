@@ -179,6 +179,7 @@ docs/WebMessagingContent.md
 docs/WebMessagingEvent.md
 docs/WebMessagingEventCoBrowse.md
 docs/WebMessagingEventPresence.md
+docs/WebMessagingEventVideo.md
 docs/WebMessagingGeneric.md
 docs/WebMessagingMessage.md
 docs/WebMessagingMessageEntityList.md
@@ -377,6 +378,7 @@ src/main/java/cloud/genesys/webmessaging/sdk/model/WebMessagingContent.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/WebMessagingEvent.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/WebMessagingEventCoBrowse.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/WebMessagingEventPresence.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/WebMessagingEventVideo.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/WebMessagingGeneric.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/WebMessagingMessage.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/WebMessagingMessageEntityList.java

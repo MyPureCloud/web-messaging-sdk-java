@@ -113,6 +113,7 @@ cloud/genesys/webmessaging/sdk/model/WebMessagingMessage$StatusEnum.class
 cloud/genesys/webmessaging/sdk/model/JourneyAction.class
 cloud/genesys/webmessaging/sdk/model/EventVideo.class
 cloud/genesys/webmessaging/sdk/model/EventTypeEnumDeserializer.class
+cloud/genesys/webmessaging/sdk/model/WebMessagingEventVideo$TypeEnum.class
 cloud/genesys/webmessaging/sdk/model/AdditionalIDType.class
 cloud/genesys/webmessaging/sdk/model/ContentQuickReplyV2.class
 cloud/genesys/webmessaging/sdk/model/TooManyRequestsErrorMessage.class
@@ -305,10 +306,12 @@ cloud/genesys/webmessaging/sdk/model/UploadSuccessEvent.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingEventCoBrowse$TypeEnumDeserializer.class
 cloud/genesys/webmessaging/sdk/model/ListItemTypeDeserializer.class
 cloud/genesys/webmessaging/sdk/ApiClient.class
+cloud/genesys/webmessaging/sdk/model/WebMessagingEventVideo.class
 cloud/genesys/webmessaging/sdk/WebMessagingClient.class
 cloud/genesys/webmessaging/sdk/model/RequestTypeGetConfigurationDeserializer.class
 cloud/genesys/webmessaging/sdk/model/AttachmentDeletedResponse.class
 cloud/genesys/webmessaging/sdk/connector/ApiClientConnector.class
 cloud/genesys/webmessaging/sdk/model/EventPresence.class
+cloud/genesys/webmessaging/sdk/model/WebMessagingEventVideo$TypeEnumDeserializer.class
 cloud/genesys/webmessaging/sdk/model/ListItemType.class
 cloud/genesys/webmessaging/sdk/connector/apache/SLF4JInterceptor$RequestData.class

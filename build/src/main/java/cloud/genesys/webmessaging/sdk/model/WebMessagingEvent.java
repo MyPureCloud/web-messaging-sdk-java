@@ -11,6 +11,7 @@ import java.util.Objects;
 import java.io.IOException;
 import cloud.genesys.webmessaging.sdk.model.WebMessagingEventCoBrowse;
 import cloud.genesys.webmessaging.sdk.model.WebMessagingEventPresence;
+import cloud.genesys.webmessaging.sdk.model.WebMessagingEventVideo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
@@ -44,7 +45,8 @@ public class WebMessagingEvent  implements Serializable {
   public enum EventTypeEnum {
     OUTDATEDSDKVERSION("OutdatedSdkVersion"),
     COBROWSE("CoBrowse"),
-    PRESENCE("Presence");
+    PRESENCE("Presence"),
+    VIDEO("Video");
 
     private String value;
 
@@ -74,6 +76,7 @@ public class WebMessagingEvent  implements Serializable {
   private EventTypeEnum eventType = null;
   private WebMessagingEventCoBrowse coBrowse = null;
   private WebMessagingEventPresence presence = null;
+  private WebMessagingEventVideo video = null;
 
   
   /**
@@ -130,6 +133,24 @@ public class WebMessagingEvent  implements Serializable {
   }
 
 
+  /**
+   * Video event.
+   **/
+  public WebMessagingEvent video(WebMessagingEventVideo video) {
+    this.video = video;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Video event.")
+  @JsonProperty("video")
+  public WebMessagingEventVideo getVideo() {
+    return video;
+  }
+  public void setVideo(WebMessagingEventVideo video) {
+    this.video = video;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -141,12 +162,13 @@ public class WebMessagingEvent  implements Serializable {
     WebMessagingEvent webMessagingEvent = (WebMessagingEvent) o;
     return Objects.equals(this.eventType, webMessagingEvent.eventType) &&
           Objects.equals(this.coBrowse, webMessagingEvent.coBrowse) &&
-          Objects.equals(this.presence, webMessagingEvent.presence);
+          Objects.equals(this.presence, webMessagingEvent.presence) &&
+          Objects.equals(this.video, webMessagingEvent.video);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventType, coBrowse, presence);
+    return Objects.hash(eventType, coBrowse, presence, video);
   }
 
   @Override
@@ -157,6 +179,7 @@ public class WebMessagingEvent  implements Serializable {
     sb.append("    eventType: ").append(toIndentedString(eventType)).append("\n");
     sb.append("    coBrowse: ").append(toIndentedString(coBrowse)).append("\n");
     sb.append("    presence: ").append(toIndentedString(presence)).append("\n");
+    sb.append("    video: ").append(toIndentedString(video)).append("\n");
     sb.append("}");
     return sb.toString();
   }

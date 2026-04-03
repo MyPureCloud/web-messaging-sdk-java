@@ -19,4 +19,4 @@
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:18.0.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:18.1.0_

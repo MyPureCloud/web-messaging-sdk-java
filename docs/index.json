@@ -142,6 +142,8 @@
   "ReactionType.md",
   "Reason.md",
   "RecipientAdditionalIdentifier.md",
+  "RecipientAdditionalProviderInfo.md",
+  "RecipientVerificationType.md",
   "RequestType.md",
   "RequestTypeCloseSession.md",
   "RequestTypeConfigureAuthenticatedSession.md",

@@ -6,6 +6,7 @@
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
 | **additionalIds** | [**List&lt;RecipientAdditionalIdentifier&gt;**](RecipientAdditionalIdentifier) | List of recipient additional identifiers |  [optional] |
+| **additionalProviderInfo** | [**RecipientAdditionalProviderInfo**](RecipientAdditionalProviderInfo) | Additional information about the message author. |  [optional] |
 | **email** | **String** | E-mail address of the recipient. |  [optional] |
 | **externalContactDivisionId** | **String** | The ID of the division the external contact is a member of. Must be set to '*' for the Unassigned division. |  [optional] |
 | **externalContactId** | **String** | The identifier of the external contact. |  [optional] |
@@ -20,4 +21,4 @@
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:18.0.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:18.1.0_

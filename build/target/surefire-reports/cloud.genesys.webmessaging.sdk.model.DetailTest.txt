@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: cloud.genesys.webmessaging.sdk.model.DetailTest
 -------------------------------------------------------------------------------
-Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 s -- in cloud.genesys.webmessaging.sdk.model.DetailTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 s -- in cloud.genesys.webmessaging.sdk.model.DetailTest

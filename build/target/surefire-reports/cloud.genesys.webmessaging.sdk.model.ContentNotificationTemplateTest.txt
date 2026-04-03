@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: cloud.genesys.webmessaging.sdk.model.ContentNotificationTemplateTest
 -------------------------------------------------------------------------------
-Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 s -- in cloud.genesys.webmessaging.sdk.model.ContentNotificationTemplateTest
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 s -- in cloud.genesys.webmessaging.sdk.model.ContentNotificationTemplateTest

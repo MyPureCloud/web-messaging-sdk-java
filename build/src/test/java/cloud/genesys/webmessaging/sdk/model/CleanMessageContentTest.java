@@ -90,12 +90,6 @@ public class CleanMessageContentTest {
     }
 
     @Test
-    public void testFluentSetter_generic() {
-        CleanMessageContent result = instance.generic(null);
-        assertSame(instance, result, "Fluent setter for generic should return the same instance");
-    }
-
-    @Test
     public void testFluentSetter_card() {
         CleanMessageContent result = instance.card(null);
         assertSame(instance, result, "Fluent setter for card should return the same instance");
@@ -114,6 +108,18 @@ public class CleanMessageContentTest {
     }
 
     @Test
+    public void testFluentSetter_form() {
+        CleanMessageContent result = instance.form(null);
+        assertSame(instance, result, "Fluent setter for form should return the same instance");
+    }
+
+    @Test
+    public void testFluentSetter_generic() {
+        CleanMessageContent result = instance.generic(null);
+        assertSame(instance, result, "Fluent setter for generic should return the same instance");
+    }
+
+    @Test
     public void testFluentSetter_listPicker() {
         CleanMessageContent result = instance.listPicker(null);
         assertSame(instance, result, "Fluent setter for listPicker should return the same instance");
@@ -126,14 +132,14 @@ public class CleanMessageContentTest {
     }
 
     @Test
-    public void testFluentSetter_text() {
-        CleanMessageContent result = instance.text(null);
-        assertSame(instance, result, "Fluent setter for text should return the same instance");
-    }
-
-    @Test
     public void testFluentSetter_quickReplyV2() {
         CleanMessageContent result = instance.quickReplyV2(null);
         assertSame(instance, result, "Fluent setter for quickReplyV2 should return the same instance");
+    }
+
+    @Test
+    public void testFluentSetter_text() {
+        CleanMessageContent result = instance.text(null);
+        assertSame(instance, result, "Fluent setter for text should return the same instance");
     }
 }

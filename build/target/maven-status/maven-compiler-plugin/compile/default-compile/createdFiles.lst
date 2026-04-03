@@ -51,6 +51,7 @@ cloud/genesys/webmessaging/sdk/ApiResponse.class
 cloud/genesys/webmessaging/sdk/model/EventTypingTypeDeserializer.class
 cloud/genesys/webmessaging/sdk/model/GetConfigurationResponse.class
 cloud/genesys/webmessaging/sdk/model/ContactFieldDeserializer.class
+cloud/genesys/webmessaging/sdk/model/RecipientAdditionalProviderInfo.class
 cloud/genesys/webmessaging/sdk/model/RequestTypeGetJwtDeserializer.class
 cloud/genesys/webmessaging/sdk/model/ChannelTypeDeserializer.class
 cloud/genesys/webmessaging/sdk/model/DeviceType.class
@@ -171,8 +172,10 @@ cloud/genesys/webmessaging/sdk/auth/OAuth.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingQuickReply.class
 cloud/genesys/webmessaging/sdk/model/GenerateDownloadUrlRequest.class
 cloud/genesys/webmessaging/sdk/ApiClient$ConnectorProperties.class
+cloud/genesys/webmessaging/sdk/model/RecipientVerificationType.class
 cloud/genesys/webmessaging/sdk/model/MessagingRecipient.class
 cloud/genesys/webmessaging/sdk/model/RequestTypeCloseSessionDeserializer.class
+cloud/genesys/webmessaging/sdk/model/RecipientVerificationTypeDeserializer.class
 cloud/genesys/webmessaging/sdk/model/GenerateUploadUrlRequest.class
 cloud/genesys/webmessaging/sdk/DetailLevel.class
 cloud/genesys/webmessaging/sdk/model/EventCoBrowse.class

@@ -14,6 +14,7 @@ import cloud.genesys.webmessaging.sdk.model.ContentButtonResponse;
 import cloud.genesys.webmessaging.sdk.model.ContentCard;
 import cloud.genesys.webmessaging.sdk.model.ContentCarousel;
 import cloud.genesys.webmessaging.sdk.model.ContentDatePicker;
+import cloud.genesys.webmessaging.sdk.model.ContentForm;
 import cloud.genesys.webmessaging.sdk.model.ContentGeneric;
 import cloud.genesys.webmessaging.sdk.model.ContentListPicker;
 import cloud.genesys.webmessaging.sdk.model.ContentQuickReply;
@@ -34,14 +35,15 @@ public class CleanMessageContent  implements Serializable {
   private CleanContentAttachment attachment = null;
   private ContentType contentType = null;
   private ContentButtonResponse buttonResponse = null;
-  private ContentGeneric generic = null;
   private ContentCard card = null;
   private ContentCarousel carousel = null;
   private ContentDatePicker datePicker = null;
+  private ContentForm form = null;
+  private ContentGeneric generic = null;
   private ContentListPicker listPicker = null;
   private ContentQuickReply quickReply = null;
-  private ContentText text = null;
   private ContentQuickReplyV2 quickReplyV2 = null;
+  private ContentText text = null;
 
   
   /**
@@ -92,23 +94,6 @@ public class CleanMessageContent  implements Serializable {
   }
   public void setButtonResponse(ContentButtonResponse buttonResponse) {
     this.buttonResponse = buttonResponse;
-  }
-
-
-  /**
-   **/
-  public CleanMessageContent generic(ContentGeneric generic) {
-    this.generic = generic;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("generic")
-  public ContentGeneric getGeneric() {
-    return generic;
-  }
-  public void setGeneric(ContentGeneric generic) {
-    this.generic = generic;
   }
 
 
@@ -165,6 +150,40 @@ public class CleanMessageContent  implements Serializable {
 
   /**
    **/
+  public CleanMessageContent form(ContentForm form) {
+    this.form = form;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("form")
+  public ContentForm getForm() {
+    return form;
+  }
+  public void setForm(ContentForm form) {
+    this.form = form;
+  }
+
+
+  /**
+   **/
+  public CleanMessageContent generic(ContentGeneric generic) {
+    this.generic = generic;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("generic")
+  public ContentGeneric getGeneric() {
+    return generic;
+  }
+  public void setGeneric(ContentGeneric generic) {
+    this.generic = generic;
+  }
+
+
+  /**
+   **/
   public CleanMessageContent listPicker(ContentListPicker listPicker) {
     this.listPicker = listPicker;
     return this;
@@ -199,23 +218,6 @@ public class CleanMessageContent  implements Serializable {
 
   /**
    **/
-  public CleanMessageContent text(ContentText text) {
-    this.text = text;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("text")
-  public ContentText getText() {
-    return text;
-  }
-  public void setText(ContentText text) {
-    this.text = text;
-  }
-
-
-  /**
-   **/
   public CleanMessageContent quickReplyV2(ContentQuickReplyV2 quickReplyV2) {
     this.quickReplyV2 = quickReplyV2;
     return this;
@@ -231,6 +233,23 @@ public class CleanMessageContent  implements Serializable {
   }
 
 
+  /**
+   **/
+  public CleanMessageContent text(ContentText text) {
+    this.text = text;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("text")
+  public ContentText getText() {
+    return text;
+  }
+  public void setText(ContentText text) {
+    this.text = text;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -243,19 +262,20 @@ public class CleanMessageContent  implements Serializable {
     return Objects.equals(this.attachment, cleanMessageContent.attachment) &&
           Objects.equals(this.contentType, cleanMessageContent.contentType) &&
           Objects.equals(this.buttonResponse, cleanMessageContent.buttonResponse) &&
-          Objects.equals(this.generic, cleanMessageContent.generic) &&
           Objects.equals(this.card, cleanMessageContent.card) &&
           Objects.equals(this.carousel, cleanMessageContent.carousel) &&
           Objects.equals(this.datePicker, cleanMessageContent.datePicker) &&
+          Objects.equals(this.form, cleanMessageContent.form) &&
+          Objects.equals(this.generic, cleanMessageContent.generic) &&
           Objects.equals(this.listPicker, cleanMessageContent.listPicker) &&
           Objects.equals(this.quickReply, cleanMessageContent.quickReply) &&
-          Objects.equals(this.text, cleanMessageContent.text) &&
-          Objects.equals(this.quickReplyV2, cleanMessageContent.quickReplyV2);
+          Objects.equals(this.quickReplyV2, cleanMessageContent.quickReplyV2) &&
+          Objects.equals(this.text, cleanMessageContent.text);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(attachment, contentType, buttonResponse, generic, card, carousel, datePicker, listPicker, quickReply, text, quickReplyV2);
+    return Objects.hash(attachment, contentType, buttonResponse, card, carousel, datePicker, form, generic, listPicker, quickReply, quickReplyV2, text);
   }
 
   @Override
@@ -266,14 +286,15 @@ public class CleanMessageContent  implements Serializable {
     sb.append("    attachment: ").append(toIndentedString(attachment)).append("\n");
     sb.append("    contentType: ").append(toIndentedString(contentType)).append("\n");
     sb.append("    buttonResponse: ").append(toIndentedString(buttonResponse)).append("\n");
-    sb.append("    generic: ").append(toIndentedString(generic)).append("\n");
     sb.append("    card: ").append(toIndentedString(card)).append("\n");
     sb.append("    carousel: ").append(toIndentedString(carousel)).append("\n");
     sb.append("    datePicker: ").append(toIndentedString(datePicker)).append("\n");
+    sb.append("    form: ").append(toIndentedString(form)).append("\n");
+    sb.append("    generic: ").append(toIndentedString(generic)).append("\n");
     sb.append("    listPicker: ").append(toIndentedString(listPicker)).append("\n");
     sb.append("    quickReply: ").append(toIndentedString(quickReply)).append("\n");
-    sb.append("    text: ").append(toIndentedString(text)).append("\n");
     sb.append("    quickReplyV2: ").append(toIndentedString(quickReplyV2)).append("\n");
+    sb.append("    text: ").append(toIndentedString(text)).append("\n");
     sb.append("}");
     return sb.toString();
   }

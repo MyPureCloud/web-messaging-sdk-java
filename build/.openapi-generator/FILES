@@ -144,6 +144,8 @@ docs/PushProviderIntegration.md
 docs/ReactionType.md
 docs/Reason.md
 docs/RecipientAdditionalIdentifier.md
+docs/RecipientAdditionalProviderInfo.md
+docs/RecipientVerificationType.md
 docs/RequestType.md
 docs/RequestTypeCloseSession.md
 docs/RequestTypeConfigureAuthenticatedSession.md
@@ -344,6 +346,8 @@ src/main/java/cloud/genesys/webmessaging/sdk/model/PushProviderIntegration.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ReactionType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/Reason.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/RecipientAdditionalIdentifier.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/RecipientAdditionalProviderInfo.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/RecipientVerificationType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/RequestType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/RequestTypeCloseSession.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/RequestTypeConfigureAuthenticatedSession.java

@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: cloud.genesys.webmessaging.sdk.model.ContentGenericTest
 -------------------------------------------------------------------------------
-Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.040 s -- in cloud.genesys.webmessaging.sdk.model.ContentGenericTest
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.010 s -- in cloud.genesys.webmessaging.sdk.model.ContentGenericTest

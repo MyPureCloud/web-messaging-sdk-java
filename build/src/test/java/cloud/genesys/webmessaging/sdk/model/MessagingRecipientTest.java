@@ -78,6 +78,12 @@ public class MessagingRecipientTest {
     }
 
     @Test
+    public void testFluentSetter_additionalProviderInfo() {
+        MessagingRecipient result = instance.additionalProviderInfo(null);
+        assertSame(instance, result, "Fluent setter for additionalProviderInfo should return the same instance");
+    }
+
+    @Test
     public void testFluentSetter_email() {
         MessagingRecipient result = instance.email(null);
         assertSame(instance, result, "Fluent setter for email should return the same instance");

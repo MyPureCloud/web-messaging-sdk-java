@@ -6,6 +6,7 @@
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/SessionClearedEventTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/BaseChannelMetadataTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/NotificationTemplateHeaderTest.java
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/RecipientVerificationTypeTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/ContentListPickerSectionTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/ContentWheelPickerTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/TooManyRequestsErrorMessageTest.java
@@ -50,6 +51,7 @@
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/SessionResponseTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/WebMessagingContentTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/ContentIntroductionTest.java
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/RecipientAdditionalProviderInfoTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/IncomingNormalizedMessageTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/GetConfigurationRequestTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/ContentCardActionTest.java

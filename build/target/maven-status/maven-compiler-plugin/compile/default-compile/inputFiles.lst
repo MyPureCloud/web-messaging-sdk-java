@@ -140,6 +140,7 @@
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/WebMessagingMessageEntityList.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/ConversationContentListPicker.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/EventType.java
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/RecipientVerificationType.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/PresignedUrlResponse.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/MessageDataType.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/connector/okhttp/OkHttpClientConnector.java
@@ -176,6 +177,7 @@
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/RequestTypeGenerateDownloadUrl.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/ConfigureAuthenticatedSessionRequest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/GetConfigurationResponse.java
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/RecipientAdditionalProviderInfo.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/DeviceType.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/ConversationContentListPickerSection.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/KeyboardType.java

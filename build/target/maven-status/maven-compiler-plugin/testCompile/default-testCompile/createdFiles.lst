@@ -45,6 +45,7 @@ cloud/genesys/webmessaging/sdk/model/RequestTypeGetJwtTest.class
 cloud/genesys/webmessaging/sdk/model/SendMessageRequestTest.class
 cloud/genesys/webmessaging/sdk/model/ContentListPickerTest.class
 cloud/genesys/webmessaging/sdk/model/OAuthParamsTest.class
+cloud/genesys/webmessaging/sdk/model/RecipientAdditionalProviderInfoTest.class
 cloud/genesys/webmessaging/sdk/GenesysCloudRegionWebSocketHostsTest.class
 cloud/genesys/webmessaging/sdk/model/GetJwtRequestTest.class
 cloud/genesys/webmessaging/sdk/model/DeleteAttachmentRequestTest.class
@@ -129,6 +130,7 @@ cloud/genesys/webmessaging/sdk/model/GetConfigurationRequestTest.class
 cloud/genesys/webmessaging/sdk/model/ContentAttachmentTest.class
 cloud/genesys/webmessaging/sdk/model/JourneyCustomerTest.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingQuickReplyTest.class
+cloud/genesys/webmessaging/sdk/model/RecipientVerificationTypeTest.class
 cloud/genesys/webmessaging/sdk/model/FileTypeTest.class
 cloud/genesys/webmessaging/sdk/model/RequestTypeCloseSessionTest.class
 cloud/genesys/webmessaging/sdk/model/ConnectionClosedEventTest.class

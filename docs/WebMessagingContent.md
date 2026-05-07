@@ -14,6 +14,7 @@
 | **carousel** | [**ContentCarousel**](ContentCarousel) | Carousel content |  [optional] |
 | **datePicker** | [**ContentDatePicker**](ContentDatePicker) | DatePicker content |  [optional] |
 | **listPicker** | [**ConversationContentListPicker**](ConversationContentListPicker) | ListPicker content |  [optional] |
+| **form** | [**ConversationContentForm**](ConversationContentForm) | Form content |  [optional] |
 
 
 ## Enum: ContentTypeEnum
@@ -29,8 +30,9 @@
 | CAROUSEL | &quot;Carousel&quot; | 
 | DATEPICKER | &quot;DatePicker&quot; | 
 | LISTPICKER | &quot;ListPicker&quot; | 
+| FORM | &quot;Form&quot; | 
 
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:18.1.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:18.2.0_

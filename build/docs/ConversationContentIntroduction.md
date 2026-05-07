@@ -1,0 +1,16 @@
+# ConversationContentIntroduction
+
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ------------ | ------------- | ------------- | ------------- |
+| **title** | **String** | Text to show in the title. |  |
+| **subtitle** | **String** | Text to show in the subtitle. |  [optional] |
+| **imageUrl** | **String** | URL of an image. |  [optional] |
+| **buttonText** | **String** | Text to show on the button. |  |
+
+
+
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:18.2.0_

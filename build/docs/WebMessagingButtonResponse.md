@@ -21,8 +21,9 @@
 | QUICKREPLY | &quot;QuickReply&quot; | 
 | DATEPICKER | &quot;DatePicker&quot; | 
 | LISTPICKER | &quot;ListPicker&quot; | 
+| FORM | &quot;Form&quot; | 
 
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:18.1.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:18.2.0_

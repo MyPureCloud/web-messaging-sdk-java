@@ -112,4 +112,10 @@ public class WebMessagingContentTest {
         WebMessagingContent result = instance.listPicker(null);
         assertSame(instance, result, "Fluent setter for listPicker should return the same instance");
     }
+
+    @Test
+    public void testFluentSetter_form() {
+        WebMessagingContent result = instance.form(null);
+        assertSame(instance, result, "Fluent setter for form should return the same instance");
+    }
 }

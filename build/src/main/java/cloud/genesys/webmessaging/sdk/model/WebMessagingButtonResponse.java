@@ -45,7 +45,8 @@ public class WebMessagingButtonResponse  implements Serializable {
     BUTTON("Button"),
     QUICKREPLY("QuickReply"),
     DATEPICKER("DatePicker"),
-    LISTPICKER("ListPicker");
+    LISTPICKER("ListPicker"),
+    FORM("Form");
 
     private String value;
 

@@ -41,7 +41,7 @@ public class Limit  implements Serializable {
  @JsonDeserialize(using = NamespaceEnumDeserializer.class)
   public enum NamespaceEnum {
     OUTDATEDSDKVERSION("OutdatedSdkVersion"),
-    WORKFORCE_MANAGEMENT_FORECAST("workforce.management.forecast"),
+    WORKFORCE_MANAGEMENT_AGENT_AVAILABILITY("workforce.management.agent.availability"),
     AGENT_ASSISTANT("agent.assistant"),
     AGENTIC_VIRTUAL_AGENTS("agentic.virtual.agents"),
     ANALYTICS_AGENTS("analytics.agents"),
@@ -61,6 +61,7 @@ public class Limit  implements Serializable {
     BOTS_VOICE("bots.voice"),
     BUSINESS_RULES("business.rules"),
     CALLBACK("callback"),
+    CASE_MANAGEMENT("case.management"),
     COBROWSE("cobrowse"),
     CONTENT_MANAGEMENT("content.management"),
     CONVERSATION("conversation"),
@@ -122,7 +123,7 @@ public class Limit  implements Serializable {
     WEB_MESSAGING("web.messaging"),
     WEBCHAT("webchat"),
     WEBHOOKS("webhooks"),
-    WORKFORCE_MANAGEMENT_AGENT_AVAILABILITY("workforce.management.agent.availability"),
+    WORKFORCE_MANAGEMENT_FORECAST("workforce.management.forecast"),
     WORKFORCE_MANAGEMENT("workforce.management"),
     WORKFORCE_MANAGEMENT_SELF_SCHEDULE("workforce.management.self.schedule"),
     WORKFORCE_MANAGEMENT_SHIFT_TRADING("workforce.management.shift.trading"),

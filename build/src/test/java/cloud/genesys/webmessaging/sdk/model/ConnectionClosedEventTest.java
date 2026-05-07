@@ -82,4 +82,10 @@ public class ConnectionClosedEventTest {
         ConnectionClosedEvent result = instance.reasonCode(null);
         assertSame(instance, result, "Fluent setter for reasonCode should return the same instance");
     }
+
+    @Test
+    public void testFluentSetter_reason() {
+        ConnectionClosedEvent result = instance.reason(null);
+        assertSame(instance, result, "Fluent setter for reason should return the same instance");
+    }
 }

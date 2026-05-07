@@ -12,6 +12,7 @@ import java.io.IOException;
 import cloud.genesys.webmessaging.sdk.model.ContentCard;
 import cloud.genesys.webmessaging.sdk.model.ContentCarousel;
 import cloud.genesys.webmessaging.sdk.model.ContentDatePicker;
+import cloud.genesys.webmessaging.sdk.model.ConversationContentForm;
 import cloud.genesys.webmessaging.sdk.model.ConversationContentListPicker;
 import cloud.genesys.webmessaging.sdk.model.WebMessagingAttachment;
 import cloud.genesys.webmessaging.sdk.model.WebMessagingButtonResponse;
@@ -56,7 +57,8 @@ public class WebMessagingContent  implements Serializable {
     CARD("Card"),
     CAROUSEL("Carousel"),
     DATEPICKER("DatePicker"),
-    LISTPICKER("ListPicker");
+    LISTPICKER("ListPicker"),
+    FORM("Form");
 
     private String value;
 
@@ -92,6 +94,7 @@ public class WebMessagingContent  implements Serializable {
   private ContentCarousel carousel = null;
   private ContentDatePicker datePicker = null;
   private ConversationContentListPicker listPicker = null;
+  private ConversationContentForm form = null;
 
   
   @ApiModelProperty(example = "null", value = "Type of this content element. If contentType = \"Attachment\" only one item is allowed.")
@@ -234,6 +237,24 @@ public class WebMessagingContent  implements Serializable {
   }
 
 
+  /**
+   * Form content
+   **/
+  public WebMessagingContent form(ConversationContentForm form) {
+    this.form = form;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Form content")
+  @JsonProperty("form")
+  public ConversationContentForm getForm() {
+    return form;
+  }
+  public void setForm(ConversationContentForm form) {
+    this.form = form;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -251,12 +272,13 @@ public class WebMessagingContent  implements Serializable {
           Objects.equals(this.card, webMessagingContent.card) &&
           Objects.equals(this.carousel, webMessagingContent.carousel) &&
           Objects.equals(this.datePicker, webMessagingContent.datePicker) &&
-          Objects.equals(this.listPicker, webMessagingContent.listPicker);
+          Objects.equals(this.listPicker, webMessagingContent.listPicker) &&
+          Objects.equals(this.form, webMessagingContent.form);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(contentType, attachment, quickReply, buttonResponse, generic, card, carousel, datePicker, listPicker);
+    return Objects.hash(contentType, attachment, quickReply, buttonResponse, generic, card, carousel, datePicker, listPicker, form);
   }
 
   @Override
@@ -273,6 +295,7 @@ public class WebMessagingContent  implements Serializable {
     sb.append("    carousel: ").append(toIndentedString(carousel)).append("\n");
     sb.append("    datePicker: ").append(toIndentedString(datePicker)).append("\n");
     sb.append("    listPicker: ").append(toIndentedString(listPicker)).append("\n");
+    sb.append("    form: ").append(toIndentedString(form)).append("\n");
     sb.append("}");
     return sb.toString();
   }

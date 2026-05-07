@@ -15,7 +15,7 @@
 | Name | Value |
 | ---- | ----- |
 | OUTDATEDSDKVERSION | &quot;OutdatedSdkVersion&quot; | 
-| WORKFORCE_MANAGEMENT_FORECAST | &quot;workforce.management.forecast&quot; | 
+| WORKFORCE_MANAGEMENT_AGENT_AVAILABILITY | &quot;workforce.management.agent.availability&quot; | 
 | AGENT_ASSISTANT | &quot;agent.assistant&quot; | 
 | AGENTIC_VIRTUAL_AGENTS | &quot;agentic.virtual.agents&quot; | 
 | ANALYTICS_AGENTS | &quot;analytics.agents&quot; | 
@@ -35,6 +35,7 @@
 | BOTS_VOICE | &quot;bots.voice&quot; | 
 | BUSINESS_RULES | &quot;business.rules&quot; | 
 | CALLBACK | &quot;callback&quot; | 
+| CASE_MANAGEMENT | &quot;case.management&quot; | 
 | COBROWSE | &quot;cobrowse&quot; | 
 | CONTENT_MANAGEMENT | &quot;content.management&quot; | 
 | CONVERSATION | &quot;conversation&quot; | 
@@ -96,7 +97,7 @@
 | WEB_MESSAGING | &quot;web.messaging&quot; | 
 | WEBCHAT | &quot;webchat&quot; | 
 | WEBHOOKS | &quot;webhooks&quot; | 
-| WORKFORCE_MANAGEMENT_AGENT_AVAILABILITY | &quot;workforce.management.agent.availability&quot; | 
+| WORKFORCE_MANAGEMENT_FORECAST | &quot;workforce.management.forecast&quot; | 
 | WORKFORCE_MANAGEMENT | &quot;workforce.management&quot; | 
 | WORKFORCE_MANAGEMENT_SELF_SCHEDULE | &quot;workforce.management.self.schedule&quot; | 
 | WORKFORCE_MANAGEMENT_SHIFT_TRADING | &quot;workforce.management.shift.trading&quot; | 
@@ -105,4 +106,4 @@
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:18.1.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:18.2.0_

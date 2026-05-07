@@ -22,6 +22,7 @@ public class ConnectionClosedEvent  implements Serializable {
   
   private String tracingId = null;
   private String reasonCode = null;
+  private String reason = null;
 
   
   /**
@@ -58,6 +59,23 @@ public class ConnectionClosedEvent  implements Serializable {
   }
 
 
+  /**
+   **/
+  public ConnectionClosedEvent reason(String reason) {
+    this.reason = reason;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("reason")
+  public String getReason() {
+    return reason;
+  }
+  public void setReason(String reason) {
+    this.reason = reason;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -68,12 +86,13 @@ public class ConnectionClosedEvent  implements Serializable {
     }
     ConnectionClosedEvent connectionClosedEvent = (ConnectionClosedEvent) o;
     return Objects.equals(this.tracingId, connectionClosedEvent.tracingId) &&
-          Objects.equals(this.reasonCode, connectionClosedEvent.reasonCode);
+          Objects.equals(this.reasonCode, connectionClosedEvent.reasonCode) &&
+          Objects.equals(this.reason, connectionClosedEvent.reason);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(tracingId, reasonCode);
+    return Objects.hash(tracingId, reasonCode, reason);
   }
 
   @Override
@@ -83,6 +102,7 @@ public class ConnectionClosedEvent  implements Serializable {
     
     sb.append("    tracingId: ").append(toIndentedString(tracingId)).append("\n");
     sb.append("    reasonCode: ").append(toIndentedString(reasonCode)).append("\n");
+    sb.append("    reason: ").append(toIndentedString(reason)).append("\n");
     sb.append("}");
     return sb.toString();
   }

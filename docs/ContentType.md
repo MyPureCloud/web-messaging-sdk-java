@@ -32,6 +32,8 @@
 
 * `NOTIFICATION` (value: `"Notification"`)
 
+* `NOTIFICATIONRESPONSE` (value: `"NotificationResponse"`)
+
 * `PAYMENTREQUEST` (value: `"PaymentRequest"`)
 
 * `PAYMENTRESPONSE` (value: `"PaymentResponse"`)
@@ -57,4 +59,4 @@
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:18.2.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:18.3.0_

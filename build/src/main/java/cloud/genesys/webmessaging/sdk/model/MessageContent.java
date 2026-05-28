@@ -20,6 +20,7 @@ import cloud.genesys.webmessaging.sdk.model.ContentInteractiveApplication;
 import cloud.genesys.webmessaging.sdk.model.ContentList;
 import cloud.genesys.webmessaging.sdk.model.ContentListPicker;
 import cloud.genesys.webmessaging.sdk.model.ContentLocation;
+import cloud.genesys.webmessaging.sdk.model.ContentNotificationResponse;
 import cloud.genesys.webmessaging.sdk.model.ContentNotificationTemplate;
 import cloud.genesys.webmessaging.sdk.model.ContentPaymentRequest;
 import cloud.genesys.webmessaging.sdk.model.ContentPaymentResponse;
@@ -61,6 +62,7 @@ public class MessageContent  implements Serializable {
   private ContentListPicker listPicker = null;
   private ContentLocation location = null;
   private MessagingRecipient mention = null;
+  private ContentNotificationResponse notificationResponse = null;
   private ContentPaymentRequest paymentRequest = null;
   private ContentPaymentResponse paymentResponse = null;
   private ContentPostback postback = null;
@@ -309,6 +311,24 @@ public class MessageContent  implements Serializable {
 
 
   /**
+   * Notification response content, e.g. an Apple Invitation acceptance.
+   **/
+  public MessageContent notificationResponse(ContentNotificationResponse notificationResponse) {
+    this.notificationResponse = notificationResponse;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Notification response content, e.g. an Apple Invitation acceptance.")
+  @JsonProperty("notificationResponse")
+  public ContentNotificationResponse getNotificationResponse() {
+    return notificationResponse;
+  }
+  public void setNotificationResponse(ContentNotificationResponse notificationResponse) {
+    this.notificationResponse = notificationResponse;
+  }
+
+
+  /**
    * Payment request content.
    **/
   public MessageContent paymentRequest(ContentPaymentRequest paymentRequest) {
@@ -546,6 +566,7 @@ public class MessageContent  implements Serializable {
           Objects.equals(this.listPicker, messageContent.listPicker) &&
           Objects.equals(this.location, messageContent.location) &&
           Objects.equals(this.mention, messageContent.mention) &&
+          Objects.equals(this.notificationResponse, messageContent.notificationResponse) &&
           Objects.equals(this.paymentRequest, messageContent.paymentRequest) &&
           Objects.equals(this.paymentResponse, messageContent.paymentResponse) &&
           Objects.equals(this.postback, messageContent.postback) &&
@@ -562,7 +583,7 @@ public class MessageContent  implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(attachment, buttonResponse, card, carousel, contentType, datePicker, form, generic, interactiveApplication, list, listPicker, location, mention, paymentRequest, paymentResponse, postback, push, quickReply, quickReplyV2, reactions, richLink, roadsideAssistance, story, template, text);
+    return Objects.hash(attachment, buttonResponse, card, carousel, contentType, datePicker, form, generic, interactiveApplication, list, listPicker, location, mention, notificationResponse, paymentRequest, paymentResponse, postback, push, quickReply, quickReplyV2, reactions, richLink, roadsideAssistance, story, template, text);
   }
 
   @Override
@@ -583,6 +604,7 @@ public class MessageContent  implements Serializable {
     sb.append("    listPicker: ").append(toIndentedString(listPicker)).append("\n");
     sb.append("    location: ").append(toIndentedString(location)).append("\n");
     sb.append("    mention: ").append(toIndentedString(mention)).append("\n");
+    sb.append("    notificationResponse: ").append(toIndentedString(notificationResponse)).append("\n");
     sb.append("    paymentRequest: ").append(toIndentedString(paymentRequest)).append("\n");
     sb.append("    paymentResponse: ").append(toIndentedString(paymentResponse)).append("\n");
     sb.append("    postback: ").append(toIndentedString(postback)).append("\n");

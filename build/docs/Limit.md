@@ -15,7 +15,8 @@
 | Name | Value |
 | ---- | ----- |
 | OUTDATEDSDKVERSION | &quot;OutdatedSdkVersion&quot; | 
-| WORKFORCE_MANAGEMENT_AGENT_AVAILABILITY | &quot;workforce.management.agent.availability&quot; | 
+| WEBCHAT | &quot;webchat&quot; | 
+| WEBHOOKS | &quot;webhooks&quot; | 
 | AGENT_ASSISTANT | &quot;agent.assistant&quot; | 
 | AGENTIC_VIRTUAL_AGENTS | &quot;agentic.virtual.agents&quot; | 
 | ANALYTICS_AGENTS | &quot;analytics.agents&quot; | 
@@ -24,6 +25,7 @@
 | ANALYTICS | &quot;analytics&quot; | 
 | ANALYTICS_REALTIME | &quot;analytics.realtime&quot; | 
 | ANALYTICS_REPORTING_SETTINGS | &quot;analytics.reporting.settings&quot; | 
+| ANOMALY_DETECTION | &quot;anomaly.detection&quot; | 
 | ARCHITECT | &quot;architect&quot; | 
 | AUDIOHOOK | &quot;audiohook&quot; | 
 | AUDIOHOOK_MONITOR | &quot;audiohook.monitor&quot; | 
@@ -65,6 +67,7 @@
 | LEARNING | &quot;learning&quot; | 
 | LIMIT_REGISTRY | &quot;limit.registry&quot; | 
 | MARKETPLACE | &quot;marketplace&quot; | 
+| MCP | &quot;mcp&quot; | 
 | MEDIA_COMMUNICATIONS | &quot;media.communications&quot; | 
 | MESSAGING | &quot;messaging&quot; | 
 | MICRO_FRONTEND | &quot;micro.frontend&quot; | 
@@ -95,10 +98,10 @@
 | VOICE_TRANSCRIPTION | &quot;voice.transcription&quot; | 
 | WEB_DEPLOYMENTS | &quot;web.deployments&quot; | 
 | WEB_MESSAGING | &quot;web.messaging&quot; | 
-| WEBCHAT | &quot;webchat&quot; | 
-| WEBHOOKS | &quot;webhooks&quot; | 
+| WORKFORCE_MANAGEMENT_AGENT_AVAILABILITY | &quot;workforce.management.agent.availability&quot; | 
 | WORKFORCE_MANAGEMENT_FORECAST | &quot;workforce.management.forecast&quot; | 
 | WORKFORCE_MANAGEMENT | &quot;workforce.management&quot; | 
+| WORKFORCE_MANAGEMENT_SCHEDULING_PREFERENCES | &quot;workforce.management.scheduling.preferences&quot; | 
 | WORKFORCE_MANAGEMENT_SELF_SCHEDULE | &quot;workforce.management.self.schedule&quot; | 
 | WORKFORCE_MANAGEMENT_SHIFT_TRADING | &quot;workforce.management.shift.trading&quot; | 
 | SYSTEM | &quot;system&quot; | 
@@ -106,4 +109,4 @@
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:18.2.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:18.3.0_

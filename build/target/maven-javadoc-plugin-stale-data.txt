@@ -18,12 +18,12 @@
 'UTF-8'
 -Xdoclint:none
 -doctitle
-'web-messaging-sdk 18.2.0 API'
+'web-messaging-sdk 18.3.0 API'
 -linkoffline
 'https://docs.oracle.com/en/java/javase/11/docs/api' '/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/javadoc-bundle-options'
 -use
 -windowtitle
-'web-messaging-sdk 18.2.0 API'
+'web-messaging-sdk 18.3.0 API'
 cloud.genesys.webmessaging.sdk.model
 cloud.genesys.webmessaging.sdk.api
 cloud.genesys.webmessaging.sdk.api.request
@@ -33,55 +33,55 @@ cloud.genesys.webmessaging.sdk.connector
 cloud.genesys.webmessaging.sdk.connector.apache
 cloud.genesys.webmessaging.sdk.connector.okhttp
 cloud.genesys.webmessaging.sdk.extensions
-/root/.m2/repository/io/swagger/swagger-annotations/1.6.11/swagger-annotations-1.6.11.jar = 1778185615021
-/root/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar = 1778185615061
-/root/.m2/repository/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar = 1778185615161
-/root/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar = 1778185615071
-/root/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar = 1778185615051
-/root/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar = 1778185615181
-/root/.m2/repository/com/squareup/okhttp3/okhttp/4.12.0/okhttp-4.12.0.jar = 1778185615321
-/root/.m2/repository/com/squareup/okio/okio/3.6.0/okio-3.6.0.jar = 1778185615121
-/root/.m2/repository/com/squareup/okio/okio-jvm/3.6.0/okio-jvm-3.6.0.jar = 1778185615291
-/root/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.9.10/kotlin-stdlib-common-1.9.10.jar = 1778185615301
-/root/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.8.21/kotlin-stdlib-jdk8-1.8.21.jar = 1778185615211
-/root/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.8.21/kotlin-stdlib-1.8.21.jar = 1778185615501
-/root/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar = 1778185615261
-/root/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.8.21/kotlin-stdlib-jdk7-1.8.21.jar = 1778185615311
-/root/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.18.6/jackson-core-2.18.6.jar = 1778185615551
-/root/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.18.6/jackson-annotations-2.18.6.jar = 1778185615351
-/root/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar = 1778185615651
-/root/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.18.6/jackson-jaxrs-json-provider-2.18.6.jar = 1778185615371
-/root/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-base/2.18.6/jackson-jaxrs-base-2.18.6.jar = 1778185615401
-/root/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.18.6/jackson-module-jaxb-annotations-2.18.6.jar = 1778185615421
-/root/.m2/repository/javax/xml/bind/jaxb-api/2.2.12/jaxb-api-2.2.12.jar = 1778185615471
-/root/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar = 1778185615471
-/root/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-joda/2.18.6/jackson-datatype-joda-2.18.6.jar = 1778185615551
-/root/.m2/repository/joda-time/joda-time/2.14.1/joda-time-2.14.1.jar = 1778185615711
-/root/.m2/repository/com/brsanthu/migbase64/2.2/migbase64-2.2.jar = 1778185615561
-/root/.m2/repository/com/google/guava/guava/32.1.3-jre/guava-32.1.3-jre.jar = 1778185615741
-/root/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar = 1778185615591
-/root/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar = 1778185615601
-/root/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar = 1778185615631
-/root/.m2/repository/org/checkerframework/checker-qual/3.37.0/checker-qual-3.37.0.jar = 1778185615701
-/root/.m2/repository/com/google/errorprone/error_prone_annotations/2.21.1/error_prone_annotations-2.21.1.jar = 1778185615691
-/root/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar = 1778185615691
-/workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java = 1778185592961
-/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/generated-sources/annotations = 1778185621600
-/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/element-list = 1778185662700
-/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/serialized-form.html = 1778185662920
-/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/overview-tree.html = 1778185663630
-/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/index.html = 1778185663630
-/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/allclasses-index.html = 1778185663980
-/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/allpackages-index.html = 1778185663980
-/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/module-search-index.js = 1778185663980
-/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/package-search-index.js = 1778185663980
-/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/type-search-index.js = 1778185663980
-/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/member-search-index.js = 1778185663990
-/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/tag-search-index.js = 1778185663990
-/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/index-all.html = 1778185664150
-/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/overview-summary.html = 1778185664150
-/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/help-doc.html = 1778185664150
-/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/stylesheet.css = 1778185664160
-/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/script.js = 1778185664160
-/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/search.js = 1778185664160
-/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/jquery-ui.overrides.css = 1778185664170
+/root/.m2/repository/io/swagger/swagger-annotations/1.6.11/swagger-annotations-1.6.11.jar = 1779959718506
+/root/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar = 1779959718526
+/root/.m2/repository/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar = 1779959718796
+/root/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar = 1779959718606
+/root/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar = 1779959718536
+/root/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar = 1779959718666
+/root/.m2/repository/com/squareup/okhttp3/okhttp/4.12.0/okhttp-4.12.0.jar = 1779959718816
+/root/.m2/repository/com/squareup/okio/okio/3.6.0/okio-3.6.0.jar = 1779959718596
+/root/.m2/repository/com/squareup/okio/okio-jvm/3.6.0/okio-jvm-3.6.0.jar = 1779959718786
+/root/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.9.10/kotlin-stdlib-common-1.9.10.jar = 1779959718746
+/root/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.8.21/kotlin-stdlib-jdk8-1.8.21.jar = 1779959718716
+/root/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.8.21/kotlin-stdlib-1.8.21.jar = 1779959718946
+/root/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar = 1779959718786
+/root/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.8.21/kotlin-stdlib-jdk7-1.8.21.jar = 1779959718816
+/root/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.18.6/jackson-core-2.18.6.jar = 1779959718956
+/root/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.18.6/jackson-annotations-2.18.6.jar = 1779959718856
+/root/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar = 1779959719086
+/root/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.18.6/jackson-jaxrs-json-provider-2.18.6.jar = 1779959718876
+/root/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-base/2.18.6/jackson-jaxrs-base-2.18.6.jar = 1779959718906
+/root/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.18.6/jackson-module-jaxb-annotations-2.18.6.jar = 1779959718926
+/root/.m2/repository/javax/xml/bind/jaxb-api/2.2.12/jaxb-api-2.2.12.jar = 1779959718956
+/root/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar = 1779959718966
+/root/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-joda/2.18.6/jackson-datatype-joda-2.18.6.jar = 1779959718996
+/root/.m2/repository/joda-time/joda-time/2.14.1/joda-time-2.14.1.jar = 1779959719176
+/root/.m2/repository/com/brsanthu/migbase64/2.2/migbase64-2.2.jar = 1779959718996
+/root/.m2/repository/com/google/guava/guava/32.1.3-jre/guava-32.1.3-jre.jar = 1779959719246
+/root/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar = 1779959719036
+/root/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar = 1779959719036
+/root/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar = 1779959719076
+/root/.m2/repository/org/checkerframework/checker-qual/3.37.0/checker-qual-3.37.0.jar = 1779959719156
+/root/.m2/repository/com/google/errorprone/error_prone_annotations/2.21.1/error_prone_annotations-2.21.1.jar = 1779959719106
+/root/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar = 1779959719136
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java = 1779959699286
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/generated-sources/annotations = 1779959723656
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/element-list = 1779959759507
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/serialized-form.html = 1779959759707
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/overview-tree.html = 1779959760417
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/index.html = 1779959760417
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/allclasses-index.html = 1779959760837
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/allpackages-index.html = 1779959760837
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/module-search-index.js = 1779959760837
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/package-search-index.js = 1779959760837
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/type-search-index.js = 1779959760837
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/member-search-index.js = 1779959760847
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/tag-search-index.js = 1779959760847
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/index-all.html = 1779959761047
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/overview-summary.html = 1779959761047
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/help-doc.html = 1779959761057
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/stylesheet.css = 1779959761057
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/script.js = 1779959761057
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/search.js = 1779959761057
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/target/apidocs/jquery-ui.overrides.css = 1779959761057

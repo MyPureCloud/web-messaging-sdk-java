@@ -206,14 +206,17 @@ cloud/genesys/webmessaging/sdk/model/EventTypeEnum.class
 cloud/genesys/webmessaging/sdk/model/RequestTypeIncomingMessageDeserializer.class
 cloud/genesys/webmessaging/sdk/model/GetJwtRequest.class
 cloud/genesys/webmessaging/sdk/model/ConversationFormPageComponent.class
+cloud/genesys/webmessaging/sdk/model/ContentNotificationResponse.class
 cloud/genesys/webmessaging/sdk/model/Limit.class
 cloud/genesys/webmessaging/sdk/model/NotificationTemplateFooter.class
+cloud/genesys/webmessaging/sdk/model/NotificationStatusDeserializer.class
 cloud/genesys/webmessaging/sdk/model/ConversationContentListPickerSection.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingMessage$DirectionEnum.class
 cloud/genesys/webmessaging/sdk/connector/ApiClientConnectorResponse.class
 cloud/genesys/webmessaging/sdk/model/SessionClearedEvent.class
 cloud/genesys/webmessaging/sdk/model/ConversationFormPage.class
 cloud/genesys/webmessaging/sdk/model/ListTypeDeserializer.class
+cloud/genesys/webmessaging/sdk/model/NotificationStatus.class
 cloud/genesys/webmessaging/sdk/model/IncomingNormalizedMessage.class
 cloud/genesys/webmessaging/sdk/JodaApiDateFormat.class
 cloud/genesys/webmessaging/sdk/connector/apache/SLF4JInterceptor.class

@@ -42,6 +42,7 @@ public enum ContentType {
   LOCATION("Location"),
   MENTION("Mention"),
   NOTIFICATION("Notification"),
+  NOTIFICATIONRESPONSE("NotificationResponse"),
   PAYMENTREQUEST("PaymentRequest"),
   PAYMENTRESPONSE("PaymentResponse"),
   POSTBACK("Postback"),

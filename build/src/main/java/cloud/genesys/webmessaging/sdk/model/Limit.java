@@ -41,7 +41,8 @@ public class Limit  implements Serializable {
  @JsonDeserialize(using = NamespaceEnumDeserializer.class)
   public enum NamespaceEnum {
     OUTDATEDSDKVERSION("OutdatedSdkVersion"),
-    WORKFORCE_MANAGEMENT_AGENT_AVAILABILITY("workforce.management.agent.availability"),
+    WEBCHAT("webchat"),
+    WEBHOOKS("webhooks"),
     AGENT_ASSISTANT("agent.assistant"),
     AGENTIC_VIRTUAL_AGENTS("agentic.virtual.agents"),
     ANALYTICS_AGENTS("analytics.agents"),
@@ -50,6 +51,7 @@ public class Limit  implements Serializable {
     ANALYTICS("analytics"),
     ANALYTICS_REALTIME("analytics.realtime"),
     ANALYTICS_REPORTING_SETTINGS("analytics.reporting.settings"),
+    ANOMALY_DETECTION("anomaly.detection"),
     ARCHITECT("architect"),
     AUDIOHOOK("audiohook"),
     AUDIOHOOK_MONITOR("audiohook.monitor"),
@@ -91,6 +93,7 @@ public class Limit  implements Serializable {
     LEARNING("learning"),
     LIMIT_REGISTRY("limit.registry"),
     MARKETPLACE("marketplace"),
+    MCP("mcp"),
     MEDIA_COMMUNICATIONS("media.communications"),
     MESSAGING("messaging"),
     MICRO_FRONTEND("micro.frontend"),
@@ -121,10 +124,10 @@ public class Limit  implements Serializable {
     VOICE_TRANSCRIPTION("voice.transcription"),
     WEB_DEPLOYMENTS("web.deployments"),
     WEB_MESSAGING("web.messaging"),
-    WEBCHAT("webchat"),
-    WEBHOOKS("webhooks"),
+    WORKFORCE_MANAGEMENT_AGENT_AVAILABILITY("workforce.management.agent.availability"),
     WORKFORCE_MANAGEMENT_FORECAST("workforce.management.forecast"),
     WORKFORCE_MANAGEMENT("workforce.management"),
+    WORKFORCE_MANAGEMENT_SCHEDULING_PREFERENCES("workforce.management.scheduling.preferences"),
     WORKFORCE_MANAGEMENT_SELF_SCHEDULE("workforce.management.self.schedule"),
     WORKFORCE_MANAGEMENT_SHIFT_TRADING("workforce.management.shift.trading"),
     SYSTEM("system");

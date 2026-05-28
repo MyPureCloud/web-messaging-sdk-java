@@ -150,6 +150,12 @@ public class MessageContentTest {
     }
 
     @Test
+    public void testFluentSetter_notificationResponse() {
+        MessageContent result = instance.notificationResponse(null);
+        assertSame(instance, result, "Fluent setter for notificationResponse should return the same instance");
+    }
+
+    @Test
     public void testFluentSetter_paymentRequest() {
         MessageContent result = instance.paymentRequest(null);
         assertSame(instance, result, "Fluent setter for paymentRequest should return the same instance");

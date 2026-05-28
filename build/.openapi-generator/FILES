@@ -49,6 +49,7 @@ docs/ContentListPicker.md
 docs/ContentListPickerItem.md
 docs/ContentListPickerSection.md
 docs/ContentLocation.md
+docs/ContentNotificationResponse.md
 docs/ContentNotificationTemplate.md
 docs/ContentPaymentRequest.md
 docs/ContentPaymentResponse.md
@@ -139,6 +140,7 @@ docs/MessageEvent.md
 docs/MessagingRecipient.md
 docs/NormalizedType.md
 docs/NotificationMessage.md
+docs/NotificationStatus.md
 docs/NotificationTemplateBody.md
 docs/NotificationTemplateButton.md
 docs/NotificationTemplateCard.md
@@ -264,6 +266,7 @@ src/main/java/cloud/genesys/webmessaging/sdk/model/ContentListPicker.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentListPickerItem.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentListPickerSection.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentLocation.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/ContentNotificationResponse.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentNotificationTemplate.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentPaymentRequest.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentPaymentResponse.java
@@ -354,6 +357,7 @@ src/main/java/cloud/genesys/webmessaging/sdk/model/MessageEvent.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/MessagingRecipient.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/NormalizedType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/NotificationMessage.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/NotificationStatus.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/NotificationTemplateBody.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/NotificationTemplateButton.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/NotificationTemplateCard.java

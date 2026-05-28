@@ -18,6 +18,7 @@ cloud/genesys/webmessaging/sdk/model/CleanMessageContentTest.class
 cloud/genesys/webmessaging/sdk/model/SendEchoRequestTest.class
 cloud/genesys/webmessaging/sdk/model/ContentReceivedReplyMessageTest.class
 cloud/genesys/webmessaging/sdk/model/RequestTypeDeleteAttachmentTest.class
+cloud/genesys/webmessaging/sdk/model/ContentNotificationResponseTest.class
 cloud/genesys/webmessaging/sdk/model/CloseSessionRequestTest.class
 cloud/genesys/webmessaging/sdk/model/ContentLineItemTest.class
 cloud/genesys/webmessaging/sdk/model/ReasonTest.class
@@ -48,6 +49,7 @@ cloud/genesys/webmessaging/sdk/model/ConversationContentListPickerSectionTest.cl
 cloud/genesys/webmessaging/sdk/model/ConversationFormPageComponentTest.class
 cloud/genesys/webmessaging/sdk/model/ContentInteractiveApplicationTest.class
 cloud/genesys/webmessaging/sdk/model/ContentIntroductionTest.class
+cloud/genesys/webmessaging/sdk/model/NotificationStatusTest.class
 cloud/genesys/webmessaging/sdk/model/NotificationTemplateFooterTest.class
 cloud/genesys/webmessaging/sdk/model/BaseMessagingChannelTest.class
 cloud/genesys/webmessaging/sdk/model/RequestTypeEchoMessageTest.class

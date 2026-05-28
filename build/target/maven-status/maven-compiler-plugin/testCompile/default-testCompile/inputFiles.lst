@@ -25,6 +25,7 @@
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/ContentStoryTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/WebMessagingGenericTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/RequestTypeGenerateDownloadUrlTest.java
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/ContentNotificationResponseTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/ListItemTypeTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/IncomingNormalizedMessageTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/MessageEventTest.java
@@ -125,6 +126,7 @@
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/ContentCardActionTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/GetJwtRequestTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/DeleteAttachmentRequestTest.java
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/NotificationStatusTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/WebMessagingAttachmentTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/EventTypingTypeTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/ContentAttachmentTest.java

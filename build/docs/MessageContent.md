@@ -18,6 +18,7 @@
 | **listPicker** | [**ContentListPicker**](ContentListPicker) | ListPicker content. |  [optional] |
 | **location** | [**ContentLocation**](ContentLocation) | Location content. |  [optional] |
 | **mention** | [**MessagingRecipient**](MessagingRecipient) | Mention content. |  [optional] |
+| **notificationResponse** | [**ContentNotificationResponse**](ContentNotificationResponse) | Notification response content, e.g. an Apple Invitation acceptance. |  [optional] |
 | **paymentRequest** | [**ContentPaymentRequest**](ContentPaymentRequest) | Payment request content. |  [optional] |
 | **paymentResponse** | [**ContentPaymentResponse**](ContentPaymentResponse) | Payment response content. |  [optional] |
 | **postback** | [**ContentPostback**](ContentPostback) | Structured message postback (Deprecated). |  [optional] |
@@ -34,4 +35,4 @@
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:18.2.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:18.3.0_

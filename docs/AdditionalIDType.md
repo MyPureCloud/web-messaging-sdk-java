@@ -6,17 +6,25 @@
 ## Enum
 
 
+* `BSUID` (value: `"Bsuid"`)
+
 * `DEPLOYMENT` (value: `"Deployment"`)
 
 * `INGESTIONRULE` (value: `"IngestionRule"`)
 
 * `INGESTIONRULEVERSION` (value: `"IngestionRuleVersion"`)
 
+* `PARENTBSUID` (value: `"ParentBsuid"`)
+
 * `PHONENUMBER` (value: `"PhoneNumber"`)
 
 * `SUBJECT` (value: `"Subject"`)
 
 * `TOPIC` (value: `"Topic"`)
+
+* `UNKNOWN` (value: `"Unknown"`)
+
+* `USERNAME` (value: `"Username"`)
 
 
 

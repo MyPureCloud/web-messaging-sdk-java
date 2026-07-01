@@ -55,6 +55,7 @@ cloud/genesys/webmessaging/sdk/model/BaseMessagingChannelTest.class
 cloud/genesys/webmessaging/sdk/model/RequestTypeEchoMessageTest.class
 cloud/genesys/webmessaging/sdk/model/ContentListPickerItemTest.class
 cloud/genesys/webmessaging/sdk/model/JwtResponseTest.class
+cloud/genesys/webmessaging/sdk/model/ContentAttachmentMediaTypeTest.class
 cloud/genesys/webmessaging/sdk/model/ContentTextTest.class
 cloud/genesys/webmessaging/sdk/model/AdditionalIDTypeTest.class
 cloud/genesys/webmessaging/sdk/model/TypeTest.class
@@ -129,7 +130,6 @@ cloud/genesys/webmessaging/sdk/model/TemplateButtonTypeTest.class
 cloud/genesys/webmessaging/sdk/model/EventPresenceTypeTest.class
 cloud/genesys/webmessaging/sdk/model/EventTypeTest.class
 cloud/genesys/webmessaging/sdk/model/CardActionTypeTest.class
-cloud/genesys/webmessaging/sdk/model/MediaTypeTest.class
 cloud/genesys/webmessaging/sdk/model/ContentFormTest.class
 cloud/genesys/webmessaging/sdk/model/ContentCardTest.class
 cloud/genesys/webmessaging/sdk/model/GetConfigurationResponseTest.class

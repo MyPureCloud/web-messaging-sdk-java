@@ -31,6 +31,7 @@
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/ContentRequiredContactField.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/ResponseMessage.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/connector/ApiClientConnectorProperties.java
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/ContentAttachmentMediaType.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/ConversationFormPageComponent.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/SendMessageRequest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/connector/okhttp/OkHttpClientConnectorProvider.java
@@ -227,7 +228,6 @@
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/JodaApiDateFormat.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/CleanContentAttachment.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/TooManyRequestsErrorMessage.java
-/workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/MediaType.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/ErrorMessage.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/FormPageComponent.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/ApiClient.java

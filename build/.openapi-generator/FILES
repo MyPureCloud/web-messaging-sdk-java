@@ -32,6 +32,7 @@ docs/ConnectionClosedEvent.md
 docs/ContactField.md
 docs/ContentActions.md
 docs/ContentAttachment.md
+docs/ContentAttachmentMediaType.md
 docs/ContentButtonResponse.md
 docs/ContentCard.md
 docs/ContentCardAction.md
@@ -133,7 +134,6 @@ docs/ListItemComponent.md
 docs/ListItemType.md
 docs/ListType.md
 docs/LogoutEvent.md
-docs/MediaType.md
 docs/MessageContent.md
 docs/MessageDataType.md
 docs/MessageEvent.md
@@ -249,6 +249,7 @@ src/main/java/cloud/genesys/webmessaging/sdk/model/ConnectionClosedEvent.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContactField.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentActions.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentAttachment.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/ContentAttachmentMediaType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentButtonResponse.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentCard.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentCardAction.java
@@ -350,7 +351,6 @@ src/main/java/cloud/genesys/webmessaging/sdk/model/ListItemComponent.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ListItemType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ListType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/LogoutEvent.java
-src/main/java/cloud/genesys/webmessaging/sdk/model/MediaType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/MessageContent.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/MessageDataType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/MessageEvent.java

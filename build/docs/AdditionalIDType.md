@@ -6,11 +6,15 @@
 ## Enum
 
 
+* `BSUID` (value: `"Bsuid"`)
+
 * `DEPLOYMENT` (value: `"Deployment"`)
 
 * `INGESTIONRULE` (value: `"IngestionRule"`)
 
 * `INGESTIONRULEVERSION` (value: `"IngestionRuleVersion"`)
+
+* `PARENTBSUID` (value: `"ParentBsuid"`)
 
 * `PHONENUMBER` (value: `"PhoneNumber"`)
 
@@ -18,7 +22,11 @@
 
 * `TOPIC` (value: `"Topic"`)
 
+* `UNKNOWN` (value: `"Unknown"`)
+
+* `USERNAME` (value: `"Username"`)
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:18.3.0_
+
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:19.0.0_

@@ -8,7 +8,7 @@
 | **id** | **String** |  |  [optional] |
 | **filename** | **String** |  |  [optional] |
 | **fileSize** | **Double** |  |  [optional] |
-| **mediaType** | [**MediaType**](MediaType) |  |  |
+| **mediaType** | [**ContentAttachmentMediaType**](ContentAttachmentMediaType) |  |  |
 | **mime** | **String** |  |  [optional] |
 | **sha256** | **String** |  |  [optional] |
 | **text** | **String** |  |  [optional] |
@@ -17,4 +17,4 @@
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:18.3.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:19.0.0_

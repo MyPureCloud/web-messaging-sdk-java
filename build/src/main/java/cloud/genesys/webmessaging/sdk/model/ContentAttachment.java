@@ -9,7 +9,7 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
-import cloud.genesys.webmessaging.sdk.model.MediaType;
+import cloud.genesys.webmessaging.sdk.model.ContentAttachmentMediaType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -25,7 +25,7 @@ public class ContentAttachment  implements Serializable {
   private Double contentSizeBytes = null;
   private String filename = null;
   private String id = null;
-  private MediaType mediaType = null;
+  private ContentAttachmentMediaType mediaType = null;
   private String mime = null;
   private String sha256 = null;
   private String text = null;
@@ -89,17 +89,17 @@ public class ContentAttachment  implements Serializable {
   /**
    * The type of attachment this instance represents.
    **/
-  public ContentAttachment mediaType(MediaType mediaType) {
+  public ContentAttachment mediaType(ContentAttachmentMediaType mediaType) {
     this.mediaType = mediaType;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "The type of attachment this instance represents.")
   @JsonProperty("mediaType")
-  public MediaType getMediaType() {
+  public ContentAttachmentMediaType getMediaType() {
     return mediaType;
   }
-  public void setMediaType(MediaType mediaType) {
+  public void setMediaType(ContentAttachmentMediaType mediaType) {
     this.mediaType = mediaType;
   }
 

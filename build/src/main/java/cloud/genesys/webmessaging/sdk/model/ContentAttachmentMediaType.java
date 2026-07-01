@@ -13,23 +13,23 @@ import io.swagger.annotations.ApiModel;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 import java.io.Serializable;
-class MediaTypeDeserializer extends StdDeserializer<MediaType> {
-  public MediaTypeDeserializer() {
-    super(MediaTypeDeserializer.class);
+class ContentAttachmentMediaTypeDeserializer extends StdDeserializer<ContentAttachmentMediaType> {
+  public ContentAttachmentMediaTypeDeserializer() {
+    super(ContentAttachmentMediaTypeDeserializer.class);
   }
 
   @Override
-  public MediaType deserialize(JsonParser jsonParser, DeserializationContext ctxt)
+  public ContentAttachmentMediaType deserialize(JsonParser jsonParser, DeserializationContext ctxt)
           throws IOException {
     JsonNode node = jsonParser.getCodec().readTree(jsonParser);
-    return MediaType.fromString(node.toString().replace("\"", ""));
+    return ContentAttachmentMediaType.fromString(node.toString().replace("\"", ""));
   }
 }
 /**
  * The type of attachment this instance represents.
  */
- @JsonDeserialize(using = MediaTypeDeserializer.class)
-public enum MediaType {
+ @JsonDeserialize(using = ContentAttachmentMediaTypeDeserializer.class)
+public enum ContentAttachmentMediaType {
   AUDIO("Audio"),
   FILE("File"),
   IMAGE("Image"),
@@ -38,21 +38,21 @@ public enum MediaType {
 
   private String value;
 
-  MediaType(String value) {
+  ContentAttachmentMediaType(String value) {
     this.value = value;
   }
 
   @JsonCreator
-  public static MediaType fromString(String key) {
+  public static ContentAttachmentMediaType fromString(String key) {
     if (key == null) return null;
 
-    for (MediaType value : MediaType.values()) {
+    for (ContentAttachmentMediaType value : ContentAttachmentMediaType.values()) {
       if (key.equalsIgnoreCase(value.toString())) {
         return value;
       }
     }
 
-    return MediaType.values()[0];
+    return ContentAttachmentMediaType.values()[0];
   }
 
   @Override

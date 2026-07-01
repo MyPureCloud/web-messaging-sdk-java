@@ -6,26 +6,26 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Tests for MediaType enum.
+ * Tests for ContentAttachmentMediaType enum.
  */
-public class MediaTypeTest {
+public class ContentAttachmentMediaTypeTest {
 
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     @Test
     public void testFromStringNull() {
-        assertNull(MediaType.fromString(null));
+        assertNull(ContentAttachmentMediaType.fromString(null));
     }
 
     @Test
     public void testFromStringUnknownReturnsFallback() {
-        MediaType result = MediaType.fromString("NonExistentValue_XYZ");
-        assertEquals(MediaType.values()[0], result);
+        ContentAttachmentMediaType result = ContentAttachmentMediaType.fromString("NonExistentValue_XYZ");
+        assertEquals(ContentAttachmentMediaType.values()[0], result);
     }
 
     @Test
     public void testAllValuesHaveNonNullToString() {
-        for (MediaType value : MediaType.values()) {
+        for (ContentAttachmentMediaType value : ContentAttachmentMediaType.values()) {
             assertNotNull(value.toString(), "toString() should not be null for " + value.name());
             assertFalse(value.toString().isEmpty(), "toString() should not be empty for " + value.name());
         }
@@ -33,24 +33,24 @@ public class MediaTypeTest {
 
     @Test
     public void testFromStringCaseInsensitive() {
-        for (MediaType value : MediaType.values()) {
-            assertEquals(value, MediaType.fromString(value.toString().toLowerCase()),
+        for (ContentAttachmentMediaType value : ContentAttachmentMediaType.values()) {
+            assertEquals(value, ContentAttachmentMediaType.fromString(value.toString().toLowerCase()),
                     "fromString should be case-insensitive for " + value.name());
         }
     }
 
     @Test
     public void testJsonRoundTrip() throws Exception {
-        for (MediaType value : MediaType.values()) {
+        for (ContentAttachmentMediaType value : ContentAttachmentMediaType.values()) {
             String json = objectMapper.writeValueAsString(value);
-            MediaType deserialized = objectMapper.readValue(json, MediaType.class);
+            ContentAttachmentMediaType deserialized = objectMapper.readValue(json, ContentAttachmentMediaType.class);
             assertEquals(value, deserialized, "Round-trip failed for " + value.name());
         }
     }
 
     @Test
     public void testJsonDeserializationUnknownValue() throws Exception {
-        MediaType result = objectMapper.readValue("\"SomethingUnknown_XYZ\"", MediaType.class);
-        assertEquals(MediaType.values()[0], result);
+        ContentAttachmentMediaType result = objectMapper.readValue("\"SomethingUnknown_XYZ\"", ContentAttachmentMediaType.class);
+        assertEquals(ContentAttachmentMediaType.values()[0], result);
     }
 }

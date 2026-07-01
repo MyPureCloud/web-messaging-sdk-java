@@ -8,6 +8,7 @@
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/RequestTypeDeleteAttachmentTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/SessionExpiredEventTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/KeyboardTypeTest.java
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/ContentAttachmentMediaTypeTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/ContentPostbackTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/ListTypeTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/ConversationContentLocationTest.java
@@ -98,7 +99,6 @@
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/EntTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/ResponseMessageTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/ContentLineItemTest.java
-/workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/MediaTypeTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/StructuredMessageTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/NotificationTemplateParameterTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/WebMessagingEventCoBrowseTest.java

@@ -3,6 +3,7 @@ cloud/genesys/webmessaging/sdk/model/NotificationTemplateHeader.class
 cloud/genesys/webmessaging/sdk/Configuration.class
 cloud/genesys/webmessaging/sdk/model/PresignedUrlResponse.class
 cloud/genesys/webmessaging/sdk/model/ResponseMessage.class
+cloud/genesys/webmessaging/sdk/model/ContentAttachmentMediaTypeDeserializer.class
 cloud/genesys/webmessaging/sdk/connector/apache/ApacheHttpCredentialsProvider$CredentialsWrapper.class
 cloud/genesys/webmessaging/sdk/model/ContentInteractiveApplication.class
 cloud/genesys/webmessaging/sdk/model/ButtonResponseType.class
@@ -39,7 +40,6 @@ cloud/genesys/webmessaging/sdk/model/ListType.class
 cloud/genesys/webmessaging/sdk/model/ConfigureSessionRequest.class
 cloud/genesys/webmessaging/sdk/model/NotificationTemplateButton.class
 cloud/genesys/webmessaging/sdk/model/NotificationMessage.class
-cloud/genesys/webmessaging/sdk/model/MediaType.class
 cloud/genesys/webmessaging/sdk/model/ConversationContentButtonResponse$TypeEnumDeserializer.class
 cloud/genesys/webmessaging/sdk/model/DeviceTypeDeserializer.class
 cloud/genesys/webmessaging/sdk/model/ConversationContentIntroduction.class
@@ -51,7 +51,6 @@ cloud/genesys/webmessaging/sdk/model/BaseMessagingRecipient.class
 cloud/genesys/webmessaging/sdk/model/ConversationContentInput$KeyboardTypeEnum.class
 cloud/genesys/webmessaging/sdk/model/ContentQuickReply.class
 cloud/genesys/webmessaging/sdk/model/EventTypingType.class
-cloud/genesys/webmessaging/sdk/model/MediaTypeDeserializer.class
 cloud/genesys/webmessaging/sdk/model/Direction.class
 cloud/genesys/webmessaging/sdk/model/ConversationContentInput$KeyboardTypeEnumDeserializer.class
 cloud/genesys/webmessaging/sdk/model/HeaderType.class
@@ -321,6 +320,7 @@ cloud/genesys/webmessaging/sdk/model/TemplateButtonTypeDeserializer.class
 cloud/genesys/webmessaging/sdk/model/PushProviderIntegration.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingContent.class
 cloud/genesys/webmessaging/sdk/model/WebMessagingButtonResponse$TypeEnum.class
+cloud/genesys/webmessaging/sdk/model/ContentAttachmentMediaType.class
 cloud/genesys/webmessaging/sdk/model/NormalizedTypeDeserializer.class
 cloud/genesys/webmessaging/sdk/api/request/GetWebmessagingMessagesRequest.class
 cloud/genesys/webmessaging/sdk/model/Ent.class

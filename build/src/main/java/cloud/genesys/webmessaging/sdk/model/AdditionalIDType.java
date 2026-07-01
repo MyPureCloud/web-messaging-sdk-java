@@ -30,12 +30,16 @@ class AdditionalIDTypeDeserializer extends StdDeserializer<AdditionalIDType> {
  */
  @JsonDeserialize(using = AdditionalIDTypeDeserializer.class)
 public enum AdditionalIDType {
+  BSUID("Bsuid"),
   DEPLOYMENT("Deployment"),
   INGESTIONRULE("IngestionRule"),
   INGESTIONRULEVERSION("IngestionRuleVersion"),
+  PARENTBSUID("ParentBsuid"),
   PHONENUMBER("PhoneNumber"),
   SUBJECT("Subject"),
-  TOPIC("Topic");
+  TOPIC("Topic"),
+  UNKNOWN("Unknown"),
+  USERNAME("Username");
 
   private String value;
 

@@ -1,20 +1,28 @@
-Platform API version: 10398
+Platform API version: 10555
 
 
 
 
-# Major Changes (0 changes)
+# Major Changes (4 changes)
+
+**MediaType** (1 change)
+
+* Model MediaType was removed
+
+**ContentAttachment** (1 change)
+
+* Property mediaType was changed from MediaType to ContentAttachmentMediaType
+
+**BaseContentAttachment** (1 change)
+
+* Property mediaType was changed from MediaType to ContentAttachmentMediaType
+
+**CleanContentAttachment** (1 change)
+
+* Property mediaType was changed from MediaType to ContentAttachmentMediaType
 
 
-# Minor Changes (2 changes)
-
-**ContentNotificationResponse** (1 change)
-
-* Model was added
-
-**MessageContent** (1 change)
-
-* Optional property notificationResponse was added
+# Minor Changes (0 changes)
 
 
 # Point Changes (0 changes)

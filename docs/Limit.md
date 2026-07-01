@@ -15,8 +15,8 @@
 | Name | Value |
 | ---- | ----- |
 | OUTDATEDSDKVERSION | &quot;OutdatedSdkVersion&quot; | 
-| WEBCHAT | &quot;webchat&quot; | 
-| WEBHOOKS | &quot;webhooks&quot; | 
+| WEB_DEPLOYMENTS | &quot;web.deployments&quot; | 
+| WEB_MESSAGING | &quot;web.messaging&quot; | 
 | AGENT_ASSISTANT | &quot;agent.assistant&quot; | 
 | AGENTIC_VIRTUAL_AGENTS | &quot;agentic.virtual.agents&quot; | 
 | ANALYTICS_AGENTS | &quot;analytics.agents&quot; | 
@@ -67,10 +67,12 @@
 | LEARNING | &quot;learning&quot; | 
 | LIMIT_REGISTRY | &quot;limit.registry&quot; | 
 | MARKETPLACE | &quot;marketplace&quot; | 
+| MCP_ANALYTICS_AGGREGATES | &quot;mcp.analytics.aggregates&quot; | 
 | MCP | &quot;mcp&quot; | 
 | MEDIA_COMMUNICATIONS | &quot;media.communications&quot; | 
 | MESSAGING | &quot;messaging&quot; | 
 | MICRO_FRONTEND | &quot;micro.frontend&quot; | 
+| MULTI_ORG | &quot;multi.org&quot; | 
 | NOTIFICATIONS | &quot;notifications&quot; | 
 | ONBOARDING | &quot;onboarding&quot; | 
 | OUTBOUND | &quot;outbound&quot; | 
@@ -96,8 +98,8 @@
 | USERS | &quot;users&quot; | 
 | USERS_RULES | &quot;users.rules&quot; | 
 | VOICE_TRANSCRIPTION | &quot;voice.transcription&quot; | 
-| WEB_DEPLOYMENTS | &quot;web.deployments&quot; | 
-| WEB_MESSAGING | &quot;web.messaging&quot; | 
+| WEBCHAT | &quot;webchat&quot; | 
+| WEBHOOKS | &quot;webhooks&quot; | 
 | WORKFORCE_MANAGEMENT_AGENT_AVAILABILITY | &quot;workforce.management.agent.availability&quot; | 
 | WORKFORCE_MANAGEMENT_FORECAST | &quot;workforce.management.forecast&quot; | 
 | WORKFORCE_MANAGEMENT | &quot;workforce.management&quot; | 
@@ -109,4 +111,4 @@
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:18.3.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:19.0.0_

@@ -1,7 +1,7 @@
-# MediaType
+# ContentAttachmentMediaType
 
 
-# MediaType
+# ContentAttachmentMediaType
 
 ## Enum
 
@@ -19,4 +19,4 @@
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:18.3.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:19.0.0_

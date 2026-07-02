@@ -7,7 +7,7 @@
 * **Documentation** https://mypurecloud.github.io/web-messaging-sdk-java/
 * **Source** https://github.com/MyPureCloud/web-messaging-sdk-java
 
-Documentation version: cloud.genesys.webmessaging.sdk:web-messaging-sdk:19.0.0
+Documentation version: cloud.genesys.webmessaging.sdk:web-messaging-sdk:19.1.0
 
 ## Install Using maven
 

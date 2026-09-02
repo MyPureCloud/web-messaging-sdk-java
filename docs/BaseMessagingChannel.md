@@ -15,4 +15,4 @@
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:19.1.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:19.2.0_

@@ -15,8 +15,8 @@
 | Name | Value |
 | ---- | ----- |
 | OUTDATEDSDKVERSION | &quot;OutdatedSdkVersion&quot; | 
-| WEB_DEPLOYMENTS | &quot;web.deployments&quot; | 
-| WEB_MESSAGING | &quot;web.messaging&quot; | 
+| USERS_RULES | &quot;users.rules&quot; | 
+| VOICE_TRANSCRIPTION | &quot;voice.transcription&quot; | 
 | AGENT_ASSISTANT | &quot;agent.assistant&quot; | 
 | AGENTIC_VIRTUAL_AGENTS | &quot;agentic.virtual.agents&quot; | 
 | ANALYTICS_AGENTS | &quot;analytics.agents&quot; | 
@@ -75,6 +75,7 @@
 | MULTI_ORG | &quot;multi.org&quot; | 
 | NOTIFICATIONS | &quot;notifications&quot; | 
 | ONBOARDING | &quot;onboarding&quot; | 
+| ORGANIZATION_NOTICE | &quot;organization.notice&quot; | 
 | OUTBOUND | &quot;outbound&quot; | 
 | PLATFORM_API | &quot;platform.api&quot; | 
 | PREDICTIVE_ROUTING | &quot;predictive.routing&quot; | 
@@ -85,6 +86,7 @@
 | ROUTING | &quot;routing&quot; | 
 | SCIM | &quot;scim&quot; | 
 | SCREEN_MONITORING | &quot;screen.monitoring&quot; | 
+| SDA | &quot;sda&quot; | 
 | SEARCH | &quot;search&quot; | 
 | SECONDARY_AUTOMATION_TESTING | &quot;secondary.automation.testing&quot; | 
 | SKILLS | &quot;skills&quot; | 
@@ -96,10 +98,11 @@
 | TELEPHONY_CONFIGURATION | &quot;telephony.configuration&quot; | 
 | USAGE | &quot;usage&quot; | 
 | USERS | &quot;users&quot; | 
-| USERS_RULES | &quot;users.rules&quot; | 
-| VOICE_TRANSCRIPTION | &quot;voice.transcription&quot; | 
+| WEB_DEPLOYMENTS | &quot;web.deployments&quot; | 
+| WEB_MESSAGING | &quot;web.messaging&quot; | 
 | WEBCHAT | &quot;webchat&quot; | 
 | WEBHOOKS | &quot;webhooks&quot; | 
+| WORKFORCE_MANAGEMENT_ADHERENCE | &quot;workforce.management.adherence&quot; | 
 | WORKFORCE_MANAGEMENT_AGENT_AVAILABILITY | &quot;workforce.management.agent.availability&quot; | 
 | WORKFORCE_MANAGEMENT_FORECAST | &quot;workforce.management.forecast&quot; | 
 | WORKFORCE_MANAGEMENT | &quot;workforce.management&quot; | 
@@ -111,4 +114,4 @@
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:19.1.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:19.2.0_

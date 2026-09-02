@@ -146,6 +146,7 @@ cloud/genesys/webmessaging/sdk/model/OriginatingEntityTest.class
 cloud/genesys/webmessaging/sdk/model/JourneyCustomerSessionTest.class
 cloud/genesys/webmessaging/sdk/model/EventTypeEnumTest.class
 cloud/genesys/webmessaging/sdk/model/GenerateUploadUrlRequestTest.class
+cloud/genesys/webmessaging/sdk/WebMessagingClientTest$3.class
 cloud/genesys/webmessaging/sdk/model/RequestTypeConfigureAuthenticatedSessionTest.class
 cloud/genesys/webmessaging/sdk/model/ConfigureAuthenticatedSessionRequestTest.class
 cloud/genesys/webmessaging/sdk/model/ContentPushTest.class

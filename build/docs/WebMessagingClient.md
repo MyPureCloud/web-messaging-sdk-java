@@ -42,6 +42,14 @@ title: WebMessagingClient
 | [**getAttachment**](WebMessagingClient.html#getAttachment2) | send a request to generate a download url for an attachment and trace the request using the provided tracingId |
 | [**deleteAttachment**](WebMessagingClient.html#deleteAttachment1) | delete an attachment. Must not have been sent and trace the request using the provided tracingId |
 | [**deleteAttachment**](WebMessagingClient.html#deleteAttachment2) | delete an attachment. Must not have been sent |
+| [**handleTextFragment**](WebMessagingClient.html#handleTextFragment1) | Handles a WebSocket text frame, reassembling messages delivered across multiple fragments.<p>{@link java.net.http.WebSocket} may deliver a single logical text message over several 
+invocations; the final fragment is flagged with == true.Fragments 
+are accumulated in and only deserialized once the message is complete, 
+otherwise a partial fragment fails JSON parsing and the message is silently dropped. 
+
+<p>Package-private for unit testing of the fragment-reassembly logic. 
+
+ |
 | [**deserialize**](WebMessagingClient.html#deserialize1) | Deserializes a message payload |
 | [**onSessionEvent**](WebMessagingClient.html#onSessionEvent1) | Invokes appropriate handler for incoming WebSocket messages |
 | [**onWebSocketConnected**](WebMessagingClient.html#onWebSocketConnected1) | Invokes registered listeners when the connection to the remote server has been established |
@@ -655,6 +663,37 @@ delete an attachment. Must not have been sent
 ### Return type
 
 **CompletableFuture<WebSocket>**
+
+<a name="handleTextFragment1"></a>
+
+# **handleTextFragment**
+
+
+
+> void handleTextFragment(data, last)
+
+Handles a WebSocket text frame, reassembling messages delivered across multiple fragments.<p>{@link java.net.http.WebSocket} may deliver a single logical text message over several 
+invocations; the final fragment is flagged with == true.Fragments 
+are accumulated in and only deserialized once the message is complete, 
+otherwise a partial fragment fails JSON parsing and the message is silently dropped. 
+
+<p>Package-private for unit testing of the fragment-reassembly logic. 
+
+
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **data** | **boolean**| a text fragment |
+| **last** | **CharSequence **| if this is the last fragment of the message   |
+{: class="table-striped"}
+
+
+### Return type
+
+**void**
 
 <a name="deserialize1"></a>
 

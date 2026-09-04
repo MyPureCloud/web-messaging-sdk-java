@@ -24,7 +24,11 @@
 
 * `RATING` (value: `"Rating"`)
 
+* `REPOST` (value: `"Repost"`)
+
 * `SAD` (value: `"Sad"`)
+
+* `SAVE` (value: `"Save"`)
 
 * `SHARE` (value: `"Share"`)
 

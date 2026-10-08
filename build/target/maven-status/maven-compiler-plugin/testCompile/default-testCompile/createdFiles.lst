@@ -54,6 +54,7 @@ cloud/genesys/webmessaging/sdk/model/NotificationTemplateFooterTest.class
 cloud/genesys/webmessaging/sdk/model/BaseMessagingChannelTest.class
 cloud/genesys/webmessaging/sdk/model/RequestTypeEchoMessageTest.class
 cloud/genesys/webmessaging/sdk/model/ContentListPickerItemTest.class
+cloud/genesys/webmessaging/sdk/model/ContentThumbnailTest.class
 cloud/genesys/webmessaging/sdk/model/JwtResponseTest.class
 cloud/genesys/webmessaging/sdk/model/ContentAttachmentMediaTypeTest.class
 cloud/genesys/webmessaging/sdk/model/ContentTextTest.class

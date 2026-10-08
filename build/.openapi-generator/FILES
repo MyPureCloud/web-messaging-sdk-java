@@ -66,6 +66,7 @@ docs/ContentRichLinkHeader.md
 docs/ContentRoadsideAssistance.md
 docs/ContentStory.md
 docs/ContentText.md
+docs/ContentThumbnail.md
 docs/ContentType.md
 docs/ContentWheelPicker.md
 docs/ContentWheelPickerItem.md
@@ -283,6 +284,7 @@ src/main/java/cloud/genesys/webmessaging/sdk/model/ContentRichLinkHeader.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentRoadsideAssistance.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentStory.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentText.java
+src/main/java/cloud/genesys/webmessaging/sdk/model/ContentThumbnail.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentType.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentWheelPicker.java
 src/main/java/cloud/genesys/webmessaging/sdk/model/ContentWheelPickerItem.java

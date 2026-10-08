@@ -57,6 +57,7 @@
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/PagedResource.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/ReactionType.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/ContentInteractiveApplication.java
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/ContentThumbnail.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/auth/Authentication.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/ContentPush.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/main/java/cloud/genesys/webmessaging/sdk/model/GenerateDownloadUrlRequest.java

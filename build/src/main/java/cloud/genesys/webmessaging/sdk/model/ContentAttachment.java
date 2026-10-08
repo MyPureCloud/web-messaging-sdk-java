@@ -10,6 +10,7 @@ import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.util.Objects;
 import java.io.IOException;
 import cloud.genesys.webmessaging.sdk.model.ContentAttachmentMediaType;
+import cloud.genesys.webmessaging.sdk.model.ContentThumbnail;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -29,6 +30,7 @@ public class ContentAttachment  implements Serializable {
   private String mime = null;
   private String sha256 = null;
   private String text = null;
+  private ContentThumbnail thumbnail = null;
   private String url = null;
 
   
@@ -69,14 +71,14 @@ public class ContentAttachment  implements Serializable {
 
 
   /**
-   * Provider specific ID for attachment. For example, a LINE sticker ID.
+   * Provider specific ID for attachment.
    **/
   public ContentAttachment id(String id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Provider specific ID for attachment. For example, a LINE sticker ID.")
+  @ApiModelProperty(example = "null", value = "Provider specific ID for attachment.")
   @JsonProperty("id")
   public String getId() {
     return id;
@@ -159,6 +161,24 @@ public class ContentAttachment  implements Serializable {
 
 
   /**
+   * Thumbnail image for the attachment content. Currently populated only for inbound Video attachments from YouTube (Open channel).
+   **/
+  public ContentAttachment thumbnail(ContentThumbnail thumbnail) {
+    this.thumbnail = thumbnail;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Thumbnail image for the attachment content. Currently populated only for inbound Video attachments from YouTube (Open channel).")
+  @JsonProperty("thumbnail")
+  public ContentThumbnail getThumbnail() {
+    return thumbnail;
+  }
+  public void setThumbnail(ContentThumbnail thumbnail) {
+    this.thumbnail = thumbnail;
+  }
+
+
+  /**
    * URL of the attachment.
    **/
   public ContentAttachment url(String url) {
@@ -192,12 +212,13 @@ public class ContentAttachment  implements Serializable {
           Objects.equals(this.mime, contentAttachment.mime) &&
           Objects.equals(this.sha256, contentAttachment.sha256) &&
           Objects.equals(this.text, contentAttachment.text) &&
+          Objects.equals(this.thumbnail, contentAttachment.thumbnail) &&
           Objects.equals(this.url, contentAttachment.url);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(contentSizeBytes, filename, id, mediaType, mime, sha256, text, url);
+    return Objects.hash(contentSizeBytes, filename, id, mediaType, mime, sha256, text, thumbnail, url);
   }
 
   @Override
@@ -212,6 +233,7 @@ public class ContentAttachment  implements Serializable {
     sb.append("    mime: ").append(toIndentedString(mime)).append("\n");
     sb.append("    sha256: ").append(toIndentedString(sha256)).append("\n");
     sb.append("    text: ").append(toIndentedString(text)).append("\n");
+    sb.append("    thumbnail: ").append(toIndentedString(thumbnail)).append("\n");
     sb.append("    url: ").append(toIndentedString(url)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -7,14 +7,15 @@
 | ------------ | ------------- | ------------- | ------------- |
 | **contentSizeBytes** | **Double** | Size in bytes of the attachment content. |  [optional] |
 | **filename** | **String** | Suggested file name for attachment. |  [optional] |
-| **id** | **String** | Provider specific ID for attachment. For example, a LINE sticker ID. |  [optional] |
+| **id** | **String** | Provider specific ID for attachment. |  [optional] |
 | **mediaType** | [**ContentAttachmentMediaType**](ContentAttachmentMediaType) | The type of attachment this instance represents. |  |
 | **mime** | **String** | Attachment mime type (https://www.iana.org/assignments/media-types/media-types.xhtml). |  [optional] |
 | **sha256** | **String** | Secure hash of the attachment content. |  [optional] |
 | **text** | **String** | Text associated with attachment such as an image caption. |  [optional] |
+| **thumbnail** | [**ContentThumbnail**](ContentThumbnail) | Thumbnail image for the attachment content. Currently populated only for inbound Video attachments from YouTube (Open channel). |  [optional] |
 | **url** | **String** | URL of the attachment. |  [optional] |
 
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:19.2.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:19.3.0_

@@ -69,6 +69,7 @@
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/GetConfigurationResponseTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/ReasonTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/ContentListTest.java
+/workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/ContentThumbnailTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/ContentPaymentRequestTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/PaymentPlatformTest.java
 /workspace/platform-client-sdk-common/output/webmessagingjava/build/src/test/java/cloud/genesys/webmessaging/sdk/model/ContentInteractiveApplicationTest.java

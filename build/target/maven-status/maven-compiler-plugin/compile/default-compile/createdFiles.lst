@@ -64,6 +64,7 @@ cloud/genesys/webmessaging/sdk/model/ChannelTypeDeserializer.class
 cloud/genesys/webmessaging/sdk/model/DeviceType.class
 cloud/genesys/webmessaging/sdk/model/StoryTypeDeserializer.class
 cloud/genesys/webmessaging/sdk/model/SessionExpiredEvent.class
+cloud/genesys/webmessaging/sdk/model/ContentThumbnail.class
 cloud/genesys/webmessaging/sdk/connector/ApiClientConnectorProperty.class
 cloud/genesys/webmessaging/sdk/model/ConversationContentListPicker.class
 cloud/genesys/webmessaging/sdk/model/ButtonComponent.class

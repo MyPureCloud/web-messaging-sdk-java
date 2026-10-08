@@ -114,6 +114,12 @@ public class ContentAttachmentTest {
     }
 
     @Test
+    public void testFluentSetter_thumbnail() {
+        ContentAttachment result = instance.thumbnail(null);
+        assertSame(instance, result, "Fluent setter for thumbnail should return the same instance");
+    }
+
+    @Test
     public void testFluentSetter_url() {
         ContentAttachment result = instance.url(null);
         assertSame(instance, result, "Fluent setter for url should return the same instance");

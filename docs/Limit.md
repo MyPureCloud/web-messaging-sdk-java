@@ -15,9 +15,8 @@
 | Name | Value |
 | ---- | ----- |
 | OUTDATEDSDKVERSION | &quot;OutdatedSdkVersion&quot; | 
-| USERS_RULES | &quot;users.rules&quot; | 
-| VOICE_TRANSCRIPTION | &quot;voice.transcription&quot; | 
 | AGENT_ASSISTANT | &quot;agent.assistant&quot; | 
+| AGENTIC_INTENT_CLASSIFIER | &quot;agentic.intent.classifier&quot; | 
 | AGENTIC_VIRTUAL_AGENTS | &quot;agentic.virtual.agents&quot; | 
 | ANALYTICS_AGENTS | &quot;analytics.agents&quot; | 
 | ANALYTICS_ALERTING | &quot;analytics.alerting&quot; | 
@@ -98,6 +97,8 @@
 | TELEPHONY_CONFIGURATION | &quot;telephony.configuration&quot; | 
 | USAGE | &quot;usage&quot; | 
 | USERS | &quot;users&quot; | 
+| USERS_RULES | &quot;users.rules&quot; | 
+| VOICE_TRANSCRIPTION | &quot;voice.transcription&quot; | 
 | WEB_DEPLOYMENTS | &quot;web.deployments&quot; | 
 | WEB_MESSAGING | &quot;web.messaging&quot; | 
 | WEBCHAT | &quot;webchat&quot; | 

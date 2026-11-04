@@ -10,6 +10,8 @@
 
 * `FAILED` (value: `"Failed"`)
 
+* `MODIFIED` (value: `"Modified"`)
+
 * `PUBLISHED` (value: `"Published"`)
 
 * `READ` (value: `"Read"`)

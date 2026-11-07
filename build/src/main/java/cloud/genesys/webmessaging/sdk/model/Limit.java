@@ -41,9 +41,8 @@ public class Limit  implements Serializable {
  @JsonDeserialize(using = NamespaceEnumDeserializer.class)
   public enum NamespaceEnum {
     OUTDATEDSDKVERSION("OutdatedSdkVersion"),
-    USERS_RULES("users.rules"),
-    VOICE_TRANSCRIPTION("voice.transcription"),
     AGENT_ASSISTANT("agent.assistant"),
+    AGENTIC_INTENT_CLASSIFIER("agentic.intent.classifier"),
     AGENTIC_VIRTUAL_AGENTS("agentic.virtual.agents"),
     ANALYTICS_AGENTS("analytics.agents"),
     ANALYTICS_ALERTING("analytics.alerting"),
@@ -124,6 +123,8 @@ public class Limit  implements Serializable {
     TELEPHONY_CONFIGURATION("telephony.configuration"),
     USAGE("usage"),
     USERS("users"),
+    USERS_RULES("users.rules"),
+    VOICE_TRANSCRIPTION("voice.transcription"),
     WEB_DEPLOYMENTS("web.deployments"),
     WEB_MESSAGING("web.messaging"),
     WEBCHAT("webchat"),

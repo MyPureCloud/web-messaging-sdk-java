@@ -31,6 +31,7 @@ class StatusDeserializer extends StdDeserializer<Status> {
 public enum Status {
   DELIVERED("Delivered"),
   FAILED("Failed"),
+  MODIFIED("Modified"),
   PUBLISHED("Published"),
   READ("Read"),
   REMOVED("Removed"),

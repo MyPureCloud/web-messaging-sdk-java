@@ -10,6 +10,8 @@
 
 * `FAILED` (value: `"Failed"`)
 
+* `MODIFIED` (value: `"Modified"`)
+
 * `PUBLISHED` (value: `"Published"`)
 
 * `READ` (value: `"Read"`)
@@ -21,4 +23,4 @@
 
 
 
-_cloud.genesys.webmessaging.sdk:web-messaging-sdk:19.3.0_
+_cloud.genesys.webmessaging.sdk:web-messaging-sdk:19.4.0_
